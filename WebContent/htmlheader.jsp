@@ -13,15 +13,33 @@
 		<tr bgcolor="#949494">
 			<th>Header Name</th>
 			<th>Header Value(s)</th>
+			<th>desription</th>
 		</tr>
 		<%
 			Enumeration headerNames = request.getHeaderNames();
+			//out.print("" + headerNames.toString() + "\n");
 			while (headerNames.hasMoreElements()) {
 				String paramName = (String) headerNames.nextElement();
+				//out.println("" + paramName + "\n");
 				out.print("<tr><td>" + paramName + "</td>\n");
 				String paramValue = request.getHeader(paramName);
-				out.println("<td> " + paramValue + "</td></tr>\n");
+				//out.println("<td> " + paramValue + "</td></tr>\n");
+				
+				out.println("<td> " + paramValue + "</td>\n");
+				out.println("<td> " + "abc" + "</td></tr>\n");
+				//out.println("paramName:" + paramName + "\n");
+				//out.println("paramValue:" + paramValue + "\n");
 			}
+			
+			for(int i = 0;i < 1000;i++)
+			{
+				out.println("<tr><td> " + i + "</td>");	
+				out.println("<td> " + i * i + "</td>");	
+				out.println("<td> " + i * i * i + "</td></tr>");	
+				
+			}
+			
+			
 		%>
 	</table>
 </body>
