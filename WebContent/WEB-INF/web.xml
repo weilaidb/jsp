@@ -13,10 +13,6 @@
 		<welcome-file>default.jsp</welcome-file>
 	</welcome-file-list>
 
-	<!-- 超时以分钟为单位，Tomcat中的默认的超时时间是30分钟。 -->
-	<session-config>
-		<session-timeout>30</session-timeout>
-	</session-config>
 
 	<servlet>
 		<!-- 类名 -->
@@ -48,16 +44,5 @@
 		<url-pattern>/TomcatTest/DisplayHeader</url-pattern>
 	</servlet-mapping>
 
-	<!-- 上传文件 -->
-	<servlet>
-		<display-name>UploadServlet</display-name>
-		<servlet-name>UploadServlet</servlet-name>
-		<servlet-class>com.runoob.test.UploadServlet</servlet-class>
-	</servlet>
-
-	<servlet-mapping>
-		<servlet-name>UploadServlet</servlet-name>
-		<url-pattern>/TomcatTest/UploadServlet</url-pattern>
-	</servlet-mapping>
 
 </web-app>
