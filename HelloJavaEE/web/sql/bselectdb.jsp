@@ -21,7 +21,8 @@
 <%
     try {
         Class.forName("com.mysql.jdbc.Driver");  ////驱动程序名
-        String url = "jdbc:mysql://localhost:3306/alldb"; //数据库名
+        String url = "jdbc:mysql://localhost:3306/alldb?useSSL=true"; //数据库名
+//        String url = "jdbc:mysql://localhost:3306/alldb?useSSL=false"; //数据库名
         String username = "root";  //数据库用户名
         String password = "Zzerp123";  //数据库用户密码
         Connection conn = DriverManager.getConnection(url, username, password);  //连接状态
@@ -40,7 +41,7 @@
     <%
         Statement stmt = null;
         ResultSet rs = null;
-        String sql = "SELECT * from abc order by id desc limit 50;";  //查询语句
+        String sql = "SELECT * from abc order by id desc limit 100;";  //查询语句
         stmt = conn.createStatement();
         rs = stmt.executeQuery(sql);
         out.print("查询结果：");
