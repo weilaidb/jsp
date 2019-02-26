@@ -4,6 +4,7 @@
 <%@ page import="javax.servlet.http.*,javax.servlet.*" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 
 <html>
 <head>
@@ -20,9 +21,21 @@ useUnicode=true&characterEncoding=utf-8 防止中文乱码
                    user="root"  password="Zzerp123"/>
 
 <sql:query dataSource="${snapshot}" var="result">
+    <%--SELECT * from abc order by id desc limit 20;--%>
     SELECT * from abc order by id desc;
 </sql:query>
 <h1>JSP 数据库实例 - ALLDB</h1>
+
+<c:set var="string1" value="This is first String."/>
+<c:set var="string2" value="This <abc>is second
+                             String.</abc>"/>
+
+<%--<p>使用 escapeXml() 函数:</p>--%>
+<%--<p>string (1) : ${fn:escapeXml(string1)}</p>--%>
+<%--<p>string (2) : ${fn:escapeXml(string2)}</p>--%>
+
+
+
 <table border="1" width="100%">
     <tr>
         <th>ID</th>
@@ -33,7 +46,7 @@ useUnicode=true&characterEncoding=utf-8 防止中文乱码
         <tr>
             <td><c:out value="${row.id}"/></td>
             <td><c:out value="${row.name}"/></td>
-            <td><c:out value="${row.url}"/></td>
+            <td><c:out value="${row.content}"/></td>
         </tr>
     </c:forEach>
 </table>
