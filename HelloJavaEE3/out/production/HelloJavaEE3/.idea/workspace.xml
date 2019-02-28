@@ -11,8 +11,101 @@
       <change beforePath="$PROJECT_DIR$/out/production/HelloJavaEE3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloJavaEE3/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/HelloJavaEE3/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloJavaEE3/web/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/HelloJavaEE3/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloJavaEE3/web/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/production/HelloJavaEE3/.idea/artifacts/hello.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/production/HelloJavaEE3/.idea/artifacts/hello3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/production/HelloJavaEE3/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/production/HelloJavaEE3/.idea/libraries/lib.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/production/HelloJavaEE3/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/production/HelloJavaEE3/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/production/HelloJavaEE3/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/production/HelloJavaEE3/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/production/HelloJavaEE3/HelloJavaEE3.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/production/HelloJavaEE3/web/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/production/HelloJavaEE3/web/WEB-INF/lib/jstl.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/production/HelloJavaEE3/web/WEB-INF/lib/mysql-connector-java-5.1.39-bin.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/production/HelloJavaEE3/web/WEB-INF/lib/sqlite-jdbc-3.23.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/production/HelloJavaEE3/web/WEB-INF/lib/standard.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/production/HelloJavaEE3/web/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/production/HelloJavaEE3/web/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/artifacts/HelloJavaEE3_war_exploded/WEB-INF/classes/.idea/artifacts/HelloJavaEE3_war_exploded.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/artifacts/HelloJavaEE3_war_exploded/WEB-INF/classes/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/artifacts/HelloJavaEE3_war_exploded/WEB-INF/classes/.idea/libraries/lib.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/artifacts/HelloJavaEE3_war_exploded/WEB-INF/classes/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/artifacts/HelloJavaEE3_war_exploded/WEB-INF/classes/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/artifacts/HelloJavaEE3_war_exploded/WEB-INF/classes/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/artifacts/HelloJavaEE3_war_exploded/WEB-INF/classes/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/artifacts/HelloJavaEE3_war_exploded/WEB-INF/classes/HelloJavaEE3.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/artifacts/HelloJavaEE3_war_exploded/WEB-INF/classes/web/WEB-INF/lib/jstl.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/artifacts/HelloJavaEE3_war_exploded/WEB-INF/classes/web/WEB-INF/lib/mysql-connector-java-5.1.39-bin.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/artifacts/HelloJavaEE3_war_exploded/WEB-INF/classes/web/WEB-INF/lib/sqlite-jdbc-3.23.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/artifacts/HelloJavaEE3_war_exploded/WEB-INF/classes/web/WEB-INF/lib/standard.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/artifacts/HelloJavaEE3_war_exploded/WEB-INF/classes/web/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/artifacts/HelloJavaEE3_war_exploded/WEB-INF/classes/web/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/artifacts/HelloJavaEE3_war_exploded/WEB-INF/lib/jstl.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/artifacts/HelloJavaEE3_war_exploded/WEB-INF/lib/mysql-connector-java-5.1.39-bin.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/artifacts/HelloJavaEE3_war_exploded/WEB-INF/lib/sqlite-jdbc-3.23.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/artifacts/HelloJavaEE3_war_exploded/WEB-INF/lib/standard.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/artifacts/HelloJavaEE3_war_exploded/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/artifacts/HelloJavaEE3_war_exploded/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/production/HelloJavaEE3/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/production/HelloJavaEE3/.idea/libraries/lib.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/production/HelloJavaEE3/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/production/HelloJavaEE3/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/production/HelloJavaEE3/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/production/HelloJavaEE3/HelloJavaEE3.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/production/HelloJavaEE3/web/WEB-INF/lib/jstl.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/production/HelloJavaEE3/web/WEB-INF/lib/mysql-connector-java-5.1.39-bin.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/production/HelloJavaEE3/web/WEB-INF/lib/sqlite-jdbc-3.23.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/production/HelloJavaEE3/web/WEB-INF/lib/standard.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/production/HelloJavaEE3/web/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/production/HelloJavaEE3/web/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/test/HelloJavaEE3/artifacts/HelloJavaEE3_war_exploded/WEB-INF/classes/.idea/artifacts/HelloJavaEE3_war_exploded.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/test/HelloJavaEE3/artifacts/HelloJavaEE3_war_exploded/WEB-INF/classes/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/test/HelloJavaEE3/artifacts/HelloJavaEE3_war_exploded/WEB-INF/classes/.idea/libraries/lib.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/test/HelloJavaEE3/artifacts/HelloJavaEE3_war_exploded/WEB-INF/classes/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/test/HelloJavaEE3/artifacts/HelloJavaEE3_war_exploded/WEB-INF/classes/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/test/HelloJavaEE3/artifacts/HelloJavaEE3_war_exploded/WEB-INF/classes/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/test/HelloJavaEE3/artifacts/HelloJavaEE3_war_exploded/WEB-INF/classes/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/test/HelloJavaEE3/artifacts/HelloJavaEE3_war_exploded/WEB-INF/classes/HelloJavaEE3.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/test/HelloJavaEE3/artifacts/HelloJavaEE3_war_exploded/WEB-INF/classes/web/WEB-INF/lib/jstl.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/test/HelloJavaEE3/artifacts/HelloJavaEE3_war_exploded/WEB-INF/classes/web/WEB-INF/lib/mysql-connector-java-5.1.39-bin.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/test/HelloJavaEE3/artifacts/HelloJavaEE3_war_exploded/WEB-INF/classes/web/WEB-INF/lib/sqlite-jdbc-3.23.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/test/HelloJavaEE3/artifacts/HelloJavaEE3_war_exploded/WEB-INF/classes/web/WEB-INF/lib/standard.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/test/HelloJavaEE3/artifacts/HelloJavaEE3_war_exploded/WEB-INF/classes/web/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/test/HelloJavaEE3/artifacts/HelloJavaEE3_war_exploded/WEB-INF/classes/web/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/test/HelloJavaEE3/artifacts/HelloJavaEE3_war_exploded/WEB-INF/lib/jstl.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/test/HelloJavaEE3/artifacts/HelloJavaEE3_war_exploded/WEB-INF/lib/mysql-connector-java-5.1.39-bin.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/test/HelloJavaEE3/artifacts/HelloJavaEE3_war_exploded/WEB-INF/lib/sqlite-jdbc-3.23.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/test/HelloJavaEE3/artifacts/HelloJavaEE3_war_exploded/WEB-INF/lib/standard.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/test/HelloJavaEE3/artifacts/HelloJavaEE3_war_exploded/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/test/HelloJavaEE3/artifacts/HelloJavaEE3_war_exploded/index.jsp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/test/HelloJavaEE3/production/HelloJavaEE3/.idea/artifacts/HelloJavaEE3_war_exploded.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/test/HelloJavaEE3/production/HelloJavaEE3/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/test/HelloJavaEE3/production/HelloJavaEE3/.idea/libraries/lib.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/test/HelloJavaEE3/production/HelloJavaEE3/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/test/HelloJavaEE3/production/HelloJavaEE3/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/test/HelloJavaEE3/production/HelloJavaEE3/.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/test/HelloJavaEE3/production/HelloJavaEE3/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/test/HelloJavaEE3/production/HelloJavaEE3/HelloJavaEE3.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/test/HelloJavaEE3/production/HelloJavaEE3/web/WEB-INF/lib/jstl.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/test/HelloJavaEE3/production/HelloJavaEE3/web/WEB-INF/lib/mysql-connector-java-5.1.39-bin.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/test/HelloJavaEE3/production/HelloJavaEE3/web/WEB-INF/lib/sqlite-jdbc-3.23.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/test/HelloJavaEE3/production/HelloJavaEE3/web/WEB-INF/lib/standard.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/test/HelloJavaEE3/production/HelloJavaEE3/web/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/test/HelloJavaEE3/production/HelloJavaEE3/web/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/test/HelloJavaEE3/test/HelloJavaEE3/production/HelloJavaEE3/.idea/artifacts/HelloJavaEE3_war_exploded.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/test/HelloJavaEE3/test/HelloJavaEE3/production/HelloJavaEE3/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/test/HelloJavaEE3/test/HelloJavaEE3/production/HelloJavaEE3/.idea/libraries/lib.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/test/HelloJavaEE3/test/HelloJavaEE3/production/HelloJavaEE3/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/test/HelloJavaEE3/test/HelloJavaEE3/production/HelloJavaEE3/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/test/HelloJavaEE3/test/HelloJavaEE3/production/HelloJavaEE3/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/test/HelloJavaEE3/test/HelloJavaEE3/production/HelloJavaEE3/HelloJavaEE3.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/test/HelloJavaEE3/test/HelloJavaEE3/production/HelloJavaEE3/web/WEB-INF/lib/jstl.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/test/HelloJavaEE3/test/HelloJavaEE3/production/HelloJavaEE3/web/WEB-INF/lib/mysql-connector-java-5.1.39-bin.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/test/HelloJavaEE3/test/HelloJavaEE3/production/HelloJavaEE3/web/WEB-INF/lib/sqlite-jdbc-3.23.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/test/HelloJavaEE3/test/HelloJavaEE3/production/HelloJavaEE3/web/WEB-INF/lib/standard.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/test/HelloJavaEE3/test/HelloJavaEE3/production/HelloJavaEE3/web/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/test/HelloJavaEE3/test/HelloJavaEE3/test/HelloJavaEE3/production/HelloJavaEE3/web/index.jsp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
     </list>
@@ -25,11 +118,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="312">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/HelloWorld.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
             </state>
           </provider>
         </entry>
@@ -71,7 +173,18 @@
             <path>
               <item name="HelloJavaEE3" type="b2602c69:ProjectViewProjectNode" />
               <item name="HelloJavaEE3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HelloJavaEE3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HelloJavaEE3" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HelloJavaEE3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HelloJavaEE3" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="HelloJavaEE3" type="b2602c69:ProjectViewProjectNode" />
@@ -96,11 +209,11 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551370539015" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/out/artifacts" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551370893497" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/WEB-INF/lib" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
@@ -290,16 +403,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1551369169984</updated>
-      <workItem from="1551369172823" duration="1365000" />
+      <workItem from="1551369172823" duration="1701000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1365000" />
+    <option name="totallyTimeSpent" value="1701000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="-8" width="1861" height="1096" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Designer" />
       <window_info id="Image Layers" />
@@ -342,7 +454,14 @@
     <entry file="file://$PROJECT_DIR$/web/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HelloWorld.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>
@@ -412,7 +531,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
