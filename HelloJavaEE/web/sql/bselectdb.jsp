@@ -8,8 +8,17 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java"
     pageEncoding="utf-8" %>
 <%@page import="java.sql.*" %>  <%--导入java.sql包--%>
+<%
+    String path = request.getContextPath();
+    String basePath = request.getScheme() + "://"
+            + request.getServerName() + ":" + request.getServerPort()
+            + path + "/";
+%>
+
 <html>
 <head>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/js/mysql/event.js"></script>
+    <base href="<%=basePath%>">
     <meta charset="UTF-8">
     <title >查询事项</title>
     <style>
@@ -17,11 +26,18 @@
             border: 1px solid red;
         }
     </style>
+
+
+    <%--var a=<%int i=1;i++;out.print(i); %>;--%>
+    <%--alert("a="+a);--%>
+
+
 </head>
 <body>
 <h1>查询数据项</h1>
 </p>
 </p>
+
 <form>
     <div style="text-align:center; vertical-align:middle;font-size:xx-large">
     <input type="text"   name="qry" size="100"  maxlength="200" value="" height="500" ><br>
@@ -81,14 +97,14 @@ try {
             String sqltail = " order by id desc;";
             String sqlmid = " ";
             String []qrylst = qryval.split(" ");
-            for (int i = 0; i < qrylst.length; i++) {
+            for (int lp = 0; lp < qrylst.length; lp++) {
 //                out.println("split str:" + qrylst[i]);
 //                out.print("<br />");
 //                sqlmid += "content like  \"%" + qrylst[i] + "%\" ";
-                out.println("split str:" + new String(qrylst[i].getBytes("iso-8859-1"),"utf-8"));
+                out.println("split str:" + new String(qrylst[lp].getBytes("iso-8859-1"),"utf-8"));
                 out.print("<br />");
-                sqlmid += "content like  \"%" + new String(qrylst[i].getBytes("iso-8859-1"),"utf-8") + "%\" ";
-                if(i != qrylst.length - 1)
+                sqlmid += "content like  \"%" + new String(qrylst[lp].getBytes("iso-8859-1"),"utf-8") + "%\" ";
+                if(lp != qrylst.length - 1)
                     sqlmid += " and ";
 
             }
