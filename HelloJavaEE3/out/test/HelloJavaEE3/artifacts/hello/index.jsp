@@ -11,7 +11,18 @@
     <title>第一个Web项目</title>
   </head>
   <body>
-  Hello World
-  第一个Web项目运行成功啦!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  <%--世界依然美好，一路前行，有你。--%>
+  <%--关于世界的传递，未来集团。--%>
+  <h1>《短歌行》</h1>
+  <p/>
+  <p/>
+  <p/>
+  <p/>
+  <p/>
+
+  <h1 align="center"><a href="sql/bselectdb.jsp">我的记事本(mysql)</a></h1>
+  <h1 align="center"><a href="sql/showhiddentext.jsp">展开示例</a></h1>
+  <h1 align="center"><a href="sql/showhiddentext.html">展开示例2</a></h1>
+
   </body>
 </html>

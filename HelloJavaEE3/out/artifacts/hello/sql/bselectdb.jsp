@@ -17,47 +17,94 @@
 
 <html>
 <head>
-    <script type="text/javascript" src="${pageContext.request.contextPath}/js/mysql/event.js"></script>
+    <script type="text/javascript"
+            src="${pageContext.request.contextPath}/js/mysql/event.js">
+    </script>
     <base href="<%=basePath%>">
     <meta charset="UTF-8">
-    <title >查询事项</title>
+    <title >我的超级记事本(mysql)</title>
     <style>
         th, tr, td, table {
             border: 1px solid red;
+            tab-interval: 10px;
+            background-color: aliceblue;
+            font-size: medium;
         }
     </style>
 
 
     <%--var a=<%int i=1;i++;out.print(i); %>;--%>
     <%--alert("a="+a);--%>
+    <script type="text/javascript">
+        //获取button按钮
+        var btn=document.getElementById('btn');
+        //获取p
+        var content=document.getElementById('content');
+        //获取p中的内容
+        var str=content.innerHTML;
+        //定义一个变量，表示当前的状态（收缩、展开）
+        var onOff=true;// true表示展开
+        console.log("onOff:" + onOff)
+        btn.onclick=function(){
+            console.log("onclick onOff:" + onOff)
+            if(onOff) {
+                content.innerHTML = str.substr(0,50)+"......";
+                btn.innerHTML='>>>展开'
+            } else {
+                //说明当前状态是收缩的，需要展开
+                content.innerHTML = str
+                btn.innerHTML = '<<<收缩';
+            }
+            onOff=!onOff; //每点击一次，改变一次展开、收缩状态
+            return false;  //阻止a标签的默认事件
+        }
 
-
+        window.onload=function(){
+            console.log("onclick onOff:" + onOff)
+            if(onOff) {
+                content.innerHTML = str.substr(0,50)+"......";
+                btn.innerHTML='>>>展开'
+            } else {
+                //说明当前状态是收缩的，需要展开
+                content.innerHTML = str
+                btn.innerHTML = '<<<收缩';
+            }
+            onOff=!onOff; //每点击一次，改变一次展开、收缩状态
+            return false;  //阻止a标签的默认事件
+        }
+    </script>
 </head>
 <body>
-<h1>查询数据项</h1>
+<%--<h1>查询结果</h1>--%>
 </p>
 </p>
 
-<form>
-    <div style="text-align:center; vertical-align:middle;font-size:xx-large">
-    <input type="text"   name="qry" size="100"  maxlength="200" value="" height="500" ><br>
-    <%--<input type="text" name="only" size="30" maxlength="20" readonly value="你只能读不能修改">--%>
-    </div>
+<style type="text/css">
+    .text1{
+    height:40px
+    }
+</style>
+
+<form name="form1" method="post" action="sql/bselectdb.jsp">
+    <h1>
+    请输入查询数据：<input type="text" class="text1" name="qrydata" size="80">
+        <input type="submit" name="Submit" value="点击查询">
+    </h1>
 </form>
 
 
 <%
     String qryval = "";
     try {
-        qryval = request.getParameter("qry");
+        qryval = request.getParameter("qrydata");
 //    out.print("查询数据项:" + qryval);
-        if (!qryval.isEmpty()) {
-            out.print("查询数据项:" + new String(qryval.getBytes("iso-8859-1"), "utf-8"));
-            out.print("<br />");
-        }
+//        if (!qryval.isEmpty()) {
+//            out.print("查询内容:" +
+//                    new String(qryval.getBytes("iso-8859-1"), "utf-8"));
+//            out.print("<br />");
+//        }
     }catch (Exception e)
     {
-
     }
 
 
@@ -92,17 +139,13 @@ try {
         }
         else
         {
-//            sql = "SELECT * from abc order by id desc limit 30;";  //查询语句
             String sqlhead = " SELECT * FROM "+ tablename  + " WHERE ";
             String sqltail = " order by id desc;";
             String sqlmid = " ";
             String []qrylst = qryval.split(" ");
             for (int lp = 0; lp < qrylst.length; lp++) {
-//                out.println("split str:" + qrylst[i]);
+//                out.println("split str:" + new String(qrylst[lp].getBytes("iso-8859-1"),"utf-8"));
 //                out.print("<br />");
-//                sqlmid += "content like  \"%" + qrylst[i] + "%\" ";
-                out.println("split str:" + new String(qrylst[lp].getBytes("iso-8859-1"),"utf-8"));
-                out.print("<br />");
                 sqlmid += "content like  \"%" + new String(qrylst[lp].getBytes("iso-8859-1"),"utf-8") + "%\" ";
                 if(lp != qrylst.length - 1)
                     sqlmid += " and ";
@@ -110,7 +153,6 @@ try {
             }
 
             sql = sqlhead + sqlmid + sqltail;
-//            out.println("split str:" + qrylst[i]);
             out.println("sql express:" + sql);
             out.print("<br />");
 
@@ -128,6 +170,8 @@ try {
         <%--<td ><%=rs.getString("name").replace("\n", "<br/>") %></td>--%>
         <td ><%=rs.getString("content").replace("\n", "<br/>") %></td>
     </tr>
+
+
     <%
 
                 }
@@ -137,11 +181,18 @@ try {
                 out.print("连接失败！");
             }
         }catch (Exception e) {
-            //e.printStackTrace();
-            out.print("数据库连接异常！");
+//            e.printStackTrace();
+//            out.print("数据库连接异常！");
+            out.print("请输入查询数据！");
         }
     %>
 </table>
+
+<h2 align="center"><font size="12" color="red">~~不能再底部了~~~</font> </h2>
+
+
+
+
 </body>
 </html>
 
