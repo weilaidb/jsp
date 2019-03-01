@@ -21,8 +21,9 @@
   <p/>
 
   <h1 align="center"><a href="sql/bselectdb.jsp">我的记事本(mysql)</a></h1>
-  <h1 align="center"><a href="sql/showhiddentext.jsp">展开示例</a></h1>
-  <h1 align="center"><a href="sql/showhiddentext.html">展开示例2</a></h1>
+  <h1 align="center"><a href="sql/showhiddentext.jsp">展开示例 jsp</a></h1>
+  <h1 align="center"><a href="sql/showhiddentext.html">展开示例 html</a></h1>
+  <h1 align="center"><a href="sql/tableshowhide.html">展开示例 table</a></h1>
 
   </body>
 </html>

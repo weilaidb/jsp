@@ -14,6 +14,25 @@
             + request.getServerName() + ":" + request.getServerPort()
             + path + "/";
 %>
+<style>
+.wrap{
+width: 150px; //设置需要固定的宽度
+white-space: wrap; //不换行
+text-overflow: ellipsis; //超出部分用....代替
+overflow: hidden; //超出隐藏
+}
+
+.mytable tr td {
+    /* for IE */
+    text-overflow: ellipsis;
+    /* for Firefox,mozilla */
+    -moz-text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: left
+}
+
+</style>
 
 <html>
 <head>
@@ -37,9 +56,9 @@
     <%--alert("a="+a);--%>
     <script type="text/javascript">
         //获取button按钮
-        var btn=document.getElementById('btn');
+        var btn=document.getElementById('showorhidebtn');
         //获取p
-        var content=document.getElementById('content');
+        var content=document.getElementById('tablecontent');
         //获取p中的内容
         var str=content.innerHTML;
         //定义一个变量，表示当前的状态（收缩、展开）
@@ -73,6 +92,9 @@
             return false;  //阻止a标签的默认事件
         }
     </script>
+
+
+
 </head>
 <body>
 <%--<h1>查询结果</h1>--%>
@@ -122,6 +144,11 @@ try {
             out.print("<br />");
 %>
 
+<%--<table width='100%' border='0' cellspacing='0'--%>
+       <%--cellpadding='0' class='mytable'--%>
+       <%--style='table-layout: fixed'>;--%>
+<%--<table border="1" width="100%">--%>
+
 <table border="1" width="100%">
     <tr>
         <th>ID</th>
@@ -144,8 +171,6 @@ try {
             String sqlmid = " ";
             String []qrylst = qryval.split(" ");
             for (int lp = 0; lp < qrylst.length; lp++) {
-//                out.println("split str:" + new String(qrylst[lp].getBytes("iso-8859-1"),"utf-8"));
-//                out.print("<br />");
                 sqlmid += "content like  \"%" + new String(qrylst[lp].getBytes("iso-8859-1"),"utf-8") + "%\" ";
                 if(lp != qrylst.length - 1)
                     sqlmid += " and ";
@@ -165,9 +190,59 @@ try {
         while (rs.next()) {
             rowCount++;
     %>
-        <tr><%=rs.getString("id").replace("\n", "<br/>") %></td>
+
+    <tr>
+        <%
+        String showid = rs.getString("id").replace("\n", "<br/>");
+        showid = "<a href=sql/queryid.jsp>" + showid + "</a>";
+        %>
+        <td><%= showid %></td>
         <%--<td ><%=rs.getString("name").replace("\n", "<br/>") %></td>--%>
-        <td ><%=rs.getString("content").replace("\n", "<br/>") %></td>
+        <%--<td ><%=rs.getString("content").replace("\n", "<br/>") %></td>--%>
+        <%String showcontent = rs.getString("content")
+                .replaceAll("<[.[^<\n]]*>", "")
+                .replace("\n", "<br/>");
+            int showlen = 500;
+            long totallen = showcontent.length();
+//            String appendstr = "[TLen:" + showcontent.length();
+            if(showcontent.length() > showlen)
+            {
+                showcontent = showcontent.substring(0,showlen);
+            }
+            long curlen = showcontent.length();
+            String appendstr = "ShowRate:" + (curlen * 100/totallen) + "%";
+            if((curlen * 100/totallen) == 100)
+            {
+                appendstr = "";
+            }
+            else
+            {
+                appendstr = "<h3 color=red>" + appendstr + "</h3>";
+            }
+        %>
+        <td ><%=showcontent + "<br/><br/><br/>" + appendstr%></td>
+
+        <%--<td ><%=Html2Text.getContent(rs.getString("content").replace("\n", "<br/>")) %></td>--%>
+
+
+
+        <%--<td style='word-wrap: break-word'><%=rs.getString("content").replace("\n", "<br/>") %></td>--%>
+
+
+        <%--<td style="overflow: hidden; white-space: nowrap; text-overflow: ellipsis;"><%=rs.getString("content").replace("\n", "<br/>") %></td>--%>
+
+
+        <%--<td class="wrap">--%>
+            <%--<div class="wrap">--%>
+                <%--<%=rs.getString("content").replace("\n", "<br/>") %>--%>
+            <%--</div>--%>
+        <%--</td>--%>
+        <%--<td >--%>
+            <%--<span id="tablecontent">--%>
+            <%--<%=rs.getString("content").replace("\n", "<br/>") %>--%>
+            <%--</span>--%>
+            <%--<a href=""  id="showorhidebtn"><<<收缩</a>--%>
+        <%--</td>--%>
     </tr>
 
 
