@@ -7,20 +7,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f3158e1-4520-4f9f-add1-db9f54a74a32" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/hello3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/hello_archive.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/hello/WEB-INF/classes/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/hello/WEB-INF/classes/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/hello/WEB-INF/classes/web/sql/bselectdb.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/hello/WEB-INF/classes/web/sql/bselectdb.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/hello/sql/bselectdb.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/hello/sql/bselectdb.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/hello3.war" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/hello3.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloJavaEE3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloJavaEE3/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/HelloJavaEE3/web/sql/bselectdb.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloJavaEE3/web/sql/bselectdb.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/hello/WEB-INF/classes/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/hello/WEB-INF/classes/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/hello/WEB-INF/classes/web/sql/bselectdb.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/hello/WEB-INF/classes/web/sql/bselectdb.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/hello/sql/bselectdb.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/hello/sql/bselectdb.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/sql/bselectdb.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/sql/bselectdb.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sql/queryid.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/sql/queryid.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,8 +36,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/sql/bselectdb.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="386">
-              <caret line="168" lean-forward="true" selection-start-line="168" selection-end-line="168" />
+            <state relative-caret-position="322">
+              <caret line="163" column="57" selection-start-line="163" selection-start-column="57" selection-end-line="163" selection-end-column="57" />
             </state>
           </provider>
         </entry>
@@ -52,17 +45,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/sql/queryid.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
+            <state relative-caret-position="189">
               <caret line="114" column="25" selection-start-line="114" selection-start-column="25" selection-end-line="114" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/java/lang/String.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="56580">
-              <caret line="1957" column="18" selection-start-line="1957" selection-start-column="18" selection-end-line="1957" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -138,12 +122,13 @@
       <find>text1</find>
       <find>type=&quot;text&quot;</find>
       <find>mytable</find>
-      <find>rowCount</find>
       <find>请输入查询数据</find>
       <find>qryval</find>
       <find>wrap</find>
       <find>getBytes</find>
       <find>短歌行</find>
+      <find>sql ex</find>
+      <find>rowCount</find>
     </findStrings>
     <replaceStrings>
       <replace>qryiddata</replace>
@@ -226,7 +211,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551498173414" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551504069897" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/web/WEB-INF/lib" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -351,12 +336,12 @@
       <updated>1551369169984</updated>
       <workItem from="1551369172823" duration="2539000" />
       <workItem from="1551444672347" duration="13513000" />
-      <workItem from="1551493311739" duration="4850000" />
+      <workItem from="1551493311739" duration="7277000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20902000" />
+    <option name="totallyTimeSpent" value="23329000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -371,7 +356,7 @@
     <frame x="67" y="-8" width="1861" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.064891845" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17526345" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -381,7 +366,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.1873706" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.09006211" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39958593" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -437,13 +422,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56580">
-          <caret line="1957" column="18" selection-start-line="1957" selection-start-column="18" selection-end-line="1957" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/sql/tableshowhide.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -479,13 +457,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/sql/queryid.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="114" column="25" selection-start-line="114" selection-start-column="25" selection-end-line="114" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -493,10 +464,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="91">
+          <caret line="628" column="26" selection-start-line="628" selection-start-column="22" selection-end-line="628" selection-end-column="26" />
+          <folding>
+            <element signature="e#23072#23073#0" expanded="true" />
+            <element signature="e#23112#23113#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/sql/queryid.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="114" column="25" selection-start-line="114" selection-start-column="25" selection-end-line="114" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/sql/bselectdb.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="168" lean-forward="true" selection-start-line="168" selection-end-line="168" />
+        <state relative-caret-position="322">
+          <caret line="163" column="57" selection-start-line="163" selection-start-column="57" selection-end-line="163" selection-end-column="57" />
         </state>
       </provider>
     </entry>

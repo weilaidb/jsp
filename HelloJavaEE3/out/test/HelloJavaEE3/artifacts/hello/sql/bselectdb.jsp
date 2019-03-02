@@ -170,7 +170,7 @@
             }
 
             sql = sqlhead + sqlmid + sqltail;
-//            out.println("sql express:" + sql);
+            out.println("sql express:" + sql);
             out.print("<br />");
 
 
