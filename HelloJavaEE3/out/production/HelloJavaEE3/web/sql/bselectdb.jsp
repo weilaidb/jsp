@@ -4,117 +4,118 @@
   Date: 2019/2/26
   Time: 21:12
   To change this template use File | Settings | File Templates.
+  File:bselectdb.jsp
 --%>
+<%--================page定义=========================--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java"
-    pageEncoding="utf-8" %>
+         pageEncoding="utf-8" %>
+
+<%--================引入头文件=========================--%>
 <%@page import="java.sql.*" %>  <%--导入java.sql包--%>
+
+
+<%--================css配置=========================--%>
+<style type="text/css">
+    .mytable th, tr, td, table {
+        /* for IE */
+        text-overflow: ellipsis;
+        /* for Firefox,mozilla */
+        -moz-text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        text-align: left;
+
+        border: 1px solid red;
+        tab-interval: 10px;
+        background-color: aliceblue;
+        font-size: medium;
+    }
+
+    .text1 {
+        height: 40px
+    }
+
+    .text2 {
+        height: 20px;
+    }
+</style>
+
+<%--================获取路径和基础路径=========================--%>
 <%
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://"
             + request.getServerName() + ":" + request.getServerPort()
             + path + "/";
 %>
-<style>
-.wrap{
-width: 150px; //设置需要固定的宽度
-white-space: wrap; //不换行
-text-overflow: ellipsis; //超出部分用....代替
-overflow: hidden; //超出隐藏
-}
 
-.mytable tr td {
-    /* for IE */
-    text-overflow: ellipsis;
-    /* for Firefox,mozilla */
-    -moz-text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-    text-align: left
-}
-
-</style>
 
 <html>
 <head>
+    <%--================javascript定义=========================--%>
     <script type="text/javascript"
             src="${pageContext.request.contextPath}/js/mysql/event.js">
+        //获取button按钮
+        var btn = document.getElementById('showorhidebtn');
+        //获取p
+        var content = document.getElementById('tablecontent');
+        //获取p中的内容
+        var str = content.innerHTML;
+        //定义一个变量，表示当前的状态（收缩、展开）
+        var onOff = true;// true表示展开
+        console.log("onOff:" + onOff)
+        btn.onclick = function () {
+            console.log("onclick onOff:" + onOff)
+            if (onOff) {
+                content.innerHTML = str.substr(0, 50) + "......";
+                btn.innerHTML = '>>>展开'
+            } else {
+                //说明当前状态是收缩的，需要展开
+                content.innerHTML = str
+                btn.innerHTML = '<<<收缩';
+            }
+            onOff = !onOff; //每点击一次，改变一次展开、收缩状态
+            return false;  //阻止a标签的默认事件
+        }
+
+        window.onload = function () {
+            console.log("onclick onOff:" + onOff)
+            if (onOff) {
+                content.innerHTML = str.substr(0, 50) + "......";
+                btn.innerHTML = '>>>展开'
+            } else {
+                //说明当前状态是收缩的，需要展开
+                content.innerHTML = str
+                btn.innerHTML = '<<<收缩';
+            }
+            onOff = !onOff; //每点击一次，改变一次展开、收缩状态
+            return false;  //阻止a标签的默认事件
+        }
+
+        function setqryid(id) {
+            console.log("id is:" + id);
+            request.setParameter("iddata", id);
+        }
     </script>
     <base href="<%=basePath%>">
     <meta charset="UTF-8">
-    <title >我的超级记事本(mysql)</title>
-    <style>
-        th, tr, td, table {
-            border: 1px solid red;
-            tab-interval: 10px;
-            background-color: aliceblue;
-            font-size: medium;
-        }
-    </style>
-
-
-    <%--var a=<%int i=1;i++;out.print(i); %>;--%>
-    <%--alert("a="+a);--%>
-    <script type="text/javascript">
-        //获取button按钮
-        var btn=document.getElementById('showorhidebtn');
-        //获取p
-        var content=document.getElementById('tablecontent');
-        //获取p中的内容
-        var str=content.innerHTML;
-        //定义一个变量，表示当前的状态（收缩、展开）
-        var onOff=true;// true表示展开
-        console.log("onOff:" + onOff)
-        btn.onclick=function(){
-            console.log("onclick onOff:" + onOff)
-            if(onOff) {
-                content.innerHTML = str.substr(0,50)+"......";
-                btn.innerHTML='>>>展开'
-            } else {
-                //说明当前状态是收缩的，需要展开
-                content.innerHTML = str
-                btn.innerHTML = '<<<收缩';
-            }
-            onOff=!onOff; //每点击一次，改变一次展开、收缩状态
-            return false;  //阻止a标签的默认事件
-        }
-
-        window.onload=function(){
-            console.log("onclick onOff:" + onOff)
-            if(onOff) {
-                content.innerHTML = str.substr(0,50)+"......";
-                btn.innerHTML='>>>展开'
-            } else {
-                //说明当前状态是收缩的，需要展开
-                content.innerHTML = str
-                btn.innerHTML = '<<<收缩';
-            }
-            onOff=!onOff; //每点击一次，改变一次展开、收缩状态
-            return false;  //阻止a标签的默认事件
-        }
-    </script>
-
-
-
+    <title>我的超级记事本(mysql)</title>
 </head>
 <body>
 <%--<h1>查询结果</h1>--%>
 </p>
 </p>
 
-<style type="text/css">
-    .text1{
-    height:40px
-    }
-</style>
 
 <form name="form1" method="post" action="sql/bselectdb.jsp">
     <h1>
-    请输入查询数据：<input type="text" class="text1" name="qrydata" size="80">
+        请输入查询数据：<input type="text" class="text1" name="qrydata" size="80">
         <input type="submit" name="Submit" value="点击查询">
     </h1>
 </form>
 
 
+<%--================获取查询数据================--%>
+<%--================打开数据库================--%>
 <%
     String qryval = "";
     try {
@@ -125,12 +126,11 @@ overflow: hidden; //超出隐藏
 //                    new String(qryval.getBytes("iso-8859-1"), "utf-8"));
 //            out.print("<br />");
 //        }
-    }catch (Exception e)
-    {
+    } catch (Exception e) {
     }
 
 
-try {
+    try {
         Class.forName("com.mysql.jdbc.Driver");  ////驱动程序名
         String url = "jdbc:mysql://localhost:3306/alldb?useUnicode=true&characterEncoding=utf-8"; //数据库名
 //        String url = "jdbc:mysql://localhost:3306/alldb?useSSL=true"; //数据库名
@@ -139,40 +139,32 @@ try {
         String password = "Zzerp123";  //数据库用户密码
         Connection conn = DriverManager.getConnection(url, username, password);  //连接状态
 
-        if(conn != null){
+        if (conn != null) {
 //            out.print("数据库连接成功！");
             out.print("<br />");
 %>
 
-<%--<table width='100%' border='0' cellspacing='0'--%>
-       <%--cellpadding='0' class='mytable'--%>
-       <%--style='table-layout: fixed'>;--%>
-<%--<table border="1" width="100%">--%>
-
-<table border="1" width="100%">
+<table border="1" width="100%" class='mytable'>
     <tr>
-        <th>ID</th>
+        <th>序列</th>
         <%--<th>名称</th>--%>
-        <th>内容</th>
+        <th>数据</th>
     </tr>
     <%
         Statement stmt = null;
         ResultSet rs = null;
         String sql = "";  //查询语句
         String tablename = "abc";
-        if(qryval.trim().isEmpty())
-        {
+        if (qryval.trim().isEmpty()) {
             sql = "SELECT * from " + tablename + " order by id desc limit 30;";  //查询语句
-        }
-        else
-        {
-            String sqlhead = " SELECT * FROM "+ tablename  + " WHERE ";
+        } else {
+            String sqlhead = " SELECT * FROM " + tablename + " WHERE ";
             String sqltail = " order by id desc;";
             String sqlmid = " ";
-            String []qrylst = qryval.split(" ");
+            String[] qrylst = qryval.split(" ");
             for (int lp = 0; lp < qrylst.length; lp++) {
-                sqlmid += "content like  \"%" + new String(qrylst[lp].getBytes("iso-8859-1"),"utf-8") + "%\" ";
-                if(lp != qrylst.length - 1)
+                sqlmid += "content like  \"%" + new String(qrylst[lp].getBytes("iso-8859-1"), "utf-8") + "%\" ";
+                if (lp != qrylst.length - 1)
                     sqlmid += " and ";
 
             }
@@ -191,80 +183,64 @@ try {
             rowCount++;
     %>
 
+
     <tr>
-        <%
-        String showid = rs.getString("id").replace("\n", "<br/>");
-        showid = "<a href=sql/queryid.jsp>" + showid + "</a>";
-        %>
-        <td><%= showid %></td>
+        <td>
+            <%
+                String orgshowid = rs.getString("id").replace("\n", "<br/>");
+            %>
+            <form name="form2" method="post" action="sql/queryid.jsp">
+                <input type="text"
+                       size="4"
+                       class="text2"
+                       name="iddata"
+                       readonly="readonly"
+                       value="<%=orgshowid%>">
+                <input type="submit" name="Submit" value="More">
+            </form>
+        </td>
         <%--<td ><%=rs.getString("name").replace("\n", "<br/>") %></td>--%>
         <%--<td ><%=rs.getString("content").replace("\n", "<br/>") %></td>--%>
-        <%String showcontent = rs.getString("content")
-                .replaceAll("<[.[^<\n]]*>", "")
-                .replace("\n", "<br/>");
+        <%
+            String showcontent = rs.getString("content")
+                    .replaceAll("<[.[^<\n]]*>", "")
+                    .replace("\n", "<br/>");
             int showlen = 500;
             long totallen = showcontent.length();
-//            String appendstr = "[TLen:" + showcontent.length();
-            if(showcontent.length() > showlen)
-            {
-                showcontent = showcontent.substring(0,showlen);
+            if (showcontent.length() > showlen) {
+                showcontent = showcontent.substring(0, showlen);
             }
             long curlen = showcontent.length();
-            String appendstr = "ShowRate:" + (curlen * 100/totallen) + "%";
-            if((curlen * 100/totallen) == 100)
-            {
+            String appendstr = "ShowRate:" + (curlen * 100 / totallen) + "%";
+            if ((curlen * 100 / totallen) == 100) {
                 appendstr = "";
-            }
-            else
-            {
+            } else {
                 appendstr = "<h3 color=red>" + appendstr + "</h3>";
             }
         %>
-        <td ><%=showcontent + "<br/><br/><br/>" + appendstr%></td>
-
-        <%--<td ><%=Html2Text.getContent(rs.getString("content").replace("\n", "<br/>")) %></td>--%>
-
-
-
-        <%--<td style='word-wrap: break-word'><%=rs.getString("content").replace("\n", "<br/>") %></td>--%>
-
-
-        <%--<td style="overflow: hidden; white-space: nowrap; text-overflow: ellipsis;"><%=rs.getString("content").replace("\n", "<br/>") %></td>--%>
-
-
-        <%--<td class="wrap">--%>
-            <%--<div class="wrap">--%>
-                <%--<%=rs.getString("content").replace("\n", "<br/>") %>--%>
-            <%--</div>--%>
-        <%--</td>--%>
-        <%--<td >--%>
-            <%--<span id="tablecontent">--%>
-            <%--<%=rs.getString("content").replace("\n", "<br/>") %>--%>
-            <%--</span>--%>
-            <%--<a href=""  id="showorhidebtn"><<<收缩</a>--%>
-        <%--</td>--%>
+        <td><%=showcontent + "<br/><br/><br/>" + appendstr%>
+        </td>
     </tr>
 
 
     <%
-
                 }
-                out.print("查询结果：" + rowCount + " 条");
+                out.print("查询结果：" + rowCount + " 条["
+                        + new String(qryval.getBytes("iso-8859-1"), "utf-8")
+                        + "]");
                 out.print("<br/>");
-            }else{
+            } else {
                 out.print("连接失败！");
             }
-        }catch (Exception e) {
+        } catch (Exception e) {
 //            e.printStackTrace();
 //            out.print("数据库连接异常！");
-            out.print("请输入查询数据！");
+            out.print("请输入查询数据!!!");
         }
     %>
 </table>
 
-<h2 align="center"><font size="12" color="red">~~不能再底部了~~~</font> </h2>
-
-
+<h2 align="center"><font size="12" color="red">~~不能再底部了~~~</font></h2>
 
 
 </body>
