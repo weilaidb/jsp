@@ -161,7 +161,7 @@
             String sqlhead = " SELECT * FROM " + tablename + " WHERE ";
             String sqltail = " order by id desc;";
             String sqlmid = " ";
-            String[] qrylst = qryval.split(" ");
+            String[] qrylst = qryval.replace("\"","\\\"").split(" ");
             for (int lp = 0; lp < qrylst.length; lp++) {
                 sqlmid += "content like  \"%" + new String(qrylst[lp].getBytes("iso-8859-1"), "utf-8") + "%\" ";
                 if (lp != qrylst.length - 1)
