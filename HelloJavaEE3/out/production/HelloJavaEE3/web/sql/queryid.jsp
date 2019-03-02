@@ -36,12 +36,14 @@
     .text2 {
         height: 20px;
     }
+
+    .boxes{font-size:20px;}
 </style>
 
 
 <html>
 <head>
-    <title>查询数据内容是啥呢？</title>
+    <title>显示ID数据</title>
 </head>
 <body>
 
@@ -71,7 +73,7 @@
 
         if (conn != null) {
 //            out.print("数据库连接成功！");
-            out.print("<br />");
+//            out.print("<br />");
     %>
 
 <h1><%=qryiddata%></h1>
@@ -89,26 +91,8 @@
         ResultSet rs = null;
         String sql = "";  //查询语句
         String tablename = "abc";
-//        if (qryiddata.trim().isEmpty()) {
-            sql = "SELECT * from " + tablename + " WHERE id=" + whichid + ";";  //查询语句
-//        } else {
-//            String sqlhead = " SELECT * FROM " + tablename + " WHERE ";
-//            String sqltail = " order by id desc;";
-//            String sqlmid = " ";
-//            String[] qrylst = qryiddata.split(" ");
-//            for (int lp = 0; lp < qrylst.length; lp++) {
-//                sqlmid += "content like  \"%" + new String(qrylst[lp].getBytes("iso-8859-1"), "utf-8") + "%\" ";
-//                if (lp != qrylst.length - 1)
-//                    sqlmid += " and ";
-//
-//            }
-//
-//            sql = sqlhead + sqlmid + sqltail;
-//            out.println("sql express:" + sql);
-//            out.print("<br />");
-//
-//
-//        }
+        sql = "SELECT * from " + tablename + " WHERE id=" + whichid + ";";  //查询语句
+
         stmt = conn.createStatement();
         rs = stmt.executeQuery(sql);
 
@@ -117,34 +101,13 @@
             rowCount++;
     %>
 
+    <%String toshowcontent  = rs.getString("content");%>
 
     <tr>
         <td>
-            <%=rs.getString("content").replace("\n", "<br/>")%>
+            <textarea rows="100%" cols="300%" class="boxes"><%=toshowcontent%></textarea>
         </td>
-        <%--<td ><%=rs.getString("name").replace("\n", "<br/>") %></td>--%>
-        <%--<td ><%=rs.getString("content").replace("\n", "<br/>") %></td>--%>
-        <%--<%--%>
-            <%--String showcontent = rs.getString("content")--%>
-                    <%--.replaceAll("<[.[^<\n]]*>", "")--%>
-                    <%--.replace("\n", "<br/>");--%>
-            <%--int showlen = 500;--%>
-            <%--long totallen = showcontent.length();--%>
-            <%--if (showcontent.length() > showlen) {--%>
-                <%--showcontent = showcontent.substring(0, showlen);--%>
-            <%--}--%>
-            <%--long curlen = showcontent.length();--%>
-            <%--String appendstr = "ShowRate:" + (curlen * 100 / totallen) + "%";--%>
-            <%--if ((curlen * 100 / totallen) == 100) {--%>
-                <%--appendstr = "";--%>
-            <%--} else {--%>
-                <%--appendstr = "<h3 color=red>" + appendstr + "</h3>";--%>
-            <%--}--%>
-        <%--%>--%>
-        <%--<td><%=showcontent + "<br/><br/><br/>" + appendstr%>--%>
-        <%--</td>--%>
     </tr>
-
 
     <%
                 }
@@ -154,8 +117,6 @@
                 out.print("连接失败！");
             }
         } catch (Exception e) {
-//            e.printStackTrace();
-//            out.print("数据库连接异常！");
             out.print("请输入查询数据!!!");
         }
     %>

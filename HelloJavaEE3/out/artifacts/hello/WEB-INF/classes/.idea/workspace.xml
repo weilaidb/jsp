@@ -2,11 +2,112 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="hello_archive" />
+      <artifact name="hello" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f3158e1-4520-4f9f-add1-db9f54a74a32" name="Default Changelist" comment="" />
+    <list default="true" id="2f3158e1-4520-4f9f-add1-db9f54a74a32" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/hello/WEB-INF/classes/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/hello/WEB-INF/classes/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/hello/WEB-INF/classes/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/hello/WEB-INF/classes/web/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/hello/WEB-INF/classes/web/sql/bselectdb.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/hello/WEB-INF/classes/web/sql/bselectdb.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/hello/WEB-INF/classes/web/sql/queryid.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/hello/WEB-INF/classes/web/sql/queryid.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/hello/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/hello/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/hello/sql/bselectdb.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/hello/sql/bselectdb.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/hello/sql/queryid.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/hello/sql/queryid.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloJavaEE3/.idea/artifacts/hello.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloJavaEE3/.idea/artifacts/hello_archive.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloJavaEE3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloJavaEE3/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloJavaEE3/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloJavaEE3/web/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloJavaEE3/web/sql/bselectdb.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloJavaEE3/web/sql/bselectdb.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloJavaEE3/web/sql/queryid.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloJavaEE3/web/sql/queryid.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/HelloJavaEE3_war_exploded/WEB-INF/classes/.idea/artifacts/HelloJavaEE3_war_exploded.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/HelloJavaEE3_war_exploded/WEB-INF/classes/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/HelloJavaEE3_war_exploded/WEB-INF/classes/.idea/libraries/lib.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/HelloJavaEE3_war_exploded/WEB-INF/classes/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/HelloJavaEE3_war_exploded/WEB-INF/classes/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/HelloJavaEE3_war_exploded/WEB-INF/classes/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/HelloJavaEE3_war_exploded/WEB-INF/classes/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/HelloJavaEE3_war_exploded/WEB-INF/classes/HelloJavaEE3.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/HelloJavaEE3_war_exploded/WEB-INF/classes/web/WEB-INF/lib/jstl.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/HelloJavaEE3_war_exploded/WEB-INF/classes/web/WEB-INF/lib/mysql-connector-java-5.1.39-bin.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/HelloJavaEE3_war_exploded/WEB-INF/classes/web/WEB-INF/lib/sqlite-jdbc-3.23.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/HelloJavaEE3_war_exploded/WEB-INF/classes/web/WEB-INF/lib/standard.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/HelloJavaEE3_war_exploded/WEB-INF/classes/web/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/HelloJavaEE3_war_exploded/WEB-INF/classes/web/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/HelloJavaEE3_war_exploded/WEB-INF/lib/jstl.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/HelloJavaEE3_war_exploded/WEB-INF/lib/mysql-connector-java-5.1.39-bin.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/HelloJavaEE3_war_exploded/WEB-INF/lib/sqlite-jdbc-3.23.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/HelloJavaEE3_war_exploded/WEB-INF/lib/standard.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/HelloJavaEE3_war_exploded/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/HelloJavaEE3_war_exploded/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/hello/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/hello/WEB-INF/classes/.idea/artifacts/hello.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/hello/WEB-INF/classes/.idea/artifacts/hello_archive.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/hello/WEB-INF/classes/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/hello/WEB-INF/classes/.idea/libraries/lib.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/hello/WEB-INF/classes/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/hello/WEB-INF/classes/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/hello/WEB-INF/classes/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/hello/WEB-INF/classes/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/hello/WEB-INF/classes/HelloJavaEE3.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/hello/WEB-INF/classes/HelloWorld.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/hello/WEB-INF/classes/com/runoob/main/TestBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/hello/WEB-INF/classes/com/runoob/test/MySQLDemo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/hello/WEB-INF/classes/com/weilaidb/sql/selectalldb.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/hello/WEB-INF/classes/web/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/hello/WEB-INF/classes/web/WEB-INF/lib/jstl.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/hello/WEB-INF/classes/web/WEB-INF/lib/mysql-connector-java-5.1.39-bin.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/hello/WEB-INF/classes/web/WEB-INF/lib/sqlite-jdbc-3.23.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/hello/WEB-INF/classes/web/WEB-INF/lib/standard.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/hello/WEB-INF/classes/web/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/hello/WEB-INF/classes/web/array.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/hello/WEB-INF/classes/web/forward/date.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/hello/WEB-INF/classes/web/forward/main.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/hello/WEB-INF/classes/web/httpheaderinfo.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/hello/WEB-INF/classes/web/httpsetheader.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/hello/WEB-INF/classes/web/httpstatuscode.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/hello/WEB-INF/classes/web/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/hello/WEB-INF/classes/web/js/mysql/event.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/hello/WEB-INF/classes/web/jsp_include_eg/date.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/hello/WEB-INF/classes/web/jsp_include_eg/main.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/hello/WEB-INF/classes/web/sql/array.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/hello/WEB-INF/classes/web/sql/bselectdb.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/hello/WEB-INF/classes/web/sql/queryid.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/hello/WEB-INF/classes/web/sql/select.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/hello/WEB-INF/classes/web/sql/selectalldb.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/hello/WEB-INF/classes/web/sql/showhiddentext.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/hello/WEB-INF/classes/web/sql/showhiddentext.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/hello/WEB-INF/classes/web/sql/tableshowhide.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/hello/WEB-INF/classes/web/testbean/main.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/hello/WEB-INF/classes/weilaidb/sqlite/SQLiteJDBC.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/hello/WEB-INF/lib/jstl.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/hello/WEB-INF/lib/mysql-connector-java-5.1.39-bin.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/hello/WEB-INF/lib/sqlite-jdbc-3.23.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/hello/WEB-INF/lib/standard.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/hello/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/hello/array.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/hello/forward/date.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/hello/forward/main.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/hello/httpheaderinfo.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/hello/httpsetheader.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/hello/httpstatuscode.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/hello/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/hello/js/mysql/event.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/hello/jsp_include_eg/date.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/hello/jsp_include_eg/main.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/hello/sql/array.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/hello/sql/bselectdb.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/hello/sql/queryid.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/hello/sql/select.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/hello/sql/selectalldb.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/hello/sql/showhiddentext.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/hello/sql/showhiddentext.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/hello/sql/tableshowhide.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloJavaEE3/artifacts/hello/testbean/main.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/sql/queryid.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/sql/queryid.jsp" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,20 +117,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="13" column="25" lean-forward="true" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/sql/bselectdb.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="163" column="5" selection-start-line="163" selection-start-column="5" selection-end-line="163" selection-end-column="5" />
+            <state relative-caret-position="150">
+              <caret line="5" column="37" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -37,8 +129,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/sql/queryid.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="114" column="25" selection-start-line="114" selection-start-column="25" selection-end-line="114" selection-end-column="25" />
+            <state relative-caret-position="1170">
+              <caret line="39" selection-start-line="39" selection-end-line="39" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -121,6 +213,8 @@
       <find>短歌行</find>
       <find>sql ex</find>
       <find>rowCount</find>
+      <find>textareaclass</find>
+      <find>boxes</find>
     </findStrings>
     <replaceStrings>
       <replace>qryiddata</replace>
@@ -138,8 +232,8 @@
         <option value="$PROJECT_DIR$/web/sql/tableshowhide.html" />
         <option value="$PROJECT_DIR$/web/sql/array.txt" />
         <option value="$PROJECT_DIR$/web/httpheaderinfo.jsp" />
-        <option value="$PROJECT_DIR$/web/sql/queryid.jsp" />
         <option value="$PROJECT_DIR$/web/index.jsp" />
+        <option value="$PROJECT_DIR$/web/sql/queryid.jsp" />
         <option value="$PROJECT_DIR$/web/sql/bselectdb.jsp" />
       </list>
     </option>
@@ -163,6 +257,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -196,14 +291,13 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551504338387" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551536381803" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/web/WEB-INF/lib" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -328,12 +422,14 @@
       <updated>1551369169984</updated>
       <workItem from="1551369172823" duration="2539000" />
       <workItem from="1551444672347" duration="13513000" />
-      <workItem from="1551493311739" duration="7630000" />
+      <workItem from="1551493311739" duration="8319000" />
+      <workItem from="1551532449694" duration="3928000" />
+      <workItem from="1551536413995" duration="39000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23682000" />
+    <option name="totallyTimeSpent" value="28338000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -347,7 +443,7 @@
   <component name="ToolWindowManager">
     <frame x="67" y="-8" width="1861" height="1096" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17526345" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3166944" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -357,7 +453,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.09006211" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.057971016" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39958593" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -366,7 +462,7 @@
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" />
+      <window_info active="true" anchor="bottom" id="Messages" order="11" visible="true" weight="0.54658383" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.32919255" />
       <window_info anchor="bottom" id="Version Control" order="14" />
@@ -413,6 +509,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="91">
+          <caret line="628" column="26" selection-start-line="628" selection-start-column="22" selection-end-line="628" selection-end-column="26" />
+          <folding>
+            <element signature="e#23072#23073#0" expanded="true" />
+            <element signature="e#23112#23113#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/sql/bselectdb.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="203" column="10" lean-forward="true" selection-start-line="203" selection-start-column="10" selection-end-line="203" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="5" column="37" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/sql/queryid.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1170">
+          <caret line="39" selection-start-line="39" selection-end-line="39" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/sql/tableshowhide.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -448,38 +576,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="13" column="25" lean-forward="true" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="628" column="26" selection-start-line="628" selection-start-column="22" selection-end-line="628" selection-end-column="26" />
-          <folding>
-            <element signature="e#23072#23073#0" expanded="true" />
-            <element signature="e#23112#23113#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/sql/queryid.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="114" column="25" selection-start-line="114" selection-start-column="25" selection-end-line="114" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/sql/bselectdb.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="163" column="5" selection-start-line="163" selection-start-column="5" selection-end-line="163" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
   </component>
   <component name="masterDetails">
     <states>
@@ -493,7 +589,7 @@
               <type id="javaee-facet-resources" />
             </show-content>
           </artifact-editor>
-          <last-edited>hello_archive</last-edited>
+          <last-edited>hello archive</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

@@ -108,8 +108,8 @@
 
 <form name="form1" method="post" action="sql/bselectdb.jsp">
     <h1>
-        请输入查询数据：<input type="text" class="text1" name="qrydata" size="80">
-        <input type="submit" name="Submit" value="点击查询">
+        请输入查询数据：<input type="text" class="text1" name="qrydata" size="80"/>
+        <input type="submit" name="Submit" value="点击查询"/>
     </h1>
 </form>
 
@@ -156,7 +156,7 @@
         String sql = "";  //查询语句
         String tablename = "abc";
         if (qryval.trim().isEmpty()) {
-            sql = "SELECT * from " + tablename + " order by id desc limit 30;";  //查询语句
+            sql = "SELECT * from " + tablename + " order by id desc limit 50;";  //查询语句
         } else {
             String sqlhead = " SELECT * FROM " + tablename + " WHERE ";
             String sqltail = " order by id desc;";
@@ -170,11 +170,11 @@
             }
 
             sql = sqlhead + sqlmid + sqltail;
-            out.println("sql express:" + sql);
-            out.print("<br />");
-
 
         }
+        out.println("sql express:" + sql);
+        out.print("<br />");
+
         stmt = conn.createStatement();
         rs = stmt.executeQuery(sql);
 
@@ -194,9 +194,9 @@
                        size="4"
                        class="text2"
                        name="iddata"
-                       readonly="readonly"
-                       value="<%=orgshowid%>">
-                <input type="submit" name="Submit" value="More">
+                       <%--readonly="readonly"--%>
+                       value="<%=orgshowid%>"/>
+                <input type="submit" name="Submit" value="More"/>
             </form>
         </td>
         <%--<td ><%=rs.getString("name").replace("\n", "<br/>") %></td>--%>
@@ -211,8 +211,12 @@
                 showcontent = showcontent.substring(0, showlen);
             }
             long curlen = showcontent.length();
+            if(totallen == 0 )
+            {
+                totallen = 100;
+            }
             String appendstr = "ShowRate:" + (curlen * 100 / totallen) + "%";
-            if ((curlen * 100 / totallen) == 100) {
+            if (totallen == 0 || ((curlen * 100 / totallen) == 100)) {
                 appendstr = "";
             } else {
                 appendstr = "<h3 color=red>" + appendstr + "</h3>";
@@ -233,7 +237,7 @@
                 out.print("连接失败！");
             }
         } catch (Exception e) {
-//            e.printStackTrace();
+            e.printStackTrace();
 //            out.print("数据库连接异常！");
             out.print("请输入查询数据!!!");
         }
