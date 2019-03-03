@@ -105,7 +105,9 @@
 
     <tr>
         <td>
-            <textarea rows="100%" cols="300%" class="boxes"><%=toshowcontent%></textarea>
+            <textarea class="boxes"
+                      rows="700"
+            style="width: 100%;"><%=toshowcontent%></textarea>
         </td>
     </tr>
 

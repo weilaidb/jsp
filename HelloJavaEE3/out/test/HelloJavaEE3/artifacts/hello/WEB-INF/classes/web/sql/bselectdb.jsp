@@ -199,8 +199,6 @@
                 <input type="submit" name="Submit" value="More"/>
             </form>
         </td>
-        <%--<td ><%=rs.getString("name").replace("\n", "<br/>") %></td>--%>
-        <%--<td ><%=rs.getString("content").replace("\n", "<br/>") %></td>--%>
         <%
             String showcontent = rs.getString("content")
                     .replaceAll("<[.[^<\n]]*>", "")
