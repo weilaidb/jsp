@@ -37,8 +37,108 @@
         height: 20px;
     }
 
-    .boxes{font-size:20px;}
+    .boxes {
+        font-size: 20px;
+    }
 </style>
+
+<style type="text/css">
+    html, body {
+        margin: 0;
+    }
+
+    div {
+        padding: 40px;
+    }
+
+    input {
+        width: 240px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 14px;
+        border: none;
+        background-color: #eee;
+        border-radius: 4px;
+        text-indent: 4px;
+        outline: none;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+
+    button {
+        width: 140px;
+        height: 50px;
+        border: none;
+        border-radius: 4px;
+        outline: none;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        cursor: pointer;
+    }
+</style>
+
+
+<%--<div>--%>
+<%--<input type="text" id="ipt" placeholder="输入要复制的东西"/> <br/><br/>--%>
+<%--<button id="btnxx">复制</button>--%>
+<%--</div>--%>
+<%--<style type="text/css">--%>
+<%--html, body {--%>
+<%--margin: 0;--%>
+<%--}--%>
+
+<%--div {--%>
+<%--padding: 40px;--%>
+<%--}--%>
+
+<%--input {--%>
+<%--width: 240px;--%>
+<%--height: 40px;--%>
+<%--line-height: 40px;--%>
+<%--font-size: 14px;--%>
+<%--border: none;--%>
+<%--background-color: #eee;--%>
+<%--border-radius: 4px;--%>
+<%--text-indent: 4px;--%>
+<%--outline: none;--%>
+<%---webkit-tap-highlight-color: rgba(0, 0, 0, 0);--%>
+<%--}--%>
+
+<%--button {--%>
+<%--width: 140px;--%>
+<%--height: 50px;--%>
+<%--border: none;--%>
+<%--border-radius: 4px;--%>
+<%--outline: none;--%>
+<%---webkit-tap-highlight-color: rgba(0, 0, 0, 0);--%>
+<%--cursor: pointer;--%>
+<%--}--%>
+<%--</style>--%>
+
+
+<%--<script type="text/javascript">--%>
+
+<%--// 复制的方法--%>
+<%--function copyText(text, callback) { // text: 要复制的内容， callback: 回调--%>
+<%--var tag = document.createElement('input');--%>
+<%--tag.setAttribute('id', 'cp_hgz_input');--%>
+<%--tag.value = text;--%>
+<%--document.getElementsByTagName('body')[0].appendChild(tag);--%>
+<%--document.getElementById('cp_hgz_input').select();--%>
+<%--document.execCommand('copy');--%>
+<%--document.getElementById('cp_hgz_input').remove();--%>
+<%--if (callback) {--%>
+<%--callback(text)--%>
+<%--}--%>
+<%--}--%>
+
+<%--// 点击按钮调用复制--%>
+<%--document.getElementById('btnxx').onclick = function () {--%>
+<%--var texts = document.getElementById('ipt').value--%>
+<%--copyText(texts, function () {--%>
+<%--// alert('复制成功 \n复制内容内容' + texts)--%>
+<%--})--%>
+<%--}--%>
+
+<%--</script>--%>
 
 
 <html>
@@ -59,8 +159,7 @@
 //                    new String(qryiddata.getBytes("iso-8859-1"), "utf-8"));
 //            out.print("<br />");
 //        }
-    }catch (Exception e)
-    {
+    } catch (Exception e) {
     }
     try {
         Class.forName("com.mysql.jdbc.Driver");  ////驱动程序名
@@ -74,9 +173,10 @@
         if (conn != null) {
 //            out.print("数据库连接成功！");
 //            out.print("<br />");
-    %>
+%>
 
-<h1><%=qryiddata%></h1>
+<h1><%=qryiddata%>
+</h1>
 
 
 <table border="1" width="100%" class='mytable'>
@@ -101,15 +201,26 @@
             rowCount++;
     %>
 
-    <%String toshowcontent  = rs.getString("content");%>
+    <%String toshowcontent = rs.getString("content");%>
 
+    <button id="btnxx">复制</button>
     <tr>
         <td>
-            <textarea class="boxes"
-                      rows="700"
-            style="width: 100%;"><%=toshowcontent%></textarea>
+            <div>
+                <%--<input type="text" id="ipt" placeholder="输入要复制的东西"/> <br/><br/>--%>
+                <textarea class="boxes"
+                          rows="700"
+                          id="ipt"
+                          placeholder="输入要复制的东西"
+                          style="width: 100%;"><%=toshowcontent%></textarea>
+            </div>
         </td>
     </tr>
+    <%--<div>--%>
+    <%--<input type="text" id="ipt" placeholder="输入要复制的东西"/> <br/><br/>--%>
+    <%--<button id="btnxx">复制</button>--%>
+    <%--</div>--%>
+
 
     <%
                 }
@@ -126,6 +237,64 @@
 
 <h2 align="center"><font size="12" color="red">~~不能再底部了~~~</font></h2>
 
+<style type="text/css">
+    html, body {
+        margin: 0;
+    }
 
+    div {
+        padding: 40px;
+    }
+
+    input {
+        width: 240px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 14px;
+        border: none;
+        background-color: #eee;
+        border-radius: 4px;
+        text-indent: 4px;
+        outline: none;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+
+    button {
+        width: 140px;
+        height: 50px;
+        border: none;
+        border-radius: 4px;
+        outline: none;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        cursor: pointer;
+    }
+</style>
+
+
+<script type="text/javascript">
+
+    // 复制的方法
+    function copyText(text, callback) { // text: 要复制的内容， callback: 回调
+        var tag = document.createElement('input');
+        tag.setAttribute('id', 'cp_hgz_input');
+        tag.value = text;
+        document.getElementsByTagName('body')[0].appendChild(tag);
+        document.getElementById('cp_hgz_input').select();
+        document.execCommand('copy');
+        document.getElementById('cp_hgz_input').remove();
+        if (callback) {
+            callback(text)
+        }
+    }
+
+    // 点击按钮调用复制
+    document.getElementById('btnxx').onclick = function () {
+        var texts = document.getElementById('ipt').value
+        copyText(texts, function () {
+            // alert('复制成功 \n复制内容内容' + texts)
+        })
+    }
+
+</script>
 </body>
 </html>
