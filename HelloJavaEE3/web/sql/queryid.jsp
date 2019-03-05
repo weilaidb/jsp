@@ -203,13 +203,15 @@
 
     <%String toshowcontent = rs.getString("content");%>
 
-    <button id="btnxx">复制</button>
+    <button id="btncopy">复制</button>
+    <button id="btnpaste">粘贴</button>
     <tr>
         <td>
-            <div>
+            <div contenteditable="true">
                 <%--<input type="text" id="ipt" placeholder="输入要复制的东西"/> <br/><br/>--%>
                 <textarea class="boxes"
-                          rows="700"
+                          <%--rows="700"--%>
+                          rows="80"
                           id="ipt"
                           placeholder="输入要复制的东西"
                           style="width: 100%;"><%=toshowcontent%></textarea>
@@ -218,7 +220,7 @@
     </tr>
     <%--<div>--%>
     <%--<input type="text" id="ipt" placeholder="输入要复制的东西"/> <br/><br/>--%>
-    <%--<button id="btnxx">复制</button>--%>
+    <%--<button id="btncopy">复制</button>--%>
     <%--</div>--%>
 
 
@@ -243,11 +245,12 @@
     }
 
     div {
-        padding: 40px;
+        padding: 20px;
+        padding-right: 20px;
     }
 
     input {
-        width: 240px;
+        /*width: 240px;*/
         height: 40px;
         line-height: 40px;
         font-size: 14px;
@@ -270,31 +273,33 @@
     }
 </style>
 
-
-<script type="text/javascript">
-
-    // 复制的方法
-    function copyText(text, callback) { // text: 要复制的内容， callback: 回调
-        var tag = document.createElement('input');
-        tag.setAttribute('id', 'cp_hgz_input');
-        tag.value = text;
-        document.getElementsByTagName('body')[0].appendChild(tag);
-        document.getElementById('cp_hgz_input').select();
-        document.execCommand('copy');
-        document.getElementById('cp_hgz_input').remove();
-        if (callback) {
-            callback(text)
-        }
-    }
-
-    // 点击按钮调用复制
-    document.getElementById('btnxx').onclick = function () {
-        var texts = document.getElementById('ipt').value
-        copyText(texts, function () {
-            // alert('复制成功 \n复制内容内容' + texts)
-        })
-    }
-
+<%--换成user.js更加不好使了--%>
+<script src="../js/mysql/userext.js">
 </script>
+
+
+<%--<input id=edit value=范例><br>--%>
+<%--<button onclick=fn_doufucopy()>Copy</button>--%>
+<%--<button onclick=fn_doufupaste()>paste</button><br>--%>
+<%--<textarea id=tt rows=10 cols=50></textarea>--%>
+
+<%--<script type="text/javascript">--%>
+    <%--function fn_doufucopy() {--%>
+        <%--edit.select();--%>
+        <%--document.execCommand('Copy');--%>
+    <%--}--%>
+    <%--/*--%>
+     <%--*该function执行paste指令--%>
+     <%--*/--%>
+    <%--function fn_doufupaste() {--%>
+
+        <%--setTimeout(function(){--%>
+            <%--tt.focus();--%>
+            <%--document.execCommand('paste');--%>
+        <%--},500);--%>
+
+    <%--}--%>
+
+<%--</script>--%>
 </body>
 </html>
