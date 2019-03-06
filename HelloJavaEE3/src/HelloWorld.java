@@ -22,11 +22,10 @@ public class HelloWorld extends HttpServlet {
 
         //设置逻辑实现
         PrintWriter out = resp.getWriter();
-        out.println("<h1>" + message + "</h1>");
-        out.println("<h1>" + message + "</h1>");
-        out.println("<h1>" + message + "</h1>");
-        out.println("<h1>" + message + "</h1>");
-        out.println("<h1>" + message + "</h1>");
+
+        for (int i = 0; i < 10; i++) {
+            out.println("<h1>" + message + "</h1>");
+        }
     }
 
     @Override
