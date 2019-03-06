@@ -23,6 +23,7 @@
 
   <h1 align="center"><a href="sql/bselectdb.jsp">我的记事本</a></h1>
   <h1 align="center"><a href="sql/notebook2.jsp">我的记事本(sqlite)</a></h1>
+  <h1 align="center"><a href="sql/notebookalldb.jsp">我的记事本(sqlite)[all.db]</a></h1>
   <h1 align="center"><a href="note2">我的记事本(sqlite)</a></h1>
   <%--<h1 align="center"><a href="sql/showhiddentext.jsp">展开示例 jsp</a></h1>--%>
   <%--<h1 align="center"><a href="sql/showhiddentext.html">展开示例 html</a></h1>--%>
