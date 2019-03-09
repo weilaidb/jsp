@@ -56,23 +56,23 @@ To change this template use File | Settings | File Templates.
     <%--jsSelectItemByValue(document.tablename, ${userEx.tablename });--%>
 <%--</script>--%>
 
-<script type="text/javascript">
-    function jsSelectItemByValue(objSelect, objItemText) {
-        for (var i = 0; i < objSelect.options.length; i++) {
-            if (objSelect.options[i].value == objItemText) {
-                objSelect.options[i].selected = true;
-                break;
-            }
-        }
-    };
-    jsSelectItemByValue(document.forms['form1'].tablename, ${userEx.tablename });
-</script>
+<%--<script type="text/javascript">--%>
+    <%--function jsSelectItemByValue(objSelect, objItemText) {--%>
+        <%--for (var i = 0; i < objSelect.options.length; i++) {--%>
+            <%--if (objSelect.options[i].value == objItemText) {--%>
+                <%--objSelect.options[i].selected = true;--%>
+                <%--break;--%>
+            <%--}--%>
+        <%--}--%>
+    <%--};--%>
+    <%--jsSelectItemByValue(document.forms['form1'].tablename, ${userEx.tablename });--%>
+<%--</script>--%>
 
 <script type="text/javascript">
     function setCookie(name, value) {
         var exp = new Date();
         exp.setTime(exp.getTime() + 24 * 60 * 60 * 1000);
-        document.cookie = name + "=" + escape(value) + ";expires=" + exp.toGMTString();
+        document.cookie = name + "=" + (value) + ";expires=" + exp.toGMTString();
     }
     function getCookie(name)
     {
@@ -81,14 +81,24 @@ To change this template use File | Settings | File Templates.
         if (arr == null) {
             return null;
         }
+        console.log("getCookie name :" + name);
+        console.log("getCookie value:" + arr[2]);
         return unescape(arr[2]);
     }
 </script>
 
-<script type="text/javascript">
-    var selectedIndex = getCookie("select_1");
+<script type="text/javascript" >
+    var selectedIndex = getCookie("tablename");
     if(selectedIndex != null) {
-        document.getElementById("select_1").selectedIndex = selectedIndex;
+        console.log("selectedIndex:" + selectedIndex);
+        console.log("innerText    :" + document.getElementById("selecttable"));
+        console.log("innerText    :" + document.getElementById("selecttable"));
+        console.log("innerText    :" + document.getElementById("selecttable"));
+        // console.log("innerText    :" + document.forms['form1']);
+        // console.log("innerText    :" + document.forms['form1'].getElementById("selecttable"));
+        // document.getElementById("select_1")[selectedIndex] = selectedIndex;
+        // document.getElementById("tablename").innerText;
+        // document.getElementById("select_1")
     }
 </script>
 
@@ -114,9 +124,11 @@ To change this template use File | Settings | File Templates.
         请输入查询数据(all.db)：<input type="text" class="text1" name="qrydata" size="80"/>
         <input type="submit" name="Submit" value="点击查询" class="text1"/>
 
-        <select class="text1" name="tablename" value="${userEx.tablename}"
-                id="select_1" onclick="setCookie('select_1',this.selectedIndex)"
-                onload="setCookie('select_1',this.selectedIndex)">
+        <select class="text1" name="tablename"
+                id="selecttable" onclick="setCookie('tablename',this.selectedIndex)"
+                onload="getCookie('tablename')"
+        <%--onchange="setCookie('select_1',this.selectedIndex)"--%>
+        >
             <option  value="android">android</option>
             <option  value="aspect">aspect</option>
             <option  value="c">c</option>
@@ -262,25 +274,13 @@ To change this template use File | Settings | File Templates.
             {
                 tablename = tablenamestr;
             }
+            boolean isfull = false;
             if (qryval.trim().isEmpty()) {
                 sql = "SELECT * from " + tablename + " order by id desc limit 50;";  //查询语句
+                isfull = true;
             } else {
-                String sqlhead = " SELECT * FROM " + tablename + " WHERE ";
-                String sqltail = " order by id desc;";
-                String sqlmid = " ";
-                String[] qrylst = qryval.replace("\"", "\\\"").split(" ");
-                for (int lp = 0; lp < qrylst.length; lp++) {
-                    sqlmid += "content like  \"%" + new String(qrylst[lp].getBytes("iso-8859-1"), "utf-8") + "%\" ";
-                    if (lp != qrylst.length - 1)
-                        sqlmid += " and ";
-
-                }
-
-                sql = sqlhead + sqlmid + sqltail;
-
+                sql = "SELECT * from " + tablename + " order by id desc;";  //查询语句
             }
-//            out.println("sql express:" + sql);
-//            out.print("<br />");
 
             ResultSet rSet = statement.executeQuery(sql);//搜索数据库，将搜索的放入数据集ResultSet中
 
@@ -291,14 +291,42 @@ To change this template use File | Settings | File Templates.
         int rowCount = 0;
 
         while (rSet.next()) {            //遍历这个数据集
-            rowCount++;
+            String orgshowid = "";
+            String orgcontent = "";
+            String orgcontentnew = "";
+            String qryvalnew = "";
+            orgshowid = rSet.getString(1);
+            orgcontent = rSet.getString(2);
+            qryvalnew = new String(qryval.trim().getBytes("iso-8859-1"), "utf-8");
+
+            if(isfull)
+            {
+                orgcontent = rSet.getString(2).replace("\n", "<br/>");
+                rowCount++;
+            }
+            else
+            {
+                String[] qrylst = qryval.trim().replace("\"", "").split(" ");
+                int qrynums = 0;
+                for (int lp = 0; lp < qrylst.length; lp++) {
+                    qryvalnew = new String(qrylst[lp].trim().getBytes("iso-8859-1"), "utf-8");
+                    if(orgcontent.toLowerCase().contains(qryvalnew.toLowerCase()))
+                    {
+                        qrynums++;
+                    }
+                }
+
+                if(qrynums != qrylst.length)
+                {
+                    continue;
+                }
+                rowCount++;
+
+            }
     %>
     <tr>
 
         <td>
-            <%
-                String orgshowid = rSet.getString(1).replace("\n", "<br/>");
-            %>
             <form name="form2" method="post" action="sql/notebookqueryid.jsp">
                 <input type="text"
                        size="4"
