@@ -201,8 +201,10 @@
         </td>
         <%
             String showcontent = rs.getString("content")
-                    .replaceAll("<[.[^<\n]]*>", "")
+                    .replaceAll("<","")
+                    .replaceAll(">","")
                     .replace("\n", "<br/>");
+
             int showlen = 500;
             long totallen = showcontent.length();
             if (showcontent.length() > showlen) {
@@ -217,13 +219,12 @@
             if (totallen == 0 || ((curlen * 100 / totallen) == 100)) {
                 appendstr = "";
             } else {
-                appendstr = "<h3 color=red>" + appendstr + "</h3>";
+                appendstr =  appendstr;
             }
         %>
         <td><%=showcontent + "<br/><br/><br/>" + appendstr%>
         </td>
     </tr>
-
 
     <%
                 }

@@ -7,12 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f3158e1-4520-4f9f-add1-db9f54a74a32" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/web/sql/notebookqueryid.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/hello_archive.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/hello_archive.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/test/selected.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/hello_archive/hello archive.war" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/hello_archive/hello archive.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/sql/bselectdb.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/sql/bselectdb.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/sql/notebookalldb.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/sql/notebookalldb.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/sql/notebookqueryid.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/sql/notebookqueryid.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,8 +28,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/sql/notebookalldb.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="71" column="4" selection-start-line="71" selection-start-column="4" selection-end-line="71" selection-end-column="4" />
+            <state relative-caret-position="308">
+              <caret line="118" column="16" selection-start-line="118" selection-start-column="16" selection-end-line="118" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -38,8 +37,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/sql/notebookqueryid.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="543">
-              <caret line="113" lean-forward="true" selection-start-line="113" selection-end-line="113" />
+            <state relative-caret-position="210">
+              <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -47,8 +46,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/sql/bselectdb.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="429">
-              <caret line="230" column="21" selection-start-line="230" selection-start-column="21" selection-end-line="230" selection-end-column="21" />
+            <state relative-caret-position="464">
+              <caret line="251" lean-forward="true" selection-start-line="251" selection-end-line="251" />
             </state>
           </provider>
         </entry>
@@ -66,9 +65,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>color</find>
-      <find>href</find>
-      <find>setqryid</find>
       <find>text2</find>
       <find>text1</find>
       <find>type=&quot;text&quot;</find>
@@ -96,6 +92,9 @@
       <find>action</find>
       <find>sql</find>
       <find>qrydata</find>
+      <find>cookie</find>
+      <find>getCookie</find>
+      <find>select_1</find>
     </findStrings>
     <replaceStrings>
       <replace>qryiddata</replace>
@@ -122,10 +121,11 @@
         <option value="$PROJECT_DIR$/src/weilaidb/sqlite/SQLiteJDBC.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/HelloWorld.java" />
-        <option value="$PROJECT_DIR$/web/sql/bselectdb.jsp" />
         <option value="$PROJECT_DIR$/src/weilaidb/sqlite/SqliteServlet.java" />
         <option value="$PROJECT_DIR$/web/sql/notebook2.jsp" />
         <option value="$PROJECT_DIR$/web/index.jsp" />
+        <option value="$PROJECT_DIR$/web/sql/bselectdb.jsp" />
+        <option value="$PROJECT_DIR$/web/test/selected.jsp" />
         <option value="$PROJECT_DIR$/web/sql/notebookqueryid.jsp" />
         <option value="$PROJECT_DIR$/web/sql/notebookalldb.jsp" />
       </list>
@@ -135,7 +135,7 @@
     <option name="frameworksView" value="false" />
     <option name="showModules" value="false" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="16" />
     <option name="y" value="232" />
     <option name="width" value="1779" />
@@ -149,6 +149,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -182,27 +184,19 @@
               <item name="HelloJavaEE3" type="b2602c69:ProjectViewProjectNode" />
               <item name="HelloJavaEE3" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="sql" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HelloJavaEE3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HelloJavaEE3" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552117640805" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552139997511" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/web/WEB-INF/lib" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -398,11 +392,12 @@
       <workItem from="1552054994605" duration="828000" />
       <workItem from="1552112141318" duration="990000" />
       <workItem from="1552114012752" duration="3582000" />
+      <workItem from="1552121914220" duration="7578000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58662000" />
+    <option name="totallyTimeSpent" value="66240000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -417,8 +412,8 @@
     <frame x="67" y="-8" width="1861" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.82011175" visible="true" weight="0.19245702" />
-      <window_info id="Structure" order="1" sideWeight="0.17988826" side_tool="true" visible="true" weight="0.19245702" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8181818" visible="true" weight="0.13588464" />
+      <window_info id="Structure" order="1" sideWeight="0.18181819" side_tool="true" visible="true" weight="0.13588464" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
@@ -427,7 +422,7 @@
       <window_info id="Web" order="7" sideWeight="0.5007899" side_tool="true" weight="0.07931226" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32873806" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.78369385" visible="true" weight="0.05090138" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.7831392" visible="true" weight="0.03181336" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39958593" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -435,7 +430,7 @@
       <window_info anchor="bottom" id="Application Servers" order="7" sideWeight="0.4997227" weight="0.29056203" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32979852" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.21630615" side_tool="true" visible="true" weight="0.05090138" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.21686079" side_tool="true" visible="true" weight="0.03181336" />
       <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.4997227" weight="0.252386" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.32873806" />
@@ -635,22 +630,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/sql/bselectdb.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
-          <caret line="230" column="21" selection-start-line="230" selection-start-column="21" selection-end-line="230" selection-end-column="21" />
+        <state relative-caret-position="464">
+          <caret line="251" lean-forward="true" selection-start-line="251" selection-end-line="251" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/sql/notebookqueryid.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="543">
-          <caret line="113" lean-forward="true" selection-start-line="113" selection-end-line="113" />
+        <state relative-caret-position="210">
+          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/test/selected.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/sql/notebookalldb.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="71" column="4" selection-start-line="71" selection-start-column="4" selection-end-line="71" selection-end-column="4" />
+        <state relative-caret-position="308">
+          <caret line="118" column="16" selection-start-line="118" selection-start-column="16" selection-end-line="118" selection-end-column="16" />
         </state>
       </provider>
     </entry>
