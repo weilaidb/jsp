@@ -98,7 +98,7 @@
     try {
         Class.forName("org.sqlite.JDBC");
 //        数据库地址写不正常，会报错。
-        String dbpath = "jdbc:sqlite:D:/Dropbox/weidb/all.db";
+        String dbpath = "jdbc:sqlite:D:/Dropbox/weidb/autoccode/all.db";
         connection = DriverManager.getConnection(dbpath);
 
         Statement statement = connection.createStatement();   //创建连接对象，是Java的一个操作数据库的重要接口
