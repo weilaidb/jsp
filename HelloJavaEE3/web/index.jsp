@@ -31,5 +31,6 @@
 
   <h1 align="center"><a href="javascript/tolearnjs.jsp">js示例</a></h1>
   <h1 align="center"><a href="html/header2.jsp">html示例</a></h1>
+  <h1 align="center"><a href="c/autoc.jsp">C</a></h1>
   </body>
 </html>

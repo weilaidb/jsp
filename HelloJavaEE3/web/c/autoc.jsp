@@ -27,8 +27,8 @@
     }
 
     .leftshow {
-        height: 500px;
-        width: 1000px;
+        height: 2000px;
+        width: 2000px;
         font-size: 34px;
     }
 
@@ -53,14 +53,11 @@
 
 <form name="form1" method="post" action="/c/autoc2.jsp">
     <h1>
-    <textarea class="leftshow" name="textarealeft"></textarea>
-        <p/>
         <input type="submit" class="convertbtn"  name="Submit" value="转换"/>
+        <textarea class="leftshow" name="textarealeft"></textarea>
+        <p/>
     </h1>
 </form>
-
-
-
 
 </body>
 </html>

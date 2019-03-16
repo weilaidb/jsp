@@ -26,9 +26,9 @@
         font-size: medium;
     }
 
-    .leftshow {
-        height: 500px;
-        width: 1000px;
+    .textshow {
+        height: 2000px;
+        width: 2000px;
         font-size: 34px;
     }
 
@@ -48,7 +48,7 @@
     <title>Auto C Code</title>
 </head>
 <body>
-<h1>生成C代码</h1>
+<h1>转换结果</h1>
 
 
 
@@ -58,15 +58,24 @@
     try {
         qryval = request.getParameter("textarealeft");
         if (!qryval.isEmpty()) {
-            out.print("查询内容:" +
-                    new String(qryval.getBytes("iso-8859-1"), "utf-8"));
-            out.print("<br />");
+//            out.print("查询内容:" +
+//                    new String(qryval.getBytes("iso-8859-1"), "utf-8"));
+//            out.print("<br />");
         }
     } catch (Exception e) {
         out.print("\n");
     }
 
     %>
+
+<%--<form name="form1" method="post" action="/c/autoc2.jsp">--%>
+    <h1>
+        <textarea class="textshow" name="textshow"><%=new String(qryval.getBytes("iso-8859-1"), "utf-8")%></textarea>
+        <p/>
+        <%--<input type="submit" class="convertbtn"  name="Submit" value="转换"/>--%>
+    </h1>
+<%--</form>--%>
+
 
 
 </body>
