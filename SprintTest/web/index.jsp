@@ -9,6 +9,7 @@
 <html>
   <head>
     <title>$Title$</title>
+    <h1><a href="https://www.w3cschool.cn/wkspring/dgte1ica.html">Spring Study Address</a> </h1>
   </head>
   <body>
   $END$
