@@ -31,7 +31,7 @@ public class RunCmd {
         }
     }
 
-    void OpenPath() {
+    void openPath() {
         try {
             Runtime.getRuntime().exec(
                     new String[]{"C:\\Windows\\explorer.exe",
@@ -41,7 +41,7 @@ public class RunCmd {
         }
     }
 
-    void OpenPath(String openpath) {
+    void openPath(String openpath) {
         try {
             Runtime.getRuntime().exec(
                     new String[]{"C:\\Windows\\explorer.exe",
@@ -51,7 +51,7 @@ public class RunCmd {
         }
     }
 
-    void OpenCmd() {
+    void openCmd() {
         try {
             Runtime.getRuntime().exec(
                     new String[]{"C:\\Windows\\System32\\cmd.exe"});
