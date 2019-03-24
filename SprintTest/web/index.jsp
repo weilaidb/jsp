@@ -9,7 +9,14 @@
 <html>
   <head>
     <title>$Title$</title>
-    <h1><a href="https://www.w3cschool.cn/wkspring/dgte1ica.html">Spring Study Address</a> </h1>
+    <h1><a href="https://www.w3cschool.cn/wkspring/dgte1ica.html"  target="_blank">Spring Study Address</a> </h1>
+    <h1><a href="test/html_show01.jsp">html show 01</a> </h1>
+    <h1><a href="test/html_show02.jsp">html show 02</a> </h1>
+    <h1><a href="test/html_form.jsp">html show form</a> </h1>
+
+    <h1><a href="test/script_basicdemo_01.jsp">script demo 01</a> </h1>
+    <h1><a href="test/script_basicdemo_02.jsp">script demo 02</a> </h1>
+    <h1><a href="test/script_basicdemo_03.jsp">script demo 03</a> </h1>
   </head>
   <body>
   $END$
