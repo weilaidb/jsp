@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="gb2312" standalone="no" ?>
+<?xml-stylesheet type="text/css" href="attrib.css"?>
+<authors>
+    <author>
+        <name id="MR&apos;LXH">李李李</name>
+        <books>
+            <book>&lt;&lt;Java开发实战经典&gt;&gt;</book>
+            <book>&quot;Oracle开发&quot;</book>
+        </books>
+    </author>
+</authors>
