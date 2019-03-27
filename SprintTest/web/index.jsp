@@ -12,6 +12,23 @@
   </head>
 <body>
 
+<h2><a href="jsp/page/show.jsp">jsp  demo page show error</a> </h2>
+<h2><a href="jsp/page/page_demo03.jsp">jsp  demo page 03</a> </h2>
+<h2><a href="jsp/page/page_demo02.jsp">jsp  demo page 02</a> </h2>
+<h2><a href="jsp/page/page_demo01.jsp">jsp  demo page 01</a> </h2>
+<h2><a href="jsp/scriptlet/scriptlet_tag.jsp">jsp  demo scriptlet tag</a> </h2>
+<h2><a href="jsp/print%20table/print_table.html.jsp">jsp  demo print table</a> </h2>
+<h2><a href="jsp/print%20table/print_table02.jsp">jsp  demo print table 02</a> </h2>
+<h2><a href="jsp/print%20table/print_table01.jsp">jsp  demo print table 01</a> </h2>
+<h2><a href="jsp/scriptlet/scriptlet_demo03.jsp">jsp  demo scriptlet 03</a> </h2>
+<h2><a href="jsp/scriptlet/scriptlet_demo02.jsp">jsp  demo scriptlet 02</a> </h2>
+<h2><a href="jsp/scriptlet/scriptlet_demo01.jsp">jsp  demo scriptlet 01</a> </h2>
+<h2><a href="jsp/input.html.jsp">jsp  demo input</a> </h2>
+<h2><a href="dom/js_dom_demo05.jsp">js dom demo 05</a> </h2>
+<h2><a href="dom/js_dom_demo04.jsp">js dom demo 04</a> </h2>
+<h2><a href="dom/js_dom_demo03.jsp">js dom demo 03</a> </h2>
+<h2><a href="dom/js_dom_demo02.jsp">js dom demo 02</a> </h2>
+<h2><a href="dom/js_dom_demo01.jsp">js dom demo 01</a> </h2>
 <h2><a href="test/xml_demo_06.xml">xml 06</a> </h2>
 <h2><a href="test/xml_demo_05.xml">xml 05</a> </h2>
 <h2><a href="test/xml_demo_04.xml">xml 04</a> </h2>
