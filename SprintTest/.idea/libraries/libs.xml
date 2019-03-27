@@ -3,12 +3,16 @@
     <CLASSES>
       <root url="file://D:/Software/jar/spring/spring-framework-5.1.5.RELEASE/libs" />
       <root url="jar://D:/Software/jar/jdom-2.0.6/jdom-2.0.6.jar!/" />
+      <root url="file://D:/Software/jar/dom4j" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
       <root url="file://D:/Software/jar/spring/spring-framework-5.1.5.RELEASE/libs" />
+      <root url="file://D:/Software/jar/dom4j" />
     </SOURCES>
+    <jarDirectory url="file://D:/Software/jar/dom4j" recursive="false" />
     <jarDirectory url="file://D:/Software/jar/spring/spring-framework-5.1.5.RELEASE/libs" recursive="false" />
+    <jarDirectory url="file://D:/Software/jar/dom4j" recursive="false" type="SOURCES" />
     <jarDirectory url="file://D:/Software/jar/spring/spring-framework-5.1.5.RELEASE/libs" recursive="false" type="SOURCES" />
   </library>
 </component>

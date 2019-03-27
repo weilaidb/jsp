@@ -7,16 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ff387f0d-5e43-4848-a996-9a0118359957" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/cmd/RunCmd.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/sax/cn/MySax.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/sax/cn/ReadXmlByJDOM.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/sax/cn/TestSAX.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/sax/cn/WriteXmlByJDOM.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/xml/sax_demo.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/sax/cn/DOM4JRead.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/sax/cn/DOM4JWriter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/libs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/libs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test/xml_demo_03.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/test/xml_demo_03.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,15 +21,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/index.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/xml/cn/DomDemo01.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -52,7 +37,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/xml/cn/DomDemo02.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-270">
-              <caret line="21" column="9" lean-forward="true" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+              <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -61,7 +46,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/xml/cn/DomDemo03.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="532">
-              <caret line="71" lean-forward="true" selection-start-line="31" selection-start-column="1" selection-end-line="71" />
+              <caret line="71" selection-start-line="31" selection-start-column="1" selection-end-line="71" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -87,7 +72,31 @@
         <entry file="file://$PROJECT_DIR$/src/com/sax/cn/WriteXmlByJDOM.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="219">
-              <caret line="26" column="40" lean-forward="true" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
+              <caret line="26" column="40" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/sax/cn/ReadXmlByJDOM.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1080">
+              <caret line="36" column="29" lean-forward="true" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/sax/cn/DOM4JWriter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="36" column="30" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -96,13 +105,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/sax/cn/ReadXmlByJDOM.java">
+        <entry file="file://$PROJECT_DIR$/src/com/sax/cn/DOM4JRead.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="99">
-              <caret line="16" column="59" selection-start-line="16" selection-start-column="59" selection-end-line="16" selection-end-column="59" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="260">
+              <caret line="41" column="5" lean-forward="true" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -148,8 +154,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Beans.xml" />
-        <option value="$PROJECT_DIR$/src/com/tutorialspoint/MainApp.java" />
         <option value="$PROJECT_DIR$/src/com/tutorialspoint/HelloWorld.java" />
         <option value="$PROJECT_DIR$/web/test/html_show01.jsp" />
         <option value="$PROJECT_DIR$/web/test/html_show02.jsp" />
@@ -199,15 +203,17 @@
         <option value="$PROJECT_DIR$/src/com/cmd/RunCmd.java" />
         <option value="$PROJECT_DIR$/src/com/sax/cn/WriteXmlByJDOM.java" />
         <option value="$PROJECT_DIR$/src/com/sax/cn/ReadXmlByJDOM.java" />
+        <option value="$PROJECT_DIR$/src/com/sax/cn/DOM4JWriter.java" />
+        <option value="$PROJECT_DIR$/src/com/sax/cn/DOM4JRead.java" />
       </list>
     </option>
   </component>
   <component name="JavaeeView">
     <option name="showModules" value="false" />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="177" />
-    <option name="y" value="223" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="147" />
+    <option name="y" value="570" />
     <option name="width" value="1779" />
     <option name="height" value="938" />
   </component>
@@ -243,21 +249,7 @@
               <item name="SprintTest" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="cmd" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SprintTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SprintTest" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="cn" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SprintTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SprintTest" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="tutorialspoint" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SprintTest" type="b2602c69:ProjectViewProjectNode" />
@@ -283,28 +275,6 @@
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="xml" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="SprintTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-            <path>
-              <item name="SprintTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="libs" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="SprintTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="libs" type="70bed36:NamedLibraryElementNode" />
-              <item name="jdom-2.0.6.jar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SprintTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="libs" type="70bed36:NamedLibraryElementNode" />
-              <item name="jdom-2.0.6.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="jdom2" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -315,8 +285,8 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553690859628" />
-    <property name="last_opened_file_path" value="D:/Software/jar/jdom-2.0.6/jdom-2.0.6.jar!/" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553692114033" />
+    <property name="last_opened_file_path" value="D:/Software/jar/dom4j" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -347,13 +317,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ReadXmlByJDOM">
-    <configuration name="DomDemo02" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.xml.cn.DomDemo02" />
+  <component name="RunManager" selected="Application.DOM4JRead">
+    <configuration name="DOM4JRead" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sax.cn.DOM4JRead" />
       <module name="SprintTest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.xml.cn.*" />
+          <option name="PATTERN" value="com.sax.cn.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -361,12 +331,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DomDemo03" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.xml.cn.DomDemo03" />
+    <configuration name="DOM4JWriter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sax.cn.DOM4JWriter" />
       <module name="SprintTest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.xml.cn.*" />
+          <option name="PATTERN" value="com.sax.cn.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -492,20 +462,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.DomDemo02" />
-      <item itemvalue="Application.DomDemo03" />
       <item itemvalue="Tomcat Server.Tomcat 7.0.92" />
       <item itemvalue="Application.TestSAX" />
       <item itemvalue="Application.WriteXmlByJDOM" />
       <item itemvalue="Application.ReadXmlByJDOM" />
+      <item itemvalue="Application.DOM4JWriter" />
+      <item itemvalue="Application.DOM4JRead" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.DOM4JRead" />
+        <item itemvalue="Application.DOM4JWriter" />
         <item itemvalue="Application.ReadXmlByJDOM" />
         <item itemvalue="Application.WriteXmlByJDOM" />
         <item itemvalue="Application.TestSAX" />
-        <item itemvalue="Application.DomDemo03" />
-        <item itemvalue="Application.DomDemo02" />
       </list>
     </recent_temporary>
   </component>
@@ -526,12 +496,12 @@
       <workItem from="1553596114521" duration="2196000" />
       <workItem from="1553606841699" duration="6223000" />
       <workItem from="1553642783983" duration="1706000" />
-      <workItem from="1553687538373" duration="3285000" />
+      <workItem from="1553687538373" duration="4533000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19892000" />
+    <option name="totallyTimeSpent" value="21140000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -543,10 +513,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="69" y="493" width="1779" height="938" extended-state="0" />
+    <frame x="67" y="-8" width="1861" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18245207" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17415419" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -556,7 +526,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.061146498" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.42099681" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.03821656" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -566,7 +536,7 @@
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.21845175" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.18133616" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.32979852" />
       <window_info anchor="bottom" id="Database Changes" order="14" />
       <window_info anchor="bottom" id="Version Control" order="15" />
@@ -586,20 +556,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/test/script_tabledemo.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="28" column="18" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/test/script_ifdemo.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/test/script_basicdemo_04.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -923,14 +879,14 @@
     <entry file="file://$PROJECT_DIR$/src/com/xml/cn/DomDemo02.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-270">
-          <caret line="21" column="9" lean-forward="true" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+          <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/xml/cn/DomDemo03.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="532">
-          <caret line="71" lean-forward="true" selection-start-line="31" selection-start-column="1" selection-end-line="71" />
+          <caret line="71" selection-start-line="31" selection-start-column="1" selection-end-line="71" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -952,7 +908,7 @@
     <entry file="file://$PROJECT_DIR$/src/com/sax/cn/WriteXmlByJDOM.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="219">
-          <caret line="26" column="40" lean-forward="true" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
+          <caret line="26" column="40" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -961,11 +917,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sax/cn/ReadXmlByJDOM.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="16" column="59" selection-start-line="16" selection-start-column="59" selection-end-line="16" selection-end-column="59" />
+        <state relative-caret-position="1080">
+          <caret line="36" column="29" lean-forward="true" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sax/cn/DOM4JWriter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="36" column="30" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sax/cn/DOM4JRead.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="41" column="5" lean-forward="true" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
         </state>
       </provider>
     </entry>
