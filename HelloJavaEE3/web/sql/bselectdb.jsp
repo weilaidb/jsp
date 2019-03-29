@@ -36,8 +36,16 @@
     }
 
     .text2 {
-        height: 20px;
+        height: 40px;
+        /*width: 80px;*/
     }
+
+    .submitbtn {
+        height: 40px;
+        width: 80px;
+    }
+
+
 </style>
 
 <%--================获取路径和基础路径=========================--%>
@@ -113,6 +121,11 @@
     </h1>
 </form>
 
+<%
+    Connection conn = null;
+    ResultSet rs = null;
+    Statement stmt = null;
+%>
 
 <%--================获取查询数据================--%>
 <%--================打开数据库================--%>
@@ -137,7 +150,7 @@
 //        String url = "jdbc:mysql://localhost:3306/alldb?useSSL=false"; //数据库名
         String username = "root";  //数据库用户名
         String password = "Zzerp123";  //数据库用户密码
-        Connection conn = DriverManager.getConnection(url, username, password);  //连接状态
+        conn = DriverManager.getConnection(url, username, password);  //连接状态
 
         if (conn != null) {
 //            out.print("数据库连接成功！");
@@ -146,13 +159,13 @@
 
 <table border="1" width="100%" class='mytable'>
     <tr>
-        <th>序列</th>
-        <%--<th>名称</th>--%>
         <th>数据</th>
+        <%--<th>名称</th>--%>
+        <th>序列</th>
     </tr>
     <%
-        Statement stmt = null;
-        ResultSet rs = null;
+        stmt = null;
+        rs = null;
         String sql = "";  //查询语句
         String tablename = "abc";
         if (qryval.trim().isEmpty()) {
@@ -161,7 +174,7 @@
             String sqlhead = " SELECT * FROM " + tablename + " WHERE ";
             String sqltail = " order by id desc;";
             String sqlmid = " ";
-            String[] qrylst = qryval.replace("\"","\\\"").split(" ");
+            String[] qrylst = qryval.replace("\"", "\\\"").split(" ");
             for (int lp = 0; lp < qrylst.length; lp++) {
                 sqlmid += "content like  \"%" + new String(qrylst[lp].getBytes("iso-8859-1"), "utf-8") + "%\" ";
                 if (lp != qrylst.length - 1)
@@ -194,15 +207,16 @@
                        size="4"
                        class="text2"
                        name="iddata"
-                       <%--readonly="readonly"--%>
+                <%--readonly="readonly"--%>
                        value="<%=orgshowid%>"/>
-                <input type="submit" name="Submit" value="More"/>
+                <input type="submit" name="Submit" value="More" class="submitbtn"/>
             </form>
         </td>
+
         <%
             String showcontent = rs.getString("content")
-                    .replaceAll("<","")
-                    .replaceAll(">","")
+                    .replaceAll("<", "")
+                    .replaceAll(">", "")
                     .replace("\n", "<br/>");
 
             int showlen = 500;
@@ -211,19 +225,19 @@
                 showcontent = showcontent.substring(0, showlen);
             }
             long curlen = showcontent.length();
-            if(totallen == 0 )
-            {
+            if (totallen == 0) {
                 totallen = 100;
             }
             String appendstr = "ShowRate:" + (curlen * 100 / totallen) + "%";
             if (totallen == 0 || ((curlen * 100 / totallen) == 100)) {
                 appendstr = "";
             } else {
-                appendstr =  appendstr;
+                appendstr = appendstr;
             }
         %>
         <td><%=showcontent + "<br/><br/><br/>" + appendstr%>
         </td>
+
     </tr>
 
     <%
@@ -232,6 +246,9 @@
                         + new String(qryval.getBytes("iso-8859-1"), "utf-8")
                         + "]");
                 out.print("<br/>");
+                rs.close();
+                stmt.close();
+
             } else {
                 out.print("连接失败！");
             }
@@ -239,6 +256,10 @@
             e.printStackTrace();
 //            out.print("数据库连接异常！");
             out.print("请输入查询数据!!!");
+        } finally {
+//            rs.close();
+//            stmt.close();
+            conn.close();
         }
     %>
 </table>
