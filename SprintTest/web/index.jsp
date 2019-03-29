@@ -12,6 +12,7 @@
   </head>
 <body>
 
+<h2><a href="jsp/sql/list_emp.jsp">jsp  demo sql</a> </h2>
 <h2><a href="jsp/page/show.jsp">jsp  demo page show error</a> </h2>
 <h2><a href="jsp/page/page_demo03.jsp">jsp  demo page 03</a> </h2>
 <h2><a href="jsp/page/page_demo02.jsp">jsp  demo page 02</a> </h2>

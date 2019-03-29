@@ -7,11 +7,18 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page isErrorPage="true" %>
+<%
+    response.setStatus(200);
+%>
 <html>
 <head>
     <title>Error</title>
 </head>
 <body>
+<h1>程序出现了错误！</h1>
+<h1>程序出现了错误！</h1>
+<h1>程序出现了错误！</h1>
+<h1>程序出现了错误！</h1>
 <h1>程序出现了错误！</h1>
 
 </body>
