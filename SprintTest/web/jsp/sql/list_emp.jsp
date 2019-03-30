@@ -8,15 +8,16 @@
   Time: 7:54
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java"
+         pageEncoding="UTF-8"%>
 <html>
 <head>
-    <title>Title</title>
+    <title>查询数据库小示例</title>
 </head>
 <body>
 <%!
-    public static final String DBDRIVER = "org.git.mm.mysql.Driver";
-    public static final String DBURL = "jdbc:mysql://localhost:3306/mldn";
+    public static final String DBDRIVER = "com.mysql.jdbc.Driver";
+    public static final String DBURL = "jdbc:mysql://localhost:3306/mldn?useUnicode=true&characterEncoding=utf-8"; //数据库名";
     public static final String DBUSER = "root";
     public static final String DBPASS = "Zzerp123";
 %>
@@ -30,7 +31,7 @@
     try {
         Class.forName(DBDRIVER);
         conn = DriverManager.getConnection(DBURL, DBUSER, DBPASS);
-        String sql = "SELECT empno, ename, job,sal,hiredate FROM emp";
+        String sql = "SELECT empno, ename, job,sal,hiredate FROM emp;";
         pstmt = conn.prepareStatement(sql);
         rs = pstmt.executeQuery();
 

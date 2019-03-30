@@ -116,7 +116,9 @@
 <%--<h1><%=basePath%></h1>--%>
 <script>
     function openinsertdatapage() {
-        window.location.replace("/sql/insertdb.jsp");
+        // window.location.replace("/sql/insertdb.jsp");
+        window.open('<%=basePath%>sql/insertdb.jsp')
+        // window.history.back(-1)
     }
 </script>
 
@@ -126,7 +128,9 @@
         请输入查询数据：<input type="text" class="text1" name="qrydata" size="80"/>
         <input type="submit" name="Submit" value="点击查询"/>
         <input type="button" name="insertdata" value="插入数据"
-               onclick="javascript:window.location='<%=basePath%>sql/insertdb.jsp'"/>
+               onclick="openinsertdatapage();">
+               <%--onclick="javascript:window.location='<%=basePath%>sql/insertdb.jsp' "/>--%>
+        <a href="/url" target="_blank"></a>
     </h1>
 </form>
 
