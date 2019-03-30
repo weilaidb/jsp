@@ -103,6 +103,7 @@
             console.log("id is:" + id);
             request.setParameter("iddata", id);
         }
+
     </script>
     <base href="<%=basePath%>">
     <meta charset="UTF-8">
@@ -112,14 +113,23 @@
 <%--<h1>查询结果</h1>--%>
 </p>
 </p>
+<%--<h1><%=basePath%></h1>--%>
+<script>
+    function openinsertdatapage() {
+        window.location.replace("/sql/insertdb.jsp");
+    }
+</script>
 
 
 <form name="form1" method="post" action="sql/bselectdb.jsp">
     <h1>
         请输入查询数据：<input type="text" class="text1" name="qrydata" size="80"/>
         <input type="submit" name="Submit" value="点击查询"/>
+        <input type="button" name="insertdata" value="插入数据"
+               onclick="javascript:window.location='<%=basePath%>sql/insertdb.jsp'"/>
     </h1>
 </form>
+
 
 <%
     Connection conn = null;
@@ -159,9 +169,9 @@
 
 <table border="1" width="100%" class='mytable'>
     <tr>
-        <th>数据</th>
         <%--<th>名称</th>--%>
         <th>序列</th>
+        <th>数据</th>
     </tr>
     <%
         stmt = null;
