@@ -8,9 +8,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2f3158e1-4520-4f9f-add1-db9f54a74a32" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/login/login_check.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/login/login_check.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SprintTest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SprintTest/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,7 +24,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/sql/insertdb.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
+            <state relative-caret-position="8040">
               <caret line="268" selection-start-line="268" selection-end-line="268" />
             </state>
           </provider>
@@ -54,8 +51,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/login/login.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="20" column="16" lean-forward="true" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+            <state relative-caret-position="600">
+              <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -72,7 +69,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
+            <state relative-caret-position="540">
               <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
             </state>
           </provider>
@@ -183,7 +180,8 @@
     <option name="showModules" value="false" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="183" />
+    <option name="x" value="65" />
+    <option name="y" value="27" />
     <option name="width" value="1779" />
     <option name="height" value="1100" />
   </component>
@@ -195,6 +193,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -212,17 +211,10 @@
               <item name="HelloJavaEE3" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="HelloJavaEE3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HelloJavaEE3" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="login" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -230,7 +222,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554002774574" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554002777766" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/web/WEB-INF/lib" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -501,11 +493,12 @@
       <workItem from="1553953532071" duration="8712000" />
       <workItem from="1553996667108" duration="22000" />
       <workItem from="1554002375823" duration="264000" />
+      <workItem from="1554021800444" duration="59000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109418000" />
+    <option name="totallyTimeSpent" value="109477000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -517,11 +510,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="257" y="23" width="1779" height="1100" extended-state="0" />
-    <editor active="true" />
+    <frame x="65" y="27" width="1779" height="1100" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7769608" visible="true" weight="0.18187101" />
-      <window_info id="Structure" order="1" sideWeight="0.22303921" side_tool="true" visible="true" weight="0.18187101" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7757353" visible="true" weight="0.18361418" />
+      <window_info id="Structure" order="1" sideWeight="0.22426471" side_tool="true" visible="true" weight="0.18361418" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
@@ -950,7 +942,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/sql/insertdb.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
+        <state relative-caret-position="8040">
           <caret line="268" selection-start-line="268" selection-end-line="268" />
         </state>
       </provider>
@@ -969,17 +961,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+    <entry file="file://$PROJECT_DIR$/web/login/login.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+        <state relative-caret-position="600">
+          <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/login/login.jsp">
+    <entry file="file://$PROJECT_DIR$/web/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="20" column="16" lean-forward="true" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+        <state relative-caret-position="540">
+          <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
         </state>
       </provider>
     </entry>

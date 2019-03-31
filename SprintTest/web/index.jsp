@@ -12,6 +12,14 @@
   </head>
 <body>
 
+<h2><a href="jsp/session/session_scope_02.jsp">jsp  demo session 02</a> </h2>
+<h2><a href="jsp/session/session_scope_01.jsp">jsp  demo session 01</a> </h2>
+<h2><a href="jsp/request/request_scope_03.jsp">jsp  demo request 03</a> </h2>
+<h2><a href="jsp/request/request_scope_02.jsp">jsp  demo request 02</a> </h2>
+<h2><a href="jsp/request/request_scope_01.jsp">jsp  demo request 01</a> </h2>
+<h2><a href="jsp/page2/page_scope_03.jsp">jsp  demo pageext 03</a> </h2>
+<h2><a href="jsp/page2/page_scope_02.jsp">jsp  demo pageext 02</a> </h2>
+<h2><a href="jsp/page2/page_scope_01.jsp">jsp  demo pageext 01</a> </h2>
 <h2><a href="jsp/login/login.jsp">jsp  demo login</a> </h2>
 <h2><a href="jsp/forward/forward_demo02.jsp">jsp  demo forward 02</a> </h2>
 <h2><a href="jsp/forward/forward_demo01.jsp">jsp  demo forward 01</a> </h2>
