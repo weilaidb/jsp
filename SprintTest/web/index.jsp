@@ -12,6 +12,9 @@
   </head>
 <body>
 
+<h2><a href="jsp/login/login.jsp">jsp  demo login</a> </h2>
+<h2><a href="jsp/forward/forward_demo02.jsp">jsp  demo forward 02</a> </h2>
+<h2><a href="jsp/forward/forward_demo01.jsp">jsp  demo forward 01</a> </h2>
 <h2><a href="jsp/include/include_demo-5.jsp">jsp  demo include 05</a> </h2>
 <h2><a href="jsp/include/include_demo-4.jsp">jsp  demo include 04</a> </h2>
 <h2><a href="jsp/include/include_demo-3.jsp">jsp  demo include 03</a> </h2>
