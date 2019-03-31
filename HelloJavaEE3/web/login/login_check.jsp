@@ -59,7 +59,7 @@
 <%
     if (flag) {
 %>
-<jsp:forward page="login_success.jsp">
+<jsp:forward page="../sql/bselectdb.jsp">
     <jsp:param name="uname" value="<%=name%>"/>
 </jsp:forward>
 

@@ -16,7 +16,8 @@
 <%--<h1>《短歌行》</h1>--%>
 <h1>同一个世界，同一个梦想。</h1>
 
-<h1><a href="sql/bselectdb.jsp">我的记事本(mysql)</a></h1>
+<h1><a href="login/login.jsp">我的记事本(mysql)</a></h1>
+<%--<h1><a href="sql/bselectdb.jsp">我的记事本(mysql)</a></h1>--%>
 <%--<h1><a href="sql/notebook2.jsp">我的记事本(sqlite)</a></h1>--%>
 <h1><a href="sql/notebookalldb.jsp">我的记事本(sqlite)[all.db]</a></h1>
 <%--<h1><a href="note2">我的记事本(sqlite)</a></h1>--%>
