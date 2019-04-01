@@ -35,5 +35,31 @@
         <!--<location>/jsp/page/error.jsp</location>-->
     <!--</error-page>-->
 
+    <security-constraint>
+        <web-resource-collection>
+            <!--限制访问的名称-->
+            <web-resource-name>RegisteredUsers</web-resource-name>
+            <!--限制访问的路径-->
+            <url-pattern>/jsp/request/security.jsp</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>  <!--定义访问此限制资源的角色-->
+            <role-name>weilaidb</role-name> <!--weilaidb角色可以访问-->
+            <role-name>admin</role-name>
+        </auth-constraint>
+    </security-constraint>
+    <login-config>
+        <!--使用Basic验证，通过弹出登陆窗口提示用户输入用户名和密码-->
+        <auth-method>BASIC</auth-method>
+        <!--验证中使用的领域名称 -->
+        <realm-name>Registered Users</realm-name>
+    </login-config>
+    <!--指定用于安全约束中安全角色的声明-->
+    <security-role>
+        <role-name>weilaidb</role-name>
+    </security-role>
+    <security-role>
+        <role-name>admin</role-name>
+    </security-role>
 
+    
 </web-app>

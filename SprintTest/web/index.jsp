@@ -12,6 +12,18 @@
   </head>
 <body>
 
+<h2><a href="jsp/response/response_demo08.jsp">jsp  demo response demo 08 jsp</a> </h2>
+<h2><a href="jsp/response/response_demo07.jsp">jsp  demo response demo 07 jsp</a> </h2>
+<h2><a href="jsp/response/response_demo06.jsp">jsp  demo response demo 06jsp</a> </h2>
+<h2><a href="jsp/response/response_demo05.jsp">jsp  demo response demo 05 jsp</a> </h2>
+<h2><a href="jsp/response/response_demo04.jsp">jsp  demo response demo 04 jsp</a> </h2>
+<h2><a href="jsp/response/response_demo03.jsp">jsp  demo response demo 03 jsp</a> </h2>
+<h2><a href="jsp/response/response_demo03.htm">jsp  demo response demo 03 html</a> </h2>
+<h2><a href="jsp/response/response_demo02.jsp">jsp  demo response demo 02</a> </h2>
+<h2><a href="jsp/response/response_demo01.jsp">jsp  demo response demo 01</a> </h2>
+<h2><a href="jsp/request/request_demo_06.jsp">jsp  demo request demo 06</a> </h2>
+<h2><a href="jsp/request/security.jsp">jsp  demo request demo security</a> </h2>
+<h2><a href="jsp/request/request_demo_05.jsp">jsp  demo request demo 05</a> </h2>
 <h2><a href="jsp/request/request_demo_04.html">jsp  demo request demo 04</a> </h2>
 <h2><a href="jsp/request/request_demo_03.jsp">jsp  demo request demo 03</a> </h2>
 <h2><a href="jsp/request/request_demo_02.html">jsp  demo request demo 02</a> </h2>
