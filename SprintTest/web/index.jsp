@@ -12,6 +12,8 @@
   </head>
 <body>
 
+<h2><a href="jsp/session/login.jsp">jsp  demo login</a> </h2>
+<h2><a href="jsp/session/session_id.jsp">jsp  demo session id</a> </h2>
 <h2><a href="jsp/response/response_demo08.jsp">jsp  demo response demo 08 jsp</a> </h2>
 <h2><a href="jsp/response/response_demo07.jsp">jsp  demo response demo 07 jsp</a> </h2>
 <h2><a href="jsp/response/response_demo06.jsp">jsp  demo response demo 06jsp</a> </h2>
