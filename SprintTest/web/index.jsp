@@ -11,7 +11,18 @@
     <title>$INDEX$</title>
   </head>
 <body>
-
+<%
+    String basePath = application.getContextPath();
+%>
+<h1>内容映射路径是:<%=basePath%></h1>
+<h2><a href="<%=basePath%>/config.mldn">jsp  config init</a> </h2>
+<h2><a href="<%=basePath%>/hello.mldn">jsp  demo web-inf hello</a> </h2>
+<h2><a href="jsp/application/all_attribute.jsp">jsp  demo application all attributes</a> </h2>
+<h2><a href="jsp/application/count.jsp">jsp  demo count user</a> </h2>
+<h2><a href="jsp/application/input_content.html">jsp  demo application savefile readfile</a> </h2>
+<h2><a href="jsp/application/get_path_demo01.jsp">jsp  demo application get realpath</a> </h2>
+<h2><a href="jsp/session/get_time.jsp">jsp  demo session get time</a> </h2>
+<h2><a href="jsp/session/is_new.jsp">jsp  demo  is new user</a> </h2>
 <h2><a href="jsp/session/login.jsp">jsp  demo login</a> </h2>
 <h2><a href="jsp/session/session_id.jsp">jsp  demo session id</a> </h2>
 <h2><a href="jsp/response/response_demo08.jsp">jsp  demo response demo 08 jsp</a> </h2>

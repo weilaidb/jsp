@@ -18,6 +18,7 @@
 <body>
 
 <%
+    //写文件
     request.setCharacterEncoding("UTF-8");
     String name = request.getParameter("filename");
     String content = request.getParameter("filecontent");
@@ -34,7 +35,7 @@
 %>
 
 <%
-    //读取出来
+    //读取出来 读文件
     Scanner scan = new Scanner(new FileInputStream(file));
     scan.useDelimiter("\n");
     StringBuffer buf = new StringBuffer();
