@@ -7,18 +7,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ff387f0d-5e43-4848-a996-9a0118359957" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/hello.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/init.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/jsp/application/all_attribute.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/jsp/application/count.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/jsp/config/init.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/jsp/out/out_demo.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/jsp/pagecontext/pagecontext_forward_demo01.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/jsp/pagecontext/pagecontext_forward_demo02.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../HelloJavaEE3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HelloJavaEE3/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../HelloJavaEE3/web/sql/bselectdb.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../HelloJavaEE3/web/sql/bselectdb.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../HelloJavaEE3/web/sql/insertdb.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../HelloJavaEE3/web/sql/insertdb.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/jsp/application/input_content.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/application/input_content.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -49,17 +45,44 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="39">
-              <caret line="17" column="32" lean-forward="true" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+            <state relative-caret-position="129">
+              <caret line="17" column="36" lean-forward="true" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/jsp/pagecontext/pagecontext_forward_demo01.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="134">
+              <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/jsp/pagecontext/pagecontext_forward_demo02.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="355">
+              <caret line="19" column="62" selection-start-line="19" selection-start-column="62" selection-end-line="19" selection-end-column="62" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/jsp/out/out_demo.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="325">
+              <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="83">
-              <caret line="77" column="35" selection-start-line="77" selection-start-column="35" selection-end-line="77" selection-end-column="35" />
+            <state relative-caret-position="1733">
+              <caret line="63" lean-forward="true" selection-start-line="63" selection-end-line="63" />
             </state>
           </provider>
         </entry>
@@ -117,9 +140,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/web/jsp/login/login_success.jsp" />
-        <option value="$PROJECT_DIR$/web/jsp/login/login_failure.jsp" />
-        <option value="$PROJECT_DIR$/web/jsp/login/login.jsp" />
         <option value="$PROJECT_DIR$/web/jsp/page2/page_scope_01.jsp" />
         <option value="$PROJECT_DIR$/web/jsp/page2/page_scope_03.jsp" />
         <option value="$PROJECT_DIR$/web/jsp/page2/page_scope_02.jsp" />
@@ -165,9 +185,12 @@
         <option value="$PROJECT_DIR$/web/jsp/application/all_attribute.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/hello.jsp" />
         <option value="$PROJECT_DIR$/web/jsp/config/init.jsp" />
-        <option value="$PROJECT_DIR$/web/index.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/init.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/web/jsp/out/out_demo.jsp" />
+        <option value="$PROJECT_DIR$/web/jsp/pagecontext/pagecontext_forward_demo02.jsp" />
+        <option value="$PROJECT_DIR$/web/index.jsp" />
+        <option value="$PROJECT_DIR$/web/jsp/pagecontext/pagecontext_forward_demo01.jsp" />
       </list>
     </option>
   </component>
@@ -175,10 +198,10 @@
     <option name="showModules" value="false" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="94" />
-    <option name="y" value="206" />
+    <option name="x" value="24" />
+    <option name="y" value="398" />
     <option name="width" value="1882" />
-    <option name="height" value="867" />
+    <option name="height" value="844" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -211,13 +234,6 @@
               <item name="SprintTest" type="b2602c69:ProjectViewProjectNode" />
               <item name="SprintTest" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="jsp" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SprintTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SprintTest" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="META-INF" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -236,7 +252,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554385913614" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554386839090" />
     <property name="last_opened_file_path" value="D:/Software/jar/dom4j" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -248,11 +264,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\tarbao\egjsp\eclipse-workspace\TomcatTest\SprintTest\web\jsp\pagecontext" />
       <recent name="E:\tarbao\egjsp\eclipse-workspace\TomcatTest\SprintTest\web\WEB-INF" />
       <recent name="E:\tarbao\egjsp\eclipse-workspace\TomcatTest\SprintTest\web\jsp\application" />
       <recent name="E:\tarbao\egjsp\eclipse-workspace\TomcatTest\SprintTest\web\jsp\session" />
       <recent name="E:\tarbao\egjsp\eclipse-workspace\TomcatTest\SprintTest\web\jsp\response" />
-      <recent name="E:\tarbao\egjsp\eclipse-workspace\TomcatTest\SprintTest\web\jsp\request" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.sax.cn" />
@@ -466,12 +482,12 @@
       <workItem from="1554125038817" duration="3100000" />
       <workItem from="1554207302194" duration="2190000" />
       <workItem from="1554299644670" duration="1540000" />
-      <workItem from="1554383226875" duration="2597000" />
+      <workItem from="1554383226875" duration="3563000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56340000" />
+    <option name="totallyTimeSpent" value="57306000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -483,33 +499,33 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="94" y="206" width="1882" height="867" extended-state="0" />
+    <frame x="24" y="398" width="1882" height="844" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49868074" visible="true" weight="0.19517544" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4967462" visible="true" weight="0.19517544" />
+      <window_info id="Structure" order="1" sideWeight="0.5032538" side_tool="true" weight="0.19517544" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info id="Web" order="7" sideWeight="0.5013193" side_tool="true" weight="0.1929111" />
+      <window_info id="Favorites" order="6" sideWeight="0.5032538" side_tool="true" weight="0.19517544" />
+      <window_info id="Web" order="7" sideWeight="0.5032538" side_tool="true" weight="0.19517544" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.24929972" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.042016808" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.36613604" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32979852" />
-      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32979852" />
-      <window_info anchor="bottom" id="Spring" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.03181336" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32913166" />
+      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32913166" />
+      <window_info anchor="bottom" id="Spring" order="8" weight="0.32913166" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.042016808" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.18133616" />
-      <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.32979852" />
+      <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.32913166" />
       <window_info anchor="bottom" id="Database Changes" order="14" />
-      <window_info anchor="bottom" id="Version Control" order="15" />
+      <window_info anchor="bottom" id="Version Control" order="15" weight="0.32913166" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -562,27 +578,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/jsp/login/login_check.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/jsp/page2/page_scope_01.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="23" selection-start-line="23" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/jsp/page2/page_scope_02.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="24" lean-forward="true" selection-start-line="15" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/jsp/page2/page_scope_03.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="53">
@@ -894,13 +889,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="39">
-          <caret line="17" column="32" lean-forward="true" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/init.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -910,8 +898,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="83">
-          <caret line="77" column="35" selection-start-line="77" selection-start-column="35" selection-end-line="77" selection-end-column="35" />
+        <state relative-caret-position="1733">
+          <caret line="63" lean-forward="true" selection-start-line="63" selection-end-line="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/jsp/out/out_demo.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/jsp/pagecontext/pagecontext_forward_demo02.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="19" column="62" selection-start-line="19" selection-start-column="62" selection-end-line="19" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="17" column="36" lean-forward="true" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/jsp/pagecontext/pagecontext_forward_demo01.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
         </state>
       </provider>
     </entry>

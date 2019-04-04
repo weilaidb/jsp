@@ -15,6 +15,8 @@
     String basePath = application.getContextPath();
 %>
 <h1>内容映射路径是:<%=basePath%></h1>
+<h2><a href="jsp/pagecontext/pagecontext_forward_demo01.jsp">jsp demo pagecontext 01</a> </h2>
+<h2><a href="jsp/out/out_demo.jsp">jsp demo out</a> </h2>
 <h2><a href="<%=basePath%>/config.mldn">jsp  config init</a> </h2>
 <h2><a href="<%=basePath%>/hello.mldn">jsp  demo web-inf hello</a> </h2>
 <h2><a href="jsp/application/all_attribute.jsp">jsp  demo application all attributes</a> </h2>
