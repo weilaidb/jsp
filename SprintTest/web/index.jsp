@@ -11,10 +11,16 @@
     <title>$INDEX$</title>
   </head>
 <body>
+
+<h2><a href="jsp/javabean/use_javabean_demo02.jsp">jsp demo javabean 02</a> </h2>
+<h2><a href="jsp/javabean/use_javabean_demo01.jsp">jsp demo javabean 01</a> </h2>
+
 <%
     String basePath = application.getContextPath();
+    String baseRealPath = application.getRealPath("/");
 %>
 <h1>内容映射路径是:<%=basePath%></h1>
+<h1>实际内容映射路径是:<%=baseRealPath%></h1>
 <h2><a href="jsp/pagecontext/pagecontext_forward_demo01.jsp">jsp demo pagecontext 01</a> </h2>
 <h2><a href="jsp/out/out_demo.jsp">jsp demo out</a> </h2>
 <h2><a href="<%=basePath%>/config.mldn">jsp  config init</a> </h2>
