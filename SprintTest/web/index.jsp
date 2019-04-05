@@ -12,6 +12,15 @@
   </head>
 <body>
 
+<h2><a href="jsp/javabean/register/index.jsp">jsp demo register check</a> </h2>
+<h2><a href="jsp/javabean/getProperty/removebean.jsp">jsp demo remove bean</a> </h2>
+<h2><a href="jsp/javabean/getProperty/application_bean.jsp">jsp demo application bean</a> </h2>
+<h2><a href="jsp/javabean/getProperty/session_bean.jsp">jsp demo session bean</a> </h2>
+<h2><a href="jsp/javabean/getProperty/request_bean01.jsp">jsp demo request bean 01</a> </h2>
+<h2><a href="jsp/javabean/getProperty/page_bean01.jsp">jsp demo page bean 01</a> </h2>
+<h2><a href="jsp/javabean/getProperty/input_bean.jsp">jsp demo get property</a> </h2>
+<h2><a href="jsp/javabean/value_bean.jsp">jsp demo value</a> </h2>
+<h2><a href="jsp/javabean/input_bean2.htm">jsp demo input 02</a> </h2>
 <h2><a href="jsp/javabean/input_bean.htm">jsp demo input</a> </h2>
 <h2><a href="jsp/javabean/use_javabean_demo022.jsp">jsp demo javabean 022</a> </h2>
 <h2><a href="jsp/javabean/use_javabean_demo02.jsp">jsp demo javabean 02</a> </h2>
