@@ -12,6 +12,8 @@
   </head>
 <body>
 
+<h2><a href="jsp/javabean/input_bean.htm">jsp demo input</a> </h2>
+<h2><a href="jsp/javabean/use_javabean_demo022.jsp">jsp demo javabean 022</a> </h2>
 <h2><a href="jsp/javabean/use_javabean_demo02.jsp">jsp demo javabean 02</a> </h2>
 <h2><a href="jsp/javabean/use_javabean_demo01.jsp">jsp demo javabean 01</a> </h2>
 
