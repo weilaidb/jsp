@@ -20,10 +20,6 @@
 %>
 
 <body>
-<form action="emp_list.jsp" method="post">
-    请输入查询关键字<input type="text" name="kw">
-    <input type="submit" value="查询">
-</form>
 
 <%
     try {
@@ -36,6 +32,11 @@
 
 
 %>
+<center>
+<form action="emp_list.jsp" method="post">
+    请输入查询关键字<input type="text" name="kw">
+    <input type="submit" value="查询">
+</form>
 
 <table border="1" width="80%">
     <tr>
@@ -67,7 +68,7 @@
         }
     %>
 </table>
-
+</center>
 <%
     } catch (Exception e) {
         e.printStackTrace(); //在Tomcat后台打印
