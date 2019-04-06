@@ -12,6 +12,8 @@
   </head>
 <body>
 
+<h2><a href="jsp/emp/emp_list.jsp">jsp demo emp list</a> </h2>
+<h2><a href="jsp/emp/emp_insert.jsp">jsp demo emp insert</a> </h2>
 <h2><a href="jsp/javabean/register/index.jsp">jsp demo register check</a> </h2>
 <h2><a href="jsp/javabean/getProperty/removebean.jsp">jsp demo remove bean</a> </h2>
 <h2><a href="jsp/javabean/getProperty/application_bean.jsp">jsp demo application bean</a> </h2>

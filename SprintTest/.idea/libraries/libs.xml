@@ -4,6 +4,7 @@
       <root url="file://D:/Software/jar/spring/spring-framework-5.1.5.RELEASE/libs" />
       <root url="jar://D:/Software/jar/jdom-2.0.6/jdom-2.0.6.jar!/" />
       <root url="file://D:/Software/jar/dom4j" />
+      <root url="jar://D:/Software/jar/mysql-connector-java-5.1.39-bin.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
