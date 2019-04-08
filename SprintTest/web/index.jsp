@@ -12,8 +12,9 @@
   </head>
 <body>
 
-<h2><a href="jsp/upload/smartupload_demo02.html">jsp demo upload 02</a> </h2>
-<h2><a href="jsp/upload/smartupload_demo01.html">jsp demo upload 01</a> </h2>
+<h2><a href="jsp/upload/fileupload_demo01.html">jsp demo fileupload 01</a> </h2>
+<h2><a href="jsp/upload/smartupload_demo02.html">jsp demo smart upload 02</a> </h2>
+<h2><a href="jsp/upload/smartupload_demo01.html">jsp demo smart upload 01</a> </h2>
 <h2><a href="jsp/emp/emp_list.jsp">jsp demo emp list</a> </h2>
 <h2><a href="jsp/emp/emp_insert.jsp">jsp demo emp insert</a> </h2>
 <h2><a href="jsp/javabean/register/index.jsp">jsp demo register check</a> </h2>
