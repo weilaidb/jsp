@@ -89,4 +89,20 @@
         <servlet-name>dbinit</servlet-name>
         <url-pattern>/config.mldn</url-pattern>
     </servlet-mapping>
+
+
+
+    <servlet>
+        <servlet-name>hello</servlet-name>
+        <servlet-class>com.servlet.HelloServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>hello</servlet-name>
+        <url-pattern>/helloServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>hello</servlet-name>
+        <url-pattern>/lxh/*</url-pattern>
+    </servlet-mapping>
+    
 </web-app>

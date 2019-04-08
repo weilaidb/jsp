@@ -12,6 +12,14 @@
   </head>
 <body>
 
+<%
+    String basePath = application.getContextPath();
+    String baseRealPath = application.getRealPath("/");
+%>
+
+<h2><a href="<%=basePath%>/helloServlet">jsp demo servlet hello word</a> </h2>
+<h2><a href="jsp/upload/fileupload_demo03.html">jsp demo fileupload 03</a> </h2>
+<h2><a href="jsp/upload/fileupload_demo02.html">jsp demo fileupload 02</a> </h2>
 <h2><a href="jsp/upload/fileupload_demo01.html">jsp demo fileupload 01</a> </h2>
 <h2><a href="jsp/upload/smartupload_demo02.html">jsp demo smart upload 02</a> </h2>
 <h2><a href="jsp/upload/smartupload_demo01.html">jsp demo smart upload 01</a> </h2>
@@ -31,10 +39,7 @@
 <h2><a href="jsp/javabean/use_javabean_demo02.jsp">jsp demo javabean 02</a> </h2>
 <h2><a href="jsp/javabean/use_javabean_demo01.jsp">jsp demo javabean 01</a> </h2>
 
-<%
-    String basePath = application.getContextPath();
-    String baseRealPath = application.getRealPath("/");
-%>
+
 <h1>内容映射路径是:<%=basePath%></h1>
 <h1>实际内容映射路径是:<%=baseRealPath%></h1>
 <h2><a href="jsp/pagecontext/pagecontext_forward_demo01.jsp">jsp demo pagecontext 01</a> </h2>

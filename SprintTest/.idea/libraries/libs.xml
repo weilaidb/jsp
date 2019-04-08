@@ -6,6 +6,8 @@
       <root url="file://D:/Software/jar/dom4j" />
       <root url="jar://D:/Software/jar/mysql-connector-java-5.1.39-bin.jar!/" />
       <root url="jar://D:/Software/jar/jspSmartUpload.jar!/" />
+      <root url="jar://D:/Software/jar/fileUpload/commons-fileupload-1.4-bin/commons-fileupload-1.4.jar!/" />
+      <root url="jar://D:/Software/jar/commons-io-2.5.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

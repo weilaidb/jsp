@@ -31,6 +31,12 @@ public class IPTimeStamp {
         return buf.toString();
     }
 
+    public String getIPTimeRandFormat(){
+        return getIPTimeRand().replace(":", "_");
+    }
+
+
+
     private String addZero(String str, int len)
     {
         StringBuffer s = new StringBuffer();
