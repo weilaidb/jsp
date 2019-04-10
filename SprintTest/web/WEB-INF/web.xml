@@ -104,5 +104,23 @@
         <servlet-name>hello</servlet-name>
         <url-pattern>/lxh/*</url-pattern>
     </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>input</servlet-name>
+        <servlet-class>com.servlet.InputServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>input</servlet-name>
+        <url-pattern>/InputServlet</url-pattern>
+    </servlet-mapping>
     
+    <servlet>
+        <servlet-name>life</servlet-name>
+        <servlet-class>com.servlet.LifeCycleServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>life</servlet-name>
+        <url-pattern>/LifeServlet</url-pattern>
+    </servlet-mapping>
 </web-app>

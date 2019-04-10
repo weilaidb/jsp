@@ -7,8 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f3158e1-4520-4f9f-add1-db9f54a74a32" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/web/sql/insertdb.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/sql/insertdb.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SprintTest/.idea/libraries/libs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SprintTest/.idea/libraries/libs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SprintTest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SprintTest/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SprintTest/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SprintTest/web/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SprintTest/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../SprintTest/web/index.jsp" afterDir="false" />
@@ -25,16 +23,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/sql/insertdb.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
-              <caret line="274" column="46" lean-forward="true" selection-start-line="274" selection-start-column="46" selection-end-line="274" selection-end-column="46" />
+            <state relative-caret-position="376">
+              <caret line="131" column="17" selection-start-line="131" selection-start-column="17" selection-end-line="131" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/java/lang/Throwable.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="262">
@@ -200,7 +198,7 @@
     <option name="frameworksView" value="false" />
     <option name="showModules" value="false" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="450" />
     <option name="y" value="20" />
     <option name="width" value="1779" />
@@ -520,7 +518,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109753000" />
+    <option name="totallyTimeSpent" value="109754000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -987,8 +985,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/sql/insertdb.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="274" column="46" lean-forward="true" selection-start-line="274" selection-start-column="46" selection-end-line="274" selection-end-column="46" />
+        <state relative-caret-position="376">
+          <caret line="131" column="17" selection-start-line="131" selection-start-column="17" selection-end-line="131" selection-end-column="17" />
         </state>
       </provider>
     </entry>
