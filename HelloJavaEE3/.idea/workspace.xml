@@ -6,11 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f3158e1-4520-4f9f-add1-db9f54a74a32" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../SprintTest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SprintTest/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SprintTest/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SprintTest/web/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SprintTest/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../SprintTest/web/index.jsp" afterDir="false" />
-    </list>
+    <list default="true" id="2f3158e1-4520-4f9f-add1-db9f54a74a32" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,8 +22,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/sql/insertdb.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="376">
-              <caret line="131" column="17" selection-start-line="131" selection-start-column="17" selection-end-line="131" selection-end-column="17" />
+            <state relative-caret-position="286">
+              <caret line="128" column="13" lean-forward="true" selection-start-line="128" selection-start-column="13" selection-end-line="128" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -198,7 +194,7 @@
     <option name="frameworksView" value="false" />
     <option name="showModules" value="false" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="450" />
     <option name="y" value="20" />
     <option name="width" value="1779" />
@@ -518,7 +514,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109754000" />
+    <option name="totallyTimeSpent" value="109943000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -543,7 +539,7 @@
       <window_info id="Web" order="7" sideWeight="0.5007899" side_tool="true" weight="0.07931226" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32873806" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.77260125" visible="true" weight="0.13891834" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.77260125" weight="0.13891834" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39958593" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -985,8 +981,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/sql/insertdb.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="131" column="17" selection-start-line="131" selection-start-column="17" selection-end-line="131" selection-end-column="17" />
+        <state relative-caret-position="286">
+          <caret line="128" column="13" lean-forward="true" selection-start-line="128" selection-start-column="13" selection-end-line="128" selection-end-column="13" />
         </state>
       </provider>
     </entry>
