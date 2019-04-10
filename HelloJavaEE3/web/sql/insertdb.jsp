@@ -272,7 +272,7 @@
             if (null == e.getMessage()) {
                 out.println("写入成功!!<br />");
             } else {
-                out.println("写入异常!! ");
+                out.println("写入异常!! " + e.getMessage());
             }
         } else {
             out.println("数据为空!!<br />");
