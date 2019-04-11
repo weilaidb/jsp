@@ -177,5 +177,13 @@
     </servlet-mapping>
 
 
+    <servlet>
+        <servlet-name>login</servlet-name>
+        <servlet-class>com.login.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>login</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
     
 </web-app>
