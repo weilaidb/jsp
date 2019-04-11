@@ -18,6 +18,11 @@
     String baseRealPath = application.getRealPath("/");
 %>
 
+<h2><a href="<%=basePath%>/ServerRedirectDemo">jsp demo servlet sever</a></h2>
+<h2><a href="<%=basePath%>/ClientRedirectDemo">jsp demo servlet client</a></h2>
+<h2><a href="<%=basePath%>/ServletContextDemoServlet">jsp demo servlet context realpath</a></h2>
+<h2><a href="<%=basePath%>/HttpSessionDemoServlet">jsp demo servlet session</a></h2>
+<h2><a href="<%=basePath%>/InitParamServlet">jsp demo servlet init param</a></h2>
 <h2><a href="<%=basePath%>/LifeServlet">jsp demo servlet lifecycle</a></h2>
 <h2><a href="jsp/servlet/input.jsp">jsp demo servlet input html</a></h2>
 <h2><a href="<%=basePath%>/InputServlet">jsp demo servlet input</a></h2>

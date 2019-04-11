@@ -118,9 +118,64 @@
     <servlet>
         <servlet-name>life</servlet-name>
         <servlet-class>com.servlet.LifeCycleServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
     </servlet>
     <servlet-mapping>
         <servlet-name>life</servlet-name>
         <url-pattern>/LifeServlet</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>initparam</servlet-name>
+        <servlet-class>com.servlet.InitParamServlet</servlet-class>
+        <init-param>
+            <param-name>ref</param-name>
+            <param-value>www.weilaidbfdsfd.com</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>initparam</servlet-name>
+        <url-pattern>/InitParamServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>sessiondemo</servlet-name>
+        <servlet-class>com.servlet.HttpSessionDemoServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>sessiondemo</servlet-name>
+        <url-pattern>/HttpSessionDemoServlet</url-pattern>
+    </servlet-mapping>
+
+    
+    <servlet>
+        <servlet-name>applicationdemo</servlet-name>
+        <servlet-class>com.servlet.ServletContextDemoServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>applicationdemo</servlet-name>
+        <url-pattern>/ServletContextDemoServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>client</servlet-name>
+        <servlet-class>com.servlet.ClientRedirectDemo</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>client</servlet-name>
+        <url-pattern>/ClientRedirectDemo</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>server</servlet-name>
+        <servlet-class>com.servlet.ServerRedirectDemo</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>server</servlet-name>
+        <url-pattern>/ServerRedirectDemo</url-pattern>
+    </servlet-mapping>
+
+
+    
 </web-app>
