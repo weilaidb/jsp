@@ -7,21 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f3158e1-4520-4f9f-add1-db9f54a74a32" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/weilaidb/login/SelectDatabase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/sql/login/bselectdb.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/sql/login/insertdb.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/java/test/2.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/java/test/LoginListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/java/test/WZQConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/java/test/WZQFrame.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/runcmd/RunCmd.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/runcmd/TestRunCmd.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/runoob/main/TestBean.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/runoob/test/MySQLDemo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/weilaidb/sql/selectalldb.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/sql/insertdb.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/sql/insertdb.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SprintTest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SprintTest/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -36,6 +22,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/sql/insertdb.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/weilaidb/login/SelectDatabase.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -58,16 +53,7 @@
         <entry file="file://$PROJECT_DIR$/src/weilaidb/login/LoginServlet.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="59">
-              <caret line="36" column="17" lean-forward="true" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/weilaidb/login/IUserDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+              <caret line="36" column="17" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -103,11 +89,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/sql/bselectdb.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="60" column="6" lean-forward="true" selection-start-line="60" selection-start-column="6" selection-end-line="60" selection-end-column="6" />
+            <state relative-caret-position="-520">
+              <caret line="197" lean-forward="true" selection-start-line="197" selection-end-line="197" />
             </state>
           </provider>
         </entry>
@@ -116,7 +102,7 @@
         <entry file="file://$PROJECT_DIR$/web/sql/login/bselectdb.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="470">
-              <caret line="220" lean-forward="true" selection-start-line="220" selection-end-line="220" />
+              <caret line="220" selection-start-line="220" selection-end-line="220" />
             </state>
           </provider>
         </entry>
@@ -223,7 +209,6 @@
         <option value="$PROJECT_DIR$/web/sql/alteralldbcollate_nocs.jsp" />
         <option value="$PROJECT_DIR$/web/cmd/runcmd.jsp" />
         <option value="$PROJECT_DIR$/web/login/login_check.jsp" />
-        <option value="$PROJECT_DIR$/web/sql/insertdb.jsp" />
         <option value="$PROJECT_DIR$/src/weilaidb/login/User.java" />
         <option value="$PROJECT_DIR$/src/weilaidb/login/DAOFactory.java" />
         <option value="$PROJECT_DIR$/src/weilaidb/login/DatabaseConnection.java" />
@@ -237,6 +222,7 @@
         <option value="$PROJECT_DIR$/src/weilaidb/login/SelectDatabase.java" />
         <option value="$PROJECT_DIR$/web/sql/login/bselectdb.jsp" />
         <option value="$PROJECT_DIR$/web/sql/bselectdb.jsp" />
+        <option value="$PROJECT_DIR$/web/sql/insertdb.jsp" />
       </list>
     </option>
   </component>
@@ -325,7 +311,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555200903124" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555201791308" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/web/WEB-INF/lib" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -602,12 +588,12 @@
       <workItem from="1554021800444" duration="59000" />
       <workItem from="1554906580684" duration="276000" />
       <workItem from="1555196766051" duration="105000" />
-      <workItem from="1555197139170" duration="3755000" />
+      <workItem from="1555197139170" duration="4557000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="113803000" />
+    <option name="totallyTimeSpent" value="114605000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -619,11 +605,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="-8" width="1861" height="1096" extended-state="6" />
-    <editor active="true" />
+    <frame x="67" y="-8" width="1861" height="1096" extended-state="7" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7708333" visible="true" weight="0.14864115" />
-      <window_info id="Structure" order="1" sideWeight="0.22916667" side_tool="true" visible="true" weight="0.14864115" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.77088946" visible="true" weight="0.14864115" />
+      <window_info id="Structure" order="1" sideWeight="0.22911051" side_tool="true" visible="true" weight="0.14864115" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
@@ -632,7 +617,7 @@
       <window_info id="Web" order="7" sideWeight="0.5007899" side_tool="true" weight="0.07931226" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4997227" weight="0.32873806" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.7709373" visible="true" weight="0.38918346" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.7709373" visible="true" weight="0.21314952" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39958593" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -640,7 +625,7 @@
       <window_info anchor="bottom" id="Application Servers" order="7" sideWeight="0.4997227" weight="0.29056203" />
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49861342" weight="0.03181336" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.22906268" side_tool="true" visible="true" weight="0.38918346" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.22906268" side_tool="true" visible="true" weight="0.21314952" />
       <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49195784" weight="0.49840933" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.32873806" />
@@ -899,13 +884,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sql.java" />
-    <entry file="file://$PROJECT_DIR$/web/sql/insertdb.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4050">
-          <caret line="135" column="11" selection-start-line="135" selection-start-column="11" selection-end-line="135" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/java/lang/Throwable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="10470">
@@ -1039,7 +1017,7 @@
     <entry file="file://$PROJECT_DIR$/src/weilaidb/login/LoginServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="59">
-          <caret line="36" column="17" lean-forward="true" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
+          <caret line="36" column="17" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -1053,14 +1031,21 @@
     <entry file="file://$PROJECT_DIR$/web/sql/login/bselectdb.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="470">
-          <caret line="220" lean-forward="true" selection-start-line="220" selection-end-line="220" />
+          <caret line="220" selection-start-line="220" selection-end-line="220" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/sql/bselectdb.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="60" column="6" lean-forward="true" selection-start-line="60" selection-start-column="6" selection-end-line="60" selection-end-column="6" />
+        <state relative-caret-position="-520">
+          <caret line="197" lean-forward="true" selection-start-line="197" selection-end-line="197" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/sql/insertdb.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
         </state>
       </provider>
     </entry>
