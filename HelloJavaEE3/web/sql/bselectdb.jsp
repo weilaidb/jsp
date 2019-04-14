@@ -126,8 +126,8 @@
 <form name="form1" method="post" action="sql/bselectdb.jsp">
     <h1>
         请输入查询数据：<input type="text" class="text1" name="qrydata" size="80"/>
-        <input type="submit" name="Submit" value="点击查询"/>
-        <input type="button" name="insertdata" value="插入数据"
+        <input type="submit" class="text1" name="Submit" value="点击查询"/>
+        <input type="button" class="text1" name="insertdata" value="插入数据"
                onclick="openinsertdatapage();">
                <%--onclick="javascript:window.location='<%=basePath%>sql/insertdb.jsp' "/>--%>
         <a href="/url" target="_blank"></a>
