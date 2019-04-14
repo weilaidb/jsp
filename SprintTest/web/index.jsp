@@ -18,6 +18,12 @@
     String baseRealPath = application.getRealPath("/");
 %>
 
+<h2><a href="jsp/listener/session_unbound.jsp">jps demo servlet session remove loginuser</a></h2>
+<h2><a href="jsp/listener/session_bound.jsp">jps demo servlet session loginuser</a></h2>
+<h2><a href="jsp/listener/session_attribute_remove.jsp">jps demo servlet session remove attribute</a></h2>
+<h2><a href="jsp/listener/session_attribute_add.jsp">jps demo servlet session add attribute</a></h2>
+<h2><a href="jsp/listener/application_attribute_remove.jsp">jps demo servlet remove attribute</a></h2>
+<h2><a href="jsp/listener/application_attribute_add.jsp">jps demo servlet add attribute</a></h2>
 <h2><a href="<%=basePath%>/">jsp demo servlet filter</a></h2>
 <h2><a href="jsp/servlet/login.jsp">jsp demo servlet login</a></h2>
 <h2><a href="<%=basePath%>/ServerRedirectDemo">jsp demo servlet sever</a></h2>
