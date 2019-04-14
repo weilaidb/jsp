@@ -36,7 +36,23 @@
         <url-pattern>/note2</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>bmysql</servlet-name>
+        <servlet-class>weilaidb.login.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>bmysql</servlet-name>
+        <url-pattern>/BSelectDb</url-pattern>
+    </servlet-mapping>
 
+    <servlet>
+        <servlet-name>bselectdatabse</servlet-name>
+        <servlet-class>weilaidb.login.SelectDatabase</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>bselectdatabse</servlet-name>
+        <url-pattern>/SelectDatabase</url-pattern>
+    </servlet-mapping>
 
-
+    
 </web-app>
