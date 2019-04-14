@@ -18,6 +18,17 @@
     String baseRealPath = application.getRealPath("/");
 %>
 
+<h2><a href="jsp/el/param_values_demo.html">jps demo el get values</a></h2>
+<h2><a href="jsp/el/get_param_demo.jsp">jps demo el get param</a></h2>
+<h2><a href="jsp/el/invoke_method.jsp">jps demo el invoke method</a></h2>
+<h2><a href="jsp/el/get_attribute_demo.jsp">jps demo el get attribute</a></h2>
+<h2><a href="jsp/el/repeat_attribute_demo.jsp">jps demo el print 4 range scope</a></h2>
+<h2><a href="jsp/el/print_attribute_demo02.jsp">jps demo el print attribute info 2</a></h2>
+<h2><a href="jsp/el/print_attribute_demo01.jsp">jps demo el print attribute info</a></h2>
+<h2><a href="jsp/listener/login.jsp">jps demo servlet request login</a></h2>
+<h2><a href="jsp/listener/request_attribute_remove.jsp">jps demo servlet request remove attribute</a></h2>
+<h2><a href="jsp/listener/request_attribute_replace.jsp">jps demo servlet request replace attribute</a></h2>
+<h2><a href="jsp/listener/request_attribute_add.jsp">jps demo servlet request add attribute</a></h2>
 <h2><a href="jsp/listener/session_unbound.jsp">jps demo servlet session remove loginuser</a></h2>
 <h2><a href="jsp/listener/session_bound.jsp">jps demo servlet session loginuser</a></h2>
 <h2><a href="jsp/listener/session_attribute_remove.jsp">jps demo servlet session remove attribute</a></h2>

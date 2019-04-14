@@ -18,21 +18,21 @@
     </welcome-file-list>
 
     <!--<error-page>-->
-        <!--<error-code>500</error-code>-->
-        <!--<location>/jsp/page/error.jsp</location>-->
+    <!--<error-code>500</error-code>-->
+    <!--<location>/jsp/page/error.jsp</location>-->
     <!--</error-page>-->
     <!--<error-page>-->
-        <!--<error-code>404</error-code>-->
-        <!--<location>/jsp/page/error.jsp</location>-->
+    <!--<error-code>404</error-code>-->
+    <!--<location>/jsp/page/error.jsp</location>-->
     <!--</error-page>-->
     <!--<error-page>-->
-        <!--<exception-type>java.lang.NullPointerException</exception-type>-->
-        <!--<location>/jsp/page/error.jsp</location>-->
+    <!--<exception-type>java.lang.NullPointerException</exception-type>-->
+    <!--<location>/jsp/page/error.jsp</location>-->
     <!--</error-page>-->
 
     <!--<error-page>-->
-        <!--<exception-type>java.lang.Exception</exception-type>-->
-        <!--<location>/jsp/page/error.jsp</location>-->
+    <!--<exception-type>java.lang.Exception</exception-type>-->
+    <!--<location>/jsp/page/error.jsp</location>-->
     <!--</error-page>-->
 
     <security-constraint>
@@ -91,7 +91,6 @@
     </servlet-mapping>
 
 
-
     <servlet>
         <servlet-name>hello</servlet-name>
         <servlet-class>com.servlet.HelloServlet</servlet-class>
@@ -114,7 +113,7 @@
         <servlet-name>input</servlet-name>
         <url-pattern>/InputServlet</url-pattern>
     </servlet-mapping>
-    
+
     <servlet>
         <servlet-name>life</servlet-name>
         <servlet-class>com.servlet.LifeCycleServlet</servlet-class>
@@ -137,7 +136,7 @@
         <servlet-name>initparam</servlet-name>
         <url-pattern>/InitParamServlet</url-pattern>
     </servlet-mapping>
-    
+
     <servlet>
         <servlet-name>sessiondemo</servlet-name>
         <servlet-class>com.servlet.HttpSessionDemoServlet</servlet-class>
@@ -148,7 +147,7 @@
         <url-pattern>/HttpSessionDemoServlet</url-pattern>
     </servlet-mapping>
 
-    
+
     <servlet>
         <servlet-name>applicationdemo</servlet-name>
         <servlet-class>com.servlet.ServletContextDemoServlet</servlet-class>
@@ -157,7 +156,7 @@
         <servlet-name>applicationdemo</servlet-name>
         <url-pattern>/ServletContextDemoServlet</url-pattern>
     </servlet-mapping>
-    
+
     <servlet>
         <servlet-name>client</servlet-name>
         <servlet-class>com.servlet.ClientRedirectDemo</servlet-class>
@@ -198,12 +197,12 @@
         <filter-name>simple</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
-    
+
     <listener>
         <listener-class>com.listen.ServletContextListenerDemo</listener-class>
     </listener>
-    
-    
+
+
     <listener>
         <listener-class>com.listen.ServletContextAttributeListenerDemo</listener-class>
     </listener>
@@ -214,11 +213,24 @@
     <session-config>
         <session-timeout>5</session-timeout>
     </session-config>
-    
+
     <listener>
         <listener-class>com.listen.HttpSessionAttributeListenerDemo</listener-class>
     </listener>
+    <!--打开此项后启动失败-->
     <!--<listener>-->
-        <!--<listener-class>com.listen.LoginUser</listener-class>-->
+    <!--<listener-class>com.listen.LoginUser</listener-class>-->
     <!--</listener>-->
+
+    <listener>
+        <listener-class>com.listen.ServletRequestListenerDemo</listener-class>
+    </listener>
+
+    <listener>
+        <listener-class>com.listen.ServletRequestAttributedListener</listener-class>
+    </listener>
+
+    <listener>
+        <listener-class>com.listen.OnlineUserList</listener-class>
+    </listener>
 </web-app>

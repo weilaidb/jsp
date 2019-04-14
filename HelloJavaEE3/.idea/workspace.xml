@@ -7,17 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f3158e1-4520-4f9f-add1-db9f54a74a32" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../SprintTest/src/com/listen/OnlineUserList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SprintTest/src/com/listen/ServletRequestAttributedListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SprintTest/src/com/listen/ServletRequestListenerDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SprintTest/web/jsp/listener/list.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SprintTest/web/jsp/listener/login.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SprintTest/web/jsp/listener/request_attribute_add.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SprintTest/web/jsp/listener/request_attribute_remove.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SprintTest/web/jsp/listener/request_attribute_replace.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sql/bselectdb.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/sql/bselectdb.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SprintTest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SprintTest/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SprintTest/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SprintTest/web/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SprintTest/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../SprintTest/web/index.jsp" afterDir="false" />
@@ -104,8 +93,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="16" column="12" lean-forward="true" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+            <state relative-caret-position="557">
+              <caret line="26" column="34" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -316,7 +305,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555201791324" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555249149477" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/web/WEB-INF/lib" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -595,12 +584,12 @@
       <workItem from="1555196766051" duration="105000" />
       <workItem from="1555197139170" duration="5204000" />
       <workItem from="1555215820769" duration="125000" />
-      <workItem from="1555248619247" duration="465000" />
+      <workItem from="1555248619247" duration="541000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="115842000" />
+    <option name="totallyTimeSpent" value="115918000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -625,7 +614,7 @@
       <window_info id="Web" order="7" sideWeight="0.5007899" side_tool="true" weight="0.07931226" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4997227" weight="0.32873806" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.7703827" visible="true" weight="0.09650053" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.7703827" weight="0.09650053" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39958593" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -982,8 +971,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="16" column="12" lean-forward="true" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+        <state relative-caret-position="557">
+          <caret line="26" column="34" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
         </state>
       </provider>
     </entry>
