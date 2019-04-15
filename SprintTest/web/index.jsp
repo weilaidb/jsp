@@ -18,6 +18,17 @@
     String baseRealPath = application.getRealPath("/");
 %>
 
+<h2><a href="jsp/tag/hellotag2.jsp">jps demo tag hello2 </a></h2>
+<h2><a href="jsp/tag/hellotag.jsp">jps demo tag hello </a></h2>
+<h2><a href="jsp/el/other_demo.jsp">jps demo el other </a></h2>
+<h2><a href="jsp/el/logic_demo.jsp">jps demo el logic </a></h2>
+<h2><a href="jsp/el/rel_demo.jsp">jps demo el rel </a></h2>
+<h2><a href="jsp/el/math_demo.jsp">jps demo el math </a></h2>
+<h2><a href="<%=basePath%>/ELListServlet">jps demo el print ELListServlet</a></h2>
+<h2><a href="<%=basePath%>/ELServlet">jps demo el print ELServlet</a></h2>
+<h2><a href="jsp/el/print_vo.jsp">jps demo el print vo</a></h2>
+<h2><a href="jsp/el/print_map.jsp">jps demo el print map</a></h2>
+<h2><a href="jsp/el/print_collection.jsp">jps demo el print collection</a></h2>
 <h2><a href="jsp/el/param_values_demo.html">jps demo el get values</a></h2>
 <h2><a href="jsp/el/get_param_demo.jsp">jps demo el get param</a></h2>
 <h2><a href="jsp/el/invoke_method.jsp">jps demo el invoke method</a></h2>
