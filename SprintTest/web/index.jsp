@@ -18,6 +18,7 @@
     String baseRealPath = application.getRealPath("/");
 %>
 
+<h2><a href="jsp/tag/datetag.jsp">jps demo tag date </a></h2>
 <h2><a href="jsp/tag/hellotag2.jsp">jps demo tag hello2 </a></h2>
 <h2><a href="jsp/tag/hellotag.jsp">jps demo tag hello </a></h2>
 <h2><a href="jsp/el/other_demo.jsp">jps demo el other </a></h2>
