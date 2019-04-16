@@ -251,11 +251,4 @@
         <servlet-name>ELListServlet</servlet-name>
         <url-pattern>/ELListServlet</url-pattern>
     </servlet-mapping>
-
-    <jsp-config>
-        <tablib>
-            <taglib-uri>mldn_hello</taglib-uri>
-            <taglib-location>/WEB-INF/hellotag.tld</taglib-location>
-        </tablib>
-    </jsp-config>
 </web-app>

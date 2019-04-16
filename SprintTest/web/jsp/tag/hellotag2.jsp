@@ -7,27 +7,14 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java"
          pageEncoding="UTF-8" %>
-<%@ taglib prefix="mytag" uri="mldn_hello"%>
+<%@ taglib prefix="mytagext" uri="mldn_helloext"%>
 <html>
 <head>
     <title>Title</title>
 </head>
 <body>
 
-<h1><mytag:hello/></h1>
-<h1><mytag:hello/></h1>
-<h1><mytag:hello/></h1>
-<h1><mytag:hello/></h1>
-<h1><mytag:hello/></h1>
-<h1><mytag:hello/></h1>
-<h1><mytag:hello/></h1>
-<h1><mytag:hello/></h1>
-<h1><mytag:hello/></h1>
-<h1><mytag:hello/></h1>
-<h1><mytag:hello/></h1>
-<h1><mytag:hello/></h1>
-<h1><mytag:hello/></h1>
-<h1><mytag:hello/></h1>
+<h1><mytagext:hello/></h1>
 
 </body>
 </html>
