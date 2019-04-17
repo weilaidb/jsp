@@ -18,6 +18,20 @@
     String baseRealPath = application.getRealPath("/");
 %>
 
+<h2><a href="jsp/ajax/ajax_receive_content.html">jps demo ajax receive</a></h2>
+<h2><a href="jsp/jstl/if_demo.jsp">jps demo jstl if</a></h2>
+<h2><a href="jsp/jstl/catch.jsp">jps demo jstl catch</a></h2>
+<h2><a href="jsp/jstl/remove.jsp">jps demo jstl out remove</a></h2>
+<h2><a href="jsp/jstl/set_bean.jsp">jps demo jstl out set bean </a></h2>
+<h2><a href="jsp/jstl/set_demo.jsp">jps demo jstl out set </a></h2>
+<h2><a href="jsp/jstl/out_demo.jsp">jps demo jstl out show </a></h2>
+<h2><a href="jsp/jstl/hello_jstl.jsp">jps demo jstl hello </a></h2>
+<h2><a href="jsp/tag/addtag.jsp">jps demo tag add </a></h2>
+<h2><a href="jsp/tag/simpleiteratetag.jsp">jps demo tag simple   date </a></h2>
+<h2><a href="jsp/tag/simpledatetag.jsp">jps demo tag simple date </a></h2>
+<h2><a href="jsp/tag/bodyiteratetag.jsp">jps demo tag body iterate </a></h2>
+<h2><a href="jsp/tag/iteratetag.jsp">jps demo tag iterate </a></h2>
+<h2><a href="jsp/tag/presenttag.jsp">jps demo tag present </a></h2>
 <h2><a href="jsp/tag/datetag.jsp">jps demo tag date </a></h2>
 <h2><a href="jsp/tag/hellotag2.jsp">jps demo tag hello2 </a></h2>
 <h2><a href="jsp/tag/hellotag.jsp">jps demo tag hello </a></h2>

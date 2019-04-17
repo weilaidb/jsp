@@ -8,11 +8,23 @@
       <root url="jar://D:/Software/jar/jspSmartUpload.jar!/" />
       <root url="jar://D:/Software/jar/fileUpload/commons-fileupload-1.4-bin/commons-fileupload-1.4.jar!/" />
       <root url="jar://D:/Software/jar/commons-io-2.5.jar!/" />
+      <root url="jar://D:/Software/jar/taglibs/taglibs-standard-compat-1.2.5.jar!/" />
+      <root url="jar://D:/Software/jar/taglibs/taglibs-standard-impl-1.2.5.jar!/" />
+      <root url="jar://D:/Software/jar/taglibs/taglibs-standard-jstlel-1.2.5.jar!/" />
+      <root url="jar://D:/Software/jar/taglibs/taglibs-standard-spec-1.2.5.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
       <root url="file://D:/Software/jar/spring/spring-framework-5.1.5.RELEASE/libs" />
       <root url="file://D:/Software/jar/dom4j" />
+      <root url="jar://D:/Software/jar/taglibs/taglibs-standard-1.2.5-source-release.zip!/taglibs-standard-1.2.5/compat/src/main/java" />
+      <root url="jar://D:/Software/jar/taglibs/taglibs-standard-1.2.5-source-release.zip!/taglibs-standard-1.2.5/impl/src/main/java" />
+      <root url="jar://D:/Software/jar/taglibs/taglibs-standard-1.2.5-source-release.zip!/taglibs-standard-1.2.5/impl/src/test/java" />
+      <root url="jar://D:/Software/jar/taglibs/taglibs-standard-1.2.5-source-release.zip!/taglibs-standard-1.2.5/jstlel/src/main/java" />
+      <root url="jar://D:/Software/jar/taglibs/taglibs-standard-1.2.5-source-release.zip!/taglibs-standard-1.2.5/jstlel/src/test/java" />
+      <root url="jar://D:/Software/jar/taglibs/taglibs-standard-1.2.5-source-release.zip!/taglibs-standard-1.2.5/spec/src/main/java" />
+      <root url="jar://D:/Software/jar/taglibs/taglibs-standard-1.2.5-source-release.zip!/taglibs-standard-1.2.5/spec/src/test/java" />
+      <root url="jar://D:/Software/jar/taglibs/taglibs-standard-1.2.5-source-release.zip!/taglibs-standard-1.2.5/standard-test/src/test/java" />
     </SOURCES>
     <jarDirectory url="file://D:/Software/jar/dom4j" recursive="false" />
     <jarDirectory url="file://D:/Software/jar/spring/spring-framework-5.1.5.RELEASE/libs" recursive="false" />
