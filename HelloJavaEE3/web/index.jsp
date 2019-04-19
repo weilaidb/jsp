@@ -23,6 +23,7 @@
 <h1><a href="sql/notebookalldb.jsp">我的记事本(sqlite)[all.db]</a></h1>
 <%--<h1><a href="note2">我的记事本(sqlite)</a></h1>--%>
 <h1><a href="sql/alteralldbcollate_cs.jsp">变更内容字段为utf8_general_cs,更改content类型为mediumtext</a></h1>
+<h1><a href="openpath/explorer.jsp">explorer mypath</a></h1>
 <%--<h1><a href="sql/alteralldbcollate_nocs.jsp">变更内容字段为utf8_bin,更改content类型为text</a></h1>--%>
 <%--<h1 ><a href="sql/showhiddentext.jsp">展开示例 jsp</a></h1>--%>
 <%--<h1 ><a href="sql/showhiddentext.html">展开示例 html</a></h1>--%>
