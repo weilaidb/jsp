@@ -54,5 +54,12 @@
         <url-pattern>/SelectDatabase</url-pattern>
     </servlet-mapping>
 
-    
+    <servlet>
+        <servlet-name>Explorer</servlet-name>
+        <servlet-class>weilaidb.explorer.OpenPath</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Explorer</servlet-name>
+        <url-pattern>/Explorer</url-pattern>
+    </servlet-mapping>
 </web-app>
