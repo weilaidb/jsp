@@ -7,7 +7,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ff387f0d-5e43-4848-a996-9a0118359957" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../HelloJavaEE3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HelloJavaEE3/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/jstl/SimpleInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/tag/AttributeTag.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/tag/BodyIterateTag.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/tag/BodyIterateTagExtraInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/tag/DynamicAddTag.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/tag/IterateTag.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/tag/SimpleDateTag.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/tag/SimpleIterateTag.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/mldntag.tld" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/mldntagext.tld" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/mldntagext3.tld" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/mldntagext4.tld" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/mldntagext5.tld" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/mldntagext6.tld" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/jsp/ajax/ajax_receive_content.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/jsp/ajax/content.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/jsp/ajax/create_ajax.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/jsp/ajax/regist.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/jsp/jstl/catch.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/jsp/jstl/hello_jstl.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/jsp/jstl/if_demo.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/jsp/jstl/out_demo.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/jsp/jstl/remove.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/jsp/jstl/set_bean.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/jsp/jstl/set_demo.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/jsp/tag/addtag.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/jsp/tag/bodyiteratetag.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/jsp/tag/iteratetag.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/jsp/tag/presenttag.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/jsp/tag/simpledatetag.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/jsp/tag/simpleiteratetag.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/libs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/libs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,8 +71,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+            <state relative-caret-position="78">
+              <caret line="20" column="33" lean-forward="true" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -47,7 +80,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/jsp/jstl/if_demo.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
+            <state relative-caret-position="215">
               <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
             </state>
           </provider>
@@ -56,7 +89,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/jsp/ajax/create_ajax.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
+            <state relative-caret-position="49">
               <caret line="11" column="61" selection-start-line="11" selection-start-column="61" selection-end-line="11" selection-end-column="61" />
             </state>
           </provider>
@@ -74,7 +107,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/jsp/ajax/ajax_receive_content.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
+            <state relative-caret-position="77">
               <caret line="21" column="34" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
             </state>
           </provider>
@@ -202,6 +235,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -260,8 +295,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -540,7 +573,8 @@
       <workItem from="1555335380563" duration="3614000" />
       <workItem from="1555415387152" duration="3142000" />
       <workItem from="1555453369312" duration="4447000" />
-      <workItem from="1555506449961" duration="6141000" />
+      <workItem from="1555506449961" duration="6608000" />
+      <workItem from="1555682328355" duration="14000" />
       <workItem from="1555690047208" duration="7000" />
     </task>
     <servers />
@@ -559,15 +593,16 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="188" y="534" width="1674" height="488" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.74328357" visible="true" weight="0.24319308" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.74820143" visible="true" weight="0.24009901" />
       <window_info id="Structure" order="1" sideWeight="0.50583243" side_tool="true" weight="0.13422075" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" sideWeight="0.50583243" side_tool="true" weight="0.13422075" />
-      <window_info id="Web" order="7" sideWeight="0.25671643" side_tool="true" visible="true" weight="0.24319308" />
+      <window_info id="Web" order="7" sideWeight="0.25179857" side_tool="true" visible="true" weight="0.24009901" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.26970956" />
@@ -1056,23 +1091,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/jsp/jstl/if_demo.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
+        <state relative-caret-position="215">
           <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/jsp/ajax/create_ajax.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
+        <state relative-caret-position="49">
           <caret line="11" column="61" selection-start-line="11" selection-start-column="61" selection-end-line="11" selection-end-column="61" />
         </state>
       </provider>
@@ -1084,16 +1112,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="20" column="33" lean-forward="true" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/jsp/ajax/ajax_receive_content.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
+        <state relative-caret-position="77">
           <caret line="21" column="34" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/jsp/ajax/regist.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
+        <state relative-caret-position="553">
           <caret line="55" column="35" selection-start-line="55" selection-start-column="35" selection-end-line="55" selection-end-column="35" />
         </state>
       </provider>
