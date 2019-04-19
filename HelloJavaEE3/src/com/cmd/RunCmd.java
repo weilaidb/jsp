@@ -13,7 +13,7 @@ public class RunCmd {
         }
     }
 
-    public static void explorerdirEncodingUtil(String dir) {
+    public static void explorerdirDencodingUtil(String dir) {
         try {
             dir = EncodingUtil.decodeURIComponent(dir);
             runcmd("explorer.exe " + dir);
@@ -25,7 +25,13 @@ public class RunCmd {
     public static void runcmd(String command) {
         Process p = null;
         try {
-            p = Runtime.getRuntime().exec(command);
+//            p = Runtime.getRuntime().exec(command);
+            Process proc = Runtime.getRuntime().exec(command);
+            StreamGobbler errorGobbler = new StreamGobbler(proc.getErrorStream(), "Error");
+            StreamGobbler outputGobbler = new StreamGobbler(proc.getInputStream(), "Output");
+            errorGobbler.start();
+            outputGobbler.start();
+            proc.waitFor();
 
         } catch (Exception e) {
             e.printStackTrace();

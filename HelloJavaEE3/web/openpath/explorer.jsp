@@ -27,11 +27,11 @@
 //        path = path.replace("\\", "\\\\");
         try {
             path = new String(path.getBytes("iso-8859-1"), "utf-8");
-//            System.out.println("open path is " + path);
+            System.out.println("open path is " + path);
 //            out.write("open path is " + path);
 //            out.write("open path is convert uri " + EncodingUtil.encodeURIComponent(path));
             //先对参数进行编码
-            RunCmd.explorerdir(path);
+            RunCmd.explorerdirDencodingUtil(path);
         } catch (Exception e) {
             e.printStackTrace();
             out.write(e.getMessage());
@@ -49,8 +49,8 @@
 
     for (int i = 0; i < openlist.length; i++) {
 %>
-<h2><a href="explorer.jsp?openpath=<%=EncodingUtil.encodeURIComponent(openlist[i])%>"><%=openlist[i]%>
-</a><br></h2>
+<h1><a href="explorer.jsp?openpath=<%=EncodingUtil.encodeURIComponent(openlist[i])%>"><%=openlist[i]%>
+</a><br></h1>
 <%
     }
 %>

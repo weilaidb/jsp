@@ -7,7 +7,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ff387f0d-5e43-4848-a996-9a0118359957" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HelloJavaEE3/src/com/cmd/StreamGobbler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJavaEE3/.idea/artifacts/hello.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJavaEE3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HelloJavaEE3/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJavaEE3/out/artifacts/weilai/weilai.7z" beforeDir="false" afterPath="$PROJECT_DIR$/../HelloJavaEE3/out/artifacts/weilai/weilai.7z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJavaEE3/src/com/cmd/RunCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HelloJavaEE3/src/com/cmd/RunCmd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJavaEE3/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../HelloJavaEE3/web/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJavaEE3/web/openpath/explorer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../HelloJavaEE3/web/openpath/explorer.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -203,6 +209,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -261,7 +268,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -542,11 +548,12 @@
       <workItem from="1555453369312" duration="4447000" />
       <workItem from="1555506449961" duration="6608000" />
       <workItem from="1555682328355" duration="14000" />
+      <workItem from="1555689759027" duration="3000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124042000" />
+    <option name="totallyTimeSpent" value="124045000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -559,16 +566,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="-8" width="1861" height="1096" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.747614" visible="true" weight="0.21797004" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.74655354" visible="true" weight="0.22018857" />
       <window_info id="Structure" order="1" sideWeight="0.50583243" side_tool="true" weight="0.13422075" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" sideWeight="0.50583243" side_tool="true" weight="0.13422075" />
-      <window_info id="Web" order="7" sideWeight="0.252386" side_tool="true" visible="true" weight="0.21797004" />
+      <window_info id="Web" order="7" sideWeight="0.25344646" side_tool="true" visible="true" weight="0.22018857" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.26970956" />
