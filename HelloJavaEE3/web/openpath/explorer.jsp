@@ -17,6 +17,10 @@
     String basePath = application.getContextPath();
 %>
 <body>
+
+<a href="<%=basePath%>/index.jsp">首页</a>
+<a href="explorer.jsp">主页</a>
+<h1>收藏文件列表</h1>
 <%
     String path = request.getParameter("openpath");
     if (path != null && path.trim() != "") {
@@ -33,23 +37,20 @@
             out.write(e.getMessage());
         }
     }
-%>
-<h1>系统盘</h1>
-
-<%
-
     String[] openlist = {
             "C:",
             "D:",
             "E:",
             "E:\\books",
             "E:\\books\\java web\\Java Web开发实战经典.pdf",
+            "E:\\mysqlbackup\\backup-mysql.bat",
+            "E:\\mysqlbackup"
     };
 
     for (int i = 0; i < openlist.length; i++) {
 %>
-<h1><a href="explorer.jsp?openpath=<%=EncodingUtil.encodeURIComponent(openlist[i])%>"><%=openlist[i]%>
-</a><br></h1>
+<h2><a href="explorer.jsp?openpath=<%=EncodingUtil.encodeURIComponent(openlist[i])%>"><%=openlist[i]%>
+</a><br></h2>
 <%
     }
 %>
