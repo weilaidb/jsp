@@ -1,5 +1,6 @@
 <%@ page import="com.cmd.RunCmd" %>
 <%@ page import="com.cmd.EncodingUtil" %>
+<%@ page import="com.net.ClientSendMsg2QtServer" %>
 <%--
   Created by IntelliJ IDEA.
   User: dell
@@ -9,6 +10,23 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java"
          pageEncoding="UTF-8" %>
+
+<%
+//    打开的文件列表
+    String[] openlist = {
+            "C:",
+            "D:",
+            "E:",
+            "E:\\books",
+            "E:\\books\\java web\\Java Web开发实战经典.pdf",
+            "E:\\mysqlbackup\\backup-mysql.bat",
+            "E:\\mysqlbackup",
+            "E:\\tarbao\\python\\AutoMyCCode",
+            "E:\\tarbao\\egjsp\\eclipse-workspace\\TomcatTest\\HelloJavaEE3",
+            "E:\\tarbao\\egjsp\\eclipse-workspace\\TomcatTest",
+    };
+
+%>
 <html>
 <head>
     <title>路径</title>
@@ -27,30 +45,23 @@
 //        path = path.replace("\\", "\\\\");
         try {
             path = new String(path.getBytes("iso-8859-1"), "utf-8");
+//            path = new String(path.getBytes("iso-8859-1"), "gbk");
             System.out.println("open path is " + path);
 //            out.write("open path is " + path);
 //            out.write("open path is convert uri " + EncodingUtil.encodeURIComponent(path));
             //先对参数进行编码
-            RunCmd.explorerdirDencodingUtil(path);
+//            RunCmd.explorerdirDencodingUtil(path);
+            ClientSendMsg2QtServer.sendStr2QtServer(path);
         } catch (Exception e) {
             e.printStackTrace();
             out.write(e.getMessage());
         }
     }
-    String[] openlist = {
-            "C:",
-            "D:",
-            "E:",
-            "E:\\books",
-            "E:\\books\\java web\\Java Web开发实战经典.pdf",
-            "E:\\mysqlbackup\\backup-mysql.bat",
-            "E:\\mysqlbackup"
-    };
 
     for (int i = 0; i < openlist.length; i++) {
 %>
-<h1><a href="explorer.jsp?openpath=<%=EncodingUtil.encodeURIComponent(openlist[i])%>"><%=openlist[i]%>
-</a><br></h1>
+<h2><a href="explorer.jsp?openpath=<%=EncodingUtil.encodeURIComponent(openlist[i])%>"><%=openlist[i]%>
+</a><br></h2>
 <%
     }
 %>
