@@ -17,3 +17,13 @@ insert into explorerlist values(NULL, 'E:\\mysqlbackup');
 insert into explorerlist values(NULL, 'E:\\tarbao\\python\\AutoMyCCode');
 insert into explorerlist values(NULL, 'E:\\tarbao\\egjsp\\eclipse-workspace\\TomcatTest\\HelloJavaEE3');
 insert into explorerlist values(NULL, 'E:\\tarbao\\egjsp\\eclipse-workspace\\TomcatTest');
+
+
+
+drop table if exists dirlist;
+create table dirlist (  `id` int(200) unsigned NOT NULL AUTO_INCREMENT,
+name varchar(3000),
+PRIMARY KEY (`id`),
+UNIQUE KEY `name_UNIQUE` (`id`)
+)  ENGINE=InnoDB AUTO_INCREMENT=217 DEFAULT CHARSET=utf8;
+insert into dirlist values(NULL, 'E:\\books');
