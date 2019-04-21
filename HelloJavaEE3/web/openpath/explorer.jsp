@@ -45,7 +45,8 @@
 %>
 
 <h1><a href="<%=basePath%>/index.jsp">首页</a>
-<a href="insertfile.jsp" target="_blank">写入</a>
+    <a href="deletefile.jsp" target="_blank">删除</a>
+    <a href="insertfile.jsp" target="_blank">写入</a>
 </h1>
 <h1>文件列表</h1>
 
