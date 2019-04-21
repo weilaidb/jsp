@@ -40,7 +40,7 @@ public class SqlInterface {
             pstmt = conn.prepareStatement(sql);
             rs = pstmt.executeQuery();
             while (rs.next()) {
-                name = rs.getString(1);
+                name = rs.getString(2);
                 reslist.add(name);
             }
         } catch (Exception e) {
@@ -83,9 +83,16 @@ public class SqlInterface {
         return reslist;
     }
 
-    public int insertName(String dbName, String tableName, String files) {
+    public String insertName(String dbName, String tableName, String files) {
+        String resstr = "写入成功!";
+        String resfail = "写入失败!";
+        String resempty = "数据为空!";
 
         try {
+            if(files.trim().isEmpty())
+            {
+                return resempty;
+            }
             Class.forName(DBDRIVER);
             //            创建数据库,需要手动创建呢
             conn = DriverManager.getConnection(DBURL.replaceAll("mldn", dbName), DBUSER, DBPASS);
@@ -94,9 +101,9 @@ public class SqlInterface {
             String[] filelist = files.split("\n");
             for (String str :
                     filelist) {
-                str = str.replace("\\", "\\\\")
-                        .replace("\"", "\"\"");
-                sql = "insert into egtable values('filexxx');";
+                str = str.replace("\\", "\\\\");
+//                        .replace("\"", "\"\"");
+                sql = "insert into egtable values(NULL, 'filexxx');";
                 sql = sql.replace("egtable", tableName)
                         .replace("filexxx", str);
 //                System.out.println(sql);
@@ -105,6 +112,8 @@ public class SqlInterface {
             }
         } catch (Exception e) {
             System.out.print(e);
+            resfail += e.getMessage();
+            resstr = resfail;
         } finally {
             try {
                 rs.close();
@@ -115,6 +124,6 @@ public class SqlInterface {
             }
         }
 
-        return 0;
+        return resstr;
     }
 }

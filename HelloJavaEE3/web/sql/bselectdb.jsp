@@ -110,6 +110,7 @@
     <title>我的超级记事本(mysql)</title>
 </head>
 <body>
+<a href="<%=basePath%>/index.jsp">首页</a>
 <%--<h1>查询结果</h1>--%>
 </p>
 </p>

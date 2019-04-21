@@ -7,10 +7,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f3158e1-4520-4f9f-add1-db9f54a74a32" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sql script/create_files.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql script/create_files.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/commmon/SqlInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/commmon/SqlInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/openpath/explorer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/openpath/explorer.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/openpath/insertfile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/openpath/insertfile.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/sql/bselectdb.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/sql/bselectdb.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/sql/insertdb.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/sql/insertdb.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,17 +29,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/openpath/explorer.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="21" column="38" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
+            <state relative-caret-position="300">
+              <caret line="50" column="27" lean-forward="true" selection-start-line="50" selection-start-column="27" selection-end-line="50" selection-end-column="27" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/openpath/insertfile.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="36" column="18" lean-forward="true" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
+            <state relative-caret-position="306">
+              <caret line="34" column="25" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -64,14 +66,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/commmon/SqlInterface.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
+            <state relative-caret-position="261">
+              <caret line="88" column="32" selection-start-line="88" selection-start-column="32" selection-end-line="88" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/sql/select.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="11" column="6" lean-forward="true" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -86,10 +97,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/java/sql/Statement.java">
+        <entry file="file://$PROJECT_DIR$/web/sql/bselectdb.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="1230" column="17" selection-start-line="1230" selection-start-column="17" selection-end-line="1230" selection-end-column="17" />
+            <state relative-caret-position="300">
+              <caret line="112" column="40" selection-start-line="112" selection-start-column="40" selection-end-line="112" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -97,26 +108,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/sql/insertdb.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="184" column="7" lean-forward="true" selection-start-line="184" selection-start-column="7" selection-end-line="184" selection-end-column="7" />
+            <state relative-caret-position="932">
+              <caret line="165" column="18" selection-start-line="165" selection-start-column="18" selection-end-line="165" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sql script/create_files.sql">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/java/sql/Statement.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="4" selection-start-line="4" selection-start-column="101" selection-end-line="4" selection-end-column="102" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/login/login_check.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="477">
-              <caret line="38" column="25" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
+            <state relative-caret-position="191">
+              <caret line="1230" column="17" selection-start-line="1230" selection-start-column="17" selection-end-line="1230" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -224,8 +226,6 @@
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/weilaidb/login/SelectDatabase.java" />
         <option value="$PROJECT_DIR$/web/sql/login/bselectdb.jsp" />
-        <option value="$PROJECT_DIR$/web/sql/insertdb.jsp" />
-        <option value="$PROJECT_DIR$/web/sql/bselectdb.jsp" />
         <option value="$PROJECT_DIR$/src/com/commmon/Byte24Long.java" />
         <option value="$PROJECT_DIR$/src/com/commmon/ChangeCharset.java" />
         <option value="$PROJECT_DIR$/src/com/commmon/getEncoding.java" />
@@ -233,9 +233,11 @@
         <option value="$PROJECT_DIR$/src/com/net/ClientSendMsg2QtServer.java" />
         <option value="$PROJECT_DIR$/web/index.jsp" />
         <option value="$PROJECT_DIR$/sql script/create_files.sql" />
+        <option value="$PROJECT_DIR$/web/sql/bselectdb.jsp" />
+        <option value="$PROJECT_DIR$/web/sql/insertdb.jsp" />
         <option value="$PROJECT_DIR$/web/openpath/explorer.jsp" />
-        <option value="$PROJECT_DIR$/web/openpath/insertfile.jsp" />
         <option value="$PROJECT_DIR$/src/com/commmon/SqlInterface.java" />
+        <option value="$PROJECT_DIR$/web/openpath/insertfile.jsp" />
       </list>
     </option>
   </component>
@@ -590,12 +592,12 @@
       <workItem from="1555770346269" duration="3892000" />
       <workItem from="1555800798295" duration="3335000" />
       <workItem from="1555832610716" duration="6289000" />
-      <workItem from="1555842609066" duration="3519000" />
+      <workItem from="1555842609066" duration="5143000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="141080000" />
+    <option name="totallyTimeSpent" value="142704000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -620,7 +622,7 @@
       <window_info id="Web" order="7" sideWeight="0.5007899" side_tool="true" weight="0.07931226" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4997227" weight="0.32873806" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.9240155" weight="0.23011665" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.9240155" visible="true" weight="0.25768822" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49963635" weight="0.39875" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -629,7 +631,7 @@
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49861342" weight="0.03181336" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.07598447" side_tool="true" weight="0.33934253" />
-      <window_info active="true" anchor="bottom" id="Messages" order="11" sideWeight="0.48863006" visible="true" weight="0.08695652" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.48863006" weight="0.08695652" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.32873806" />
       <window_info anchor="bottom" id="Version Control" order="14" />
@@ -702,17 +704,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/java/awt/Window.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28320">
-          <caret line="1012" column="16" selection-start-line="1012" selection-start-column="16" selection-end-line="1012" selection-end-column="16" />
-          <folding>
-            <element signature="e#35456#35457#0" expanded="true" />
-            <element signature="e#35491#35492#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/c/autoc2.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="870">
@@ -997,24 +988,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/sql/bselectdb.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5190">
-          <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="463">
           <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/sql/insertdb.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="184" column="7" lean-forward="true" selection-start-line="184" selection-start-column="7" selection-end-line="184" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -1046,6 +1023,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/java/util/List.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="475" column="21" selection-start-line="475" selection-start-column="17" selection-end-line="475" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/sql/select.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="11" column="6" lean-forward="true" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/sql/bselectdb.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="112" column="40" selection-start-line="112" selection-start-column="40" selection-end-line="112" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/sql/insertdb.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="932">
+          <caret line="165" column="18" selection-start-line="165" selection-start-column="18" selection-end-line="165" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/java/lang/String.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="293">
@@ -1057,34 +1062,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/openpath/insertfile.jsp">
+    <entry file="file://$PROJECT_DIR$/src/com/commmon/SqlInterface.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="36" column="18" lean-forward="true" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
+        <state relative-caret-position="261">
+          <caret line="88" column="32" selection-start-line="88" selection-start-column="32" selection-end-line="88" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/openpath/explorer.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="21" column="38" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
+        <state relative-caret-position="300">
+          <caret line="50" column="27" lean-forward="true" selection-start-line="50" selection-start-column="27" selection-end-line="50" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/java/util/List.java">
+    <entry file="file://$PROJECT_DIR$/web/openpath/insertfile.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="475" column="21" selection-start-line="475" selection-start-column="17" selection-end-line="475" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/commmon/SqlInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="306">
+          <caret line="34" column="25" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
         </state>
       </provider>
     </entry>

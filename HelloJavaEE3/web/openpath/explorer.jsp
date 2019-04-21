@@ -43,7 +43,9 @@
 <a href="<%=basePath%>/index.jsp">首页</a>
 <a href="explorer.jsp">主页</a>
 <a href="insertfile.jsp" target="_blank">写入文件列表</a>
+<h1><a href="explorer.jsp">刷新</a></h1>
 <h1>收藏文件列表</h1>
+
 <%
     String path = request.getParameter("openpath");
     if (path != null && path.trim() != "") {

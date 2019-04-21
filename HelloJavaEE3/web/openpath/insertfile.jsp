@@ -32,9 +32,12 @@
 
 <%
     String filenames = "";
+    String result = "数据为空";
     try {
         filenames = request.getParameter("insertfilename");
-        inter.insertName(dbName, tableName, filenames);
+        if(!filenames.trim().isEmpty()) {
+            result = inter.insertName(dbName, tableName, filenames);
+        }
     } catch (Exception e) {
 //        out.print("\n");
     }
@@ -75,6 +78,8 @@
         </textarea>
     </h1>
 </form>
+
+<%=result%>
 
 </body>
 </html>

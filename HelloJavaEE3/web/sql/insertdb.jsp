@@ -163,6 +163,7 @@
     <title>输入数据(mysql)</title>
 </head>
 <body onload="ClearTextArea()">
+<a href="<%=basePath%>/index.jsp">首页</a>
 <%--<h1>查询结果</h1>--%>
 </p>
 </p>
