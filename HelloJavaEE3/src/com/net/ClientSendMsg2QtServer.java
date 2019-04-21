@@ -1,6 +1,7 @@
 package com.net;
 
 import com.commmon.Byte24Long;
+import com.commmon.testChinese;
 
 import java.io.*;
 import java.net.Socket;
@@ -17,7 +18,15 @@ public class ClientSendMsg2QtServer {
             OutputStream os = socket.getOutputStream();//字节输出流
             PrintWriter pw = new PrintWriter(os);//将输出流包装为打印流
             long len = 0;
-            len = towritestr.length();
+            /**
+             * 发送长度为总长度，包含头和体。
+             */
+            if (testChinese.isContainChinese(towritestr)) {
+                len = towritestr.length() + 6;
+            } else {
+                len = towritestr.length();
+            }
+//            len = towritestr.length();
             byte[] buffer = Byte24Long.LongToBytes(len);
             System.out.println("size of len:" + (len));
             pw.write(Byte24Long.getChars(buffer));
