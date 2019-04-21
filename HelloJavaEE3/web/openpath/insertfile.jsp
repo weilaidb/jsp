@@ -63,9 +63,8 @@
     String basePath = application.getContextPath();
 %>
 <body onload="ClearTextArea()">
-<a href="<%=basePath%>/index.jsp">首页</a>
-<a href="insertfile.jsp">主页</a>
-<a href="explorer.jsp">文件列表</a>
+<h1><a href="<%=basePath%>/index.jsp">首页</a>
+</h1>
 <form name="form1" method="post" action="insertfile.jsp">
     <h1>
         写入文件列表：
