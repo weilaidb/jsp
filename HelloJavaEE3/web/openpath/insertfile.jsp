@@ -1,4 +1,3 @@
-<%@ page import="java.util.List" %>
 <%@ page import="com.commmon.SqlInterface" %>
 <%--
   Created by IntelliJ IDEA.
@@ -9,8 +8,6 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java"
          pageEncoding="utf-8" %>
-
-
 
 <%--================css配置=========================--%>
 <style type="text/css">
@@ -31,16 +28,6 @@
     SqlInterface inter = new SqlInterface();
     String dbName = "files";
     String tableName = "explorerlist";
-
-//    List<String> openlist = inter.getAll(dbName, tableName, "");
-//    String loadstr = "";
-//    for (String file :
-//            openlist) {
-////        System.out.println(file);
-//        loadstr += file + "\n";
-//    }
-//    System.out.println(loadstr);
-
 %>
 
 <%
@@ -88,8 +75,6 @@
         </textarea>
     </h1>
 </form>
-
-
 
 </body>
 </html>

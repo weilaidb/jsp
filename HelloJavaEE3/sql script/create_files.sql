@@ -1,5 +1,5 @@
 drop database if exists files;
-create database files;
+create database if not exists files;
 use files;
 drop table if exists explorerlist;
 create table explorerlist (name varchar(4096))  ENGINE=InnoDB AUTO_INCREMENT=217 DEFAULT CHARSET=utf8;
