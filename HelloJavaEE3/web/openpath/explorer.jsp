@@ -1,6 +1,8 @@
 <%@ page import="com.cmd.EncodingUtil" %>
 <%@ page import="com.net.ClientSendMsg2QtServer" %>
 <%@ page import="java.nio.charset.Charset" %>
+<%@ page import="java.util.List" %>
+<%@ page import="com.commmon.SqlInterface" %>
 <%--
   Created by IntelliJ IDEA.
   User: dell
@@ -13,23 +15,20 @@
 <%
     //    打开的文件列表
 //    增加表项openlist，用以打开文件路径
-    String[] openlist = {
-            "C:",
-            "D:",
-            "E:",
-            "E:\\books",
-            "E:\\books\\java web\\Java Web开发实战经典.pdf",
-            "E:\\mysqlbackup\\backup-mysql.bat",
-            "E:\\mysqlbackup",
-            "E:\\tarbao\\python\\AutoMyCCode",
-            "E:\\tarbao\\egjsp\\eclipse-workspace\\TomcatTest\\HelloJavaEE3",
-            "E:\\tarbao\\egjsp\\eclipse-workspace\\TomcatTest",
-    };
+    SqlInterface inter = new SqlInterface();
+    String dbName = "files";
+    String tableName = "explorerlist";
+
+    List<String> openlist = inter.getAll(dbName, tableName, "");
+//    for (String file :
+//            openlist) {
+//        System.out.println(file);
+//    }
 
 %>
 <html>
 <head>
-    <title>路径</title>
+    <title>打开文件列表</title>
 </head>
 <%
     String basePath = application.getContextPath();
@@ -43,6 +42,7 @@
 
 <a href="<%=basePath%>/index.jsp">首页</a>
 <a href="explorer.jsp">主页</a>
+<a href="insertfile.jsp" target="_blank">写入文件列表</a>
 <h1>收藏文件列表</h1>
 <%
     String path = request.getParameter("openpath");
@@ -58,10 +58,12 @@
         }
     }
 
-    for (int i = 0; i < openlist.length; i++) {
+    for (String file :
+            openlist) {
+
 %>
-<h2><a href="explorer.jsp?openpath=<%=EncodingUtil.encodeURIComponent(openlist[i])%>"><%=openlist[i]%>
-</a><br></h2>
+<h3><a href="explorer.jsp?openpath=<%=EncodingUtil.encodeURIComponent(file)%>"><%=file%>
+</a><br></h3>
 <%
     }
 %>
