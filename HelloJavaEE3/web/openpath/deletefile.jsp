@@ -28,11 +28,11 @@
 %>
 <html>
 <head>
-    <title>打开文件列表</title>
+    <title>删除</title>
 </head>
 <%
     //定时刷新页面
-    response.setHeader("Refresh","5;explorer.jsp");
+    response.setHeader("Refresh","5;deletefile.jsp");
 %>
 <%
     String basePath = application.getContextPath();
@@ -52,15 +52,18 @@
 
 <%
     String path = request.getParameter("deletefile");
+    String result = "数据为空";
     if (path != null && path.trim() != "") {
         try {
-            inter.deleteName(dbName, tableName, path);
+            result = inter.deleteName(dbName, tableName, path);
         } catch (Exception e) {
             e.printStackTrace();
             out.write(e.getMessage());
         }
     }
-
+%>
+<%=result%>
+<%
     for (String file :
             openlist) {
 

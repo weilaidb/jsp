@@ -28,7 +28,7 @@
 %>
 <html>
 <head>
-    <title>打开文件列表</title>
+    <title>文件列表</title>
 </head>
 <%
     String basePath = application.getContextPath();
