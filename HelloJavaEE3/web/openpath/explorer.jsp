@@ -1,9 +1,5 @@
-<%@ page import="com.cmd.RunCmd" %>
 <%@ page import="com.cmd.EncodingUtil" %>
 <%@ page import="com.net.ClientSendMsg2QtServer" %>
-<%@ page import="static com.commmon.getEncoding.getEncoding" %>
-<%@ page import="javafx.scene.control.TextFormatter" %>
-<%@ page import="com.commmon.ChangeCharset" %>
 <%@ page import="java.nio.charset.Charset" %>
 <%--
   Created by IntelliJ IDEA.
@@ -14,9 +10,9 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java"
          pageEncoding="UTF-8" %>
-<%--<%@page contentType="text/html;charset=gb2312" %>--%>
 <%
-//    打开的文件列表
+    //    打开的文件列表
+//    增加表项openlist，用以打开文件路径
     String[] openlist = {
             "C:",
             "D:",
@@ -52,33 +48,8 @@
     String path = request.getParameter("openpath");
     if (path != null && path.trim() != "") {
         try {
+            System.out.println("defaultCharset " + Charset.defaultCharset());
             System.out.println("open path     is " + path);
-            System.out.println("open path     is " + new String(path.getBytes("UTF-8")));
-            System.out.println("open path     is " + new String(path.getBytes("GB2312")));
-            System.out.println("open path     is " + new String(path.getBytes("GBK")));
-            System.out.println("open path     is " + new String(path.getBytes("iso-8859-1")));
-            System.out.println("open path     is " + new String(path.getBytes("US-ASCII")));
-            if(Charset.defaultCharset().equals("GBK"))
-            {
-//                path = new String(path.getBytes("GBK"), "iso-8859-1");
-                path = new String(path.getBytes("GBK"), "US-ASCII");
-                System.out.println("defaultCharset " + Charset.defaultCharset());
-            }else {
-//                path = new String(path.getBytes("UTF-8"), "US-ASCII");
-//                path = new String(path.getBytes("UTF-8"), "iso-8859-1");
-//                path = new String(path.getBytes("UTF-8"), "GB2312");
-//                path = new String(path.getBytes("UTF-8"), "GBK");
-//                path = new String(path.getBytes("GBK"), "US-ASCII");
-//                path = new String(path.getBytes("GBK"), "iso-8859-1");
-//                path = new String(path.getBytes("GBK"), "UTF-8");
-//                path = new String(path.getBytes("GBK"), "GB2312");
-//                path = new String(path.getBytes("GBK"), "GBK");
-//                path = new String(path.getBytes("US-ASCII"), "GBK");
-//                path = new String(path.getBytes("iso-8859-1"), "GBK");
-                System.out.println("~~else~~ ");
-                System.out.println("defaultCharset " + Charset.defaultCharset());
-                System.out.println("open path     is " + path);
-            }
 
             ClientSendMsg2QtServer.sendStr2QtServer(path);
         } catch (Exception e) {
