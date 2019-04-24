@@ -6,9 +6,6 @@ import com.commmon.testChinese;
 import java.io.*;
 import java.net.Socket;
 import java.net.UnknownHostException;
-import java.nio.ByteBuffer;
-import java.nio.CharBuffer;
-import java.nio.charset.Charset;
 
 public class ClientSendMsg2QtServer {
     private static final int HEAD_SIZE = 8 * 1;
@@ -24,34 +21,16 @@ public class ClientSendMsg2QtServer {
             /**
              * 发送长度为总长度，包含头和体。
              */
-            byte[] byteArray = towritestr.getBytes();
-
-            Charset charset = Charset.forName("UTF-8");
-            byte[] orgstr = towritestr.getBytes("iso-8859-1");
-            String last = new String(orgstr, "GB2312");
-//            String last = new String(orgstr, "GB2312");
-
-            String newstr = new String(towritestr.getBytes("GB2312")
-                    , "UTF-8");
-            ByteBuffer byteBuffer = charset.encode(newstr);//why string?
-            byte[] ba = byteBuffer.array();//转化成byte[]
-            CharBuffer charBuffer = charset.decode(byteBuffer);
-            char[] ca = charBuffer.array();//转化成char[]
-
             if (testChinese.isContainChinese(towritestr)) {
-                len = towritestr.length();
+                len = towritestr.length() + 6;
             } else {
-                len = last.length();
+                len = towritestr.length();
             }
 //            len = towritestr.length();
             byte[] buffer = Byte24Long.LongToBytes(len);
             System.out.println("size of len:" + (len));
             pw.write(Byte24Long.getChars(buffer));
-//            pw.write(towritestr);
-            pw.write(last);
-//            pw.write(byteArray);
-//            pw.write(ca);
-//            pw.write(towritestr,len);
+            pw.write(towritestr);
             pw.flush();
 //            socket.shutdownOutput();//关闭输出流
             //3.获取输入流，并读取服务器端的响应信息
