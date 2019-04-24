@@ -10,13 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f3158e1-4520-4f9f-add1-db9f54a74a32" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/commmon/ConverFromGBKToUTF8.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/commmon/StringUnicodeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/net/ClientSendMsg2QtServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/net/ClientSendMsg2QtServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/openpath/explorer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/openpath/explorer.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/openpath/iterlist/iterator.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/openpath/iterlist/iterator.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/openpath/insertfile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/openpath/insertfile.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,8 +27,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/openpath/explorer.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="477">
-              <caret line="72" column="41" selection-start-line="72" selection-start-column="41" selection-end-line="72" selection-end-column="41" />
+            <state relative-caret-position="447">
+              <caret line="59" column="10" lean-forward="true" selection-start-line="59" selection-start-column="10" selection-end-line="59" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/openpath/insertfile.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="373">
+              <caret line="36" column="83" selection-start-line="36" selection-start-column="83" selection-end-line="36" selection-end-column="83" />
             </state>
           </provider>
         </entry>
@@ -55,19 +58,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/commmon/ConverFromGBKToUTF8.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-886">
-              <caret line="19" column="30" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="30" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2652#2669#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/commmon/StringUnicodeTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
@@ -76,11 +66,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/net/ClientSendMsg2QtServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="30" column="52" selection-start-line="30" selection-start-column="52" selection-end-line="30" selection-end-column="52" />
+            <state relative-caret-position="818">
+              <caret line="45" column="18" lean-forward="true" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1977#1978#0" expanded="true" />
@@ -244,7 +234,6 @@
         <option value="$PROJECT_DIR$/sql script/create_files.sql" />
         <option value="$PROJECT_DIR$/web/sql/insertdb.jsp" />
         <option value="$PROJECT_DIR$/src/com/commmon/SqlInterface.java" />
-        <option value="$PROJECT_DIR$/web/openpath/insertfile.jsp" />
         <option value="$PROJECT_DIR$/web/openpath/deletefile.jsp" />
         <option value="$PROJECT_DIR$/web/sql/bselectdb.jsp" />
         <option value="$PROJECT_DIR$/web/openpath/adddirectory.jsp" />
@@ -257,6 +246,7 @@
         <option value="$PROJECT_DIR$/src/com/commmon/StringUnicodeTest.java" />
         <option value="$PROJECT_DIR$/web/openpath/explorer.jsp" />
         <option value="$PROJECT_DIR$/src/com/net/ClientSendMsg2QtServer.java" />
+        <option value="$PROJECT_DIR$/web/openpath/insertfile.jsp" />
       </list>
     </option>
   </component>
@@ -264,7 +254,7 @@
     <option name="frameworksView" value="false" />
     <option name="showModules" value="false" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="43" />
     <option name="y" value="189" />
     <option name="width" value="1836" />
@@ -541,9 +531,9 @@
       <item itemvalue="Application.TestRunCmd" />
       <item itemvalue="Application.ClientSendMsg2QtServer" />
       <item itemvalue="Application.ChangeCharset" />
+      <item itemvalue="Application.StringUnicodeTest" />
       <item itemvalue="JavaScript Debug.index.jsp" />
       <item itemvalue="Tomcat Server.Tomcat 7.0.92" />
-      <item itemvalue="Application.StringUnicodeTest" />
     </list>
     <recent_temporary>
       <list>
@@ -626,7 +616,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="160186000" />
+    <option name="totallyTimeSpent" value="160204000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -641,7 +631,7 @@
     <frame x="67" y="-8" width="1861" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7479936" visible="true" weight="0.06821963" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7479936" visible="true" weight="0.1530782" />
       <window_info id="Structure" order="1" sideWeight="0.25160256" side_tool="true" weight="0.1120355" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -996,8 +986,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/openpath/insertfile.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="68" column="31" selection-start-line="68" selection-start-column="27" selection-end-line="68" selection-end-column="31" />
+        <state relative-caret-position="373">
+          <caret line="36" column="83" selection-start-line="36" selection-start-column="83" selection-end-line="36" selection-end-column="83" />
         </state>
       </provider>
     </entry>
@@ -1113,15 +1103,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/openpath/explorer.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="477">
-          <caret line="72" column="41" selection-start-line="72" selection-start-column="41" selection-end-line="72" selection-end-column="41" />
+        <state relative-caret-position="447">
+          <caret line="59" column="10" lean-forward="true" selection-start-line="59" selection-start-column="10" selection-end-line="59" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/net/ClientSendMsg2QtServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="30" column="52" selection-start-line="30" selection-start-column="52" selection-end-line="30" selection-end-column="52" />
+        <state relative-caret-position="818">
+          <caret line="45" column="18" lean-forward="true" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1977#1978#0" expanded="true" />

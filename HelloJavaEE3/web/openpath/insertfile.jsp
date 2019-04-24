@@ -34,7 +34,7 @@
     String filenames = "";
     String result = "数据为空";
     try {
-        filenames = request.getParameter("insertfilename");
+        filenames = request.getParameter("insertfilename").replace("\n", "").trim();
         if(!filenames.trim().isEmpty()) {
             result = inter.insertName(dbName, tableName, filenames);
         }
