@@ -3,6 +3,8 @@
 <%@ page import="java.nio.charset.Charset" %>
 <%@ page import="java.util.List" %>
 <%@ page import="com.commmon.SqlInterface" %>
+<%@ page import="com.commmon.ConverFromGBKToUTF8" %>
+<%@ page import="com.commmon.StringUnicodeTest" %>
 <%--
   Created by IntelliJ IDEA.
   User: dell
@@ -41,7 +43,7 @@
 <body>
 <%
     //定时刷新页面
-    response.setHeader("Refresh","5;explorer.jsp");
+    response.setHeader("Refresh","30;explorer.jsp");
 %>
 
 <h1><a href="<%=basePath%>/index.jsp">首页</a>
@@ -58,6 +60,16 @@
             System.out.println("defaultCharset " + Charset.defaultCharset());
             System.out.println("open path     is " + path);
 
+//            String afterstr = new String(path.getBytes("GB2312"), "UTF-8");
+//            String afterstr = new String(path.getBytes("GB2312"), "ascii");
+//            String afterstr = new String(path.getBytes("GB2312"), "ISO-8859-1");
+//            String afterstr = new String(path.getBytes("UTF-8"), "GB2312");
+//            ConverFromGBKToUTF8 cvt =  new ConverFromGBKToUTF8();
+//            String bfstr = new String(path.getBytes("GB2312"), "GB2312");
+//            String afterstr = cvt.gbk2utf8(bfstr);
+//            String tmpstr = StringUnicodeTest.stringToUnicode(path);
+//            String afterstr = new String(tmpstr.getBytes("UNICODE"), "UTF-8");
+//            ClientSendMsg2QtServer.sendStr2QtServer(path);
             ClientSendMsg2QtServer.sendStr2QtServer(path);
         } catch (Exception e) {
             e.printStackTrace();

@@ -21,10 +21,10 @@
     String tableName = "dirlist";
 
     List<String> openlist = inter.getAll(dbName, tableName, "");
-    for (String file :
-            openlist) {
-        System.out.println(file);
-    }
+//    for (String file :
+//            openlist) {
+//        System.out.println(file);
+//    }
 
 %>
 <html>
