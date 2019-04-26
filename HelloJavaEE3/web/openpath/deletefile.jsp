@@ -32,7 +32,7 @@
 </head>
 <%
     //定时刷新页面
-    response.setHeader("Refresh","5;deletefile.jsp");
+//    response.setHeader("Refresh","5;deletefile.jsp");
 %>
 <%
     String basePath = application.getContextPath();
@@ -56,13 +56,17 @@
     if (path != null && path.trim() != "") {
         try {
             result = inter.deleteName(dbName, tableName, path);
+%>
+        <jsp:forward page="deletefile.jsp"/>
+<%
         } catch (Exception e) {
             e.printStackTrace();
-            out.write(e.getMessage());
+//            out.write(e.getMessage());
         }
+
     }
 %>
-<%=result%>
+<%--<%=result%>--%>
 <%
     for (String file :
             openlist) {

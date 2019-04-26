@@ -47,7 +47,7 @@
 %>
 
 <h1><a href="<%=basePath%>/index.jsp">首页</a>
-    <a href="adddirectory.jsp" target="_blank">文件夹</a>
+    <a href="adddirectory.jsp">文件夹</a>
     <a href="deletefile.jsp" target="_blank">删除</a>
     <a href="insertfile.jsp" target="_blank">写入</a>
 </h1>
@@ -60,16 +60,6 @@
             System.out.println("defaultCharset " + Charset.defaultCharset());
             System.out.println("open path     is " + path);
 
-//            String afterstr = new String(path.getBytes("GB2312"), "UTF-8");
-//            String afterstr = new String(path.getBytes("GB2312"), "ascii");
-//            String afterstr = new String(path.getBytes("GB2312"), "ISO-8859-1");
-//            String afterstr = new String(path.getBytes("UTF-8"), "GB2312");
-//            ConverFromGBKToUTF8 cvt =  new ConverFromGBKToUTF8();
-//            String bfstr = new String(path.getBytes("GB2312"), "GB2312");
-//            String afterstr = cvt.gbk2utf8(bfstr);
-//            String tmpstr = StringUnicodeTest.stringToUnicode(path);
-//            String afterstr = new String(tmpstr.getBytes("UNICODE"), "UTF-8");
-//            ClientSendMsg2QtServer.sendStr2QtServer(path);
             ClientSendMsg2QtServer.sendStr2QtServer(path);
         } catch (Exception e) {
             e.printStackTrace();

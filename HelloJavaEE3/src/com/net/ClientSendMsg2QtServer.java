@@ -10,6 +10,14 @@ import java.net.UnknownHostException;
 public class ClientSendMsg2QtServer {
     private static final int HEAD_SIZE = 8 * 1;
 
+    public static boolean checkiszimu(char c) {
+        if (((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     public static void sendStr2QtServer(String towritestr) {
         try {
             //1.创建客户端Socket，指定服务器地址和端口
@@ -21,14 +29,20 @@ public class ClientSendMsg2QtServer {
             /**
              * 发送长度为总长度，包含头和体。
              */
-            if (testChinese.isContainChinese(towritestr)) {
+            char lastchar = towritestr.charAt(towritestr.length() - 1);
+            if (testChinese.isContainChinese(towritestr)
+                    && (true == checkiszimu(lastchar))) {
                 len = towritestr.length() + 6;
+            }else if (testChinese.isContainChinese(towritestr)
+                    && (false == checkiszimu(lastchar))) {
+                len = towritestr.length() + 4;
             } else {
                 len = towritestr.length();
             }
 //            len = towritestr.length();
             byte[] buffer = Byte24Long.LongToBytes(len);
             System.out.println("size of len:" + (len));
+            System.out.println("buffer of len:" + (buffer.length));
             pw.write(Byte24Long.getChars(buffer));
             pw.write(towritestr);
             pw.flush();
