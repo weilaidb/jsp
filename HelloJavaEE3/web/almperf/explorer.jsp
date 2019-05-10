@@ -110,7 +110,15 @@
     <a href="insert.jsp" target="_blank">写入</a>
 </h1>
 <h1>性能告警</h1>
-
+<%!
+    //方法四：
+    public final static boolean isNumeric(String s) {
+        if (s != null && !"".equals(s.trim()))
+            return s.matches("^[0-9]*$");
+        else
+            return false;
+    }
+%>
 <%
     String path = request.getParameter("openpath");
     if (path != null && path.trim() != "") {
@@ -130,6 +138,13 @@
             openlist) {
         String[] splitlst = file.split("\\s+", 2);
         if(splitlst.length < 2)
+        {
+            continue;
+        }
+        /**
+         * 第一个不为索引的不处理
+         */
+        if(false == isNumeric(splitlst[0].trim()))
         {
             continue;
         }
