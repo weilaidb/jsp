@@ -128,7 +128,7 @@
 
     for (String file :
             openlist) {
-        String[] splitlst = file.split("\\s+");
+        String[] splitlst = file.split("\\s+", 2);
         if(splitlst.length < 2)
         {
             continue;
