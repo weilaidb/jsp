@@ -219,7 +219,7 @@
             <%
                 String orgshowid = rs.getString("id").replace("\n", "<br/>");
             %>
-            <form name="form2" method="post" action="sql/queryid.jsp">
+            <form name="form2" method="post" action="sql/queryidwithmodify.jsp">
                 <input type="text"
                        size="4"
                        class="text2"

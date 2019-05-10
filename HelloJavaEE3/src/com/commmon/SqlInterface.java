@@ -141,14 +141,14 @@ public class SqlInterface {
             //            创建数据库,需要手动创建呢
             conn = DriverManager.getConnection(DBURL.replaceAll("mldn", dbName), DBUSER, DBPASS);
 //            创建数据库名称和表必须在首先创建出来。
-            file = new String(file.getBytes("iso-8859-1"), "utf-8");
+//            file = new String(file.getBytes("iso-8859-1"), "utf-8");
 
             file = file.replace("\\", "\\\\")
                         .replace("\"", "\"\"");
             sql = "delete from egtable where name=\"filexxx\"";
             sql = sql.replace("egtable", tableName)
                     .replace("filexxx", file);
-//                System.out.println(sql);
+                System.out.println(sql);
             pstmt = conn.prepareStatement(sql);
             pstmt.execute();
 
