@@ -19,7 +19,7 @@
     String dbName = "showui";
     String tableName = "almperf";
 
-    List<String> openlist = inter.getAll(dbName, tableName, "");
+    List<String> openlist = inter.getAllDesc(dbName, tableName, "");
 //    for (String file :
 //            openlist) {
 //        System.out.println(file);
