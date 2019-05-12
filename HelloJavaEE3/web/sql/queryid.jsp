@@ -39,6 +39,7 @@
 
     .boxes {
         font-size: 20px;
+        background-color: #c8eccc;
     }
 </style>
 

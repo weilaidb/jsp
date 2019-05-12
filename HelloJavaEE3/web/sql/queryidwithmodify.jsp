@@ -57,7 +57,7 @@
         overflow-y: auto;
         border-color: rgba(82, 168, 236, 0.8);
         box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
-
+        background-color: #c8eccc;
     }
 </style>
 
