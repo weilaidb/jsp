@@ -62,4 +62,16 @@
         <servlet-name>Explorer</servlet-name>
         <url-pattern>/Explorer</url-pattern>
     </servlet-mapping>
+	
+	
+  <servlet>
+    <servlet-name>TreeviewServlet</servlet-name>
+    <servlet-class>tree.TreeviewServlet</servlet-class>
+   </servlet>
+
+  <servlet-mapping>
+     <servlet-name>TreeviewServlet</servlet-name>
+     <url-pattern>/treeview</url-pattern>
+  </servlet-mapping>
+  
 </web-app>
