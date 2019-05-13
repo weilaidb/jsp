@@ -118,24 +118,25 @@
         Class.forName("com.mysql.jdbc.Driver");  ////驱动程序名
         String url = "jdbc:mysql://localhost:3306/alldb?useUnicode=true&characterEncoding=utf-8"; //数据库名
 //        String url = "jdbc:mysql://localhost:3306/alldb?useSSL=true"; //数据库名
-//        String url = "jdbc:mysql://localhost:3306/alldb?useSSL=false"; //数据库名
         String username = "root";  //数据库用户名
         String password = "Zzerp123";  //数据库用户密码
         Connection conn = DriverManager.getConnection(url, username, password);  //连接状态
 
         if (conn != null) {
 //            out.print("数据库连接成功！");
-//            out.print("<br />");
 %>
 
 <h1><%=qryiddata%>
 </h1>
 
+<%--<%request.setCharacterEncoding("UTF-8"); %>--%>
+<%--<%session.setAttribute("iddata", qryiddata); %>--%>
+<%--&lt;%&ndash;<jsp:forward page="modifyid.jsp"></jsp:forward>&ndash;%&gt;--%>
+
+
 
 <table border="1" width="100%" class='mytable'>
     <tr>
-        <%--<th>序列</th>--%>
-        <%--<th>名称</th>--%>
         <th>数据</th>
     </tr>
     <%
@@ -160,26 +161,21 @@
     <button id="btnpaste">粘贴</button>
     <tr>
         <td>
-            <form name="form1" method="post" action="">
+            <form name="form1" method="post" action="modifyid.jsp">
                 <input type="submit" name="Submit" value="修改" class="submitbtn"/>
-            <%--<input type="text" id="ipt" placeholder="输入要复制的东西"/> <br/><br/>--%>
-            <textarea class="boxes"
-                      rows="1000"
-            <%--autoHeight="true"--%>
-            <%--rows="80"--%>
-                      id="ipt"
-                      name="modifythings"
-                      placeholder="输入要复制的东西"
-                      style="width: 100%;"><%=toshowcontent%></textarea>
+                <input type="text" name="iddataext" value="<%=qryiddata%>">
+                <textarea class="boxes"
+                          rows="1000"
+                <%--autoHeight="true"--%>
+                <%--rows="80"--%>
+                          id="ipt"
+                          name="modifythings"
+                          placeholder="输入要复制的东西"
+                          style="width: 100%;"><%=toshowcontent%>
+                </textarea>
             </form>
         </td>
     </tr>
-    <%--<div>--%>
-    <%--<input type="text" id="ipt" placeholder="输入要复制的东西"/> <br/><br/>--%>
-    <%--<button id="btncopy">复制</button>--%>
-    <%--</div>--%>
-
-
     <%
                 }
                 out.print("查询结果：" + rowCount + " 条[" + qryiddata + "]");
@@ -195,67 +191,5 @@
 
 <h2 align="center"><font size="12" color="red">~~不能再底部了~~~</font></h2>
 
-<style type="text/css">
-    html, body {
-        margin: 0;
-    }
-
-    div {
-        padding: 20px;
-        padding-right: 20px;
-    }
-
-    input {
-        /*width: 240px;*/
-        height: 40px;
-        line-height: 40px;
-        font-size: 14px;
-        border: none;
-        background-color: #eee;
-        border-radius: 4px;
-        text-indent: 4px;
-        outline: none;
-        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    }
-
-    button {
-        width: 140px;
-        height: 50px;
-        border: none;
-        border-radius: 4px;
-        outline: none;
-        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-        cursor: pointer;
-    }
-</style>
-
-<%--换成user.js更加不好使了--%>
-<script src="../js/mysql/userext.js">
-</script>
-
-
-<%--<input id=edit value=范例><br>--%>
-<%--<button onclick=fn_doufucopy()>Copy</button>--%>
-<%--<button onclick=fn_doufupaste()>paste</button><br>--%>
-<%--<textarea id=tt rows=10 cols=50></textarea>--%>
-
-<%--<script type="text/javascript">--%>
-<%--function fn_doufucopy() {--%>
-<%--edit.select();--%>
-<%--document.execCommand('Copy');--%>
-<%--}--%>
-<%--/*--%>
-<%--*该function执行paste指令--%>
-<%--*/--%>
-<%--function fn_doufupaste() {--%>
-
-<%--setTimeout(function(){--%>
-<%--tt.focus();--%>
-<%--document.execCommand('paste');--%>
-<%--},500);--%>
-
-<%--}--%>
-
-<%--</script>--%>
 </body>
 </html>

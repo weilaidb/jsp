@@ -1,0 +1,3 @@
+<%
+    String basePath = application.getContextPath();
+%>
