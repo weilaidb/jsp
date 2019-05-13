@@ -123,7 +123,7 @@
         rs.close();
         stmt.close();
         conn.close();
-        out.println("写入成功!!<br />");
+        out.println("修改成功!!<br />");
         return;
 
     } catch (Exception e) {
