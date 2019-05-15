@@ -162,7 +162,7 @@
     <tr>
         <td>
             <form name="form1" method="post" action="modifyid.jsp">
-                <input type="submit" name="Submit" value="修改" class="submitbtn"/>
+                <input type="submit" name="Submit" value="保存" class="submitbtn"/>
                 <input type="text" name="iddataext" value="<%=qryiddata%>">
                 <textarea class="boxes"
                           rows="1000"

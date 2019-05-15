@@ -18,9 +18,24 @@
 
 <html>
 <head>
+    <%--<%--%>
+        <%--//定时刷新页面--%>
+    <%--response.setHeader("Refresh","3;queryidwithmodify.jsp");--%>
+    <%--%>--%>
+    <%--<meta http-equiv="refresh" content="1;url=queryidwithmodify.jsp">--%>
+    <%--<script type="text/javascript">setTimeout("history.go(-1)", 3000);  </script>--%>
+    <SCRIPT language=javascript>
+        function go()
+        {
+            window.history.go(-1);
+        }
+        setTimeout("go()",1000);
+    </SCRIPT>
+
     <title>显示ID数据</title>
 </head>
 <body>
+
 
 <%--================获取查询数据================--%>
 <%--================打开数据库================--%>
