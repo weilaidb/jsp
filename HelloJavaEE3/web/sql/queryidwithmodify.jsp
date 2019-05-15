@@ -191,5 +191,27 @@
 
 <h2 align="center"><font size="12" color="red">~~不能再底部了~~~</font></h2>
 
+<style type="text/css">
+    .btns{font-weight: bold;display: inline-block;width: 80px;height: 80px;border: #5fb878;background: #5fb878;font-size: 1.4em;text-align: center;padding-top: 5px;color: white;}
+    a:hover{color:#FFFFFF}
+</style>
+
+
+<div style="overflow: hidden;position: fixed;right: 1px;bottom: 2px;z-index: 10;">
+    <div style="overflow: hidden;">
+        <%--<div style="padding-right:10px;">--%>
+            <%--<a id="js_print" class="btns">打印</a>--%>
+        <%--</div>--%>
+        <%--<div style="padding-top:20px;padding-right:10px;">--%>
+            <%--<a href="list.jhtml" class="btns">返回</a>--%>
+        <%--</div>--%>
+        <div style="padding-top:20px;padding-right:10px;padding-bottom:3px">
+            <a href="#" style="float: right;" class="btns">顶部</a>
+        </div>
+    </div>
+</div>
+
+
+
 </body>
 </html>
