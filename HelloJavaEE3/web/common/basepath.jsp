@@ -1,6 +1,7 @@
 <%
     String basePath = application.getContextPath();
     String path = request.getContextPath();
+    String docBase = application.getRealPath("/");
     String CurrentPath = request.getServletPath();
     String basePath2 = request.getScheme() + "://"
             + request.getServerName() + ":" + request.getServerPort()

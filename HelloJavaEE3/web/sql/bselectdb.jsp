@@ -52,12 +52,18 @@
 <%
     String path = request.getContextPath();
     String CurrentPath = request.getServletPath();
+    
     String basePath = request.getScheme() + "://"
             + request.getServerName() + ":" + request.getServerPort()
             + path + "/";
+	String currentAllPath = basePath + CurrentPath;
+			
     System.out.println("path    :" + path);
     System.out.println("basePath:" + basePath);
     System.out.println("getServletPath:" + request.getServletPath());
+	// out.println("basePath:" + basePath + CurrentPath);
+//	out.println("currentAllPath:" + currentAllPath);
+	
 %>
 
 
@@ -316,7 +322,7 @@
         <%--<a href="list.jhtml" class="btns">返回</a>--%>
         <%--</div>--%>
         <div style="padding-top:20px;padding-right:10px;padding-bottom:3px">
-            <a href="<%=CurrentPath%>#" style="float: right;" class="btns">顶部</a>
+            <a href="<%=currentAllPath%>#" style="float: right;" class="btns">顶部</a>
         </div>
     </div>
 </div>
