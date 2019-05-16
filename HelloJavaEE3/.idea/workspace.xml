@@ -10,9 +10,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f3158e1-4520-4f9f-add1-db9f54a74a32" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/common/basepath.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/common/basepath.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sql/bselectdb.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/sql/bselectdb.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../pythoneg/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../pythoneg/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -256,9 +253,8 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="917" />
-    <option name="y" value="335" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="67" />
     <option name="width" value="1836" />
     <option name="height" value="966" />
   </component>
@@ -336,7 +332,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558019418532" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558019959817" />
     <property name="last_opened_file_path" value="D:/Software/jar/netty-4.1.36.Final.tar/netty-4.1.36.Final/jar/all-in-one/netty-all-4.1.36.Final.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -628,12 +624,12 @@
       <workItem from="1557930584713" duration="1576000" />
       <workItem from="1557934805065" duration="1302000" />
       <workItem from="1557936116245" duration="4000" />
-      <workItem from="1558017203242" duration="2210000" />
+      <workItem from="1558017203242" duration="2243000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="193219000" />
+    <option name="totallyTimeSpent" value="193252000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -645,8 +641,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="917" y="335" width="1836" height="966" extended-state="0" />
-    <editor active="true" />
+    <frame x="48" y="320" width="1836" height="966" extended-state="0" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7479936" visible="true" weight="0.1991001" />
       <window_info id="Structure" order="1" sideWeight="0.25160256" side_tool="true" weight="0.1120355" />
@@ -658,7 +653,7 @@
       <window_info id="Web" order="7" sideWeight="0.5007899" side_tool="true" weight="0.07931226" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4997227" weight="0.10604454" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.9240155" visible="true" weight="0.19065191" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.9240155" weight="0.19065191" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49963635" weight="0.39875" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />

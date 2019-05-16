@@ -55,12 +55,12 @@
     
     String basePath = request.getScheme() + "://"
             + request.getServerName() + ":" + request.getServerPort()
-            + path + "/";
+            + path;
 	String currentAllPath = basePath + CurrentPath;
 			
-    System.out.println("path    :" + path);
-    System.out.println("basePath:" + basePath);
-    System.out.println("getServletPath:" + request.getServletPath());
+    // System.out.println("path    :" + path);
+    // System.out.println("basePath:" + basePath);
+    // System.out.println("getServletPath:" + request.getServletPath());
 	// out.println("basePath:" + basePath + CurrentPath);
 //	out.println("currentAllPath:" + currentAllPath);
 	
@@ -128,19 +128,19 @@
 <script>
     function openinsertdatapage() {
         // window.location.replace("/sql/insertdb.jsp");
-        window.open('<%=basePath%>sql/insertdb.jsp')
+        window.open('<%=basePath%>/sql/insertdb.jsp')
         // window.history.back(-1)
     }
 </script>
 
 
-<form name="form1" method="post" action="sql/bselectdb.jsp">
+<form name="form1" method="post" action="<%=basePath%>/sql/bselectdb.jsp">
     <h1>
         请输入查询数据：<input type="text" class="text1" name="qrydata" size="80"/>
         <input type="submit" class="text1" name="Submit" value="点击查询"/>
         <input type="button" class="text1" name="insertdata" value="插入数据"
                onclick="openinsertdatapage();">
-        <%--onclick="javascript:window.location='<%=basePath%>sql/insertdb.jsp' "/>--%>
+        <%--onclick="javascript:window.location='<%=basePath%>/sql/insertdb.jsp' "/>--%>
         <a href="/url" target="_blank"></a>
     </h1>
 </form>
