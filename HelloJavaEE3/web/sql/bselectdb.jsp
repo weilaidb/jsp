@@ -51,9 +51,13 @@
 <%--================获取路径和基础路径=========================--%>
 <%
     String path = request.getContextPath();
+    String CurrentPath = request.getServletPath();
     String basePath = request.getScheme() + "://"
             + request.getServerName() + ":" + request.getServerPort()
             + path + "/";
+    System.out.println("path    :" + path);
+    System.out.println("basePath:" + basePath);
+    System.out.println("getServletPath:" + request.getServletPath());
 %>
 
 
@@ -130,7 +134,7 @@
         <input type="submit" class="text1" name="Submit" value="点击查询"/>
         <input type="button" class="text1" name="insertdata" value="插入数据"
                onclick="openinsertdatapage();">
-               <%--onclick="javascript:window.location='<%=basePath%>sql/insertdb.jsp' "/>--%>
+        <%--onclick="javascript:window.location='<%=basePath%>sql/insertdb.jsp' "/>--%>
         <a href="/url" target="_blank"></a>
     </h1>
 </form>
@@ -282,6 +286,40 @@
 </table>
 
 <h2 align="center"><font size="12" color="red">~~不能再底部了~~~</font></h2>
+
+<style type="text/css">
+    .btns {
+        font-weight: bold;
+        display: inline-block;
+        width: 80px;
+        height: 80px;
+        border: #5fb878;
+        background: #5fb878;
+        font-size: 1.4em;
+        text-align: center;
+        padding-top: 5px;
+        color: white;
+    }
+
+    a:hover {
+        color: #FFFFFF
+    }
+</style>
+
+
+<div style="overflow: hidden;position: fixed;right: 1px;bottom: 2px;z-index: 10;">
+    <div style="overflow: hidden;">
+        <%--<div style="padding-right:10px;">--%>
+        <%--<a id="js_print" class="btns">打印</a>--%>
+        <%--</div>--%>
+        <%--<div style="padding-top:20px;padding-right:10px;">--%>
+        <%--<a href="list.jhtml" class="btns">返回</a>--%>
+        <%--</div>--%>
+        <div style="padding-top:20px;padding-right:10px;padding-bottom:3px">
+            <a href="<%=CurrentPath%>#" style="float: right;" class="btns">顶部</a>
+        </div>
+    </div>
+</div>
 
 
 </body>
