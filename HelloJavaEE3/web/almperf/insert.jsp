@@ -8,7 +8,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java"
          pageEncoding="utf-8" %>
-
+<%@include file="../common/basepath.jsp"%>
 <%--================css配置=========================--%>
 <style type="text/css">
     .submitbtn {
@@ -27,8 +27,16 @@
     //    打开的文件列表
     SqlInterface inter = new SqlInterface();
     String dbName = "showui";
-    String tableName = "almperf";
 %>
+
+<%
+    //    表名使用模块名
+    String tableName = app_CurrentPath.toLowerCase().substring(1)
+            .replaceAll("\\/.*", "");
+    System.out.println("tablename:" + tableName);
+%>
+
+
 
 <%
     String filenames = "";

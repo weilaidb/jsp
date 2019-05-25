@@ -1,14 +1,14 @@
 <%
-    String basePath = application.getContextPath();
-    String path = request.getContextPath();
-    String docBase = application.getRealPath("/");
-    String CurrentPath = request.getServletPath();
-    String basePath2 = request.getScheme() + "://"
+    String app_basePath = application.getContextPath();
+    String app_path = request.getContextPath();
+    String app_docBase = application.getRealPath("/");
+    String app_CurrentPath = request.getServletPath();
+    String app_basePath2 = request.getScheme() + "://"
             + request.getServerName() + ":" + request.getServerPort()
-            + path + "/";
-    System.out.println("path          :" + path);
-    System.out.println("basePath      :" + basePath);
-    System.out.println("basePath2     :" + basePath2);
-    System.out.println("CurrentPath   :" + CurrentPath);
+            + app_path + "/";
+    System.out.println("app_path          :" + app_path);
+    System.out.println("app_basePath      :" + app_basePath);
+    System.out.println("app_basePath2     :" + app_basePath2);
+    System.out.println("app_CurrentPath   :" + app_CurrentPath);
     System.out.println("getServletPath:" + request.getServletPath());
 %>

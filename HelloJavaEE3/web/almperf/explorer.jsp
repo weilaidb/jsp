@@ -12,12 +12,21 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java"
          pageEncoding="UTF-8" %>
+<%@include file="../common/basepath.jsp"%>
 <%
     //    打开的文件列表
 //    增加表项openlist，用以打开文件路径
     SqlInterface inter = new SqlInterface();
     String dbName = "showui";
-    String tableName = "almperf";
+%>
+<%
+//    表名使用模块名
+    String tableName = app_CurrentPath.toLowerCase().substring(1)
+            .replaceAll("\\/.*", "");
+    System.out.println("tablename:" + tableName);
+%>
+
+<%
 
     List<String> openlist = inter.getAllDesc(dbName, tableName, "");
 //    for (String file :
@@ -25,13 +34,6 @@
 //        System.out.println(file);
 //    }
 
-%>
-<%--================获取路径和基础路径=========================--%>
-<%
-    String path2 = request.getContextPath();
-    String basePath = request.getScheme() + "://"
-            + request.getServerName() + ":" + request.getServerPort()
-            + path2 + "/";
 %>
 
 
@@ -104,7 +106,7 @@
 //    response.setHeader("Refresh","30;explorer.jsp");
 %>
 
-<h1><a href="<%=basePath%>/index.jsp">首页</a>
+<h1><a href="<%=app_basePath%>/index.jsp">首页</a>
     <%--<a href="add.jsp">添加</a>--%>
     <a href="delete.jsp" target="_blank">删除</a>
     <a href="insert.jsp" target="_blank">写入</a>
@@ -149,7 +151,7 @@
             continue;
         }
 %>
-    <form name="form2" method="post" action="<%=basePath%>/sql/queryid.jsp">
+    <form name="form2" method="post" action="<%=app_basePath%>/sql/queryid.jsp">
         <input type="text"
                size="4"
                class="text2"

@@ -12,18 +12,27 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java"
          pageEncoding="UTF-8" %>
+<%@include file="../common/basepath.jsp"%>
 <%
     //    打开的文件列表
 //    增加表项openlist，用以打开文件路径
     SqlInterface inter = new SqlInterface();
     String dbName = "showui";
-    String tableName = "almperf";
+%>
 
+<%
+    //    表名使用模块名
+    String tableName = app_CurrentPath.toLowerCase().substring(1)
+            .replaceAll("\\/.*", "");
+    System.out.println("tablename:" + tableName);
+%>
+
+<%
     List<String> openlist = inter.getAll(dbName, tableName, "");
-//    for (String file :
-//            openlist) {
-//        System.out.println(file);
-//    }
+    //    for (String file :
+    //            openlist) {
+    //        System.out.println(file);
+    //    }
 
 %>
 <html>
