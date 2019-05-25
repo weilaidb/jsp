@@ -45,6 +45,7 @@
         filenames = request.getParameter("insertfilename").replace("\n", "").trim();
         if(!filenames.trim().isEmpty()) {
             result = inter.insertName(dbName, tableName, filenames);
+            result = new String(result.getBytes("iso-8859-1"), "utf-8");
         }
     } catch (Exception e) {
 //        out.print("\n");
