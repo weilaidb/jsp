@@ -19,6 +19,7 @@
 <h1><a href="openpath/explorer.jsp" target="_blank">审视列表</a></h1>
 <h1><a href="almperf/explorer.jsp" target="_blank">性能告警</a></h1>
 <h1><a href="timeclock/explorer.jsp" target="_blank">时钟时间</a></h1>
+<h1><a href="pubuse/explorer.jsp" target="_blank">公共使用</a></h1>
 <%--<h1><a href="tree/tree.jsp">树型</a></h1>--%>
 <%--<h1><a href="openpath/iterlist/iterator.jsp" target="_blank">遍历文件列表</a></h1>--%>
 
