@@ -12,24 +12,23 @@
 <%--================引入头文件=========================--%>
 <%@page import="java.sql.*" %>  <%--导入java.sql包--%>
 <%--<%@ include file="../css/bdata.css"%>--%>
-<link href="../css/bdata.css" rel="stylesheet" type="text/css" />
-
+<link href="../css/bdata.css" rel="stylesheet" type="text/css"/>
 
 
 <html>
 <head>
     <%--<%--%>
-        <%--//定时刷新页面--%>
+    <%--//定时刷新页面--%>
     <%--response.setHeader("Refresh","3;queryidwithmodify.jsp");--%>
     <%--%>--%>
     <%--<meta http-equiv="refresh" content="1;url=queryidwithmodify.jsp">--%>
     <%--<script type="text/javascript">setTimeout("history.go(-1)", 3000);  </script>--%>
     <SCRIPT language=javascript>
-        function go()
-        {
+        function go() {
             window.history.go(-1);
         }
-        setTimeout("go()",1000);
+
+        setTimeout("go()", 1000);
     </SCRIPT>
 
     <title>显示ID数据</title>
@@ -43,12 +42,7 @@
     String qryiddata = "";
     try {
         qryiddata = (String) request.getParameter("iddataext");
-    out.print("修改ID【" + qryiddata + "】的内容");
-//        if (!qryiddata.isEmpty()) {
-//            out.print("查询内容:" +
-//                    new String(qryiddata.getBytes("iso-8859-1"), "utf-8"));
-//            out.print("<br />");
-//        }
+        out.print("修改ID【" + qryiddata + "】的内容");
     } catch (Exception e) {
     }
 %>
@@ -57,20 +51,10 @@
     String modifydata = "";
     try {
         modifydata = request.getParameter("modifythings");
-//    out.print("查询数据项:" + modifydata);
-//        if (!modifydata.isEmpty()) {
-//            out.print("查询内容:" +
-//                    new String(modifydata.getBytes("iso-8859-1"), "utf-8"));
-//            out.print("<br />");
-//        }
     } catch (Exception e) {
     }
 
 %>
-
-<%--<h1>修改的内容为:</h1>--%>
-<%--<h1><%=modifydata%>--%>
-
 
 <%
     Connection conn = null;
@@ -86,15 +70,11 @@
     try {
         Class.forName("com.mysql.jdbc.Driver");  ////驱动程序名
         String url = "jdbc:mysql://localhost:3306/alldb?useUnicode=true&characterEncoding=utf-8"; //数据库名
-//        String url = "jdbc:mysql://localhost:3306/alldb?useSSL=true"; //数据库名
-//        String url = "jdbc:mysql://localhost:3306/alldb?useSSL=false"; //数据库名
-        String username = "root";  //数据库用户名
+       String username = "root";  //数据库用户名
         String password = "Zzerp123";  //数据库用户密码
         conn = DriverManager.getConnection(url, username, password);  //连接状态
 
         if (conn != null) {
-//            out.print("数据库连接成功！");
-//            out.print("<br />");
         }
     } catch (Exception e) {
         out.println("数据库连接失败<br/>");
@@ -116,7 +96,7 @@
                     + "\""
                     + nameval
                     + "\""
-                    +", `content` = "
+                    + ", `content` = "
                     + "\""
                     + insertval
                     + "\""
@@ -130,8 +110,6 @@
             out.println("数据为空!!<br />");
             return;
         }
-//        out.println("sql express:" + sql);
-//        out.print("<br />");
 
         stmt = conn.createStatement();
         stmt.execute(sql);
@@ -152,16 +130,8 @@
         } else {
             out.println("数据为空!!<br />");
         }
-//        out.println(e.getLocalizedMessage());
     }
 %>
-
-
-
-
-
-
-<%--<h2 align="center"><font size="12" color="red">~~不能再底部了~~~</font></h2>--%>
 
 </body>
 </html>

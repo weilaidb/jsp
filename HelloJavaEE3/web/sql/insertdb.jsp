@@ -12,11 +12,6 @@
 
 <%--================引入头文件=========================--%>
 <%@page import="java.sql.*" %>
-<%@ page import="java.util.concurrent.ExecutionException" %>
-<%@ page import="java.util.Date" %>
-<%@ page import="java.time.format.DateTimeFormatter" %>  <%--导入java.sql包--%>
-
-
 <%--================css配置=========================--%>
 <style type="text/css">
     .mytable th, tr, td, table {
@@ -32,15 +27,6 @@
         tab-interval: 10px;
         background-color: aliceblue;
         font-size: medium;
-    }
-
-    .text1 {
-        height: 40px
-    }
-
-    .text2 {
-        height: 40px;
-        /*width: 80px;*/
     }
 
     .submitbtn {
@@ -137,20 +123,6 @@
             }
         }
 
-        // //复制
-        // document.onkeydown = function (e) {
-        //     if (e.ctrlKey && e.keyCode == 86) {//ctrl+V
-        //         var cloneActiveElement = "需要复制的内容";
-        //         var copyText = document.getElementById("copy_text");
-        //         copyText.innerHTML = cloneActiveElement;
-        //         copyText.readOnly = false;
-        //         copyText.select();
-        //         copyText.setSelectionRange(0, copyText.value.length);
-        //         document.execCommand("copy");
-        //         copyText.readOnly = true;
-        //     }
-        // }
-
         document.onmousedown = function (ev) {
             // console.log(ev);
             // document.getElementById("id_insertdb").value = ev.toString();
@@ -164,9 +136,6 @@
 </head>
 <body onload="ClearTextArea()">
 <a href="<%=basePath%>/index.jsp">首页</a>
-<%--<h1>查询结果</h1>--%>
-
-<%--<textarea id="copy_text" style="position:absolute;left:-9999px"></textarea>--%>
 
 <form name="form1" method="post" action="">
     <h3>
@@ -199,14 +168,7 @@
     insertval = "";
     try {
         insertval = request.getParameter("insertdbname");
-//        out.print("查询数据项:" + insertval);
-//        if (!insertval.isEmpty()) {
-//            out.print("查询内容:" +
-//                    new String(insertval.getBytes("iso-8859-1"), "utf-8"));
-//            out.print("<br />");
-//        }
     } catch (Exception e) {
-//        out.print("\n");
     }
 
 
@@ -216,15 +178,11 @@
     try {
         Class.forName("com.mysql.jdbc.Driver");  ////驱动程序名
         String url = "jdbc:mysql://localhost:3306/alldb?useUnicode=true&characterEncoding=utf-8"; //数据库名
-//        String url = "jdbc:mysql://localhost:3306/alldb?useSSL=true"; //数据库名
-//        String url = "jdbc:mysql://localhost:3306/alldb?useSSL=false"; //数据库名
         String username = "root";  //数据库用户名
         String password = "Zzerp123";  //数据库用户密码
         conn = DriverManager.getConnection(url, username, password);  //连接状态
 
         if (conn != null) {
-//            out.print("数据库连接成功！");
-//            out.print("<br />");
         }
     } catch (Exception e) {
         out.println("数据库连接失败<br/>");
@@ -257,8 +215,6 @@
             out.println("数据为空!!<br />");
             return;
         }
-//        out.println("sql express:" + sql);
-//        out.print("<br />");
 
         stmt = conn.createStatement();
         stmt.execute(sql);
@@ -278,7 +234,6 @@
         } else {
             out.println("数据为空!!<br />");
         }
-//        out.println(e.getLocalizedMessage());
     }
 %>
 

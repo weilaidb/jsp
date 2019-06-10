@@ -28,15 +28,7 @@
         background-color: aliceblue;
         font-size: medium;
     }
-
-    .text1 {
-        height: 40px
-    }
-
-    .text2 {
-        height: 20px;
-    }
-
+    
     .boxes {
         display: block;
         margin: 0 auto;
@@ -106,33 +98,18 @@
     String qryiddata = "";
     try {
         qryiddata = request.getParameter("iddata");
-//    out.print("查询数据项:" + qryiddata);
-//        if (!qryiddata.isEmpty()) {
-//            out.print("查询内容:" +
-//                    new String(qryiddata.getBytes("iso-8859-1"), "utf-8"));
-//            out.print("<br />");
-//        }
     } catch (Exception e) {
     }
     try {
         Class.forName("com.mysql.jdbc.Driver");  ////驱动程序名
         String url = "jdbc:mysql://localhost:3306/alldb?useUnicode=true&characterEncoding=utf-8"; //数据库名
-//        String url = "jdbc:mysql://localhost:3306/alldb?useSSL=true"; //数据库名
         String username = "root";  //数据库用户名
         String password = "Zzerp123";  //数据库用户密码
         Connection conn = DriverManager.getConnection(url, username, password);  //连接状态
 
         if (conn != null) {
-//            out.print("数据库连接成功！");
 %>
-
-<%--<h1><%=qryiddata%>--%>
-<%--</h1>--%>
-
 <table border="1" width="100%" class='mytable'>
-    <%--<tr>--%>
-        <%--<th>数据</th>--%>
-    <%--</tr>--%>
     <%
         int whichid = Integer.valueOf(qryiddata).intValue();
         Statement stmt = null;
@@ -150,18 +127,13 @@
     %>
 
     <%String toshowcontent = rs.getString("content");%>
-
-    <%--<button id="btncopy">复制</button>--%>
-    <%--<button id="btnpaste">粘贴</button>--%>
     <tr>
         <td>
             <form name="form1" method="post" action="modifyid.jsp">
                 <input type="submit" id="savetext" name="Submit" value="保存" class="submitbtn"/>
-                <input type="text" name="iddataext" value="">
+                <input type="text" name="iddataext" value="<%=qryiddata%>">
                 <textarea class="boxes"
                           rows="1000"
-                <%--autoHeight="true"--%>
-                <%--rows="80"--%>
                           id="ipt"
                           name="modifythings"
                           placeholder="输入要复制的东西"
@@ -172,8 +144,6 @@
     </tr>
     <%
                 }
-//                out.print("查询结果：" + rowCount + " 条[" + qryiddata + "]");
-//                out.print("<br/>");
             } else {
                 out.print("连接失败！");
             }
@@ -193,19 +163,9 @@
 
 <div style="overflow: hidden;position: fixed;right: 1px;bottom: 2px;z-index: 10;">
     <div style="overflow: hidden;">
-        <%--<div style="padding-right:10px;">--%>
-            <%--<a id="js_print" class="btns">打印</a>--%>
-        <%--</div>--%>
-        <%--<div style="padding-top:20px;padding-right:10px;">--%>
-            <%--<a href="list.jhtml" class="btns">返回</a>--%>
-        <%--</div>--%>
         <div style="padding-top:20px;padding-right:10px;padding-bottom:3px">
             <a href="#" style="float: right;" class="btns">顶部</a>
         </div>
-            <%--<div style="padding-top:10px;padding-right:10px;padding-bottom:3px">--%>
-                <%--<a id="savetext" class="btns">保存</a>--%>
-            <%--</div>--%>
-
     </div>
 </div>
 

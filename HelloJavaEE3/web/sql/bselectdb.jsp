@@ -52,18 +52,10 @@
 <%
     String path = request.getContextPath();
     String CurrentPath = request.getServletPath();
-    
     String basePath = request.getScheme() + "://"
             + request.getServerName() + ":" + request.getServerPort()
             + path;
 	String currentAllPath = basePath + CurrentPath;
-			
-    // System.out.println("path    :" + path);
-    // System.out.println("basePath:" + basePath);
-    // System.out.println("getServletPath:" + request.getServletPath());
-	// out.println("basePath:" + basePath + CurrentPath);
-//	out.println("currentAllPath:" + currentAllPath);
-	
 %>
 
 
@@ -121,15 +113,9 @@
 </head>
 <body>
 <a href="<%=basePath%>/index.jsp">首页</a>
-<%--<h1>查询结果</h1>--%>
-<%--</p>--%>
-<%--</p>--%>
-<%--<h1><%=basePath%></h1>--%>
 <script>
     function openinsertdatapage() {
-        // window.location.replace("/sql/insertdb.jsp");
         window.open('<%=basePath%>/sql/insertdb.jsp')
-        // window.history.back(-1)
     }
 </script>
 
@@ -140,8 +126,6 @@
         <input type="submit" class="text1" name="Submit" value="点击查询"/>
         <input type="button" class="text1" name="insertdata" value="插入数据"
                onclick="openinsertdatapage();">
-        <%--onclick="javascript:window.location='<%=basePath%>/sql/insertdb.jsp' "/>--%>
-        <%--<a href="/url" target="_blank"></a>--%>
     </h3>
 </form>
 
@@ -158,12 +142,6 @@
     String qryval = "";
     try {
         qryval = request.getParameter("qrydata");
-//    out.print("查询数据项:" + qryval);
-//        if (!qryval.isEmpty()) {
-//            out.print("查询内容:" +
-//                    new String(qryval.getBytes("iso-8859-1"), "utf-8"));
-//            out.print("<br />");
-//        }
     } catch (Exception e) {
         out.print("\n");
     }
@@ -171,20 +149,15 @@
     try {
         Class.forName("com.mysql.jdbc.Driver");  ////驱动程序名
         String url = "jdbc:mysql://localhost:3306/alldb?useUnicode=true&characterEncoding=utf-8"; //数据库名
-//        String url = "jdbc:mysql://localhost:3306/alldb?useSSL=true"; //数据库名
-//        String url = "jdbc:mysql://localhost:3306/alldb?useSSL=false"; //数据库名
         String username = "root";  //数据库用户名
         String password = "Zzerp123";  //数据库用户密码
         conn = DriverManager.getConnection(url, username, password);  //连接状态
 
         if (conn != null) {
-//            out.print("数据库连接成功！");
-            out.print("<br />");
 %>
 
 <table border="1" width="100%" class='mytable'>
     <tr>
-        <%--<th>名称</th>--%>
         <th>序列</th>
         <th>数据</th>
     </tr>
@@ -212,8 +185,6 @@
             sql = sqlhead + sqlmid + sqltail;
 
         }
-//        out.println("sql express:" + sql);
-//        out.print("<br />");
 
         stmt = conn.createStatement();
         rs = stmt.executeQuery(sql);
@@ -222,7 +193,6 @@
         while (rs.next()) {
             rowCount++;
     %>
-
 
     <tr>
         <td>
@@ -234,7 +204,6 @@
                        size="4"
                        class="text2"
                        name="iddata"
-                <%--readonly="readonly"--%>
                        value="<%=orgshowid%>"/>
                 <input type="submit" name="Submit" value="..." class="submitbtn"/>
             </form>
@@ -281,11 +250,8 @@
             }
         } catch (Exception e) {
             e.printStackTrace();
-//            out.print("数据库连接异常！");
             out.print("请输入查询数据!!!");
         } finally {
-//            rs.close();
-//            stmt.close();
             conn.close();
         }
     %>
@@ -315,12 +281,6 @@
 
 <div style="overflow: hidden;position: fixed;right: 1px;bottom: 2px;z-index: 10;">
     <div style="overflow: hidden;">
-        <%--<div style="padding-right:10px;">--%>
-        <%--<a id="js_print" class="btns">打印</a>--%>
-        <%--</div>--%>
-        <%--<div style="padding-top:20px;padding-right:10px;">--%>
-        <%--<a href="list.jhtml" class="btns">返回</a>--%>
-        <%--</div>--%>
         <div style="padding-top:20px;padding-right:10px;padding-bottom:3px">
             <a href="<%=currentAllPath%>#" style="float: right;" class="btns">顶部</a>
         </div>
