@@ -32,17 +32,17 @@
     }
 
     .text1 {
-        height: 40px
+        height: 30px
     }
 
     .text2 {
-        height: 40px;
+        height: 30px;
         /*width: 80px;*/
     }
 
     .submitbtn {
-        height: 40px;
-        width: 80px;
+        height: 30px;
+        width: 10px;
     }
 
 
@@ -122,8 +122,8 @@
 <body>
 <a href="<%=basePath%>/index.jsp">首页</a>
 <%--<h1>查询结果</h1>--%>
-</p>
-</p>
+<%--</p>--%>
+<%--</p>--%>
 <%--<h1><%=basePath%></h1>--%>
 <script>
     function openinsertdatapage() {
@@ -135,14 +135,14 @@
 
 
 <form name="form1" method="post" action="<%=basePath%>/sql/bselectdb.jsp">
-    <h1>
+    <h3>
         请输入查询数据：<input type="text" class="text1" name="qrydata" size="80"/>
         <input type="submit" class="text1" name="Submit" value="点击查询"/>
         <input type="button" class="text1" name="insertdata" value="插入数据"
                onclick="openinsertdatapage();">
         <%--onclick="javascript:window.location='<%=basePath%>/sql/insertdb.jsp' "/>--%>
-        <a href="/url" target="_blank"></a>
-    </h1>
+        <%--<a href="/url" target="_blank"></a>--%>
+    </h3>
 </form>
 
 
@@ -194,7 +194,7 @@
         String sql = "";  //查询语句
         String tablename = "abc";
         if (qryval.trim().isEmpty()) {
-            sql = "SELECT * from " + tablename + " order by id desc limit 50;";  //查询语句
+            sql = "SELECT * from " + tablename + " order by id desc limit 10;";  //查询语句
         } else {
             String sqlhead = " SELECT * FROM " + tablename + " WHERE ";
             String sqltail = " order by id desc;";
@@ -212,8 +212,8 @@
             sql = sqlhead + sqlmid + sqltail;
 
         }
-        out.println("sql express:" + sql);
-        out.print("<br />");
+//        out.println("sql express:" + sql);
+//        out.print("<br />");
 
         stmt = conn.createStatement();
         rs = stmt.executeQuery(sql);
@@ -236,7 +236,7 @@
                        name="iddata"
                 <%--readonly="readonly"--%>
                        value="<%=orgshowid%>"/>
-                <input type="submit" name="Submit" value="More" class="submitbtn"/>
+                <input type="submit" name="Submit" value="..." class="submitbtn"/>
             </form>
         </td>
 
@@ -246,7 +246,7 @@
                     .replaceAll(">", "")
                     .replace("\n", "<br/>");
 
-            int showlen = 500;
+            int showlen = 50;
             long totallen = showcontent.length();
             if (showcontent.length() > showlen) {
                 showcontent = showcontent.substring(0, showlen);

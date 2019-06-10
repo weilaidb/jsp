@@ -43,7 +43,7 @@
     String qryiddata = "";
     try {
         qryiddata = (String) request.getParameter("iddataext");
-    out.print("查询IDxx:" + qryiddata);
+    out.print("修改ID【" + qryiddata + "】的内容");
 //        if (!qryiddata.isEmpty()) {
 //            out.print("查询内容:" +
 //                    new String(qryiddata.getBytes("iso-8859-1"), "utf-8"));
@@ -68,7 +68,7 @@
 
 %>
 
-<h1>修改的内容为:</h1>
+<%--<h1>修改的内容为:</h1>--%>
 <%--<h1><%=modifydata%>--%>
 
 
@@ -161,7 +161,7 @@
 
 
 
-<h2 align="center"><font size="12" color="red">~~不能再底部了~~~</font></h2>
+<%--<h2 align="center"><font size="12" color="red">~~不能再底部了~~~</font></h2>--%>
 
 </body>
 </html>

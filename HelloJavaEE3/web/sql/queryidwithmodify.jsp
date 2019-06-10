@@ -126,19 +126,13 @@
 //            out.print("数据库连接成功！");
 %>
 
-<h1><%=qryiddata%>
-</h1>
-
-<%--<%request.setCharacterEncoding("UTF-8"); %>--%>
-<%--<%session.setAttribute("iddata", qryiddata); %>--%>
-<%--&lt;%&ndash;<jsp:forward page="modifyid.jsp"></jsp:forward>&ndash;%&gt;--%>
-
-
+<%--<h1><%=qryiddata%>--%>
+<%--</h1>--%>
 
 <table border="1" width="100%" class='mytable'>
-    <tr>
-        <th>数据</th>
-    </tr>
+    <%--<tr>--%>
+        <%--<th>数据</th>--%>
+    <%--</tr>--%>
     <%
         int whichid = Integer.valueOf(qryiddata).intValue();
         Statement stmt = null;
@@ -157,13 +151,13 @@
 
     <%String toshowcontent = rs.getString("content");%>
 
-    <button id="btncopy">复制</button>
-    <button id="btnpaste">粘贴</button>
+    <%--<button id="btncopy">复制</button>--%>
+    <%--<button id="btnpaste">粘贴</button>--%>
     <tr>
         <td>
             <form name="form1" method="post" action="modifyid.jsp">
-                <input type="submit" name="Submit" value="保存" class="submitbtn"/>
-                <input type="text" name="iddataext" value="<%=qryiddata%>">
+                <input type="submit" id="savetext" name="Submit" value="保存" class="submitbtn"/>
+                <input type="text" name="iddataext" value="">
                 <textarea class="boxes"
                           rows="1000"
                 <%--autoHeight="true"--%>
@@ -178,8 +172,8 @@
     </tr>
     <%
                 }
-                out.print("查询结果：" + rowCount + " 条[" + qryiddata + "]");
-                out.print("<br/>");
+//                out.print("查询结果：" + rowCount + " 条[" + qryiddata + "]");
+//                out.print("<br/>");
             } else {
                 out.print("连接失败！");
             }
@@ -208,6 +202,10 @@
         <div style="padding-top:20px;padding-right:10px;padding-bottom:3px">
             <a href="#" style="float: right;" class="btns">顶部</a>
         </div>
+            <%--<div style="padding-top:10px;padding-right:10px;padding-bottom:3px">--%>
+                <%--<a id="savetext" class="btns">保存</a>--%>
+            <%--</div>--%>
+
     </div>
 </div>
 

@@ -44,7 +44,7 @@
     }
 
     .submitbtn {
-        height: 40px;
+        height: 30px;
         width: 80px;
     }
 
@@ -165,13 +165,11 @@
 <body onload="ClearTextArea()">
 <a href="<%=basePath%>/index.jsp">首页</a>
 <%--<h1>查询结果</h1>--%>
-</p>
-</p>
 
 <%--<textarea id="copy_text" style="position:absolute;left:-9999px"></textarea>--%>
 
 <form name="form1" method="post" action="">
-    <h1>
+    <h3>
         请输入保存数据：
         <input type="submit" name="Submit" value="点击保存" class="submitbtn"/>
         <input type="button" id="id_cleararea" name="cleararea" value="清空" class="submitbtn"
@@ -182,7 +180,7 @@
         <textarea id="id_insertdb" name="insertdbname"
                   class="dia_wbkbig">
         </textarea>
-    </h1>
+    </h3>
 </form>
 
 
