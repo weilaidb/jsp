@@ -127,13 +127,22 @@
     %>
 
     <%String toshowcontent = rs.getString("content");%>
+    <%
+        int actualrows = toshowcontent.split("\n").length;
+        int maxrows = 100;
+        if(actualrows < maxrows)
+        {
+            actualrows = maxrows;
+        }
+    %>
     <tr>
         <td>
             <form name="form1" method="post" action="modifyid.jsp">
                 <input type="submit" id="savetext" name="Submit" value="保存" class="submitbtn"/>
                 <input type="text" name="iddataext" value="<%=qryiddata%>">
                 <textarea class="boxes"
-                          rows="100%"
+                          <%--rows="100%"--%>
+                          rows="<%=actualrows%>"
                           id="ipt"
                           name="modifythings"
                           placeholder="输入要复制的东西"
