@@ -28,7 +28,7 @@
         background-color: aliceblue;
         font-size: medium;
     }
-    
+
     .boxes {
         display: block;
         margin: 0 auto;
@@ -109,7 +109,7 @@
 
         if (conn != null) {
 %>
-<table border="1" width="100%" class='mytable'>
+<table border="1" width="100%" height="100%" class='mytable'>
     <%
         int whichid = Integer.valueOf(qryiddata).intValue();
         Statement stmt = null;
@@ -133,7 +133,7 @@
                 <input type="submit" id="savetext" name="Submit" value="保存" class="submitbtn"/>
                 <input type="text" name="iddataext" value="<%=qryiddata%>">
                 <textarea class="boxes"
-                          rows="1000"
+                          rows="100%"
                           id="ipt"
                           name="modifythings"
                           placeholder="输入要复制的东西"

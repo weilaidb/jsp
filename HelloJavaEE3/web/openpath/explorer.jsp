@@ -3,17 +3,10 @@
 <%@ page import="java.nio.charset.Charset" %>
 <%@ page import="java.util.List" %>
 <%@ page import="com.commmon.SqlInterface" %>
-<%@ page import="com.commmon.ConverFromGBKToUTF8" %>
-<%@ page import="com.commmon.StringUnicodeTest" %>
-<%--
-  Created by IntelliJ IDEA.
-  User: dell
-  Date: 2019/4/19
-  Time: 21:59
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java"
          pageEncoding="UTF-8" %>
+<link href="css/index.css" rel="stylesheet" type="text/css" />
+
 <%
     //    打开的文件列表
 //    增加表项openlist，用以打开文件路径
@@ -71,8 +64,10 @@
             openlist) {
 
 %>
-<h3><a href="explorer.jsp?openpath=<%=EncodingUtil.encodeURIComponent(file)%>"><%=file%>
-</a><br></h3>
+<div class="showui">
+<a href="explorer.jsp?openpath=<%=EncodingUtil.encodeURIComponent(file)%>"><%=file%>
+</a></p>
+</div>
 <%
     }
 %>

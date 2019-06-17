@@ -13,6 +13,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java"
          pageEncoding="UTF-8" %>
 <%@include file="../common/basepath.jsp"%>
+<link href="css/index.css" rel="stylesheet" type="text/css" />
+
 <%
     //    打开的文件列表
 //    增加表项openlist，用以打开文件路径
@@ -55,10 +57,6 @@
         font-size: medium;
     }
 
-    .text1 {
-        height: 40px
-    }
-
     .text2 {
         height: 1px;
         width: 0px;
@@ -67,25 +65,14 @@
     }
 
     .submitbtn {
-        height: 50px;
-        width: 70%;
+        height: 30px;
+        width: 99%;
         text-align: left;
         font-family: "Courier New";
-        font-size: xx-large;
-        border-width: thin;
+        font-size: large;
+        /*border-width: thin;*/
         /*border-color: darkviolet;*/
         /*background-color: silver;*/
-    }
-
-    .dia_wbkbig {
-        width: 100%;
-        height: 80%;
-        alignment: center;
-        align-content: center;
-    }
-
-    .body{
-        background-color: black;
     }
 </style>
 
@@ -121,6 +108,8 @@
             return false;
     }
 %>
+
+
 <%
     String path = request.getParameter("openpath");
     if (path != null && path.trim() != "") {
@@ -135,9 +124,17 @@
             out.write(e.getMessage());
         }
     }
-
+%>
+<table border="1" width="100%" class='mytable3'>
+    <tr>
+    <th>序列</th>
+    <th>数据1</th>
+    </tr>
+<%
+    int seq = 0;
     for (String file :
             openlist) {
+        seq += 1;
         String[] splitlst = file.split("\\s+", 2);
         if(splitlst.length < 2)
         {
@@ -151,20 +148,56 @@
             continue;
         }
 %>
-    <form name="form2" method="post" action="<%=app_basePath%>/sql/queryidwithmodify.jsp">
-        <input type="text"
-               size="4"
-               class="text2"
-               name="iddata"
-        <%--readonly="readonly"--%>
-               value="<%=splitlst[0].trim()%>"/>
-        <input type="submit" name="submit" value="<%=splitlst[1].trim()%>" class="submitbtn"/>
-    </form>
-</h3>
+    <tr>
+        <%
+            if(seq % 2 == 1)
+            {
+        %>
+        <td>
+
+            <div class="showui">
+                <form name="form2" method="post" action="<%=app_basePath%>/sql/queryidwithmodify.jsp">
+                    <input type="text"  size="4" class="text2" name="iddata"
+                           value="<%=splitlst[0].trim()%>"/>
+                    <input type="submit" name="submit" value="<%=splitlst[1].trim()%>" class="submitbtn"/>
+                </form>
+            </div>
+
+        </td>
+        <%
+                continue;
+            }else
+                {
+        %>
+        <td>
+            <div class="showui">
+                <form name="form2" method="post" action="<%=app_basePath%>/sql/queryidwithmodify.jsp">
+                    <input type="text"  size="4" class="text2" name="iddata"
+                           value="<%=splitlst[0].trim()%>"/>
+                    <input type="submit" name="submit" value="<%=splitlst[1].trim()%>" class="submitbtn"/>
+                </form>
+            </div>
+        </td>
+        <%
+            }
+        %>
+
+
+    </tr>
+
+
+<%--<div class="showui">--%>
+    <%--<form name="form2" method="post" action="<%=app_basePath%>/sql/queryidwithmodify.jsp">--%>
+        <%--<input type="text"  size="4" class="text2" name="iddata"--%>
+               <%--value="<%=splitlst[0].trim()%>"/>--%>
+        <%--<input type="submit" name="submit" value="<%=splitlst[1].trim()%>" class="submitbtn"/>--%>
+    <%--</form>--%>
+<%--</div>--%>
 
 <%
     }
 %>
+</table>
 
 </body>
 </html>

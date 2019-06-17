@@ -60,12 +60,12 @@ public class SqlInterface {
                 if(o1 == null || o2 == null){
                     return -1;
                 }
-//                if(o1.length() > o2.length()){
-//                    return 1;
-//                }
-//                if(o1.length() < o2.length()){
-//                    return -1;
-//                }
+                if(o1.length() > o2.length()){
+                    return 1;
+                }
+                if(o1.length() < o2.length()){
+                    return -1;
+                }
                 if(o1.compareTo(o2) > 0){
                     return 1;
                 }
