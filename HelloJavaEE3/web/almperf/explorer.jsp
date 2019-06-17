@@ -108,8 +108,6 @@
             return false;
     }
 %>
-
-
 <%
     String path = request.getParameter("openpath");
     if (path != null && path.trim() != "") {
@@ -124,17 +122,9 @@
             out.write(e.getMessage());
         }
     }
-%>
-<table border="1" width="100%" class='mytable3'>
-    <tr>
-    <th>序列</th>
-    <th>数据1</th>
-    </tr>
-<%
-    int seq = 0;
+
     for (String file :
             openlist) {
-        seq += 1;
         String[] splitlst = file.split("\\s+", 2);
         if(splitlst.length < 2)
         {
@@ -148,56 +138,20 @@
             continue;
         }
 %>
-    <tr>
-        <%
-            if(seq % 2 == 1)
-            {
-        %>
-        <td>
-
-            <div class="showui">
-                <form name="form2" method="post" action="<%=app_basePath%>/sql/queryidwithmodify.jsp">
-                    <input type="text"  size="4" class="text2" name="iddata"
-                           value="<%=splitlst[0].trim()%>"/>
-                    <input type="submit" name="submit" value="<%=splitlst[1].trim()%>" class="submitbtn"/>
-                </form>
-            </div>
-
-        </td>
-        <%
-                continue;
-            }else
-                {
-        %>
-        <td>
-            <div class="showui">
-                <form name="form2" method="post" action="<%=app_basePath%>/sql/queryidwithmodify.jsp">
-                    <input type="text"  size="4" class="text2" name="iddata"
-                           value="<%=splitlst[0].trim()%>"/>
-                    <input type="submit" name="submit" value="<%=splitlst[1].trim()%>" class="submitbtn"/>
-                </form>
-            </div>
-        </td>
-        <%
-            }
-        %>
-
-
-    </tr>
-
-
-<%--<div class="showui">--%>
-    <%--<form name="form2" method="post" action="<%=app_basePath%>/sql/queryidwithmodify.jsp">--%>
-        <%--<input type="text"  size="4" class="text2" name="iddata"--%>
-               <%--value="<%=splitlst[0].trim()%>"/>--%>
-        <%--<input type="submit" name="submit" value="<%=splitlst[1].trim()%>" class="submitbtn"/>--%>
-    <%--</form>--%>
-<%--</div>--%>
+    <form name="form2" method="post" action="<%=app_basePath%>/sql/queryidwithmodify.jsp">
+        <input type="text"
+               size="4"
+               class="text2"
+               name="iddata"
+        <%--readonly="readonly"--%>
+               value="<%=splitlst[0].trim()%>"/>
+        <input type="submit" name="submit" value="<%=splitlst[1].trim()%>" class="submitbtn"/>
+    </form>
+</h3>
 
 <%
     }
 %>
-</table>
 
 </body>
 </html>
