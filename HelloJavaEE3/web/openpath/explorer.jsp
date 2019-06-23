@@ -3,6 +3,7 @@
 <%@ page import="java.nio.charset.Charset" %>
 <%@ page import="java.util.List" %>
 <%@ page import="com.commmon.SqlInterface" %>
+<%@ page import="com.file.CheckFile" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java"
          pageEncoding="UTF-8" %>
 <link href="css/index.css" rel="stylesheet" type="text/css" />
@@ -52,8 +53,9 @@
         try {
             System.out.println("defaultCharset " + Charset.defaultCharset());
             System.out.println("open path     is " + path);
-
-            ClientSendMsg2QtServer.sendStr2QtServer(path);
+            String aftersult = CheckFile.addFileprefixIfNormal(path);
+            out.write("afterresult:" + aftersult);
+            ClientSendMsg2QtServer.sendStr2QtServer(aftersult);
         } catch (Exception e) {
             e.printStackTrace();
             out.write(e.getMessage());
@@ -62,6 +64,8 @@
 
     for (String file :
             openlist) {
+//        File testFile = new File(testFilePath);
+
 
 %>
 <div class="showui">

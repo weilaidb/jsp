@@ -2,16 +2,21 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="weilai" />
+      <artifact name="hello" />
     </artifacts-to-build>
   </component>
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/web/openpath/explorer.jsp" line="43" />
+    <bookmark url="file://$PROJECT_DIR$/web/openpath/explorer.jsp" line="44" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f3158e1-4520-4f9f-add1-db9f54a74a32" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/file/CheckFile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/openfile/explorer.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pythoneg/docx/clip2docx.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pythoneg/docx/opendocx.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/openpath/explorer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/openpath/explorer.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../pythoneg/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../pythoneg/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -27,15 +32,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/sql/queryidwithmodify.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3870">
-              <caret line="129" column="6" selection-start-line="129" selection-start-column="6" selection-end-line="129" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="360">
@@ -44,20 +40,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/almperf/explorer.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4200">
-              <caret line="140" column="79" selection-start-line="140" selection-start-column="79" selection-end-line="140" selection-end-column="79" />
+            <state relative-caret-position="405">
+              <caret line="19" column="21" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -65,17 +52,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/openpath/explorer.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="7" selection-start-line="7" selection-end-line="8" />
+            <state relative-caret-position="134">
+              <caret line="55" column="53" selection-start-line="55" selection-start-column="53" selection-end-line="55" selection-end-column="53" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/sql/queryid.jsp">
+        <entry file="file://$PROJECT_DIR$/src/com/net/ClientSendMsg2QtServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6360">
-              <caret line="212" column="16" selection-start-line="212" selection-start-column="16" selection-end-line="212" selection-end-column="16" />
+            <state relative-caret-position="-1314">
+              <caret line="9" column="13" lean-forward="true" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/file/CheckFile.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="99">
+              <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -83,7 +79,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/sql/notebookalldb.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5640">
+            <state relative-caret-position="585">
               <caret line="188" column="24" selection-start-line="188" selection-start-column="24" selection-end-line="188" selection-end-column="24" />
             </state>
           </provider>
@@ -91,7 +87,11 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/sql/notebookqueryid.jsp">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="5" column="46" lean-forward="true" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -119,16 +119,14 @@
       <list>
         <option value="HTML File" />
         <option value="JavaScript File" />
-        <option value="Class" />
+        <option value="Python Script" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>almperf</find>
-      <find>result =</find>
-      <find>position</find>
       <find>pubuse</find>
       <find>python</find>
       <find>SELECT * from abc order</find>
@@ -156,6 +154,9 @@
       <find>openlist</find>
       <find>mytable</find>
       <find>&lt;/h1&gt;</find>
+      <find>path</find>
+      <find>ClientSendMsg2QtServer</find>
+      <find>openpath</find>
     </findStrings>
     <replaceStrings>
       <replace>qryiddata</replace>
@@ -183,8 +184,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/weilaidb/login/IUserDAO.java" />
-        <option value="$PROJECT_DIR$/src/weilaidb/login/UserDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/weilaidb/login/UserDAOProxy.java" />
         <option value="$PROJECT_DIR$/web/sql/login/login.jsp" />
         <option value="$PROJECT_DIR$/src/weilaidb/login/LoginServlet.java" />
@@ -229,11 +228,13 @@
         <option value="$PROJECT_DIR$/web/sql/modifyid.jsp" />
         <option value="$PROJECT_DIR$/src/com/commmon/SqlInterface.java" />
         <option value="$PROJECT_DIR$/web/css/index.css" />
-        <option value="$PROJECT_DIR$/web/openpath/explorer.jsp" />
         <option value="$PROJECT_DIR$/web/almperf/explorer.jsp" />
         <option value="$PROJECT_DIR$/web/sql/queryidwithmodify.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/web/index.jsp" />
+        <option value="$PROJECT_DIR$/web/openfile/explorer.jsp" />
+        <option value="$PROJECT_DIR$/web/openpath/explorer.jsp" />
+        <option value="$PROJECT_DIR$/src/com/file/CheckFile.java" />
       </list>
     </option>
   </component>
@@ -247,7 +248,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="636" />
     <option name="y" value="77" />
     <option name="width" value="1173" />
@@ -272,7 +273,27 @@
             <path>
               <item name="HelloJavaEE3" type="b2602c69:ProjectViewProjectNode" />
               <item name="HelloJavaEE3" type="462c0819:PsiDirectoryNode" />
-              <item name="sql script" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HelloJavaEE3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HelloJavaEE3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HelloJavaEE3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HelloJavaEE3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="file" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HelloJavaEE3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HelloJavaEE3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="net" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="HelloJavaEE3" type="b2602c69:ProjectViewProjectNode" />
@@ -283,31 +304,7 @@
               <item name="HelloJavaEE3" type="b2602c69:ProjectViewProjectNode" />
               <item name="HelloJavaEE3" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="almperf" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HelloJavaEE3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HelloJavaEE3" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HelloJavaEE3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HelloJavaEE3" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HelloJavaEE3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HelloJavaEE3" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="timeclock" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HelloJavaEE3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HelloJavaEE3" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="openfile" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="HelloJavaEE3" type="b2602c69:ProjectViewProjectNode" />
@@ -333,7 +330,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560776648874" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1561276895143" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../java/caoerzong/jeewms" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -635,12 +632,14 @@
       <workItem from="1560436869973" duration="2344000" />
       <workItem from="1560556648344" duration="447000" />
       <workItem from="1560775583250" duration="1070000" />
-      <workItem from="1560776720172" duration="22000" />
+      <workItem from="1560776720172" duration="1055000" />
+      <workItem from="1560781263445" duration="79000" />
+      <workItem from="1561274735926" duration="2090000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="205712000" />
+    <option name="totallyTimeSpent" value="208914000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -655,7 +654,7 @@
     <frame x="67" y="-8" width="1861" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7479936" visible="true" weight="0.12534665" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7479936" visible="true" weight="0.09040488" />
       <window_info id="Structure" order="1" sideWeight="0.25160256" side_tool="true" weight="0.1120355" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -665,7 +664,7 @@
       <window_info id="Web" order="7" sideWeight="0.5007899" side_tool="true" weight="0.07931226" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4997227" weight="0.10604454" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.9240155" weight="0.085896075" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.9240155" visible="true" weight="0.14634146" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49963635" weight="0.39875" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -747,27 +746,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/cmd/EncodingUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tree/DbManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tree/TreeviewElement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/tree/treeviewRender.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -1068,29 +1046,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/openpath/explorer.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="7" selection-start-line="7" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/sql/queryid.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6360">
           <caret line="212" column="16" selection-start-line="212" selection-start-column="16" selection-end-line="212" selection-end-column="16" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/sql/notebookalldb.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5640">
-          <caret line="188" column="24" selection-start-line="188" selection-start-column="24" selection-end-line="188" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/sql/notebookqueryid.jsp">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/web/css/top.css">
       <provider selected="true" editor-type-id="text-editor">
@@ -1113,10 +1074,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+    <entry file="file://$PROJECT_DIR$/web/sql/notebookqueryid.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="5" column="46" lean-forward="true" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/sql/notebookalldb.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="188" column="24" selection-start-line="188" selection-start-column="24" selection-end-line="188" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/net/ClientSendMsg2QtServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1314">
+          <caret line="9" column="13" lean-forward="true" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/openfile/explorer.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
-          <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+          <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="19" column="21" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/openpath/explorer.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="55" column="53" selection-start-line="55" selection-start-column="53" selection-end-line="55" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/file/CheckFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
         </state>
       </provider>
     </entry>
