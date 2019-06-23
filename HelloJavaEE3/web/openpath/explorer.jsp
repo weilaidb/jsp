@@ -54,7 +54,7 @@
             System.out.println("defaultCharset " + Charset.defaultCharset());
             System.out.println("open path     is " + path);
             String aftersult = CheckFile.addFileprefixIfNormal(path);
-            out.write("afterresult:" + aftersult);
+//            out.write("afterresult:" + aftersult);
             ClientSendMsg2QtServer.sendStr2QtServer(aftersult);
         } catch (Exception e) {
             e.printStackTrace();

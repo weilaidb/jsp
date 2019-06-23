@@ -26,7 +26,6 @@ public class CheckFile {
         File testFile = new File(testFilePath);
         if(testFile.exists() && !testFile.isDirectory())
         {
-
             resultpath = /*addnotepadprefix + */ procSignAddYinhao(testFilePath);
         }
         else
