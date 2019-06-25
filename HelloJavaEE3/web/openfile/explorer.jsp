@@ -1,4 +1,4 @@
-<%--
+<%@ page import="com.clipboard.ProcClipboard" %><%--
   Created by IntelliJ IDEA.
   User: dell
   Date: 2019/6/23
@@ -8,9 +8,15 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>ClipBoard</title>
 </head>
 <body>
+
+<%--<%=ProcClipboard.getAll4Clipboard()%>--%>
+<%--<%=ProcClipboard.getfragmentHtmlFlavor4Clipboard()%>--%>
+<%--<%=ProcClipboard.getimageFlavor4Clipboard()%>--%>
+<%=ProcClipboard.getselectionHtmlFlavor4Clipboard()%>
+<%--<%=ProcClipboard.getstringFlavor4Clipboard()%>--%>
 
 </body>
 </html>

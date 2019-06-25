@@ -23,7 +23,7 @@
 <a href="pubuse/explorer.jsp" >公共使用</a></p>
 <a href="modules/python/explorer.jsp">Python</a></p>
 <a href="modules/linux_driver/explorer.jsp">Linux驱动</a></p>
-<a href="openfile/explorer.jsp">LoadFiles</a></p>
+<a href="openfile/explorer.jsp">ClipBoard</a></p>
 </div>
 <%--<a href="tree/tree.jsp">树型</a></p>--%>
 <%--<a href="openpath/iterlist/iterator.jsp" target="_blank">遍历文件列表</a></p>--%>
