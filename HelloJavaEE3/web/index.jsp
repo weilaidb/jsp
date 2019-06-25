@@ -15,6 +15,7 @@
 <h1>同一个世界，同一个梦想。(Version:2.1)</h1>
 
 <div class="showui"> <a href="login/login.jsp">我的记事本(mysql)</a></p>
+<a href="login_bin/login.jsp">我的记事本(mysql) bin</a></p>
 <a href="sql/notebookalldb.jsp">我的记事本(sqlite)[all.db]</a></p>
 <%--<a href="sql/alteralldbcollate_cs.jsp">变更内容字段为utf8_general_cs,更改content类型为mediumtext</a></p>--%>
 <a href="openpath/explorer.jsp">审视列表</a></p>
