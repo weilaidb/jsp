@@ -1,3 +1,6 @@
+CREATE SCHEMA `alldbbin` DEFAULT CHARACTER SET binary ;
+
+
 CREATE TABLE `abcbin` (
   `id` int(200) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(200) NOT NULL COMMENT 'keyword',

@@ -13,7 +13,9 @@
 <%--================引入头文件=========================--%>
 <%@page import="java.sql.*" %>
 <%@ page import="com.clipboard.ProcClipboard" %>
-<%@ page import="java.io.InputStream" %>
+<%--<%@ page import="org.apache.taglibs.standard.lang.jstl.NullLiteral" %>--%>
+<%@ page import="com.objectproc.ProcObjectAndByte" %>
+<%@ page import="java.io.*" %>
 <%--================css配置=========================--%>
 <style type="text/css">
     .mytable th, tr, td, table {
@@ -162,6 +164,7 @@
     String insertval = "";
     String sql = "";  //查询语句
     String tablename = "abcbin";
+    PreparedStatement preparedStatement = null;
 %>
 
 <%--================获取查询数据================--%>
@@ -201,31 +204,26 @@
         String nameval = insertval.substring(0, insertval.length() > 100 ? 100 : insertval.length())
                 + System.currentTimeMillis();
         Object object1 = ProcClipboard.getAll4Clipboard();
-        Blob blob = (Blob)object1;
-//        ((Blob) object1).getBinaryStream();
-        InputStream inputStream =  blob.getBinaryStream();
+        byte[] objbyte = ProcObjectAndByte.toByteArray(object1);
+        InputStream inputStream = new ByteArrayInputStream(objbyte);
         if (!insertval.isEmpty()) {
-            sql = "insert into " + tablename + "(id, name, content)" +
-                    "VALUES(" +
-                    "NULL" +
-                    "," +
-                    "\"" +
-                    nameval +
-                    "\"" +
-                    "," +
-                    "binary(\"" +
-//                    inputStream +
-                    11 +
-                    "\")" +
-                    ")";  //执行语句
+            sql = "insert into " + tablename + "(id, name, content) " +
+                    "VALUES(? ,?,?)";  //执行语句
+            preparedStatement = conn.prepareStatement(sql);
+            preparedStatement.setInt(1,0);
+            preparedStatement.setString(2,nameval);
+            preparedStatement.setBlob(3, inputStream);
+            preparedStatement.executeUpdate();
+
         } else {
             out.println("数据为空!!<br />");
             return;
         }
 
-        out.write("sql:" + sql);
-        stmt = conn.createStatement();
-        stmt.execute(sql);
+//        out.write("sql:" + sql);
+//        stmt = conn.createStatement();
+//        stmt.execute(sql);
+        preparedStatement.close();
         rs.close();
         stmt.close();
         conn.close();
@@ -237,7 +235,7 @@
             if (null == e.getMessage()) {
                 out.println("写入成功!!<br />");
             } else {
-                out.println("写入异常!! " + e.getMessage());
+                out.println("写入异常!!!!!! " + e.getMessage());
             }
         } else {
             out.println("数据为空!!<br />");

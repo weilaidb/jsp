@@ -10,7 +10,9 @@
          pageEncoding="utf-8" %>
 
 <%--================引入头文件=========================--%>
-<%@page import="java.sql.*" %>  <%--导入java.sql包--%>
+<%@page import="java.sql.*" %>
+<%@ page import="com.objectproc.ProcObjectAndByte" %>
+<%@ page import="java.io.InputStream" %>  <%--导入java.sql包--%>
 
 <%--================css配置=========================--%>
 <style type="text/css">
@@ -100,9 +102,10 @@
         qryiddata = request.getParameter("iddata");
     } catch (Exception e) {
     }
+
     try {
         Class.forName("com.mysql.jdbc.Driver");  ////驱动程序名
-        String url = "jdbc:mysql://localhost:3306/alldb?useUnicode=true&characterEncoding=utf-8"; //数据库名
+        String url = "jdbc:mysql://localhost:3306/alldbbin?useUnicode=true&characterEncoding=utf-8"; //数据库名
         String username = "root";  //数据库用户名
         String password = "Zzerp123";  //数据库用户密码
         Connection conn = DriverManager.getConnection(url, username, password);  //连接状态
@@ -115,42 +118,24 @@
         Statement stmt = null;
         ResultSet rs = null;
         String sql = "";  //查询语句
-        String tablename = "abc";
+        String tablename = "abcbin";
         sql = "SELECT * from " + tablename + " WHERE id=" + whichid + ";";  //查询语句
 
         stmt = conn.createStatement();
         rs = stmt.executeQuery(sql);
 
+        out.write("sql:" + sql);
         int rowCount = 0;
         while (rs.next()) {
             rowCount++;
-    %>
+            out.write("rowCount:" + rowCount);
 
-    <%String toshowcontent = rs.getString("content");%>
-    <%
-        int actualrows = toshowcontent.split("\n").length;
-        int maxrows = 100;
-        if(actualrows < maxrows)
-        {
-            actualrows = maxrows;
-        }
+            Blob blob = rs.getBlob(3);
+            InputStream in = blob.getBinaryStream();
+            byte[] bytes = ProcObjectAndByte.toByteArray(in);
+            Object object = ProcObjectAndByte.toObject(bytes);
     %>
-    <tr>
-        <td>
-            <form name="form1" method="post" action="modifyid.jsp">
-                <input type="submit" id="savetext" name="Submit" value="保存" class="submitbtn"/>
-                <input type="text" name="iddataext" value="<%=qryiddata%>">
-                <textarea class="boxes"
-                          <%--rows="100%"--%>
-                          rows="<%=actualrows%>"
-                          id="ipt"
-                          name="modifythings"
-                          placeholder="输入要复制的东西"
-                          style="width: 100%;"><%=toshowcontent%>
-                </textarea>
-            </form>
-        </td>
-    </tr>
+    <%=object%>
     <%
                 }
             } else {
@@ -165,8 +150,22 @@
 <h2 align="center"><font size="12" color="red">~~不能再底部了~~~</font></h2>
 
 <style type="text/css">
-    .btns{font-weight: bold;display: inline-block;width: 80px;height: 80px;border: #5fb878;background: #5fb878;font-size: 1.4em;text-align: center;padding-top: 5px;color: white;}
-    a:hover{color:#FFFFFF}
+    .btns {
+        font-weight: bold;
+        display: inline-block;
+        width: 80px;
+        height: 80px;
+        border: #5fb878;
+        background: #5fb878;
+        font-size: 1.4em;
+        text-align: center;
+        padding-top: 5px;
+        color: white;
+    }
+
+    a:hover {
+        color: #FFFFFF
+    }
 </style>
 
 
@@ -177,7 +176,6 @@
         </div>
     </div>
 </div>
-
 
 
 </body>
