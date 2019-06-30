@@ -2,7 +2,7 @@ package com.objectproc;
 
 import java.io.*;
 
-public class ProcObjectAndByte {
+public class ProcObjectAndByte  implements java.io.Serializable{
     /**
      * 对象转数组
      * @param obj
@@ -13,6 +13,7 @@ public class ProcObjectAndByte {
         ByteArrayOutputStream bos = new ByteArrayOutputStream();
         try {
             ObjectOutputStream oos = new ObjectOutputStream(bos);
+//            oos.writeObject(obj);
             oos.writeObject(obj);
             oos.flush();
             bytes = bos.toByteArray ();
@@ -70,5 +71,14 @@ public class ProcObjectAndByte {
         }
         return output.toByteArray();
     }
+
+    //System.arraycopy()方法
+    public static byte[] byteMerger(byte[] bt1, byte[] bt2){
+        byte[] bt3 = new byte[bt1.length+bt2.length];
+        System.arraycopy(bt1, 0, bt3, 0, bt1.length);
+        System.arraycopy(bt2, 0, bt3, bt1.length, bt2.length);
+        return bt3;
+    }
+
 
 }

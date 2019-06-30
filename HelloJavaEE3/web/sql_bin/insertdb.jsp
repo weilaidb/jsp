@@ -44,6 +44,14 @@
         alignment: center;
         align-content: center;
     }
+    .textarea_content {
+        width: 100%;
+        height: 1%;
+        alignment: left;
+        align-content: normal;
+    }
+
+
 </style>
 
 <%--================获取路径和基础路径=========================--%>
@@ -83,12 +91,21 @@
             }
             for (var i = 0, len = clipboardData.items.length; i < len; i++) {
                 var item = clipboardData.items[i];
+                console.log("king:" + item.kind + ", type:" + item.type);
                 if (item.kind === "string" && item.type == "text/plain") {
                     item.getAsString(function (str) {
                         // str 是获取到的字符串,创建文本框
                         //处理粘贴的文字内容
                     })
-                } else if (item.kind === "file") {//file 一般是各种截图base64数据
+                    var pasteString = item.getAsString();
+                    console.log("text:" + pasteString)
+                }else if (item.kind === "string" && item.type == "text/html")
+                {
+                    var pasteFile = item.getAsFile();
+                    console.log("html:" + pasteFile)
+                }
+
+                else if (item.kind === "file") {//file 一般是各种截图base64数据
                     var pasteFile = item.getAsFile();
                     // pasteFile就是获取到的文件
                     var reader = new FileReader();
@@ -97,7 +114,8 @@
                     }; // data url
                     reader.readAsDataURL(pasteFile);
                 }
-                var copy_content = e.clipboardData.getData('text/plain');
+                // var copy_content = e.clipboardData.getData('text/plain');
+                var copy_content = e.clipboardData.getData('text/html');
 
             }
         })
@@ -105,6 +123,7 @@
         document.addEventListener("paste", function (e) {
             // console.log(e.clipboardData.getData("text"));
             document.getElementById("id_insertdb").value = e.clipboardData.getData("text");
+            document.getElementById("id_content").value = e.clipboardData.getData("text/html");
         });
 
         document.onkeydown = function (e) {
@@ -153,6 +172,9 @@
         <textarea id="id_insertdb" name="insertdbname"
                   class="dia_wbkbig">
         </textarea>
+        <textarea id="id_content" name="insertdbcontent"
+                  class="textarea_content">
+        </textarea>
     </h3>
 </form>
 
@@ -162,6 +184,7 @@
     ResultSet rs = null;
     Statement stmt = null;
     String insertval = "";
+    String insertdbcontent = "";
     String sql = "";  //查询语句
     String tablename = "abcbin";
     PreparedStatement preparedStatement = null;
@@ -171,8 +194,10 @@
 <%--================打开数据库================--%>
 <%
     insertval = "";
+    insertdbcontent = "";
     try {
         insertval = request.getParameter("insertdbname");
+        insertdbcontent = request.getParameter("insertdbcontent");
     } catch (Exception e) {
     }
 
@@ -195,6 +220,9 @@
     }
 
 %>
+<%
+    byte[] objbyte = null;
+%>
 
 <%
     try {
@@ -203,8 +231,16 @@
         insertval = insertval.replace("\\", "\\\\");
         String nameval = insertval.substring(0, insertval.length() > 100 ? 100 : insertval.length())
                 + System.currentTimeMillis();
-        Object object1 = ProcClipboard.getAll4Clipboard();
-        byte[] objbyte = ProcObjectAndByte.toByteArray(object1);
+        /**
+         * 由于JSP是运行有后台，无法从网页处获取剪切板的内容，所以不能在后台获取剪切板的数据，
+         * 仍然使用JS进行数据传递。
+         */
+//        Object object1 = ProcClipboard.getAll4Clipboard();
+        Object object1 = new String(insertdbcontent.getBytes("iso-8859-1"), "utf-8");;
+//        Object object1 = ProcClipboard.getImageAndText4Clipboard();
+//        Object object1 = ProcClipboard.getselectionHtmlFlavor4Clipboard();
+//        Object object1 = ProcClipboard.getstringFlavor4Clipboard();
+        objbyte = ProcObjectAndByte.toByteArray(object1);
         InputStream inputStream = new ByteArrayInputStream(objbyte);
         if (!insertval.isEmpty()) {
             sql = "insert into " + tablename + "(id, name, content) " +
@@ -227,13 +263,14 @@
         rs.close();
         stmt.close();
         conn.close();
-        out.println("写入成功!!<br />");
+        out.println("写入成功!! size: " + objbyte.length + "<br />");
         return;
 
     } catch (Exception e) {
         if (insertval != null && !insertval.isEmpty()) {
             if (null == e.getMessage()) {
-                out.println("写入成功!!<br />");
+//                out.println("写入成功吧!!<br />");
+                out.println("写入成功!! size: " + objbyte.length + "<br />");
             } else {
                 out.println("写入异常!!!!!! " + e.getMessage());
             }

@@ -124,11 +124,11 @@
         stmt = conn.createStatement();
         rs = stmt.executeQuery(sql);
 
-        out.write("sql:" + sql);
+//        out.write("sql:" + sql);
         int rowCount = 0;
         while (rs.next()) {
             rowCount++;
-            out.write("rowCount:" + rowCount);
+//            out.write("rowCount:" + rowCount);
 
             Blob blob = rs.getBlob(3);
             InputStream in = blob.getBinaryStream();

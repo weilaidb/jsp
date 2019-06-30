@@ -12,7 +12,7 @@
     <title>第一个Web项目</title>
 </head>
 <body>
-<h1>同一个世界，同一个梦想。(Version:2.3)</h1>
+<h1>同一个世界，同一个梦想。(Version:2.4)</h1>
 
 <div class="showui"> <a href="login/login.jsp">我的记事本(mysql)</a></p>
 <a href="login_bin/login.jsp">我的记事本(mysql) bin</a></p>
@@ -25,7 +25,16 @@
 <a href="modules/python/explorer.jsp">Python</a></p>
 <a href="modules/linux_driver/explorer.jsp">Linux驱动</a></p>
 <a href="openfile/explorer.jsp">ClipBoard</a></p>
+    <%--没有思路时，写一些简单的例子。--%>
+<%--<a href="javascript/clipboard/demo1.jsp">clipboard demo1</a></p>--%>
 </div>
+<%
+    out.write("java版本号：" + System.getProperty("java.version")); // java版本号
+    out.write("Java提供商名称：" + System.getProperty("java.vendor")); // Java提供商名称
+    out.write("Java提供商网站：" + System.getProperty("java.vendor.url")); // Java提供商网站
+    out.write("jre目录：" + System.getProperty("java.home")); // Java，哦，应该是jre目录
+%>
+
 <%--<a href="tree/tree.jsp">树型</a></p>--%>
 <%--<a href="openpath/iterlist/iterator.jsp" target="_blank">遍历文件列表</a></p>--%>
 

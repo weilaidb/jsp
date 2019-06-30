@@ -176,7 +176,7 @@
                     .replace("\"", "\\\"")
                     .split(" ");
             for (int lp = 0; lp < qrylst.length; lp++) {
-                sqlmid += "content like  \"%" + new String(qrylst[lp].getBytes("iso-8859-1"), "utf-8") + "%\" ";
+                sqlmid += "name like  \"%" + new String(qrylst[lp].getBytes("iso-8859-1"), "utf-8") + "%\" ";
                 if (lp != qrylst.length - 1)
                     sqlmid += " and ";
 
