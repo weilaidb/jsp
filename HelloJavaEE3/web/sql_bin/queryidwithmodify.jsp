@@ -130,7 +130,7 @@
             rowCount++;
 //            out.write("rowCount:" + rowCount);
 
-            Blob blob = rs.getBlob(3);
+            Blob blob = rs.getBlob(4);
             InputStream in = blob.getBinaryStream();
             byte[] bytes = ProcObjectAndByte.toByteArray(in);
             Object object = ProcObjectAndByte.toObject(bytes);

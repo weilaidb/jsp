@@ -243,12 +243,13 @@
         objbyte = ProcObjectAndByte.toByteArray(object1);
         InputStream inputStream = new ByteArrayInputStream(objbyte);
         if (!insertval.isEmpty()) {
-            sql = "insert into " + tablename + "(id, name, content) " +
-                    "VALUES(? ,?,?)";  //执行语句
+            sql = "insert into " + tablename + "(id, name, content, content_bin) " +
+                    "VALUES(? ,?,?,?)";  //执行语句
             preparedStatement = conn.prepareStatement(sql);
             preparedStatement.setInt(1,0);
             preparedStatement.setString(2,nameval);
-            preparedStatement.setBlob(3, inputStream);
+            preparedStatement.setString(3,insertval);
+            preparedStatement.setBlob(4, inputStream);
             preparedStatement.executeUpdate();
 
         } else {
