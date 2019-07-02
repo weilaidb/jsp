@@ -155,7 +155,7 @@
     </script>
     <base href="<%=basePath%>">
     <meta charset="UTF-8">
-    <title>输入数据(mysql)</title>
+    <title>输入数据(mysql bin)</title>
 </head>
 <body onload="ClearTextArea()">
 <a href="<%=basePath%>/index.jsp">首页</a>

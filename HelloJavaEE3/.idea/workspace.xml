@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="hello" />
+      <artifact name="weilai" />
     </artifacts-to-build>
   </component>
   <component name="BookmarkManager">
@@ -10,12 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f3158e1-4520-4f9f-add1-db9f54a74a32" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sql script/bin.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql script/bin.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sql_bin/bselectdb.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/sql_bin/bselectdb.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/sql_bin/insertdb.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/sql_bin/insertdb.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sql_bin/queryidwithmodify.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/sql_bin/queryidwithmodify.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -47,11 +42,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/sql_bin/insertdb.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="618">
-              <caret line="249" column="39" lean-forward="true" selection-start-line="249" selection-start-column="39" selection-end-line="249" selection-end-column="39" />
+            <state relative-caret-position="300">
+              <caret line="157" column="25" selection-start-line="157" selection-start-column="25" selection-end-line="157" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -74,27 +69,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+            <state relative-caret-position="360">
+              <caret line="21" column="16" lean-forward="true" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/pubuse/explorer.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2820">
-              <caret line="94" column="15" selection-start-line="94" selection-start-column="15" selection-end-line="94" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/timeclock/explorer.jsp">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -219,9 +200,9 @@
         <option value="$PROJECT_DIR$/web/pubuse/explorer.jsp" />
         <option value="$PROJECT_DIR$/sql script/bin.sql" />
         <option value="$PROJECT_DIR$/web/sql_bin/queryidwithmodify.jsp" />
-        <option value="$PROJECT_DIR$/web/sql_bin/insertdb.jsp" />
         <option value="$PROJECT_DIR$/web/sql_bin/bselectdb.jsp" />
         <option value="$PROJECT_DIR$/web/index.jsp" />
+        <option value="$PROJECT_DIR$/web/sql_bin/insertdb.jsp" />
       </list>
     </option>
   </component>
@@ -288,7 +269,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1561911656720" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1562106747777" />
     <property name="last_opened_file_path" value="C:/Program Files/Java/jdk1.8.0_192/lib/visualvm/platform/modules/locale/org-openide-awt_zh_CN.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -601,12 +582,12 @@
       <workItem from="1561644288877" duration="3863000" />
       <workItem from="1561853820815" duration="7276000" />
       <workItem from="1561908832330" duration="2811000" />
-      <workItem from="1562105508919" duration="595000" />
+      <workItem from="1562105508919" duration="1185000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="242771000" />
+    <option name="totallyTimeSpent" value="243361000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1025,16 +1006,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/pubuse/explorer.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2820">
-          <caret line="94" column="15" selection-start-line="94" selection-start-column="15" selection-end-line="94" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/timeclock/explorer.jsp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/sql script/bin.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -1049,13 +1020,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/sql_bin/insertdb.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="618">
-          <caret line="249" column="39" lean-forward="true" selection-start-line="249" selection-start-column="39" selection-end-line="249" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/sql_bin/bselectdb.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="703">
@@ -1063,10 +1027,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/pubuse/explorer.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-917">
+          <caret line="94" column="15" selection-start-line="94" selection-start-column="15" selection-end-line="94" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/timeclock/explorer.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+        <state relative-caret-position="360">
+          <caret line="21" column="16" lean-forward="true" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/sql_bin/insertdb.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="157" column="25" selection-start-line="157" selection-start-column="25" selection-end-line="157" selection-end-column="25" />
         </state>
       </provider>
     </entry>
