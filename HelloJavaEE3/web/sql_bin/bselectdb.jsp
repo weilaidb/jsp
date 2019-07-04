@@ -229,7 +229,9 @@
             e.printStackTrace();
             out.print("请输入查询数据!!!");
         } finally {
-            conn.close();
+            if(null != conn) {
+                conn.close();
+            }
         }
     %>
 </table>

@@ -48,14 +48,14 @@
 <h1>文件列表</h1>
 
 <%
-    String path = request.getParameter("openpath");
+    String path = request.getParameter("openfile");
     if (path != null && path.trim() != "") {
         try {
             System.out.println("defaultCharset " + Charset.defaultCharset());
             System.out.println("open path     is " + path);
             String aftersult = CheckFile.addFileprefixIfNormal(path);
 //            out.write("afterresult:" + aftersult);
-            ClientSendMsg2QtServer.sendStr2QtServer(aftersult);
+//            ClientSendMsg2QtServer.sendStr2QtServer(aftersult);
         } catch (Exception e) {
             e.printStackTrace();
             out.write(e.getMessage());
@@ -69,7 +69,7 @@
 
 %>
 <div class="showui">
-<a href="explorer.jsp?openpath=<%=EncodingUtil.encodeURIComponent(file)%>"><%=file%>
+<a href="explorer.jsp?openfile=<%=EncodingUtil.encodeURIComponent(file)%>"><%=file%>
 </a></p>
 </div>
 <%

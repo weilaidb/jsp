@@ -55,7 +55,7 @@
     String basePath = request.getScheme() + "://"
             + request.getServerName() + ":" + request.getServerPort()
             + path;
-	String currentAllPath = basePath + CurrentPath;
+    String currentAllPath = basePath + CurrentPath;
 %>
 
 
@@ -252,7 +252,9 @@
             e.printStackTrace();
             out.print("请输入查询数据!!!");
         } finally {
-            conn.close();
+            if (null != conn) {
+                conn.close();
+            }
         }
     %>
 </table>

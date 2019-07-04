@@ -131,11 +131,58 @@
 //            out.write("rowCount:" + rowCount);
 
             Blob blob = rs.getBlob(4);
+            String toshowcontent = null;
             InputStream in = blob.getBinaryStream();
             byte[] bytes = ProcObjectAndByte.toByteArray(in);
             Object object = ProcObjectAndByte.toObject(bytes);
+            System.out.println("object size:" + bytes.length);
+            int showlen = 10;
+            if(bytes.length <= showlen)
+            {
+                toshowcontent = rs.getString(3);
+            }
     %>
-    <%=object%>
+    <%
+        if(bytes.length > showlen)
+        {
+    %>
+            <%=object%>
+    <%
+        }
+        else
+        {
+    %>
+            <%
+                int actualrows = toshowcontent.split("\n").length;
+                int maxrows = 100;
+                if(actualrows < maxrows)
+                {
+                    actualrows = maxrows;
+                }
+            %>
+            <tr>
+                <td>
+                    <form name="form1" method="post" action="modifyid.jsp">
+                        <input type="submit" id="savetext" name="Submit" value="保存" class="submitbtn"/>
+                        <input type="text" name="iddataext" value="<%=qryiddata%>">
+                        <textarea class="boxes"
+                        <%--rows="100%"--%>
+                                  rows="<%=actualrows%>"
+                                  id="ipt"
+                                  name="modifythings"
+                                  placeholder="输入要复制的东西"
+                                  style="width: 100%;"><%=toshowcontent%>
+                        </textarea>
+                    </form>
+                </td>
+            </tr>
+
+    <%
+        }
+    %>
+
+
+
     <%
                 }
             } else {
