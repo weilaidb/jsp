@@ -12,7 +12,7 @@
     <title>第一个Web项目</title>
 </head>
 <body>
-<h1>同一个世界，同一个梦想。(Version:2.6)</h1>
+<h1>同一个世界，同一个梦想。(Version:2.7)</h1>
 
 <div class="showui"> <a href="login/login.jsp">我的记事本(mysql)</a></p>
 <a href="login_bin/login.jsp">我的记事本(mysql) bin</a></p>

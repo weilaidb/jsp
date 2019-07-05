@@ -62,14 +62,14 @@
     Statement stmt = null;
     String insertval = "";
     String sql = "";  //查询语句
-    String tablename = "abc";
+    String tablename = "abcbin";
 %>
 
 
 <%
     try {
         Class.forName("com.mysql.jdbc.Driver");  ////驱动程序名
-        String url = "jdbc:mysql://localhost:3306/alldb?useUnicode=true&characterEncoding=utf-8"; //数据库名
+        String url = "jdbc:mysql://localhost:3306/alldbbin?useUnicode=true&characterEncoding=utf-8"; //数据库名
        String username = "root";  //数据库用户名
         String password = "Zzerp123";  //数据库用户密码
         conn = DriverManager.getConnection(url, username, password);  //连接状态
