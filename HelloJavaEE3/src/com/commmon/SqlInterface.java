@@ -141,6 +141,66 @@ public class SqlInterface {
         return reslist;
     }
 
+    public List<String> getAllDescOrderByTime(String dbName, String tableName, String colname) {
+        List<String> reslist = new ArrayList<>();
+        try {
+            Class.forName(DBDRIVER);
+            conn = DriverManager.getConnection(DBURL.replaceAll("mldn", dbName), DBUSER, DBPASS);
+            sql = "SELECT * FROM egtable order by id desc ";
+            if (colname.trim().isEmpty()) {
+                sql = "SELECT * FROM egtable order by id desc ";
+            } else {
+                sql = "SELECT * FROM egtable order by id desc ";
+                sql = sql.replaceAll("\\*", colname);
+            }
+            sql = sql.replaceAll("egtable", tableName);
+            pstmt = conn.prepareStatement(sql);
+            rs = pstmt.executeQuery();
+            while (rs.next()) {
+                name = rs.getString(2);
+                reslist.add(name);
+            }
+        } catch (Exception e) {
+            System.out.print(e);
+        } finally {
+            try {
+                rs.close();
+                pstmt.close();
+                conn.close();
+            } catch (Exception e) {
+
+            }
+        }
+//        //排列方式
+//        Collections.sort(reslist,new Comparator<String>() {
+//            @Override
+//            public int compare(String o1, String o2) {
+//                if(o1 == null || o2 == null){
+//                    return -1;
+//                }
+////                if(o1.length() > o2.length()){
+////                    return 1;
+////                }
+////                if(o1.length() < o2.length()){
+////                    return -1;
+////                }
+//                if(o1.compareTo(o2) > 0){
+//                    return 1;
+//                }
+//                if(o1.compareTo(o2) < 0){
+//                    return -1;
+//                }
+//                if(o1.compareTo(o2) == 0){
+//                    return 0;
+//                }
+//                return 0;
+//            }
+//        });
+
+        return reslist;
+    }
+
+
     public String insertName(String dbName, String tableName, String files) {
         String resstr = "写入成功!";
         String resfail = "写入失败!";

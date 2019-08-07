@@ -61,7 +61,8 @@
 
 <html>
 <head>
-    <%--================javascript定义=========================--%>
+
+<%--================javascript定义=========================--%>
     <script type="text/javascript"
             src="${pageContext.request.contextPath}/js/mysql/event.js">
         //获取button按钮

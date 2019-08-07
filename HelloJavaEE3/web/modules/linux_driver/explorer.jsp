@@ -29,7 +29,7 @@
 
 <%
 
-    List<String> openlist = inter.getAllDesc(dbName, tableName, "");
+    List<String> openlist = inter.getAllDescOrderByTime(dbName, tableName, "");
 //    for (String file :
 //            openlist) {
 //        System.out.println(file);
