@@ -42,7 +42,7 @@
 
     .submitbtn {
         height: 30px;
-        width: 10px;
+        width: 40px;
     }
 
 
@@ -206,7 +206,12 @@
                        class="text2"
                        name="iddata"
                        value="<%=orgshowid%>"/>
-                <input type="submit" name="Submit" value="..." class="submitbtn"/>
+                <input type="hidden" id="whichbutton" name="whichbutton" value="1"/>
+                <input type="submit" name="Submit" value="Text" class="submitbtn"
+                       onclick="this.form.whichbutton.value='1'"/>
+                <input type="submit" name="SubmitBin" value="Html" class="submitbtn"
+                       onclick="this.form.whichbutton.value='2'"/>
+
             </form>
         </td>
 

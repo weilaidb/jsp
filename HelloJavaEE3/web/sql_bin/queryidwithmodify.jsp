@@ -98,10 +98,15 @@
 <%--================打开数据库================--%>
 <%
     String qryiddata = "";
+    String whichbtnclick = "";
     try {
+        whichbtnclick = request.getParameter("whichbutton");
         qryiddata = request.getParameter("iddata");
     } catch (Exception e) {
     }
+
+    System.out.println("whichbtnclick:" + whichbtnclick );
+    System.out.println("qryiddata    :" + qryiddata );
 
     try {
         Class.forName("com.mysql.jdbc.Driver");  ////驱动程序名
@@ -135,15 +140,17 @@
             InputStream in = blob.getBinaryStream();
             byte[] bytes = ProcObjectAndByte.toByteArray(in);
             Object object = ProcObjectAndByte.toObject(bytes);
-            System.out.println("object size:" + bytes.length);
+            System.out.println("object size:" + bytes.length
+                + ", whichbtn:" + whichbtnclick);
             int showlen = 10;
-            if(bytes.length <= showlen)
+            if(bytes.length <= showlen || Integer.valueOf(whichbtnclick) == 1)
             {
                 toshowcontent = rs.getString(3);
+//                System.out.println("toshowcontent length:" + toshowcontent.length());
             }
     %>
     <%
-        if(bytes.length > showlen)
+        if(Integer.valueOf(whichbtnclick) == 2)
         {
     %>
             <%=object%>

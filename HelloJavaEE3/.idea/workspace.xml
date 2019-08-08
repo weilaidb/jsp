@@ -2,14 +2,20 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="hello" />
+      <artifact name="weilai" />
     </artifacts-to-build>
   </component>
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/web/openpath/explorer.jsp" line="44" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f3158e1-4520-4f9f-add1-db9f54a74a32" name="Default Changelist" comment="" />
+    <list default="true" id="2f3158e1-4520-4f9f-add1-db9f54a74a32" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/weilai/weilai.7z" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/weilai/weilai.7z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/frame-left.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/frame-left.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/sql_bin/bselectdb.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/sql_bin/bselectdb.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/sql_bin/queryidwithmodify.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/sql_bin/queryidwithmodify.jsp" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,37 +32,30 @@
         <entry file="file://$PROJECT_DIR$/web/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="420">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/blank.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/frame-left.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="137">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/web/httpsetheader.jsp">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/file/CheckFile.java">
+        <entry file="file://$PROJECT_DIR$/web/frame-left.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
-              <caret line="55" column="34" selection-start-line="55" selection-start-column="34" selection-end-line="55" selection-end-column="34" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="287">
+              <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/login_bin/login.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="297">
+              <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -64,8 +63,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/login_bin/login_check.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1830">
-              <caret line="61" column="31" selection-start-line="61" selection-start-column="31" selection-end-line="61" selection-end-column="31" />
+            <state relative-caret-position="408">
+              <caret line="61" column="36" selection-start-line="61" selection-start-column="36" selection-end-line="61" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -73,26 +72,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/sql_bin/bselectdb.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1860">
-              <caret line="62" column="6" selection-start-line="62" selection-start-column="6" selection-end-line="62" selection-end-column="6" />
+            <state relative-caret-position="333">
+              <caret line="45" column="5" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/sql/insertdb.jsp">
+        <entry file="file://$PROJECT_DIR$/web/sql_bin/queryidwithmodify.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="496">
-              <caret line="104" column="35" selection-start-line="104" selection-start-column="35" selection-end-line="104" selection-end-column="35" />
+            <state relative-caret-position="203">
+              <caret line="141" column="50" selection-start-line="141" selection-start-column="50" selection-end-line="141" selection-end-column="50" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
+        <entry file="file://$PROJECT_DIR$/src/com/file/CheckFile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160530">
-              <caret line="5364" column="4" selection-start-line="5364" selection-start-column="4" selection-end-line="5364" selection-end-column="4" />
+            <state relative-caret-position="533">
+              <caret line="68" column="17" selection-start-line="68" selection-start-column="17" selection-end-line="68" selection-end-column="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -133,8 +135,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>hibernate</find>
-      <find>abc</find>
       <find>javaJVMLocalObjectMimeType</find>
       <find>请输入</find>
       <find>SELECT * from abcbin</find>
@@ -148,7 +148,6 @@
       <find>insertval</find>
       <find>dia_wbkbig</find>
       <find>textarea_content</find>
-      <find>Submit</find>
       <find>qrydata</find>
       <find>qryval</find>
       <find>insertdbcontent</find>
@@ -163,6 +162,9 @@
       <find>ClipBoard2TextArea</find>
       <find>OnTextAreaBlur</find>
       <find>paste insertext...</find>
+      <find>Submit</find>
+      <find>iddata</find>
+      <find>submitbtn</find>
     </findStrings>
     <replaceStrings>
       <replace>qryiddata</replace>
@@ -232,7 +234,6 @@
         <option value="$PROJECT_DIR$/web/openpath/explorer.jsp" />
         <option value="$PROJECT_DIR$/web/openfile/explorer.jsp" />
         <option value="$PROJECT_DIR$/src/com/file/CheckFile.java" />
-        <option value="$PROJECT_DIR$/web/sql_bin/queryidwithmodify.jsp" />
         <option value="$PROJECT_DIR$/web/sql_bin/modifyid.jsp" />
         <option value="$PROJECT_DIR$/web/sql/bselectdb.jsp" />
         <option value="$PROJECT_DIR$/node_js/server.js" />
@@ -240,10 +241,11 @@
         <option value="$PROJECT_DIR$/web/loadfiles/doc.jsp" />
         <option value="$PROJECT_DIR$/web/modules/linux_driver/explorer.jsp" />
         <option value="$PROJECT_DIR$/src/com/commmon/SqlInterface.java" />
-        <option value="$PROJECT_DIR$/web/sql_bin/bselectdb.jsp" />
         <option value="$PROJECT_DIR$/web/sql/insertdb.jsp" />
         <option value="$PROJECT_DIR$/web/blank.jsp" />
         <option value="$PROJECT_DIR$/web/index.jsp" />
+        <option value="$PROJECT_DIR$/web/sql_bin/queryidwithmodify.jsp" />
+        <option value="$PROJECT_DIR$/web/sql_bin/bselectdb.jsp" />
         <option value="$PROJECT_DIR$/web/frame-left.jsp" />
       </list>
     </option>
@@ -272,7 +274,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -288,37 +289,25 @@
             <path>
               <item name="HelloJavaEE3" type="b2602c69:ProjectViewProjectNode" />
               <item name="HelloJavaEE3" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HelloJavaEE3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HelloJavaEE3" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="HelloJavaEE3" type="b2602c69:ProjectViewProjectNode" />
               <item name="HelloJavaEE3" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HelloJavaEE3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HelloJavaEE3" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="javascript" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HelloJavaEE3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HelloJavaEE3" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="javascript" type="462c0819:PsiDirectoryNode" />
-              <item name="zeroclipboard-1.3.5" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HelloJavaEE3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HelloJavaEE3" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="sql" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -333,7 +322,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1565222023089" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1565277631432" />
     <property name="last_opened_file_path" value="C:/Program Files/Java/jdk1.8.0_192/lib/visualvm/platform/modules/locale/org-openide-awt_zh_CN.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -659,12 +648,13 @@
       <workItem from="1564498759732" duration="6000" />
       <workItem from="1565011629427" duration="1502000" />
       <workItem from="1565103379034" duration="4643000" />
-      <workItem from="1565221084582" duration="729000" />
+      <workItem from="1565221084582" duration="1712000" />
+      <workItem from="1565275672788" duration="1928000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="262256000" />
+    <option name="totallyTimeSpent" value="265167000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -679,7 +669,7 @@
     <frame x="67" y="-8" width="1861" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7479936" visible="true" weight="0.15529673" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7479936" visible="true" weight="0.19523017" />
       <window_info id="Structure" order="1" sideWeight="0.25160256" side_tool="true" weight="0.1120355" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -689,7 +679,7 @@
       <window_info id="Web" order="7" sideWeight="0.5007899" side_tool="true" weight="0.07931226" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4997227" weight="0.10604454" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.9240155" visible="true" weight="0.3244963" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.9240155" weight="0.14316013" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49963635" weight="0.39875" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -771,13 +761,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/sql/modifyid.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4020">
-          <caret line="134" selection-start-line="134" selection-end-line="134" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/sql/notebook2.jsp">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -971,13 +954,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/sql_bin/queryidwithmodify.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4020">
-          <caret line="134" column="35" selection-start-line="134" selection-start-column="35" selection-end-line="134" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/sql_bin/insertdb.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4290">
@@ -1050,24 +1026,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/login_bin/login.jsp">
+    <entry file="file://$PROJECT_DIR$/web/blank.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+        <state relative-caret-position="210">
+          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/login_bin/login_check.jsp">
+    <entry file="file://$PROJECT_DIR$/web/sql/insertdb.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1830">
-          <caret line="61" column="31" selection-start-line="61" selection-start-column="31" selection-end-line="61" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/sql_bin/bselectdb.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1860">
-          <caret line="62" column="6" selection-start-line="62" selection-start-column="6" selection-end-line="62" selection-end-column="6" />
+        <state relative-caret-position="2820">
+          <caret line="94" column="17" selection-start-line="94" selection-start-column="17" selection-end-line="94" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -1095,41 +1064,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/sql/insertdb.jsp">
+    <entry file="file://$PROJECT_DIR$/src/com/file/CheckFile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="104" column="35" selection-start-line="104" selection-start-column="35" selection-end-line="104" selection-end-column="35" />
+        <state relative-caret-position="533">
+          <caret line="68" column="17" selection-start-line="68" selection-start-column="17" selection-end-line="68" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/blank.jsp">
+    <entry file="file://$PROJECT_DIR$/web/httpsetheader.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/login_bin/login.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+        <state relative-caret-position="297">
+          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/login_bin/login_check.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="61" column="36" selection-start-line="61" selection-start-column="36" selection-end-line="61" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/sql_bin/queryidwithmodify.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="141" column="50" selection-start-line="141" selection-start-column="50" selection-end-line="141" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/sql_bin/bselectdb.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="45" column="5" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/frame-left.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/file/CheckFile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="55" column="34" selection-start-line="55" selection-start-column="34" selection-end-line="55" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="287">
+          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
         </state>
       </provider>
     </entry>
