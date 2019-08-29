@@ -109,6 +109,7 @@
 
         if (conn != null) {
 %>
+<form name="form1" method="post" action="modifyid.jsp">
 <table border="1" width="100%" height="100%" class='mytable'>
     <%
         int whichid = Integer.valueOf(qryiddata).intValue();
@@ -136,10 +137,10 @@
         }
     %>
     <tr>
-        <td>
-            <form name="form1" method="post" action="modifyid.jsp">
+                <td>
+
                 <input type="submit" id="savetext" name="Submit" value="保存" class="submitbtn"/>
-                <input type="text" name="iddataext" value="<%=qryiddata%>">
+                        <input type="text" name="iddataext" value="<%=qryiddata%>">
                 <textarea class="boxes"
                           <%--rows="100%"--%>
                           rows="<%=actualrows%>"
@@ -147,9 +148,9 @@
                           name="modifythings"
                           placeholder="输入要复制的东西"
                           style="width: 100%;"><%=toshowcontent%>
-                </textarea>
-            </form>
-        </td>
+                        </textarea>
+
+                </td>
     </tr>
     <%
                 }
@@ -162,22 +163,40 @@
     %>
 </table>
 
+
+
+    <div style="overflow: hidden;position: fixed;right: 1px;bottom: 2px;z-index: 10;">
+        <div style="overflow: hidden;">
+            <div style="padding-top:20px;padding-right:10px;padding-bottom:3px">
+                <input type="submit" id="savetext" name="Submit" value="保存" class="btns"/>
+                <a href="#" style="float: right;" class="btns">顶部</a>
+            </div>
+        </div>
+    </div>
+
+</form>
+
 <h2 align="center"><font size="12" color="red">~~不能再底部了~~~</font></h2>
 
 <style type="text/css">
-    .btns{font-weight: bold;display: inline-block;width: 80px;height: 80px;border: #5fb878;background: #5fb878;font-size: 1.4em;text-align: center;padding-top: 5px;color: white;}
-    a:hover{color:#FFFFFF}
+    .btns {
+        font-weight: bold;
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        border: #5fb878;
+        background: #5fb878;
+        font-size: 2.4em;
+        text-align: center;
+        padding-top: 5px;
+        color: blue;
+        background-color: transparent;
+    }
+
+    a:hover {
+        color: #FFFFFF
+    }
 </style>
-
-
-<div style="overflow: hidden;position: fixed;right: 1px;bottom: 2px;z-index: 10;">
-    <div style="overflow: hidden;">
-        <div style="padding-top:20px;padding-right:10px;padding-bottom:3px">
-            <a href="#" style="float: right;" class="btns">顶部</a>
-        </div>
-    </div>
-</div>
-
 
 
 </body>
