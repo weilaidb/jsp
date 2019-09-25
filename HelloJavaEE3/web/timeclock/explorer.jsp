@@ -151,7 +151,7 @@
             continue;
         }
 %>
-    <form name="form2" method="post" action="<%=app_basePath%>/sql/queryidwithmodify.jsp">
+    <form name="form2" method="post"  target="frame_right" action="<%=app_basePath%>/sql/queryidwithmodify.jsp">
         <input type="text"
                size="4"
                class="text2"

@@ -15,23 +15,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-<h1>同一个世界，同一个梦想。(Version:3.0)</h1>
+<h1>同一个世界，同一个梦想。(Version:3.1)</h1>
 
 <div class="showui">
     <a href="login_bin/login.jsp" target="frame_right">记事本(mysql) bin</a></p>
+    <a href="sql/insertdb.jsp" target="frame_right">输入数据(mysql)</a></p>
     <a href="login/login.jsp" target="frame_right">记事本(mysql)</a></p>
+    <a href="sql_bin/insertdb.jsp" target="frame_right">输入数据(mysql bin)</a></p>
     <a href="sql/notebookalldb.jsp" target="frame_right">记事本(sqlite)[all.db]</a></p>
     <%--<a href="sql/alteralldbcollate_cs.jsp">变更内容字段为utf8_general_cs,更改content类型为mediumtext</a></p>--%>
     <a href="openpath/explorer.jsp" target="frame_right">审视列表</a></p>
     <a href="openfile/explorer.jsp" target="frame_right">打开文件</a></p>
-    <a href="almperf/explorer.jsp"  target="frame_right">性能告警</a></p>
-    <a href="timeclock/explorer.jsp" target="frame_right">时钟时间</a></p>
+    <a href="timeclock/index.jsp" target="_blank">时钟时间</a></p>
     <a href="qt/explorer.jsp"  target="frame_right">Qt</a></p>
     <a href="java/explorer.jsp"  target="frame_right">java</a></p>
     <a href="pubuse/explorer.jsp"  target="frame_right">公共使用</a></p>
     <a href="modules/python/explorer.jsp" target="frame_right">Python</a></p>
     <a href="modules/linux_driver/explorer.jsp" target="frame_right">Linux驱动</a></p>
     <a href="openfile/explorer.jsp" target="frame_right">ClipBoard</a></p>
+    <a href="almperf/index.jsp"  target="_blank">性能告警</a></p>
     <a href="effect/eg1.jsp" target="frame_right">特效</a></p>
     <a href="loadfiles/doc.jsp" target="frame_right">加载文件内容</a></p>
     <%--没有思路时，写一些简单的例子。--%>
