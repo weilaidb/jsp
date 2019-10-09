@@ -15,13 +15,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-<h1>同一个世界，同一个梦想。(Version:3.1)</h1>
+<h1>同一个世界，同一个梦想。(Version:3.2)</h1>
 
 <div class="showui">
-    <a href="login_bin/login.jsp" target="frame_right">记事本(mysql) bin</a></p>
-    <a href="sql/insertdb.jsp" target="frame_right">输入数据(mysql)</a></p>
-    <a href="login/login.jsp" target="frame_right">记事本(mysql)</a></p>
+    <a href="login_bin/login.jsp" target="frame_right">记 事 本(mysql) bin</a></p>
     <a href="sql_bin/insertdb.jsp" target="frame_right">输入数据(mysql bin)</a></p>
+    <a href="login/login.jsp" target="frame_right">记 事 本 (mysql)</a></p>
+    <a href="sql/insertdb.jsp" target="frame_right">输入数据(mysql)</a></p>
     <a href="sql/notebookalldb.jsp" target="frame_right">记事本(sqlite)[all.db]</a></p>
     <%--<a href="sql/alteralldbcollate_cs.jsp">变更内容字段为utf8_general_cs,更改content类型为mediumtext</a></p>--%>
     <a href="openpath/explorer.jsp" target="frame_right">审视列表</a></p>

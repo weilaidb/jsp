@@ -11,7 +11,8 @@
          pageEncoding="utf-8" %>
 
 <%--================引入头文件=========================--%>
-<%@page import="java.sql.*" %>  <%--导入java.sql包--%>
+<%@page import="java.sql.*" %>
+<%@ page import="weilaidb.sql.SqlProc" %>  <%--导入java.sql包--%>
 
 
 <%--================css配置=========================--%>
@@ -148,12 +149,8 @@
     }
 
     try {
-        Class.forName("com.mysql.jdbc.Driver");  ////驱动程序名
-        String url = "jdbc:mysql://localhost:3306/alldbbin?useUnicode=true&characterEncoding=utf-8"; //数据库名
-        String username = "root";  //数据库用户名
-        String password = "Zzerp123";  //数据库用户密码
-        conn = DriverManager.getConnection(url, username, password);  //连接状态
-
+        String dbname = "alldbbin";
+        conn = SqlProc.opendb(dbname);
         if (conn != null) {
 %>
 

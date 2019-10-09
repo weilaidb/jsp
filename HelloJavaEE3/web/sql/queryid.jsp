@@ -10,7 +10,8 @@
          pageEncoding="utf-8" %>
 
 <%--================引入头文件=========================--%>
-<%@page import="java.sql.*" %>  <%--导入java.sql包--%>
+<%@page import="java.sql.*" %>
+<%@ page import="weilaidb.sql.SqlProc" %>  <%--导入java.sql包--%>
 
 <%--================css配置=========================--%>
 <style type="text/css">
@@ -163,14 +164,9 @@
     } catch (Exception e) {
     }
     try {
-        Class.forName("com.mysql.jdbc.Driver");  ////驱动程序名
-        String url = "jdbc:mysql://localhost:3306/alldb?useUnicode=true&characterEncoding=utf-8"; //数据库名
-//        String url = "jdbc:mysql://localhost:3306/alldb?useSSL=true"; //数据库名
-//        String url = "jdbc:mysql://localhost:3306/alldb?useSSL=false"; //数据库名
-        String username = "root";  //数据库用户名
-        String password = "Zzerp123";  //数据库用户密码
-        Connection conn = DriverManager.getConnection(url, username, password);  //连接状态
-
+        Connection conn = null;
+        String dbname = "alldb";
+        conn = SqlProc.opendb(dbname);
         if (conn != null) {
 //            out.print("数据库连接成功！");
 //            out.print("<br />");
