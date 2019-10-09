@@ -13,6 +13,7 @@
 <%@page import="java.sql.*" %>
 <%@ page import="com.objectproc.ProcObjectAndByte" %>
 <%@ page import="java.io.InputStream" %>  <%--导入java.sql包--%>
+<%@include file="../common/basepath.jsp"%>
 
 <%--================css配置=========================--%>
 <style type="text/css">
@@ -93,6 +94,7 @@
     <title>显示ID数据</title>
 </head>
 <body>
+<a href="<%=app_basePath%>/index.jsp">首页</a>
 
 <%--================获取查询数据================--%>
 <%--================打开数据库================--%>
