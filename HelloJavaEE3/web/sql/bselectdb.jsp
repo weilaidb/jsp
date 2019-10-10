@@ -147,11 +147,18 @@
         out.print("\n");
     }
 
+    //判断查询的数据是否为无效
+    if(null == qryval )
+    {
+        qryval = "";
+    }
+
     try {
         String dbname = "alldb";
         conn = SqlProc.opendb(dbname);
         if (conn != null) {
 %>
+
 
 <table border="1" width="100%" class='mytable'>
     <tr>
@@ -163,7 +170,8 @@
         rs = null;
         String sql = "";  //查询语句
         String tablename = "abc";
-        if (qryval.trim().isEmpty()) {
+        System.out.println("qryval is:" + qryval);
+        if (qryval.isEmpty() || qryval.trim().isEmpty()) {
             sql = "SELECT * from " + tablename + " order by id desc limit 10;";  //查询语句
         } else {
             String sqlhead = " SELECT * FROM " + tablename + " WHERE ";
@@ -255,6 +263,8 @@
         }
     %>
 </table>
+
+
 
 <h2 align="center"><font size="12" color="red">~~不能再底部了~~~</font></h2>
 

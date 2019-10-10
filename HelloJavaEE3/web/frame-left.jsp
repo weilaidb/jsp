@@ -15,7 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-<h1>同一个世界，同一个梦想。(Version:3.2)</h1>
+<h1>同一个世界，同一个梦想。(Version:3.3)</h1>
 
 <div class="showui">
     <a href="login_bin/login.jsp" target="frame_right">记 事 本(mysql) bin</a></p>

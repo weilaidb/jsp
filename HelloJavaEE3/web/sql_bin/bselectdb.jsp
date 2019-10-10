@@ -148,6 +148,12 @@
         out.print("\n");
     }
 
+    //判断查询的数据是否为无效
+    if(null == qryval )
+    {
+        qryval = "";
+    }
+
     try {
         String dbname = "alldbbin";
         conn = SqlProc.opendb(dbname);
