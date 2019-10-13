@@ -29,6 +29,7 @@
     <a href="timeclock/index.jsp" target="_blank">时钟时间</a></p>
     <a href="qt/explorer.jsp"  target="frame_right">Qt</a></p>
     <a href="java/explorer.jsp"  target="frame_right">java</a></p>
+    <a href="ios/explorer.jsp"  target="frame_right">IOS</a></p>
     <a href="pubuse/explorer.jsp"  target="frame_right">公共使用</a></p>
     <a href="modules/python/explorer.jsp" target="frame_right">Python</a></p>
     <a href="modules/linux_driver/explorer.jsp" target="frame_right">Linux驱动</a></p>
