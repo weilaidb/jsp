@@ -29,7 +29,7 @@
             window.history.go(-1);
         }
 
-        setTimeout("go()", 1000);
+        setTimeout("go()", 300);
     </SCRIPT>
 
     <title>显示ID数据</title>
