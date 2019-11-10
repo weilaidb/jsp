@@ -16,6 +16,14 @@
 <%@ page import="weilaidb.sql.SqlProc" %>  <%--导入java.sql包--%>
 <%@include file="../common/basepath.jsp"%>
 
+<script language="JavaScript">
+    function Refresh()
+    {
+        window.location.reload();
+    }
+    // setTimeout('Refresh()',1000); //1秒刷新一次
+</script>
+
 <%--================css配置=========================--%>
 <style type="text/css">
     .mytable th, tr, td, table {
@@ -204,12 +212,14 @@
 
 
 
-    <div style="overflow: hidden;position: fixed;right: 1px;bottom: 2px;z-index: 10;">
-        <div style="overflow: hidden;">
-            <div style="padding-top:20px;padding-right:10px;padding-bottom:3px">
-                <input type="submit" id="savetext" name="Submit" value="保存" class="btns"/>
-                <a href="#" style="float: right;" class="btns">顶部</a>
-            </div>
+    <div style="overflow: hidden;position: fixed;right: 0px;bottom: 1px;z-index: 1;">
+        <div style="padding-top:1px;padding-right:1px;padding-bottom:1px">
+            <input type="button" id="btn_refresh" onclick="Refresh()" value="刷新" class="btns"/>
+            <input type="submit" id="savetext" name="Submit" value="保存" class="btns"/>
+            <%--<a href="#" styl="float: right;" class="btns">顶部</a>--%>
+            <%--<div style="height:3000px;"></div>--%>
+            <a href="javascript:void(0);" onclick="javascript:document.getElementsByTagName('BODY')[0].scrollTop=0;" class="btns">页顶</a>
+            <a href="javascript:void(0);" onclick="javascript:document.getElementsByTagName('BODY')[0].scrollTop=document.getElementsByTagName('BODY')[0].scrollHeight; "搜索 class="btns">页底</a>
         </div>
     </div>
 
@@ -225,9 +235,9 @@
         height: 100%;
         border: #5fb878;
         background: #5fb878;
-        font-size: 2.4em;
+        font-size: 1.6em;
         text-align: center;
-        padding-top: 5px;
+        padding-top: 0px;
         color: blue;
         background-color: transparent;
     }
