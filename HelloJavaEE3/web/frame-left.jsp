@@ -15,7 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-<h1>同一个世界，同一个梦想。(Version:3.6)</h1>
+<h1>同一个世界，同一个梦想。(Version:3.7)</h1>
 
 <div class="showui">
     <a href="login_bin/login.jsp" target="frame_right">记 事 本(mysql) bin</a></p>
@@ -30,6 +30,7 @@
     <a href="qt/explorer.jsp"  target="frame_right">Qt</a></p>
     <a href="java/explorer.jsp"  target="frame_right">java</a></p>
     <a href="ios/explorer.jsp"  target="frame_right">IOS</a></p>
+    <a href="csharp/explorer.jsp"  target="frame_right">C#</a></p>
     <a href="pubuse/explorer.jsp"  target="frame_right">公共使用</a></p>
     <a href="modules/python/explorer.jsp" target="frame_right">Python</a></p>
     <a href="modules/linux_driver/explorer.jsp" target="frame_right">Linux驱动</a></p>
