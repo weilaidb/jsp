@@ -15,7 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-<h1>同一个世界，同一个梦想。(Version:4.0)</h1>
+<h1>同一个世界，同一个梦想。(Version:4.1)</h1>
 
 <div class="showui">
     <a href="login_bin/login.jsp" target="frame_right">记 事 本(mysql) bin</a></p>
@@ -32,12 +32,13 @@
     <a href="ios/explorer.jsp"  target="frame_right">IOS</a></p>
     <a href="csharp/explorer.jsp"  target="frame_right">C#</a></p>
     <a href="pubuse/explorer.jsp"  target="frame_right">公共使用</a></p>
+    <a href="dirinfo/index.jsp"  target="_blank">文件夹列表</a></p>
     <a href="modules/python/explorer.jsp" target="frame_right">Python</a></p>
     <a href="modules/linux_driver/explorer.jsp" target="frame_right">Linux驱动</a></p>
     <%--<a href="openfile/explorer.jsp" target="frame_right">ClipBoard</a></p>--%>
     <a href="almperf/index.jsp"  target="_blank">性能告警</a></p>
     <a href="net/getip.jsp"  target="_blank">ip address</a></p>
-    <a href="directory/opendirectory.jsp"  target="_blank">打开文件夹列表</a></p>
+<%--    <a href="dirinfo/explorer.jsp"  target="_blank">打开文件夹列表</a></p>--%>
     <%--<a href="effect/eg1.jsp" target="frame_right">特效</a></p>--%>
     <%--<a href="loadfiles/doc.jsp" target="frame_right">加载文件内容</a></p>--%>
     <%--没有思路时，写一些简单的例子。--%>

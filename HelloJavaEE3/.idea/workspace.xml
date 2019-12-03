@@ -7,7 +7,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f3158e1-4520-4f9f-add1-db9f54a74a32" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/sql script/create_directory.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql script/create_dirinfo.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/dirinfo/add.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/dirinfo/delete.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/dirinfo/explorer.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/dirinfo/insert.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/hello.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/hello.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/weilai/weilai.7z" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/frame-left.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/frame-left.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,10 +81,10 @@
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572185053642" />
     <property name="js.buildTools.grunt.grunt-cli.package" value="" />
     <property name="js.buildTools.gulp.gulp_package_dir" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/sql script" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/web" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Facets" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
@@ -87,8 +94,8 @@
       <recent name="weilaidb.login" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\tarbao\egjsp\eclipse-workspace\TomcatTest\HelloJavaEE3\sql script" />
       <recent name="E:\tarbao\egjsp\eclipse-workspace\TomcatTest\HelloJavaEE3\web" />
+      <recent name="E:\tarbao\egjsp\eclipse-workspace\TomcatTest\HelloJavaEE3\sql script" />
       <recent name="E:\tarbao\egjsp\eclipse-workspace\TomcatTest\HelloJavaEE3\web\almperf" />
       <recent name="E:\tarbao\egjsp\eclipse-workspace\TomcatTest\HelloJavaEE3\web\timeclock" />
       <recent name="E:\tarbao\egjsp\eclipse-workspace\TomcatTest\HelloJavaEE3\web\css" />
@@ -519,7 +526,7 @@
       <workItem from="1575378026086" duration="35000" />
       <workItem from="1575378073940" duration="1738000" />
       <workItem from="1575379835129" duration="687000" />
-      <workItem from="1575380902133" duration="2755000" />
+      <workItem from="1575380902133" duration="4345000" />
     </task>
     <servers />
   </component>
@@ -540,30 +547,34 @@
       <screen x="75" y="0" width="1845" height="1080" />
     </state>
     <state x="649" y="148" key="#Tomcat_7.0.92/75.0.1845.1080@75.0.1845.1080" timestamp="1575379360034" />
-    <state x="451" y="196" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1575383642614">
+    <state x="451" y="196" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1575384818952">
       <screen x="75" y="0" width="1845" height="1080" />
     </state>
-    <state x="451" y="196" key="#com.intellij.execution.impl.EditConfigurationsDialog/75.0.1845.1080@75.0.1845.1080" timestamp="1575383642614" />
-    <state width="1710" height="288" key="GridCell.Tab.0.bottom" timestamp="1575382652029">
+    <state x="451" y="196" key="#com.intellij.execution.impl.EditConfigurationsDialog/75.0.1845.1080@75.0.1845.1080" timestamp="1575384818952" />
+    <state x="815" y="517" key="#com.intellij.javaee.module.view.web.EditWebRootDialog" timestamp="1575384924110">
       <screen x="75" y="0" width="1845" height="1080" />
     </state>
-    <state width="1710" height="288" key="GridCell.Tab.0.bottom/75.0.1845.1080@75.0.1845.1080" timestamp="1575382652029" />
-    <state width="1710" height="288" key="GridCell.Tab.0.center" timestamp="1575382652028">
+    <state x="815" y="517" key="#com.intellij.javaee.module.view.web.EditWebRootDialog/75.0.1845.1080@75.0.1845.1080" timestamp="1575384924110" />
+    <state width="1710" height="311" key="GridCell.Tab.0.bottom" timestamp="1575384994258">
       <screen x="75" y="0" width="1845" height="1080" />
     </state>
-    <state width="1710" height="288" key="GridCell.Tab.0.center/75.0.1845.1080@75.0.1845.1080" timestamp="1575382652028" />
-    <state width="1710" height="288" key="GridCell.Tab.0.left" timestamp="1575382652028">
+    <state width="1710" height="311" key="GridCell.Tab.0.bottom/75.0.1845.1080@75.0.1845.1080" timestamp="1575384994258" />
+    <state width="1710" height="311" key="GridCell.Tab.0.center" timestamp="1575384994258">
       <screen x="75" y="0" width="1845" height="1080" />
     </state>
-    <state width="1710" height="288" key="GridCell.Tab.0.left/75.0.1845.1080@75.0.1845.1080" timestamp="1575382652028" />
-    <state width="1710" height="288" key="GridCell.Tab.0.right" timestamp="1575382652028">
+    <state width="1710" height="311" key="GridCell.Tab.0.center/75.0.1845.1080@75.0.1845.1080" timestamp="1575384994258" />
+    <state width="1710" height="311" key="GridCell.Tab.0.left" timestamp="1575384994258">
       <screen x="75" y="0" width="1845" height="1080" />
     </state>
-    <state width="1710" height="288" key="GridCell.Tab.0.right/75.0.1845.1080@75.0.1845.1080" timestamp="1575382652028" />
-    <state x="528" y="184" key="SettingsEditor" timestamp="1575381701203">
+    <state width="1710" height="311" key="GridCell.Tab.0.left/75.0.1845.1080@75.0.1845.1080" timestamp="1575384994258" />
+    <state width="1710" height="311" key="GridCell.Tab.0.right" timestamp="1575384994258">
       <screen x="75" y="0" width="1845" height="1080" />
     </state>
-    <state x="528" y="184" key="SettingsEditor/75.0.1845.1080@75.0.1845.1080" timestamp="1575381701203" />
+    <state width="1710" height="311" key="GridCell.Tab.0.right/75.0.1845.1080@75.0.1845.1080" timestamp="1575384994258" />
+    <state x="528" y="184" key="SettingsEditor" timestamp="1575384927806">
+      <screen x="75" y="0" width="1845" height="1080" />
+    </state>
+    <state x="528" y="184" key="SettingsEditor/75.0.1845.1080@75.0.1845.1080" timestamp="1575384927806" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
