@@ -7,11 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f3158e1-4520-4f9f-add1-db9f54a74a32" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sql script/create_directory.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/directory/opendirectory.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/frame-left.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/frame-left.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql script/create_directory.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql script/create_dirinfo.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -523,7 +519,7 @@
       <workItem from="1575378026086" duration="35000" />
       <workItem from="1575378073940" duration="1738000" />
       <workItem from="1575379835129" duration="687000" />
-      <workItem from="1575380902133" duration="2478000" />
+      <workItem from="1575380902133" duration="2755000" />
     </task>
     <servers />
   </component>
@@ -544,10 +540,10 @@
       <screen x="75" y="0" width="1845" height="1080" />
     </state>
     <state x="649" y="148" key="#Tomcat_7.0.92/75.0.1845.1080@75.0.1845.1080" timestamp="1575379360034" />
-    <state x="451" y="196" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1575383352972">
+    <state x="451" y="196" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1575383642614">
       <screen x="75" y="0" width="1845" height="1080" />
     </state>
-    <state x="451" y="196" key="#com.intellij.execution.impl.EditConfigurationsDialog/75.0.1845.1080@75.0.1845.1080" timestamp="1575383352972" />
+    <state x="451" y="196" key="#com.intellij.execution.impl.EditConfigurationsDialog/75.0.1845.1080@75.0.1845.1080" timestamp="1575383642614" />
     <state width="1710" height="288" key="GridCell.Tab.0.bottom" timestamp="1575382652029">
       <screen x="75" y="0" width="1845" height="1080" />
     </state>

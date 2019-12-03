@@ -6,5 +6,5 @@ create table csharp (  `id` int(200) unsigned NOT NULL AUTO_INCREMENT,
 name varchar(3000),
 PRIMARY KEY (`id`),
 UNIQUE KEY `name_UNIQUE` (`id`)
-)  ENGINE=InnoDB AUTO_INCREMENT=217 DEFAULT CHARSET=utf8mb4mb4;
+)  ENGINE=InnoDB AUTO_INCREMENT=217 DEFAULT CHARSET=utf8mb4;
 -- insert into csharp values(NULL, '10 你好吗');
