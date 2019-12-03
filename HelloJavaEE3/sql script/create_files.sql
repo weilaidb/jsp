@@ -6,7 +6,7 @@ create table explorerlist (  `id` int(200) unsigned NOT NULL AUTO_INCREMENT,
 name varchar(3000),
 PRIMARY KEY (`id`),
 UNIQUE KEY `name_UNIQUE` (`id`)
-)  ENGINE=InnoDB AUTO_INCREMENT=217 DEFAULT CHARSET=utf8;
+)  ENGINE=InnoDB AUTO_INCREMENT=217 DEFAULT CHARSET=utf8mb4mb4;
 insert into explorerlist values(NULL, 'C:');
 insert into explorerlist values(NULL, 'D:');
 insert into explorerlist values(NULL, 'E:');
@@ -25,5 +25,5 @@ create table dirlist (  `id` int(200) unsigned NOT NULL AUTO_INCREMENT,
 name varchar(3000),
 PRIMARY KEY (`id`),
 UNIQUE KEY `name_UNIQUE` (`id`)
-)  ENGINE=InnoDB AUTO_INCREMENT=217 DEFAULT CHARSET=utf8;
+)  ENGINE=InnoDB AUTO_INCREMENT=217 DEFAULT CHARSET=utf8mb4mb4;
 insert into dirlist values(NULL, 'E:\\books');

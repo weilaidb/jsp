@@ -37,6 +37,7 @@
     <%--<a href="openfile/explorer.jsp" target="frame_right">ClipBoard</a></p>--%>
     <a href="almperf/index.jsp"  target="_blank">性能告警</a></p>
     <a href="net/getip.jsp"  target="_blank">ip address</a></p>
+    <a href="directory/opendirectory.jsp"  target="_blank">打开文件夹列表</a></p>
     <%--<a href="effect/eg1.jsp" target="frame_right">特效</a></p>--%>
     <%--<a href="loadfiles/doc.jsp" target="frame_right">加载文件内容</a></p>--%>
     <%--没有思路时，写一些简单的例子。--%>
