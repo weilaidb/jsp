@@ -106,7 +106,8 @@
 //    response.setHeader("Refresh","30;explorer.jsp");
 %>
 
-<h1><a href="<%=app_basePath%>/index.jsp">首页</a>
+<h1>
+    <a href="<%=app_basePath%>/index.jsp">首页</a>
     <%--<a href="add.jsp">添加</a>--%>
     <a href="delete.jsp" target="_blank">删除</a>
     <a href="insert.jsp" target="_blank">写入</a>
