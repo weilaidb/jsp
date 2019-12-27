@@ -37,7 +37,7 @@
     <a href="net/getip.jsp"         target="_blank">ip address</a></p>
 </div>
 
-<h3>版本(V4.3)</h3>
+<h3>版本(V4.4)</h3>
 
 </body>
 </html>

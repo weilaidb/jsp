@@ -7,28 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f3158e1-4520-4f9f-add1-db9f54a74a32" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea/.idea.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Java_EE_6_Java_EE_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javax.annotation.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javax.ejb.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javax.jms.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javax.persistence.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javax.resource.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javax.servlet.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javax.servlet.jsp.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javax.transaction.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelloJavaEE3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/HelloJavaEE3.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/commmon/SqlInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/commmon/SqlInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/frame-left.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/frame-left.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sql/bselectdb.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/sql/bselectdb.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sql_bin/bselectdb.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/sql_bin/bselectdb.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/timeclock/explorer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/timeclock/explorer.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -132,25 +113,7 @@
       <recent name="E:\tarbao\egjsp\eclipse-workspace\TomcatTest\HelloJavaEE3\web\css" />
     </key>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.27_ipc">
-    <configuration default="true" type="Run as an Embedded Java application" factoryName="Embedded Linux JVM">
-      <option name="classesDirectory" />
-      <option name="hostname" value="" />
-      <option name="keyPath" value="" />
-      <option name="password" value="" />
-      <option name="port" value="1234" />
-      <option name="programArguments" value="" />
-      <option name="runAsRoot" value="false" />
-      <option name="sshPort" value="22" />
-      <option name="username" value="" />
-      <option name="usingKey" value="false" />
-      <option name="vmParameters" value="" />
-      <option name="moduleName" value="" />
-      <option name="mainclass" value="" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Tomcat Server.Tomcat 7.0.92">
     <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -175,6 +138,24 @@
         </option>
       </MavenSettings>
       <method v="2" />
+    </configuration>
+    <configuration default="true" type="Run as an Embedded Java application" factoryName="Embedded Linux JVM">
+      <option name="classesDirectory" />
+      <option name="hostname" value="" />
+      <option name="keyPath" value="" />
+      <option name="password" value="" />
+      <option name="port" value="1234" />
+      <option name="programArguments" value="" />
+      <option name="runAsRoot" value="false" />
+      <option name="sshPort" value="22" />
+      <option name="username" value="" />
+      <option name="usingKey" value="false" />
+      <option name="vmParameters" value="" />
+      <option name="moduleName" value="" />
+      <option name="mainclass" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="Tomcat 7.0.92" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.92" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
@@ -488,11 +469,6 @@
                 <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
                 <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
             </expand>
             <select />
           </treeState>
@@ -643,6 +619,7 @@
       <workItem from="1575379835129" duration="687000" />
       <workItem from="1575380902133" duration="4345000" />
       <workItem from="1577019526825" duration="3410000" />
+      <workItem from="1577446495349" duration="5968000" />
     </task>
     <servers />
   </component>
@@ -688,26 +665,26 @@
       <screen x="0" y="0" width="1291" height="768" />
     </state>
     <state x="411" y="195" key="FileChooserDialogImpl/0.0.1291.768@0.0.1291.768" timestamp="1577020954554" />
-    <state width="1014" height="214" key="GridCell.Tab.0.bottom" timestamp="1577022367523">
-      <screen x="0" y="0" width="1291" height="768" />
+    <state width="1478" height="313" key="GridCell.Tab.0.bottom" timestamp="1577453512553">
+      <screen x="75" y="0" width="1845" height="1080" />
     </state>
     <state width="1014" height="214" key="GridCell.Tab.0.bottom/0.0.1291.768@0.0.1291.768" timestamp="1577022367523" />
-    <state width="1710" height="311" key="GridCell.Tab.0.bottom/75.0.1845.1080@75.0.1845.1080" timestamp="1575384994258" />
-    <state width="1014" height="214" key="GridCell.Tab.0.center" timestamp="1577022367523">
-      <screen x="0" y="0" width="1291" height="768" />
+    <state width="1478" height="313" key="GridCell.Tab.0.bottom/75.0.1845.1080@75.0.1845.1080" timestamp="1577453512553" />
+    <state width="1478" height="313" key="GridCell.Tab.0.center" timestamp="1577453512553">
+      <screen x="75" y="0" width="1845" height="1080" />
     </state>
     <state width="1014" height="214" key="GridCell.Tab.0.center/0.0.1291.768@0.0.1291.768" timestamp="1577022367523" />
-    <state width="1710" height="311" key="GridCell.Tab.0.center/75.0.1845.1080@75.0.1845.1080" timestamp="1575384994258" />
-    <state width="1014" height="214" key="GridCell.Tab.0.left" timestamp="1577022367523">
-      <screen x="0" y="0" width="1291" height="768" />
+    <state width="1478" height="313" key="GridCell.Tab.0.center/75.0.1845.1080@75.0.1845.1080" timestamp="1577453512553" />
+    <state width="1478" height="313" key="GridCell.Tab.0.left" timestamp="1577453512553">
+      <screen x="75" y="0" width="1845" height="1080" />
     </state>
     <state width="1014" height="214" key="GridCell.Tab.0.left/0.0.1291.768@0.0.1291.768" timestamp="1577022367523" />
-    <state width="1710" height="311" key="GridCell.Tab.0.left/75.0.1845.1080@75.0.1845.1080" timestamp="1575384994258" />
-    <state width="1014" height="214" key="GridCell.Tab.0.right" timestamp="1577022367523">
-      <screen x="0" y="0" width="1291" height="768" />
+    <state width="1478" height="313" key="GridCell.Tab.0.left/75.0.1845.1080@75.0.1845.1080" timestamp="1577453512553" />
+    <state width="1478" height="313" key="GridCell.Tab.0.right" timestamp="1577453512553">
+      <screen x="75" y="0" width="1845" height="1080" />
     </state>
     <state width="1014" height="214" key="GridCell.Tab.0.right/0.0.1291.768@0.0.1291.768" timestamp="1577022367523" />
-    <state width="1710" height="311" key="GridCell.Tab.0.right/75.0.1845.1080@75.0.1845.1080" timestamp="1575384994258" />
+    <state width="1478" height="313" key="GridCell.Tab.0.right/75.0.1845.1080@75.0.1845.1080" timestamp="1577453512553" />
     <state width="1014" height="214" key="GridCell.Tab.1.bottom" timestamp="1577022367524">
       <screen x="0" y="0" width="1291" height="768" />
     </state>
@@ -745,6 +722,10 @@
     </state>
     <state x="251" y="0" key="SettingsEditor/0.0.1291.768@0.0.1291.768" timestamp="1577022121220" />
     <state x="528" y="184" key="SettingsEditor/75.0.1845.1080@75.0.1845.1080" timestamp="1575384927806" />
+    <state x="665" y="286" width="1055" height="508" key="find.popup" timestamp="1577450149832">
+      <screen x="75" y="0" width="1845" height="1080" />
+    </state>
+    <state x="665" y="286" width="1055" height="508" key="find.popup/75.0.1845.1080@75.0.1845.1080" timestamp="1577450149832" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

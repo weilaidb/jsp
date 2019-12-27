@@ -14,6 +14,22 @@
          pageEncoding="UTF-8" %>
 <%@include file="../common/basepath.jsp"%>
 <%
+    String searchkey = request.getParameter("searchkey");
+    if (searchkey != null && searchkey.trim() != "") {
+        try {
+            System.out.println("defaultCharset " + Charset.defaultCharset());
+            System.out.println("searchkey:" + searchkey);
+//            out.write(searchkey);
+        } catch (Exception e) {
+            e.printStackTrace();
+            out.write(e.getMessage());
+        }
+    }else {
+        searchkey = "";
+    }
+%>
+
+<%
     //    打开的文件列表
 //    增加表项openlist，用以打开文件路径
     SqlInterface inter = new SqlInterface();
@@ -28,7 +44,7 @@
 
 <%
 
-    List<String> openlist = inter.getAllDesc(dbName, tableName, "");
+    List<String> openlist = inter.getAllDescByKey(dbName, tableName, searchkey);
 //    for (String file :
 //            openlist) {
 //        System.out.println(file);
@@ -111,6 +127,14 @@
     <%--<a href="add.jsp">添加</a>--%>
     <a href="delete.jsp" target="_blank">删除</a>
     <a href="insert.jsp" target="_blank">写入</a>
+    <form name="form3" method="post" action="explorer.jsp">
+        <input type="text"
+<%--               size="4"--%>
+<%--               class="text2"--%>
+               name="searchkey"
+        <%--readonly="readonly"--%>
+               value=""/>
+    </form>
 </h1>
 <%--<h1>时钟时间</h1>--%>
 <%!

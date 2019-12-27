@@ -1,5 +1,6 @@
 package com.commmon;
 
+import java.io.UnsupportedEncodingException;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -14,6 +15,8 @@ public class SqlInterface {
     String name = null;
     Statement stmt = null;
     String sql = "";
+    String dbName_alldb = "alldb";
+    String tableName_abc = "abc";
 
     public static final String DBDRIVER = "com.mysql.jdbc.Driver";
     public static final String DBURL = "jdbc:mysql://localhost:3306/mldn?useUnicode=true&characterEncoding=utf-8"; //数据库名";
@@ -82,7 +85,102 @@ public class SqlInterface {
         return reslist;
     }
 
-    public List<String> getAllDesc(String dbName, String tableName, String colname) {
+    public String getCombineFirstInterger(String item)
+    {
+        String[] splitlst = item.split("\\s+", 2);
+        if(splitlst.length < 2)
+        {
+            return "";
+        }
+        return  splitlst[0].trim();
+    }
+
+    public String checkStringContainKeyList(String content, String key)
+    {
+        String result = "";
+        String[] qrylst = key
+                .replace("\"", "\\\"")
+                .split(" ");
+        int count = 0;
+        for (int lp = 0; lp < qrylst.length; lp++) {
+            try {
+                String itemkey = new String(qrylst[lp].getBytes("iso-8859-1"), "utf-8");
+                if(content.contains(itemkey))
+                {
+                    count++;
+                }
+            } catch (UnsupportedEncodingException e) {
+                e.printStackTrace();
+            }
+        }
+
+        if(count == qrylst.length)
+        {
+            result = "containall";
+        }
+
+        return result;
+    }
+
+
+    public List<String> getAllDescByKey(String dbName, String tableName, String key)
+    {
+        if(key.trim().isEmpty())
+        {
+            return getAllDesc(dbName, tableName, "");
+        }
+        List<String> reslist = new ArrayList<>();
+        List<String> openlist = getAllDesc(dbName, tableName, "");
+        String result = "";
+        for (String openitem :
+                openlist) {
+            sql = "SELECT * FROM egtable where id = egid";
+            sql = sql.replaceAll("egtable", tableName_abc);
+            if(getCombineFirstInterger(openitem).trim().isEmpty())
+            {
+                continue;
+            }
+            sql = sql.replaceAll("egid", getCombineFirstInterger(openitem));
+            //从alldb中查找数据
+            result = getSqlResult(dbName_alldb, tableName_abc, sql, 2);
+            if(checkStringContainKeyList(result, key).trim().isEmpty())
+            {
+                continue;
+            }
+            reslist.add(openitem);
+        }
+
+        return  reslist;
+    }
+    //获取sql执行结果
+    public String getSqlResult(String dbName, String tableName, String sql, int columnindex)
+    {
+        String result = "";
+        try {
+            Class.forName(DBDRIVER);
+            conn = DriverManager.getConnection(DBURL.replaceAll("mldn", dbName), DBUSER, DBPASS);
+            pstmt = conn.prepareStatement(sql);
+            rs = pstmt.executeQuery();
+            while (rs.next()) {
+                name = rs.getString(columnindex);
+                result += name;
+            }
+        } catch (Exception e) {
+            System.out.print(e);
+        } finally {
+            try {
+                rs.close();
+                pstmt.close();
+                conn.close();
+            } catch (Exception e) {
+
+            }
+        }
+        return result;
+    }
+
+    public List<String> getAllDesc(String dbName, String tableName, String colname)
+    {
         List<String> reslist = new ArrayList<>();
         try {
             Class.forName(DBDRIVER);
