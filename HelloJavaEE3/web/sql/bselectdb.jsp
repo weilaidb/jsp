@@ -14,6 +14,8 @@
 <%@page import="java.sql.*" %>
 <%@ page import="weilaidb.sql.SqlProc" %>  <%--导入java.sql包--%>
 
+<%--================引入jsp=========================--%>
+<%@include file="../file/deletebeyondcomparefiles.jsp"%>
 
 <%--================css配置=========================--%>
 <style type="text/css">

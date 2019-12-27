@@ -13,6 +13,10 @@
 <%--================引入头文件=========================--%>
 <%@page import="java.sql.*" %>
 <%@ page import="weilaidb.sql.SqlProc" %>
+<%@ page import="com.file.CheckFile" %>
+<%--================引入jsp=========================--%>
+<%@include file="../file/deletebeyondcomparefiles.jsp"%>
+
 <%--================css配置=========================--%>
 <style type="text/css">
     .mytable th, tr, td, table {
@@ -235,6 +239,9 @@
 %>
 
 <h2 align="center"><font size="12" color="red">~~不能再底部了~~~</font></h2>
+
+
+
 
 </body>
 </html>
