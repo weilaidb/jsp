@@ -94,6 +94,15 @@ public class SqlInterface {
         }
         return  splitlst[0].trim();
     }
+    public String getGbkSign(String code)
+    {
+        try {
+            return new String(code.getBytes("iso-8859-1"), "utf-8");
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        return "";
+    }
 
     public String checkStringContainKeyList(String content, String key)
     {
@@ -104,11 +113,15 @@ public class SqlInterface {
         int count = 0;
         for (int lp = 0; lp < qrylst.length; lp++) {
             try {
+                //查找出来的数据编码已经是utf-8
                 String itemkey = new String(qrylst[lp].getBytes("iso-8859-1"), "utf-8");
-                if(content.contains(itemkey))
+//                System.out.println("itemkey:"  + itemkey);
+//                System.out.println("content:"  + content);
+                if(!content.contains(itemkey))
                 {
-                    count++;
+                    break;
                 }
+                count++;
             } catch (UnsupportedEncodingException e) {
                 e.printStackTrace();
             }
@@ -142,7 +155,7 @@ public class SqlInterface {
             }
             sql = sql.replaceAll("egid", getCombineFirstInterger(openitem));
             //从alldb中查找数据
-            result = getSqlResult(dbName_alldb, tableName_abc, sql, 2);
+            result = getSqlResult(dbName_alldb, tableName_abc, sql, 3);
             if(checkStringContainKeyList(result, key).trim().isEmpty())
             {
                 continue;

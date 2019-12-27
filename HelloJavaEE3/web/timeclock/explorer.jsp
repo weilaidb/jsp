@@ -14,12 +14,18 @@
          pageEncoding="UTF-8" %>
 <%@include file="../common/basepath.jsp"%>
 <%
+    //    打开的文件列表
+//    增加表项openlist，用以打开文件路径
+    SqlInterface inter = new SqlInterface();
+    String dbName = "showui";
+%>
+<%
     String searchkey = request.getParameter("searchkey");
     if (searchkey != null && searchkey.trim() != "") {
         try {
             System.out.println("defaultCharset " + Charset.defaultCharset());
             System.out.println("searchkey:" + searchkey);
-//            out.write(searchkey);
+//            out.write("searchkey:"+ inter.getGbkSign(searchkey));
         } catch (Exception e) {
             e.printStackTrace();
             out.write(e.getMessage());
@@ -29,12 +35,7 @@
     }
 %>
 
-<%
-    //    打开的文件列表
-//    增加表项openlist，用以打开文件路径
-    SqlInterface inter = new SqlInterface();
-    String dbName = "showui";
-%>
+
 <%
 //    表名使用模块名
     String tableName = app_CurrentPath.toLowerCase().substring(1)
@@ -129,12 +130,22 @@
     <a href="insert.jsp" target="_blank">写入</a>
     <form name="form3" method="post" action="explorer.jsp">
         <input type="text"
-<%--               size="4"--%>
-<%--               class="text2"--%>
+               size="40"
+               class="text1"
                name="searchkey"
+               placeholder="请输入查询的内容"
         <%--readonly="readonly"--%>
                value=""/>
+        <input type="submit" class="text1" name="Submit" value="点击查询"/>
     </form>
+    <div style="background:greenyellow; color:blue">
+        <%
+            if(!searchkey.trim().isEmpty()) {
+                out.write("查找:" + inter.getGbkSign(searchkey));
+            }
+        %>
+    </div>
+
 </h1>
 <%--<h1>时钟时间</h1>--%>
 <%!
