@@ -115,6 +115,10 @@ public class CheckFile {
     public static void getFiles(String filePath){
         File root = new File(filePath);
         File[] files = root.listFiles();
+        if(null== files)
+        {
+            return;
+        }
         for(File file:files){
             if(file.isDirectory()){
                 /*

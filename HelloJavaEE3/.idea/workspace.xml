@@ -2,15 +2,14 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="hello" />
+      <artifact name="weilai" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f3158e1-4520-4f9f-add1-db9f54a74a32" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/web/file/deletebeyondcomparefiles.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/file/CheckFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/file/CheckFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sql/insertdb.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/sql/insertdb.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/sql/bselectdb.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/sql/bselectdb.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -467,7 +466,7 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
             </expand>
             <select />
@@ -619,7 +618,9 @@
       <workItem from="1575379835129" duration="687000" />
       <workItem from="1575380902133" duration="4345000" />
       <workItem from="1577019526825" duration="3410000" />
-      <workItem from="1577446495349" duration="11061000" />
+      <workItem from="1577446495349" duration="11171000" />
+      <workItem from="1577458747124" duration="191000" />
+      <workItem from="1577459060751" duration="717000" />
     </task>
     <servers />
   </component>
@@ -665,26 +666,26 @@
       <screen x="0" y="0" width="1291" height="768" />
     </state>
     <state x="411" y="195" key="FileChooserDialogImpl/0.0.1291.768@0.0.1291.768" timestamp="1577020954554" />
-    <state width="1672" height="326" key="GridCell.Tab.0.bottom" timestamp="1577458603442">
+    <state width="1672" height="326" key="GridCell.Tab.0.bottom" timestamp="1577459805006">
       <screen x="75" y="0" width="1845" height="1080" />
     </state>
     <state width="1014" height="214" key="GridCell.Tab.0.bottom/0.0.1291.768@0.0.1291.768" timestamp="1577022367523" />
-    <state width="1672" height="326" key="GridCell.Tab.0.bottom/75.0.1845.1080@75.0.1845.1080" timestamp="1577458603442" />
-    <state width="1672" height="326" key="GridCell.Tab.0.center" timestamp="1577458603442">
+    <state width="1672" height="326" key="GridCell.Tab.0.bottom/75.0.1845.1080@75.0.1845.1080" timestamp="1577459805006" />
+    <state width="1672" height="326" key="GridCell.Tab.0.center" timestamp="1577459805006">
       <screen x="75" y="0" width="1845" height="1080" />
     </state>
     <state width="1014" height="214" key="GridCell.Tab.0.center/0.0.1291.768@0.0.1291.768" timestamp="1577022367523" />
-    <state width="1672" height="326" key="GridCell.Tab.0.center/75.0.1845.1080@75.0.1845.1080" timestamp="1577458603442" />
-    <state width="1672" height="326" key="GridCell.Tab.0.left" timestamp="1577458603442">
+    <state width="1672" height="326" key="GridCell.Tab.0.center/75.0.1845.1080@75.0.1845.1080" timestamp="1577459805006" />
+    <state width="1672" height="326" key="GridCell.Tab.0.left" timestamp="1577459805006">
       <screen x="75" y="0" width="1845" height="1080" />
     </state>
     <state width="1014" height="214" key="GridCell.Tab.0.left/0.0.1291.768@0.0.1291.768" timestamp="1577022367523" />
-    <state width="1672" height="326" key="GridCell.Tab.0.left/75.0.1845.1080@75.0.1845.1080" timestamp="1577458603442" />
-    <state width="1672" height="326" key="GridCell.Tab.0.right" timestamp="1577458603442">
+    <state width="1672" height="326" key="GridCell.Tab.0.left/75.0.1845.1080@75.0.1845.1080" timestamp="1577459805006" />
+    <state width="1672" height="326" key="GridCell.Tab.0.right" timestamp="1577459805006">
       <screen x="75" y="0" width="1845" height="1080" />
     </state>
     <state width="1014" height="214" key="GridCell.Tab.0.right/0.0.1291.768@0.0.1291.768" timestamp="1577022367523" />
-    <state width="1672" height="326" key="GridCell.Tab.0.right/75.0.1845.1080@75.0.1845.1080" timestamp="1577458603442" />
+    <state width="1672" height="326" key="GridCell.Tab.0.right/75.0.1845.1080@75.0.1845.1080" timestamp="1577459805006" />
     <state width="1014" height="214" key="GridCell.Tab.1.bottom" timestamp="1577022367524">
       <screen x="0" y="0" width="1291" height="768" />
     </state>
@@ -722,10 +723,10 @@
     </state>
     <state x="251" y="0" key="SettingsEditor/0.0.1291.768@0.0.1291.768" timestamp="1577022121220" />
     <state x="528" y="184" key="SettingsEditor/75.0.1845.1080@75.0.1845.1080" timestamp="1575384927806" />
-    <state x="665" y="286" width="1055" height="508" key="find.popup" timestamp="1577450149832">
+    <state x="665" y="286" width="1055" height="508" key="find.popup" timestamp="1577459433872">
       <screen x="75" y="0" width="1845" height="1080" />
     </state>
-    <state x="665" y="286" width="1055" height="508" key="find.popup/75.0.1845.1080@75.0.1845.1080" timestamp="1577450149832" />
+    <state x="665" y="286" width="1055" height="508" key="find.popup/75.0.1845.1080@75.0.1845.1080" timestamp="1577459433872" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
