@@ -160,11 +160,16 @@ public class SqlInterface {
                 continue;
             }
             sql = sql.replaceAll("egid", getCombineFirstInterger(openitem));
-            //从alldb中查找数据
-            result = getSqlResult(dbName_alldb, tableName_abc, sql, 3);
-            if(checkStringContainKeyList(result, key, openitem).trim().isEmpty())
+            if(openitem.toLowerCase().contains(key.toLowerCase()))
             {
-                continue;
+
+            }
+            else {
+                //从alldb中查找数据
+                result = getSqlResult(dbName_alldb, tableName_abc, sql, 3);
+                if (checkStringContainKeyList(result, key, openitem).trim().isEmpty()) {
+                    continue;
+                }
             }
             reslist.add(openitem);
         }
