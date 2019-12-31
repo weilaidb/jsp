@@ -104,7 +104,7 @@ public class SqlInterface {
         return "";
     }
 
-    public String checkStringContainKeyList(String content, String key)
+    public String checkStringContainKeyList(String content, String key,String orgDbItem)
     {
         String result = "";
         String[] qrylst = key
@@ -117,7 +117,13 @@ public class SqlInterface {
                 String itemkey = new String(qrylst[lp].getBytes("iso-8859-1"), "utf-8");
 //                System.out.println("itemkey:"  + itemkey);
 //                System.out.println("content:"  + content);
-                if(!content.contains(itemkey))
+                if(orgDbItem.toLowerCase().contains(itemkey.toLowerCase()))
+                {
+                    count++;
+                    continue;
+                }
+
+                if(!content.toLowerCase().contains(itemkey.toLowerCase()))
                 {
                     break;
                 }
@@ -156,7 +162,7 @@ public class SqlInterface {
             sql = sql.replaceAll("egid", getCombineFirstInterger(openitem));
             //从alldb中查找数据
             result = getSqlResult(dbName_alldb, tableName_abc, sql, 3);
-            if(checkStringContainKeyList(result, key).trim().isEmpty())
+            if(checkStringContainKeyList(result, key, openitem).trim().isEmpty())
             {
                 continue;
             }
