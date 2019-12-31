@@ -57,25 +57,25 @@ public class SqlInterface {
             }
         }
         //排列方式
-        Collections.sort(reslist,new Comparator<String>() {
+        Collections.sort(reslist, new Comparator<String>() {
             @Override
             public int compare(String o1, String o2) {
-                if(o1 == null || o2 == null){
+                if (o1 == null || o2 == null) {
                     return -1;
                 }
-                if(o1.length() > o2.length()){
+                if (o1.length() > o2.length()) {
                     return 1;
                 }
-                if(o1.length() < o2.length()){
+                if (o1.length() < o2.length()) {
                     return -1;
                 }
-                if(o1.compareTo(o2) > 0){
+                if (o1.compareTo(o2) > 0) {
                     return 1;
                 }
-                if(o1.compareTo(o2) < 0){
+                if (o1.compareTo(o2) < 0) {
                     return -1;
                 }
-                if(o1.compareTo(o2) == 0){
+                if (o1.compareTo(o2) == 0) {
                     return 0;
                 }
                 return 0;
@@ -85,17 +85,15 @@ public class SqlInterface {
         return reslist;
     }
 
-    public String getCombineFirstInterger(String item)
-    {
+    public String getCombineFirstInterger(String item) {
         String[] splitlst = item.split("\\s+", 2);
-        if(splitlst.length < 2)
-        {
+        if (splitlst.length < 2) {
             return "";
         }
-        return  splitlst[0].trim();
+        return splitlst[0].trim();
     }
-    public String getGbkSign(String code)
-    {
+
+    public String getGbkSign(String code) {
         try {
             return new String(code.getBytes("iso-8859-1"), "utf-8");
         } catch (UnsupportedEncodingException e) {
@@ -104,8 +102,7 @@ public class SqlInterface {
         return "";
     }
 
-    public String checkStringContainKeyList(String content, String key,String orgDbItem)
-    {
+    public String checkStringContainKeyList(String content, String key) {
         String result = "";
         String[] qrylst = key
                 .replace("\"", "\\\"")
@@ -117,14 +114,7 @@ public class SqlInterface {
                 String itemkey = new String(qrylst[lp].getBytes("iso-8859-1"), "utf-8");
 //                System.out.println("itemkey:"  + itemkey);
 //                System.out.println("content:"  + content);
-                if(orgDbItem.toLowerCase().contains(itemkey.toLowerCase()))
-                {
-                    count++;
-                    continue;
-                }
-
-                if(!content.toLowerCase().contains(itemkey.toLowerCase()))
-                {
+                if (!content.toLowerCase().contains(itemkey.toLowerCase())) {
                     break;
                 }
                 count++;
@@ -133,8 +123,7 @@ public class SqlInterface {
             }
         }
 
-        if(count == qrylst.length)
-        {
+        if (count == qrylst.length) {
             result = "containall";
         }
 
@@ -142,10 +131,8 @@ public class SqlInterface {
     }
 
 
-    public List<String> getAllDescByKey(String dbName, String tableName, String key)
-    {
-        if(key.trim().isEmpty())
-        {
+    public List<String> getAllDescByKey(String dbName, String tableName, String key) {
+        if (key.trim().isEmpty()) {
             return getAllDesc(dbName, tableName, "");
         }
         List<String> reslist = new ArrayList<>();
@@ -155,30 +142,27 @@ public class SqlInterface {
                 openlist) {
             sql = "SELECT * FROM egtable where id = egid";
             sql = sql.replaceAll("egtable", tableName_abc);
-            if(getCombineFirstInterger(openitem).trim().isEmpty())
-            {
+            if (getCombineFirstInterger(openitem).trim().isEmpty()) {
                 continue;
             }
             sql = sql.replaceAll("egid", getCombineFirstInterger(openitem));
-            if(openitem.toLowerCase().contains(key.toLowerCase()))
-            {
+            if (!checkStringContainKeyList(openitem, key).trim().isEmpty()) {
 
-            }
-            else {
+            } else {
                 //从alldb中查找数据
                 result = getSqlResult(dbName_alldb, tableName_abc, sql, 3);
-                if (checkStringContainKeyList(result, key, openitem).trim().isEmpty()) {
+                if (checkStringContainKeyList(result, key).trim().isEmpty()) {
                     continue;
                 }
             }
             reslist.add(openitem);
         }
 
-        return  reslist;
+        return reslist;
     }
+
     //获取sql执行结果
-    public String getSqlResult(String dbName, String tableName, String sql, int columnindex)
-    {
+    public String getSqlResult(String dbName, String tableName, String sql, int columnindex) {
         String result = "";
         try {
             Class.forName(DBDRIVER);
@@ -203,8 +187,7 @@ public class SqlInterface {
         return result;
     }
 
-    public List<String> getAllDesc(String dbName, String tableName, String colname)
-    {
+    public List<String> getAllDesc(String dbName, String tableName, String colname) {
         List<String> reslist = new ArrayList<>();
         try {
             Class.forName(DBDRIVER);
@@ -235,10 +218,10 @@ public class SqlInterface {
             }
         }
         //排列方式
-        Collections.sort(reslist,new Comparator<String>() {
+        Collections.sort(reslist, new Comparator<String>() {
             @Override
             public int compare(String o1, String o2) {
-                if(o1 == null || o2 == null){
+                if (o1 == null || o2 == null) {
                     return -1;
                 }
 //                if(o1.length() > o2.length()){
@@ -247,13 +230,13 @@ public class SqlInterface {
 //                if(o1.length() < o2.length()){
 //                    return -1;
 //                }
-                if(o1.compareTo(o2) > 0){
+                if (o1.compareTo(o2) > 0) {
                     return 1;
                 }
-                if(o1.compareTo(o2) < 0){
+                if (o1.compareTo(o2) < 0) {
                     return -1;
                 }
-                if(o1.compareTo(o2) == 0){
+                if (o1.compareTo(o2) == 0) {
                     return 0;
                 }
                 return 0;
@@ -329,8 +312,7 @@ public class SqlInterface {
         String resempty = "数据为空!";
 
         try {
-            if(files.trim().isEmpty())
-            {
+            if (files.trim().isEmpty()) {
                 return resempty;
             }
             Class.forName(DBDRIVER);
@@ -373,8 +355,7 @@ public class SqlInterface {
         String resempty = "数据为空!";
 
         try {
-            if(file.trim().isEmpty())
-            {
+            if (file.trim().isEmpty()) {
                 return resempty;
             }
             Class.forName(DBDRIVER);
@@ -384,11 +365,11 @@ public class SqlInterface {
 //            file = new String(file.getBytes("iso-8859-1"), "utf-8");
 
             file = file.replace("\\", "\\\\")
-                        .replace("\"", "\"\"");
+                    .replace("\"", "\"\"");
             sql = "delete from egtable where name=\"filexxx\"";
             sql = sql.replace("egtable", tableName)
                     .replace("filexxx", file);
-                System.out.println(sql);
+            System.out.println(sql);
             pstmt = conn.prepareStatement(sql);
             pstmt.execute();
 
