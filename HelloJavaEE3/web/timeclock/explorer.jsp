@@ -2,58 +2,11 @@
 <%@ page import="java.util.List" %>
 <%@ page import="java.lang.String" %>
 <%@ page import="com.commmon.SqlInterface" %>
-
-<%--
-  Created by IntelliJ IDEA.
-  User: dell
-  Date: 2019/4/19
-  Time: 21:59
-  To change this template use File | Settings | File Templates.
---%>
+<%@ page import="com.commmon.CharacterFilter" %>
+<%@ page import="java.util.ArrayList" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java"
          pageEncoding="UTF-8" %>
 <%@include file="../common/basepath.jsp"%>
-<%
-    //    打开的文件列表
-//    增加表项openlist，用以打开文件路径
-    SqlInterface inter = new SqlInterface();
-    String dbName = "showui";
-%>
-<%
-    String searchkey = request.getParameter("searchkey");
-    if (searchkey != null && searchkey.trim() != "") {
-        try {
-            System.out.println("defaultCharset " + Charset.defaultCharset());
-            System.out.println("searchkey:" + searchkey);
-//            out.write("searchkey:"+ inter.getGbkSign(searchkey));
-        } catch (Exception e) {
-            e.printStackTrace();
-            out.write(e.getMessage());
-        }
-    }else {
-        searchkey = "";
-    }
-%>
-
-
-<%
-//    表名使用模块名
-    String tableName = app_CurrentPath.toLowerCase().substring(1)
-            .replaceAll("\\/.*", "");
-    System.out.println("tablename:" + tableName);
-%>
-
-<%
-
-    List<String> openlist = inter.getAllDescByKey(dbName, tableName, searchkey);
-//    for (String file :
-//            openlist) {
-//        System.out.println(file);
-//    }
-
-%>
-
-
 
 <%--================css配置=========================--%>
 <style type="text/css">
@@ -88,7 +41,8 @@
         width: 70%;
         text-align: left;
         font-family: "Courier New";
-        font-size: xx-large;
+        font-size: large;
+        font-style: oblique;
         border-width: thin;
         /*border-color: darkviolet;*/
         /*background-color: silver;*/
@@ -106,6 +60,38 @@
     }
 </style>
 
+<%
+    //    打开的文件列表
+//    增加表项openlist，用以打开文件路径
+    SqlInterface inter = new SqlInterface();
+    String dbName = "showui";
+
+    String searchkey = request.getParameter("searchkey");
+    if (searchkey != null && searchkey.trim() != "") {
+        try {
+            System.out.println("defaultCharset " + Charset.defaultCharset());
+            System.out.println("searchkey:" + searchkey);
+//            out.write("searchkey:"+ inter.getGbkSign(searchkey));
+        } catch (Exception e) {
+            e.printStackTrace();
+            out.write(e.getMessage());
+        }
+    }else {
+        searchkey = "";
+    }
+
+//    表名使用模块名
+    String tableName = app_CurrentPath.toLowerCase().substring(1)
+            .replaceAll("\\/.*", "");
+    System.out.println("tablename:" + tableName);
+
+    List<String> openlist = inter.getAllDescByKey(dbName, tableName, searchkey);
+//    for (String file :
+//            openlist) {
+//        System.out.println(file);
+//    }
+    List<String> showlist = new ArrayList<>();
+%>
 
 <html>
 <head>
@@ -130,7 +116,7 @@
     <a href="insert.jsp" target="_blank">写入</a>
     <form name="form3" method="post" action="explorer.jsp">
         <input type="text"
-               size="40"
+               size="30"
                class="text1"
                name="searchkey"
                placeholder="请输入查询的内容"
@@ -172,32 +158,42 @@
         }
     }
 
-    for (String file :
-            openlist) {
-        String[] splitlst = file.split("\\s+", 2);
-        if(splitlst.length < 2)
-        {
-            continue;
-        }
-        /**
-         * 第一个不为索引的不处理
-         */
-        if(false == isNumeric(splitlst[0].trim()))
-        {
-            continue;
-        }
 %>
-    <form name="form2" method="post"  target="frame_right" action="<%=app_basePath%>/sql/queryidwithmodify.jsp">
-        <input type="text"
-               size="4"
-               class="text2"
-               name="iddata"
-        <%--readonly="readonly"--%>
-               value="<%=splitlst[0].trim()%>"/>
-        <input type="submit" name="submit" value="<%=splitlst[1].trim()%>" class="submitbtn"/>
-    </form>
-</h3>
 
+<%
+    showlist = CharacterFilter.gotHeaderSameList(openlist,"http",2,true);
+    System.out.println("httpshowlist:" + showlist.size());
+    for (String showstr :
+            showlist) {
+        String httpname = CharacterFilter.strBySpaceIndex(showstr,3,1);
+        String showname = CharacterFilter.strBySpaceIndex(showstr,3,2);
+        %>
+<h3>
+        <a href="<%=httpname%>" target="_blank"><%=showname%></a>
+<br/>
+</h3>
+<%
+    }
+%>
+
+<%
+    showlist = CharacterFilter.gotHeaderSameList(openlist,"http",2,false);
+//    out.write("showlist:" + showlist.size());
+    System.out.println("othershowlist:" + showlist.size());
+    for (String showstr :
+            showlist) {
+        String numname = CharacterFilter.strBySpaceIndex(showstr,2,0).trim();
+        String showname = CharacterFilter.strBySpaceIndex(showstr,2,1).trim();
+%>
+<form name="form2" method="post"  target="frame_right" action="<%=app_basePath%>/sql/queryidwithmodify.jsp">
+    <input type="text"
+           size="4"
+           class="text2"
+           name="iddata"
+    <%--readonly="readonly"--%>
+           value="<%=numname%>"/>
+    <input type="submit" name="submit" value="<%=showname%>" class="submitbtn"/>
+</form>
 <%
     }
 %>
