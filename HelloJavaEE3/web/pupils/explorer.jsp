@@ -169,10 +169,10 @@
         String httpname = CharacterFilter.strBySpaceIndex(showstr,3,1);
         String showname = CharacterFilter.strBySpaceIndex(showstr,3,2);
         %>
-<h3>
+<h1>
         <a href="<%=httpname%>" target="_blank"><%=showname%></a>
 <br/>
-</h3>
+</h1>
 <%
     }
 %>

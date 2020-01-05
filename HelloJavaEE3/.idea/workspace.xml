@@ -2,18 +2,11 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="hello" />
+      <artifact name="weilai" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f3158e1-4520-4f9f-add1-db9f54a74a32" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/sql script/create_pupils.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/pupils/add.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/pupils/delete.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/pupils/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/pupils/insert.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/frame-left.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/frame-left.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/pupils/explorer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/pupils/explorer.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -471,7 +464,7 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
             </expand>
             <select />
@@ -631,7 +624,7 @@
       <workItem from="1578180105036" duration="19000" />
       <workItem from="1578180168722" duration="5643000" />
       <workItem from="1578187685959" duration="156000" />
-      <workItem from="1578220216682" duration="764000" />
+      <workItem from="1578220216682" duration="966000" />
     </task>
     <servers />
   </component>
