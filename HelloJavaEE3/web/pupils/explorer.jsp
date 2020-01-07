@@ -91,7 +91,7 @@
 //            openlist) {
 //        System.out.println(file);
 //    }
-    List<String> showlist = new ArrayList<>();
+//    List<String> showlist = new ArrayList<String>();
 %>
 
 <html>
@@ -158,11 +158,10 @@
             out.write(e.getMessage());
         }
     }
-
 %>
 
 <%
-    showlist = CharacterFilter.gotHeaderSameList(openlist,"http",2,true);
+    List<String> showlist = CharacterFilter.gotHeaderSameList(openlist,"http",2,true);
     System.out.println("httpshowlist:" + showlist.size());
     for (String showstr :
             showlist) {
