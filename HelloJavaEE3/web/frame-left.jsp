@@ -38,7 +38,7 @@
     <a href="pupils/explorer.jsp"  target="_blank">儿童专用</a></p>
 </div>
 
-<h3>版本(V4.7)</h3>
+<h3>版本(V4.8)</h3>
 
 </body>
 </html>
