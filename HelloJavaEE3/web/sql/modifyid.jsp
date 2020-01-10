@@ -11,7 +11,8 @@
 
 <%--================引入头文件=========================--%>
 <%@page import="java.sql.*" %>
-<%@ page import="weilaidb.sql.SqlProc" %>  <%--导入java.sql包--%>
+<%@ page import="weilaidb.sql.SqlProc" %>
+<%@ page import="com.timedate.DateTimePub" %>  <%--导入java.sql包--%>
 <%--<%@ include file="../css/bdata.css"%>--%>
 <link href="../css/bdata.css" rel="stylesheet" type="text/css"/>
 
@@ -85,6 +86,7 @@
         insertval = new String(modifydata.getBytes("iso-8859-1"), "utf-8");
         insertval = insertval.replace("\"", "\"\"");
         insertval = insertval.replace("\\", "\\\\");
+        insertval = insertval + DateTimePub.getCurrentDateTimeOneLine();
         String nameval = insertval.substring(0, insertval.length() > 100 ? 100 : insertval.length())
                 + System.currentTimeMillis();
         if (!insertval.isEmpty()) {

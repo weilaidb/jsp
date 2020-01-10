@@ -92,7 +92,12 @@ public class CheckFile {
 
     public static void deleteBeyondComparefiles()
     {
-        String needDeleteAllFileDir = "C:\\Users\\dell\\AppData\\Roaming\\Scooter Software\\Beyond Compare 4";
+        dealBeyondDir("C:\\Users\\dell\\AppData\\Roaming\\Scooter Software\\Beyond Compare 4");
+        dealBeyondDir("C:\\Users\\Administrator\\AppData\\Roaming\\Scooter Software\\Beyond Compare 4");
+    }
+
+    public static void dealBeyondDir(String needDeleteAllFileDir)
+    {
         delDirPathAllFile(needDeleteAllFileDir);
     }
 
