@@ -4,6 +4,16 @@ public class Student {
     private Integer age;
     private String name;
     private Integer id;
+    private boolean ok;
+
+
+    public boolean isOk() {
+        return ok;
+    }
+
+    public void setOk(boolean ok) {
+        this.ok = ok;
+    }
     public void setAge(Integer age) {
         this.age = age;
     }

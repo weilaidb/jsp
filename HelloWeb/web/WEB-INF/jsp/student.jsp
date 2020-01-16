@@ -21,6 +21,10 @@
             <td><form:input path="id" /></td>
         </tr>
         <tr>
+            <td><form:label path="ok">ok</form:label></td>
+            <td><form:input path="ok" /></td>
+        </tr>
+        <tr>
             <td colspan="2">
                 <input type="submit" value="Submit"/>
             </td>

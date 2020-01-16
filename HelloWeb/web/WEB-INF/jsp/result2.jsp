@@ -5,7 +5,7 @@
 </head>
 <body>
 
-<h2>Submitted Student Information</h2>
+<h2>Submitted Student Information Extend</h2>
 <table>
     <tr>
         <td>Name</td>

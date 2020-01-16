@@ -18,6 +18,7 @@ public class StudentController {
         model.addAttribute("name", student.getName());
         model.addAttribute("age", student.getAge());
         model.addAttribute("id", student.getId());
-        return "result";
+        model.addAttribute("ok", student.isOk());
+        return "result2";//返回是jsp的名称
     }
 }
