@@ -1,4 +1,4 @@
-package com.tutorialspoint;
+package com.bean;
 
 public class HelloWorld {
     private String message;
