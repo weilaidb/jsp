@@ -5,9 +5,10 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 <!--   getbeam传递的参数-->
-    <bean id="helloWorld" class="com.bean2.HelloWorld">
+    <bean id="helloWorld" class="com.spring.scope.prototype.HelloWorld"
+            scope="prototype">
 <!--        类中定义的属性-->
-        <property name="message" value="Hello World!"/>
+<!--        <property name="message" value="Hello World!"/>-->
     </bean>
 
 </beans>
