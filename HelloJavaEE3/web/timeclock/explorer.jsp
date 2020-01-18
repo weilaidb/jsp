@@ -90,7 +90,7 @@
 //            openlist) {
 //        System.out.println(file);
 //    }
-    List<String> showlist = new ArrayList<>();
+    List<String> showlist = new ArrayList<String>();
 %>
 
 <html>
