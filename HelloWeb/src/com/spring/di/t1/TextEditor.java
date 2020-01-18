@@ -1,4 +1,4 @@
-package com.spring.di;
+package com.spring.di.t1;
 
 public class TextEditor {
     private SpellChecker spellChecker;

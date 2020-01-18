@@ -1,4 +1,4 @@
-package com.spring.di;
+package com.spring.di.t3;
 
 public class SpellChecker {
     public SpellChecker(){
