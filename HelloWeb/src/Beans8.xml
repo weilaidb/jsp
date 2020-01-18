@@ -26,5 +26,5 @@
 
 
 
-    <bean class="com.spring.BeanPostProcessor.InitHelloWorld" />
+    <bean class="com.spring.di.BeanPostProcessor.InitHelloWorld" />
 </beans>

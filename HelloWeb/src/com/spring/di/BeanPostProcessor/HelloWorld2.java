@@ -1,4 +1,4 @@
-package com.spring.BeanPostProcessor;
+package com.spring.di.BeanPostProcessor;
 
 public class HelloWorld2 {
     private String message;

@@ -1,4 +1,4 @@
-package com.spring.BeanPostProcessor;
+package com.spring.di.BeanPostProcessor;
 
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

@@ -1,15 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
-<!--   getbeam传递的参数-->
-    <bean id="helloWorld" class="com.spring.di.BeanPostProcessor.HelloWorld2"
-            init-method="init" destroy-method="destroy">
-<!--        类中定义的属性-->
+
+    <bean id="helloWorld" class="com.spring.di.t8event.HelloWorld">
         <property name="message" value="Hello World!"/>
     </bean>
 
-    <bean class="com.spring.di.BeanPostProcessor.InitHelloWorld" />
+    <bean id="cStartEventHandler"
+          class="com.spring.di.t8event.CStartEventHandler"/>
+
+    <bean id="cStopEventHandler"
+          class="com.spring.di.t8event.CStopEventHandler"/>
+
 </beans>
