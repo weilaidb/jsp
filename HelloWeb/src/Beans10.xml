@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+<!--   getbeam传递的参数-->
+    <!-- Definition for textEditor bean -->
+    <bean id="textEditor" class="com.spring.scope.di2.TextEditor">
+<!--      ref表示reference，传递引用
+          如果你要把一个引用传递给一个对象，那么你需要使用 标签的 ref 属性，
+          而如果你要直接传递一个值，那么你应该使用 value 属性。  -->
+        <property name="spellChecker" ref="spellCheckerxx"/>
+        <property name="spellChecker2" ref="spellCheckerxx"/>
+    </bean>
+
+    <!-- Definition for spellChecker bean -->
+    <bean id="spellCheckerxx" class="com.spring.scope.di2.SpellChecker">
+    </bean>
+</beans>
