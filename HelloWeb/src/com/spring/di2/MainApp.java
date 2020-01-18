@@ -1,4 +1,4 @@
-package com.spring.scope.di2;
+package com.spring.di2;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
