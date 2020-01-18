@@ -5,16 +5,16 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 <!--   getbeam传递的参数-->
-    <bean id="helloWorld" class="com.spring.scope.Inherited.HelloWorld">
+    <bean id="helloWorld" class="com.spring.Inherited.HelloWorld">
         <property name="message1" value="Hello World!"/>
         <property name="message2" value="Hello Second World!"/>
     </bean>
 
-    <bean id="helloIndia" class="com.spring.scope.Inherited.HelloIndia" parent="helloWorld">
+    <bean id="helloIndia" class="com.spring.Inherited.HelloIndia" parent="helloWorld">
         <property name="message1" value="Hello India!"/>
         <property name="message3" value="Namaste India!"/>
     </bean>
 
 
-    <bean class="com.spring.scope.BeanPostProcessor.InitHelloWorld" />
+    <bean class="com.spring.BeanPostProcessor.InitHelloWorld" />
 </beans>

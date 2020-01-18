@@ -1,4 +1,4 @@
-package com.spring.scope.Inherited2;
+package com.spring.Inherited2;
 
 public class HelloIndia {
     private String message1;

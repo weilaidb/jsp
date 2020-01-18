@@ -1,6 +1,6 @@
-package com.spring.scope.BeanPostProcessor;
+package com.spring.lifecycle;
 
-public class HelloWorld2 {
+public class HelloWorld {
     private String message;
     public void setMessage(String message){
         this.message  = message;

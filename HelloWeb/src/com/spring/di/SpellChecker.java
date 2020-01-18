@@ -1,4 +1,4 @@
-package com.spring.scope.di;
+package com.spring.di;
 
 public class SpellChecker {
     public SpellChecker(){

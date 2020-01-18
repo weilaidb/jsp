@@ -5,11 +5,11 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 <!--   getbeam传递的参数-->
-    <bean id="helloWorld" class="com.spring.scope.BeanPostProcessor.HelloWorld2"
+    <bean id="helloWorld" class="com.spring.BeanPostProcessor.HelloWorld2"
             init-method="init" destroy-method="destroy">
 <!--        类中定义的属性-->
         <property name="message" value="Hello World!"/>
     </bean>
 
-    <bean class="com.spring.scope.BeanPostProcessor.InitHelloWorld" />
+    <bean class="com.spring.BeanPostProcessor.InitHelloWorld" />
 </beans>

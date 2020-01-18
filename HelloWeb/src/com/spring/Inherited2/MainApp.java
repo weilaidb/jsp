@@ -1,4 +1,4 @@
-package com.spring.scope.Inherited2;
+package com.spring.Inherited2;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

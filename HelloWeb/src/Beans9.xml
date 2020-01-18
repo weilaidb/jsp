@@ -6,11 +6,11 @@
     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 <!--   getbeam传递的参数-->
     <!-- Definition for textEditor bean -->
-    <bean id="textEditor" class="com.spring.scope.di.TextEditor">
+    <bean id="textEditor" class="com.spring.di.TextEditor">
         <constructor-arg ref="spellChecker"/>
     </bean>
 
     <!-- Definition for spellChecker bean -->
-    <bean id="spellChecker" class="com.spring.scope.di.SpellChecker">
+    <bean id="spellChecker" class="com.spring.di.SpellChecker">
     </bean>
 </beans>

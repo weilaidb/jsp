@@ -12,19 +12,19 @@
     </bean>
 
 <!--    由于message3属性在HelloWorld中没有，所以无法继承-->
-<!--    <bean id="helloWorld" class="com.spring.scope.Inherited2.HelloWorld" parent="beanTeamplate">-->
-    <bean id="helloWorld" class="com.spring.scope.Inherited2.HelloWorld">
+<!--    <bean id="helloWorld" class="com.spring.Inherited2.HelloWorld" parent="beanTeamplate">-->
+    <bean id="helloWorld" class="com.spring.Inherited2.HelloWorld">
         <property name="message1" value="Hello World!"/>
         <property name="message2" value="Hello Second World!"/>
     </bean>
 
 
-    <bean id="helloIndia" class="com.spring.scope.Inherited2.HelloIndia" parent="beanTeamplate">
+    <bean id="helloIndia" class="com.spring.Inherited2.HelloIndia" parent="beanTeamplate">
         <property name="message1" value="Hello India!"/>
         <property name="message3" value="Namaste India!"/>
     </bean>
 
 
 
-    <bean class="com.spring.scope.BeanPostProcessor.InitHelloWorld" />
+    <bean class="com.spring.BeanPostProcessor.InitHelloWorld" />
 </beans>
