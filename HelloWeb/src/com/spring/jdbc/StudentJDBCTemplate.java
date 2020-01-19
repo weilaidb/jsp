@@ -34,6 +34,15 @@ public class StudentJDBCTemplate implements StudentDAO {
         System.out.println("Deleted Record with ID = " + id );
         return;
     }
+
+    public void deleteRange(Integer idb, Integer ide)
+    {
+        for (Integer lp = idb; lp < ide;lp++)
+        {
+            delete(lp);
+        }
+    }
+
     public void update(Integer id, Integer age){
         String SQL = "update Student set age = ? where id = ?";
         jdbcTemplateObject.update(SQL, age, id);

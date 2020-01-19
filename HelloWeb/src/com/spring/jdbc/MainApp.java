@@ -22,12 +22,15 @@ public class MainApp {
             System.out.print(", Name : " + record.getName() );
             System.out.println(", Age : " + record.getAge());
         }
-        System.out.println("----Updating Record with ID = 2 -----" );
-        studentJDBCTemplate.update(2, 20);
-        System.out.println("----Listing Record with ID = 2 -----" );
-        Student student = studentJDBCTemplate.getStudent(2);
-        System.out.print("ID : " + student.getId() );
-        System.out.print(", Name : " + student.getName() );
-        System.out.println(", Age : " + student.getAge());
+//        System.out.println("----Updating Record with ID = 2 -----" );
+//        studentJDBCTemplate.update(2, 20);
+//        System.out.println("----Listing Record with ID = 2 -----" );
+//        Student student = studentJDBCTemplate.getStudent(2);
+//        System.out.print("ID : " + student.getId() );
+//        System.out.print(", Name : " + student.getName() );
+//        System.out.println(", Age : " + student.getAge());
+
+//        studentJDBCTemplate.delete(2);
+        studentJDBCTemplate.deleteRange(1,12);
     }
 }
