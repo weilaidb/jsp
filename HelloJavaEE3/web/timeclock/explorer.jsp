@@ -30,20 +30,24 @@
     }
 
     .text2 {
-        height: 1px;
+        height: 0px;
         width: 0px;
         border: black;
         border-color: black;
     }
+    .form2{
+        margin: 5px;
+
+    }
 
     .submitbtn {
-        height: 50px;
-        width: 70%;
+        height: 25px;
+        width: 90%;
         text-align: left;
         font-family: "Courier New";
-        font-size: large;
-        font-style: oblique;
-        border-width: thin;
+        font-size: small;
+        /*font-style: oblique;*/
+        /*border-width: thin;*/
         /*border-color: darkviolet;*/
         /*background-color: silver;*/
     }
@@ -185,7 +189,7 @@
         String numname = CharacterFilter.strBySpaceIndex(showstr,2,0).trim();
         String showname = CharacterFilter.strBySpaceIndex(showstr,2,1).trim();
 %>
-<form name="form2" method="post"  target="frame_right" action="<%=app_basePath%>/sql/queryidwithmodify.jsp">
+<form name="form2" class="form2" method="post"  target="frame_right" action="<%=app_basePath%>/sql/queryidwithmodify.jsp">
     <input type="text"
            size="4"
            class="text2"
