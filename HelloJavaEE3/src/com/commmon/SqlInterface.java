@@ -26,6 +26,36 @@ public class SqlInterface {
     //我么要执行创建表的DDl语句
     public static String creatsql = "create table egtable (name varchar(4096))  ENGINE=InnoDB AUTO_INCREMENT=217 DEFAULT CHARSET=utf8";
 
+    //获取最新索引号
+    public Integer getMaxId(String dbName, String tableName)
+    {
+        Integer maxid = 0;
+        try {
+            Class.forName(DBDRIVER);
+            conn = DriverManager.getConnection(DBURL.replaceAll("mldn", dbName), DBUSER, DBPASS);
+            sql = "SELECT max(id) FROM egtable";
+            sql = sql.replaceAll("egtable", tableName);
+            pstmt = conn.prepareStatement(sql);
+            rs = pstmt.executeQuery();
+            while (rs.next()) {
+                maxid = rs.getInt(1);
+                break;
+            }
+        } catch (Exception e) {
+            System.out.print(e);
+        } finally {
+            try {
+                rs.close();
+                pstmt.close();
+                conn.close();
+            } catch (Exception e) {
+
+            }
+        }
+        return  maxid;
+    }
+
+
     public List<String> getAll(String dbName, String tableName, String colname) {
         List<String> reslist = new ArrayList<>();
         try {

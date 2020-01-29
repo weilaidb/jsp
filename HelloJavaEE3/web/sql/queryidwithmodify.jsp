@@ -11,7 +11,8 @@
 
 <%--================引入头文件=========================--%>
 <%@page import="java.sql.*" %>
-<%@ page import="weilaidb.sql.SqlProc" %>  <%--导入java.sql包--%>
+<%@ page import="weilaidb.sql.SqlProc" %>
+<%@ page import="com.commmon.SqlInterface" %>  <%--导入java.sql包--%>
 <%@include file="../common/basepath.jsp"%>
 
 <script language="JavaScript">
@@ -106,25 +107,42 @@
 <%--================获取查询数据================--%>
 <%--================打开数据库================--%>
 <%
+    Connection conn = null;
+    String dbname = "alldb";
+    Statement stmt = null;
+    ResultSet rs = null;
+    String sql = "";  //查询语句
+    String tablename = "abc";
     String qryiddata = "";
     try {
         qryiddata = request.getParameter("iddata");
     } catch (Exception e) {
     }
+
+    if(null == qryiddata)
+    {
+        qryiddata = "";
+    }
+
     try {
-        Connection conn = null;
-        String dbname = "alldb";
         conn = SqlProc.opendb(dbname);
         if (conn != null) {
 %>
 <form name="form1" method="post" action="modifyid.jsp">
 <table border="1" width="100%" height="100%" class='mytable'>
     <%
-        int whichid = Integer.valueOf(qryiddata).intValue();
-        Statement stmt = null;
-        ResultSet rs = null;
-        String sql = "";  //查询语句
-        String tablename = "abc";
+        int whichid = 0;
+        if(qryiddata.isEmpty())
+        {
+            SqlInterface inter = new SqlInterface();
+            whichid = inter.getMaxId(dbname,tablename);
+            qryiddata = Integer.toString(whichid);
+        }
+        else
+        {
+            whichid = Integer.valueOf(qryiddata).intValue();
+        }
+
         sql = "SELECT * from " + tablename + " WHERE id=" + whichid + ";";  //查询语句
 
         stmt = conn.createStatement();
@@ -166,7 +184,7 @@
                 out.print("连接失败！");
             }
         } catch (Exception e) {
-            out.print("请输入查询数据!!!");
+            out.print("请输入查询数据!!!" + e.getMessage());
         }
     %>
 </table>
