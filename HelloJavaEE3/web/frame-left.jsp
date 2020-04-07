@@ -36,6 +36,11 @@
     <a href="modules/linux_driver/explorer.jsp" target="frame_right">Linux驱动</a></p>
 <%--    <a href="net/getip.jsp"         target="_blank">ip address</a></p>--%>
     <a href="pupils/explorer.jsp"  target="_blank">儿童专用</a></p>
+
+
+
+
+    <a href="test/createdbname.jsp"  target="_blank">创建数据库</a></p>
 </div>
 
 <h3>版本(V5.1)</h3>
