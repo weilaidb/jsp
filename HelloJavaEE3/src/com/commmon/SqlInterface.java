@@ -363,7 +363,9 @@ public class SqlInterface {
                     filelist) {
                 str = str.replace("\\", "\\\\")
                         .replace("\"", "\"\"");
-                sql = "insert into egtable values(NULL, \"filexxx\");";
+                //此处数据库表增加两列（创建时间，更新时间）
+//                sql = "insert into egtable values(NULL, \"filexxx\");";
+                sql = "insert into egtable values(NULL, \"filexxx\", NULL, NULL);";
                 sql = sql.replace("egtable", tableName)
                         .replace("filexxx", str);
 //                System.out.println(sql);
