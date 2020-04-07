@@ -21,10 +21,11 @@
 <div class="showui">
     <a href="login/login.jsp"       target="frame_right">记 事 本 (mysql)</a></p>
     <a href="sql/insertdb.jsp"      target="frame_right">输入数据(mysql)</a></p>
-    <%--    <a href="sql_bin/insertdb.jsp"  target="frame_right">输入数据(mysql bin)</a></p>--%>
+<%--    <a href="sql_bin/insertdb.jsp"  target="frame_right">输入数据(mysql bin)</a></p>--%>
 <%--    <a href="login_bin/login.jsp"   target="frame_right">记 事 本(mysql) bin</a></p>--%>
     <a href="sql/notebookalldb.jsp" target="frame_right">记事本(sqlite)[all.db]</a></p>
     <a href="timeclock/index.jsp"   target="_blank"     >时钟时间</a></p>
+    <a href="codesets/explorer.jsp"  target="_blank">代码集(codesets)</a></p>
     <a href="pubuse/explorer.jsp"   target="frame_right">公共使用</a></p>
     <a href="almperf/index.jsp"     target="_blank"     >性能告警</a></p>
     <a href="csharp/explorer.jsp"   target="frame_right">C#</a></p>
@@ -34,16 +35,16 @@
     <a href="dirinfo/index.jsp"     target="_blank">文件夹列表</a></p>
     <a href="modules/python/explorer.jsp"       target="frame_right">Python</a></p>
     <a href="modules/linux_driver/explorer.jsp" target="frame_right">Linux驱动</a></p>
-<%--    <a href="net/getip.jsp"         target="_blank">ip address</a></p>--%>
+    <%--    <a href="net/getip.jsp"         target="_blank">ip address</a></p>--%>
     <a href="pupils/explorer.jsp"  target="_blank">儿童专用</a></p>
 
 
 
 
-    <a href="test/createdbname.jsp"  target="_blank">创建数据库</a></p>
+<%--    <a href="test/createdbname.jsp"  target="_blank">创建数据库</a></p>--%>
 </div>
 
-<h3>版本(V5.1)</h3>
+<h3>版本(V5.2)</h3>
 
 </body>
 </html>

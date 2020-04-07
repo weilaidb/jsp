@@ -123,7 +123,7 @@ public class SqlInterface {
         return splitlst[0].trim();
     }
 
-    public String getGbkSign(String code) {
+    public static String getGbkSign(String code) {
         try {
             return new String(code.getBytes("iso-8859-1"), "utf-8");
         } catch (UnsupportedEncodingException e) {
@@ -132,6 +132,14 @@ public class SqlInterface {
         return "";
     }
 
+    public static String getGbk2UTF8(String code) {
+        try {
+            return new String(code.getBytes("GBK"), "utf-8");
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        return "";
+    }
     public String checkStringContainKeyList(String content, String key) {
         String result = "";
         String[] qrylst = key

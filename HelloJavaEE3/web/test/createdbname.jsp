@@ -23,6 +23,20 @@
         out.write("创建数据库失败 + " + dbName);
     }
 %>
+<%
+    String dbName2 = "hello2";
+    int ret2 = SqlProc.deleteDbname(dbName2);
+    if (ret2 == 0 )
+    {
+        out.write("删除数据库成功 + " + dbName2);
+    }
+    else
+    {
+        out.write("删除数据库失败 + " + dbName2);
+    }
+
+    SqlProc.createTableName(SqlProc.getDbnameShowUi(),"test1");
+%>
 
 </body>
 </html>
