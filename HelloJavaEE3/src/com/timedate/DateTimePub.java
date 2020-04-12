@@ -23,7 +23,7 @@ public class DateTimePub {
     {
         SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//设置日期格式
 //        System.out.println(df.format(new Date()));// new Date()为获取当前系统时间
-        return mulLine(20) + (df.format(new Date()));// new Date()为获取当前系统时间
+        return mulLine(3) + (df.format(new Date()));// new Date()为获取当前系统时间
     }
 
     public static String mulLine(int num)

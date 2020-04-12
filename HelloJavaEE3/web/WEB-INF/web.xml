@@ -25,6 +25,14 @@
         <url-pattern>/HelloWorld</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>Diary</servlet-name>
+        <servlet-class>Diary</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Diary</servlet-name>
+        <url-pattern>/diary</url-pattern>
+    </servlet-mapping>
 
     <servlet>
         <servlet-name>SqliteServlet</servlet-name>

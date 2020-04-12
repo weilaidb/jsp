@@ -1,20 +1,34 @@
 package weilaidb.sql;
 
 import com.commmon.SqlInterface;
+import com.sun.org.apache.xerces.internal.xs.StringList;
 
 import javax.swing.plaf.nimbus.State;
 import java.sql.*;
+import java.util.List;
 
 public class SqlProc {
-    static String username = "root";  //æ•°æ®åº“ç”¨æˆ·å
-    static String password = "Zzerp123";  //æ•°æ®åº“ç”¨æˆ·å¯†
-    static String existdbname = "mysql"; //å·²ç»å­˜åœ¨çš„æ•°æ®åº“
+    static String username = "root";  //Êı¾İ¿âÓÃ»§Ãû
+    static String password = "Zzerp123";  //Êı¾İ¿âÓÃ»§ÃÜ
+    static String existdbname = "mysql"; //ÒÑ¾­´æÔÚµÄÊı¾İ¿â
 
     public static String getDbnameShowUi() {
         return dbnameShowUi;
     }
 
-    static String dbnameShowUi = "showui"; //å·²ç»å­˜åœ¨çš„æ•°æ®åº“
+    static String dbnameShowUi = "showui"; //ÒÑ¾­´æÔÚµÄÊı¾İ¿â
+
+    public static String getDbnameAlldb() {
+        return dbnameAlldb;
+    }
+
+    static String dbnameAlldb = "alldb"; //alldb
+
+    public static String getTablenameAbc() {
+        return tablenameAbc;
+    }
+
+    static String tablenameAbc = "abc"; //alldb
 
     public static String getDbnameCodeSets() {
         return dbnameCodeSets;
@@ -42,15 +56,16 @@ public class SqlProc {
     }
 
     public static String getExistDbNameEps() {
-        return "jdbc:mysql://localhost:3306/" + existdbname + "?useUnicode=true&characterEncoding=utf-8"; //æ•°æ®åº“å
+        return "jdbc:mysql://localhost:3306/" + existdbname + "?useUnicode=true&characterEncoding=utf-8"; //Êı¾İ¿âÃû
     }
+
     public static String getDbNameEps(String dbName) {
-        return "jdbc:mysql://localhost:3306/" + dbName + "?useUnicode=true&characterEncoding=utf-8"; //æ•°æ®åº“å
+        return "jdbc:mysql://localhost:3306/" + dbName + "?useUnicode=true&characterEncoding=utf-8"; //Êı¾İ¿âÃû
     }
 
     public static void classForMysqlDriver() {
         try {
-            Class.forName("com.mysql.jdbc.Driver");  ////é©±åŠ¨ç¨‹åºå
+            Class.forName("com.mysql.jdbc.Driver");  ////Çı¶¯³ÌĞòÃû
         } catch (Exception e) {
             e.printStackTrace();
             System.out.println(e.getMessage());
@@ -66,25 +81,25 @@ public class SqlProc {
 
         try {
             classForMysqlDriver();
-            String username = getUsername();  //æ•°æ®åº“ç”¨æˆ·å
-            String password = getPassword();  //æ•°æ®åº“ç”¨æˆ·å¯†ç 
-            String url0 = getExistDbNameEps(); //æ•°æ®åº“å
-            conn = DriverManager.getConnection(url0, username, password);  //è¿æ¥çŠ¶æ€
+            String username = getUsername();  //Êı¾İ¿âÓÃ»§Ãû
+            String password = getPassword();  //Êı¾İ¿âÓÃ»§ÃÜÂë
+            String url0 = getExistDbNameEps(); //Êı¾İ¿âÃû
+            conn = DriverManager.getConnection(url0, username, password);  //Á¬½Ó×´Ì¬
             Statement stat = conn.createStatement();
 
-            //åˆ›å»ºæ•°æ®åº“dbnameå¦‚æœä¸å­˜åœ¨
+            //´´½¨Êı¾İ¿âdbnameÈç¹û²»´æÔÚ
             stat.executeUpdate("create database if not exists " + dbname);
 
 
-            String url = "jdbc:mysql://localhost:3306/" + dbname + "?useUnicode=true&characterEncoding=utf-8"; //æ•°æ®åº“å
-            conn = DriverManager.getConnection(url, username, password);  //è¿æ¥çŠ¶æ€
+            String url = "jdbc:mysql://localhost:3306/" + dbname + "?useUnicode=true&characterEncoding=utf-8"; //Êı¾İ¿âÃû
+            conn = DriverManager.getConnection(url, username, password);  //Á¬½Ó×´Ì¬
 
             if (conn != null) {
                 return conn;
             }
         } catch (Exception e) {
             e.printStackTrace();
-            System.out.println("è¯·è¾“å…¥æŸ¥è¯¢æ•°æ®!!!");
+            System.out.println("ÇëÊäÈë²éÑ¯Êı¾İ!!!");
         } finally {
 //            try {
 //                if (null != conn) {
@@ -107,13 +122,12 @@ public class SqlProc {
     }
 
 
-    public static void printException(Exception e)
-    {
+    public static void printException(Exception e) {
         e.printStackTrace();
         System.out.println(e.getMessage());
     }
 
-    //åˆ›å»ºæ•°æ®åº“åç§°
+    //´´½¨Êı¾İ¿âÃû³Æ
     public static int createDbName(String dbName) {
         int ret = -1;
         Connection conn = null;
@@ -121,10 +135,10 @@ public class SqlProc {
 
         try {
             classForMysqlDriver();
-            //ä¸€å¼€å§‹å¿…é¡»å¡«ä¸€ä¸ªå·²ç»å­˜åœ¨çš„æ•°æ®åº“
-            conn = DriverManager.getConnection(getExistDbNameEps(), getUsername(), getPassword());  //è¿æ¥çŠ¶æ€
+            //Ò»¿ªÊ¼±ØĞëÌîÒ»¸öÒÑ¾­´æÔÚµÄÊı¾İ¿â
+            conn = DriverManager.getConnection(getExistDbNameEps(), getUsername(), getPassword());  //Á¬½Ó×´Ì¬
             stat = conn.createStatement();
-            //åˆ›å»ºæ•°æ®åº“hello
+            //´´½¨Êı¾İ¿âhello
             stat.executeUpdate(createDbEps(dbName));
             System.out.println("create dbname success " + dbName);
             conn.close();
@@ -137,19 +151,18 @@ public class SqlProc {
         return ret;
     }
 
-    //åˆ é™¤æ•°æ®åº“
-    public static int deleteDbname(String dbName)
-    {
+    //É¾³ıÊı¾İ¿â
+    public static int deleteDbname(String dbName) {
         int ret = -1;
         Connection conn = null;
         Statement stat = null;
 
         try {
             classForMysqlDriver();
-            //ä¸€å¼€å§‹å¿…é¡»å¡«ä¸€ä¸ªå·²ç»å­˜åœ¨çš„æ•°æ®åº“
-            conn = DriverManager.getConnection(getExistDbNameEps(), getUsername(), getPassword());  //è¿æ¥çŠ¶æ€
+            //Ò»¿ªÊ¼±ØĞëÌîÒ»¸öÒÑ¾­´æÔÚµÄÊı¾İ¿â
+            conn = DriverManager.getConnection(getExistDbNameEps(), getUsername(), getPassword());  //Á¬½Ó×´Ì¬
             stat = conn.createStatement();
-            //åˆ›å»ºæ•°æ®åº“hello
+            //´´½¨Êı¾İ¿âhello
             stat.executeUpdate(deleteDbEps(dbName));
             System.out.println("delete dbname success " + dbName);
             conn.close();
@@ -162,9 +175,8 @@ public class SqlProc {
         return ret;
     }
 
-    public static String createTableEps(String tableName)
-    {
-        String sql =  "CREATE TABLE  IF NOT EXISTS " + tableName + " (  `id` int(200) unsigned NOT NULL AUTO_INCREMENT,\n" +
+    public static String createTableEps(String tableName) {
+        String sql = "CREATE TABLE  IF NOT EXISTS " + tableName + " (  `id` int(200) unsigned NOT NULL AUTO_INCREMENT,\n" +
                 "name varchar(3000),\n" +
                 "PRIMARY KEY (`id`),\n" +
                 "create_time datetime DEFAULT CURRENT_TIMESTAMP COMMENT 'create time',\n" +
@@ -174,7 +186,19 @@ public class SqlProc {
         return (sql);
     }
 
-    //åˆ›å»ºè¡¨
+    public static String queryTableEps(String tableName) {
+        String sql = "CREATE TABLE  IF NOT EXISTS " + tableName + " (  `id` int(200) unsigned NOT NULL AUTO_INCREMENT,\n" +
+                "name varchar(3000),\n" +
+                "PRIMARY KEY (`id`),\n" +
+                "create_time datetime DEFAULT CURRENT_TIMESTAMP COMMENT 'create time',\n" +
+                "update_time datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'update time',\n" +
+                "UNIQUE KEY `name_UNIQUE` (`id`)\n" +
+                ")  ENGINE=InnoDB AUTO_INCREMENT=217 DEFAULT CHARSET=utf8mb4;";
+        return (sql);
+    }
+
+
+    //´´½¨±í
     public static int createTableName(String dbName, String tableName) throws SQLException {
         int ret = -1;
         Connection conn = null;
@@ -182,17 +206,15 @@ public class SqlProc {
 
         try {
             classForMysqlDriver();
-            //ä¸€å¼€å§‹å¿…é¡»å¡«ä¸€ä¸ªå·²ç»å­˜åœ¨çš„æ•°æ®åº“
-            conn = DriverManager.getConnection(getDbNameEps(dbName), getUsername(), getPassword());  //è¿æ¥çŠ¶æ€
+            //Ò»¿ªÊ¼±ØĞëÌîÒ»¸öÒÑ¾­´æÔÚµÄÊı¾İ¿â
+            conn = DriverManager.getConnection(getDbNameEps(dbName), getUsername(), getPassword());  //Á¬½Ó×´Ì¬
             stat = conn.createStatement();
-            //åˆ›å»ºæ•°æ®åº“è¡¨
+            //´´½¨Êı¾İ¿â±í
 //            stat.executeUpdate(createTableEps(dbName, tableName));
-            if(0 == stat.executeLargeUpdate(createTableEps(tableName)))
-            {
-                System.out.println(("111 create table okï¼"));
-            }else
-            {
-                System.out.println(("222 create table ngï¼"));
+            if (0 == stat.executeLargeUpdate(createTableEps(tableName))) {
+                System.out.println(("111 create table ok£¡"));
+            } else {
+                System.out.println(("222 create table ng£¡"));
             }
             System.out.println("create tableName success " + tableName);
 
@@ -201,10 +223,10 @@ public class SqlProc {
         } catch (Exception e) {
             printException(e);
         } finally {
-            if(stat != null) {
+            if (stat != null) {
                 stat.close();
             }
-            if(conn != null) {
+            if (conn != null) {
                 conn.close();
             }
             System.out.print("file.encoidng:" + System.getProperty("file.encoding"));
@@ -212,5 +234,171 @@ public class SqlProc {
 
         return ret;
     }
+
+    //²éÕÒÊı¾İ + ID
+    public static String queryDataId(String dbName, String tableName, String queryid,
+                                   List<String> listContent) throws SQLException {
+        int ret = -1;
+        Connection conn = null;
+        String dbname = dbName;
+        Statement stmt = null;
+        ResultSet rs = null;
+        String sql = "";  //²éÑ¯Óï¾ä
+        String tablename = tableName;
+        String qryiddata = "";
+        qryiddata = queryid;
+
+        if (null == qryiddata) {
+            qryiddata = "";
+        }
+
+        try {
+            conn = SqlProc.opendb(dbname);
+            if (conn != null) {
+                int whichid = 0;
+                if (qryiddata.isEmpty()) {
+                    SqlInterface inter = new SqlInterface();
+                    whichid = inter.getMaxId(dbname, tablename);
+                    qryiddata = Integer.toString(whichid);
+                } else {
+                    whichid = Integer.valueOf(qryiddata).intValue();
+                }
+
+                sql = "SELECT * from " + tablename + " WHERE id=" + whichid + ";";  //²éÑ¯Óï¾ä
+
+                stmt = conn.createStatement();
+                rs = stmt.executeQuery(sql);
+
+                int rowCount = 0;
+                while (rs.next()) {
+                    rowCount++;
+                    String toshowcontent = rs.getString("content");
+
+                    int actualrows = toshowcontent.split("\n").length;
+                    int maxrows = 100;
+                    if (actualrows < maxrows) {
+                        actualrows = maxrows;
+                    }
+
+                    listContent.add(toshowcontent);
+
+                }
+                System.out.println("query db:" + dbName + ", table:" + tableName);
+                System.out.println("query data:" + queryid);
+                System.out.println("rowCount:" + rowCount);
+
+            }else{
+                System.out.println("connect failed, dbName" +  dbName + ", table:" + tableName);
+                return ("Á¬½ÓÊ§°Ü£¡");
+            }
+        }  catch(Exception e){
+            System.out.println("ÇëÊäÈë²éÑ¯Êı¾İ!!!, dbName" +  dbName + ", table:" + tableName);
+            return ("ÇëÊäÈë²éÑ¯Êı¾İ!!!" + e.getMessage());
+        }
+
+        return "";
+    }
+
+
+    //²éÕÒÊı¾İ
+    public static String queryData(String dbName, String tableName, String querydata,
+                                     List<String> listContent) throws SQLException {
+        int ret = -1;
+        Connection conn = null;
+        ResultSet rs = null;
+        Statement stmt = null;
+
+        String qryval = "";
+        try {
+            qryval = querydata;
+        } catch (Exception e) {
+            System.out.println("\n");
+        }
+
+        //ÅĞ¶Ï²éÑ¯µÄÊı¾İÊÇ·ñÎªÎŞĞ§
+        if(null == qryval )
+        {
+            qryval = "";
+        }
+
+        try {
+            String dbname = dbName;
+            conn = SqlProc.opendb(dbname);
+            if (conn != null) {
+                stmt = null;
+                rs = null;
+                String sql = "";  //²éÑ¯Óï¾ä
+                String tablename = tableName;
+                System.out.println("qryval is:" + qryval);
+                if (qryval.isEmpty() || qryval.trim().isEmpty()) {
+                    sql = "SELECT * from " + tablename + " order by id desc limit 10;";  //²éÑ¯Óï¾ä
+                } else {
+                    String sqlhead = " SELECT * FROM " + tablename + " WHERE ";
+                    String sqltail = " order by id desc;";
+                    String sqlmid = " ";
+                    String[] qrylst = qryval
+                            .replace("\"", "\\\"")
+                            .split(" ");
+                    for (int lp = 0; lp < qrylst.length; lp++) {
+                        sqlmid += "content like  \"%" + qrylst[lp] + "%\" ";
+                        if (lp != qrylst.length - 1)
+                            sqlmid += " and ";
+                    }
+                    sql = sqlhead + sqlmid + sqltail;
+                }
+
+//                System.out.println("sql:" + sql);
+                stmt = conn.createStatement();
+                rs = stmt.executeQuery(sql);
+
+                int rowCount = 0;
+                while (rs.next()) {
+                    rowCount++;
+
+                    String showcontent = rs.getString("content")
+                            .replaceAll("<", "")
+                            .replaceAll(">", "")
+                            .replace("\n", "<br/>");
+
+                    listContent.add(showcontent);
+
+                    int showlen = 50;
+                    long totallen = showcontent.length();
+                    if (showcontent.length() > showlen) {
+                        showcontent = showcontent.substring(0, showlen);
+                    }
+                    long curlen = showcontent.length();
+                    if (totallen == 0) {
+                        totallen = 100;
+                    }
+                    String appendstr = "ShowRate:" + (curlen * 100 / totallen) + "%";
+                    if (totallen == 0 || ((curlen * 100 / totallen) == 100)) {
+                        appendstr = "";
+                    } else {
+                        appendstr = appendstr;
+                    }
+                }
+                rs.close();
+                stmt.close();
+                System.out.println("²éÑ¯½á¹û£º" + rowCount + " Ìõ[" + qryval + "]");
+                return ("²éÑ¯½á¹û£º" + rowCount + " Ìõ[" + qryval + "]");
+
+            } else {
+                System.out.println("Á¬½ÓÊ§°Ü£¡");
+                return("Á¬½ÓÊ§°Ü£¡");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("ÇëÊäÈë²éÑ¯Êı¾İ!!!");
+            return ("ÇëÊäÈë²éÑ¯Êı¾İ!!!");
+        } finally {
+            if (null != conn) {
+                conn.close();
+            }
+        }
+
+//        return "";
+    }
+
 
 }
