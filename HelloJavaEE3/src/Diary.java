@@ -1,5 +1,8 @@
 import com.commmon.ConverFromGBKToUTF8;
+import com.commmon.SqlInterface;
 import com.encoding.EncodeUtil;
+import com.sun.org.apache.xerces.internal.xs.StringList;
+import weilaidb.sql.SqlProc;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -7,6 +10,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 日记本，记录每天的日记信息
@@ -38,12 +44,32 @@ public class Diary extends HttpServlet {
  * 所以有这种问题时，将文件格式改变一下。
  */
         String gbkstr = "好大一棵树  \n";
-        out.println("file.encoidng:" + System.getProperty("file.encoding") + "\n");
-        System.out.println("file.encoidng:" + System.getProperty("file.encoding"));
-        out.println((gbkstr)+ "\n");
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 1; i++) {
             out.println("<h1>" + message + (gbkstr) +"</h1>");
+        }
+
+        /**
+         * 获取"日记:"开始的数据库信息
+         */
+//        SqlProc.getDbNameEps()
+        String queryData = "日记:";
+        List<String> showlist = new ArrayList();
+        String result = "";
+        try {
+            result = SqlProc.queryData(SqlProc.getDbnameAlldb(), SqlProc.getTablenameAbc(),
+                    queryData, showlist);
+            System.out.println("result count:" + showlist.size());
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+//        out.println(showlist.size());
+        out.write(result + "</br>");
+
+        for (Integer j = 0; j < showlist.size() ; j++) {
+            out.write("=========================</br>");
+            out.write(j.toString() + ":" + showlist.get(j) + "</br>");
         }
 
         response.getWriter().flush();
