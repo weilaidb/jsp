@@ -5,3 +5,5 @@
 /SprintTest/out/artifacts
 /SprintTest/out/production/SprintTest/com/xml/cn/*.class
 *.class
+/HelloWeb/out
+/HelloJavaEE3/.idea/workspace.xml
