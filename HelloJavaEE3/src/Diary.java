@@ -23,8 +23,7 @@ public class Diary extends HttpServlet {
 
     @Override
     public void init() throws ServletException {
-        message = "Hello world, this message is from servlet!" +
-                "so nice things!!";
+        message = "";
     }
 
     @Override
@@ -35,6 +34,8 @@ public class Diary extends HttpServlet {
         //设置逻辑实现
         PrintWriter out = response.getWriter();
 
+        out.println(" <a href=\"diary\"  target=\"_blank\">写日记</a>");
+
 /**
  * 中文编码的问题
  * 文件以GBK或UTF-8格式读入到内存，编码UTF-16的.class文件，执行时再解码成UTF-16的到内存中，打印时，
@@ -43,21 +44,22 @@ public class Diary extends HttpServlet {
  * 文件编码是UTF-8时，使用GBK输出，则有乱码现象。
  * 所以有这种问题时，将文件格式改变一下。
  */
-        String gbkstr = "好大一棵树  \n";
+        String gbkstr = "====日记本==== \n";
 
         for (int i = 0; i < 1; i++) {
-            out.println("<h1>" + message + (gbkstr) +"</h1>");
+//             size="<%= fontSize %>">
+            out.println("<h1><font color=\"green\">" + message + (gbkstr) +"</h1>");
         }
 
         /**
          * 获取"日记:"开始的数据库信息
          */
 //        SqlProc.getDbNameEps()
-        String queryData = "日记:";
+        String queryData = "^日记:";
         List<String> showlist = new ArrayList();
         String result = "";
         try {
-            result = SqlProc.queryData(SqlProc.getDbnameAlldb(), SqlProc.getTablenameAbc(),
+            result = SqlProc.queryDataRegex(SqlProc.getDbnameAlldb(), SqlProc.getTablenameAbc(),
                     queryData, showlist);
             System.out.println("result count:" + showlist.size());
         } catch (SQLException e) {
@@ -68,8 +70,9 @@ public class Diary extends HttpServlet {
         out.write(result + "</br>");
 
         for (Integer j = 0; j < showlist.size() ; j++) {
-            out.write("=========================</br>");
             out.write(j.toString() + ":" + showlist.get(j) + "</br>");
+            out.write("</br>");
+            out.write("</br>");
         }
 
         response.getWriter().flush();
