@@ -34,7 +34,7 @@ public class Diary extends HttpServlet {
         //设置逻辑实现
         PrintWriter out = response.getWriter();
 
-        out.println(" <a href=\"diary\"  target=\"_blank\">写日记</a>");
+        out.println(" <a href=\"sql/insertdb_diary.jsp\"  target=\"_blank\">写日记</a>");
 
 /**
  * 中文编码的问题

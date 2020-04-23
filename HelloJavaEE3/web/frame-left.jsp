@@ -45,7 +45,7 @@
 <%--    <a href="test/createdbname.jsp"  target="_blank">创建数据库</a></p>--%>
 </div>
 
-<h3>版本(V5.3)</h3>
+<h3>版本(V5.4)</h3>
 
 </body>
 </html>
