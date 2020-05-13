@@ -1,11 +1,10 @@
 package com.commmon;
 
+import com.pinyin.PinYinUtil;
+
 import java.io.UnsupportedEncodingException;
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
 
 public class SqlInterface {
@@ -349,6 +348,10 @@ public class SqlInterface {
         String resfail = "写入失败!";
         String resempty = "数据为空!";
 
+        char[] ch = new char[100];
+        Arrays.fill(ch, ' ');
+        String spacechs = new String(ch);
+
         try {
             if (files.trim().isEmpty()) {
                 return resempty;
@@ -363,12 +366,15 @@ public class SqlInterface {
                     filelist) {
                 str = str.replace("\\", "\\\\")
                         .replace("\"", "\"\"");
+                PinYinUtil hanyuPinyinUtil = new PinYinUtil();
+                str += spacechs;
+                str += hanyuPinyinUtil.toHanyuPinyin(str);
                 //此处数据库表增加两列（创建时间，更新时间）
 //                sql = "insert into egtable values(NULL, \"filexxx\");";
                 sql = "insert into egtable values(NULL, \"filexxx\", NULL, NULL);";
                 sql = sql.replace("egtable", tableName)
                         .replace("filexxx", str);
-//                System.out.println(sql);
+                System.out.println(sql);
                 pstmt = conn.prepareStatement(sql);
                 pstmt.execute();
             }
