@@ -25,6 +25,7 @@
 <%--    <a href="login_bin/login.jsp"   target="frame_right">记 事 本(mysql) bin</a></p>--%>
     <a href="sql/notebookalldb.jsp" target="frame_right">记事本(sqlite)[all.db]</a></p>
     <a href="timeclock/index.jsp"   target="_blank"     >时钟时间</a></p>
+    <a href="supertest/index.jsp"   target="_blank"     >超级测试</a></p>
     <a href="diary"  target="_blank">日记本</a></p>
     <a href="codesets/explorer.jsp"  target="_blank">代码集(codesets)</a></p>
     <a href="pubuse/explorer.jsp"   target="frame_right">公共使用</a></p>
