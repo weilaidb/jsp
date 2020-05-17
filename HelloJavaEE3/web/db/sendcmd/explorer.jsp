@@ -23,8 +23,6 @@
 //    增加表项openlist，用以打开文件路径
     SqlInterface inter = new SqlInterface();
     String dbName = SqlProc.getDbnameShowUi();
-%>
-<%
     String tableName = JspAdapter.jspGetTableNameByAppPath(app_CurrentPath);
 %>
 
@@ -82,13 +80,21 @@
             out.write(e.getMessage());
         }
     }
+    String ipaddr = "";
+    String cmddata = "";
 
     for (String file :
             openlist) {
         String[] splitlst = file.split("\\s+", 2);
         if(splitlst.length < 2)
         {
-            continue;
+            ipaddr = "localhost";
+            cmddata = splitlst[0].trim();
+        }
+        else
+        {
+            ipaddr = splitlst[0].trim();
+            cmddata = splitlst[1].trim();
         }
 //        /**
 //         * 第一个不为索引的不处理
@@ -98,6 +104,7 @@
 //            continue;
 //        }
 %>
+<%--发送时发送的数据是name=value--%>
 <form name="form2" method="get" action="executor.jsp">
     <input type="text"
            size="4"
@@ -106,8 +113,8 @@
     <%--readonly="readonly"--%>
            value="<%=splitlst[0].trim()%>"/>
     <input type="submit" id="execcmdbtn"  name="execcmdbtn"  value="发送"  class="executorsubmitbtn"/>
-    <input type="text"   id="ipaddr" name="ipaddr" value="<%=splitlst[0].trim()%>" class="ipaddrtext"/>
-    <input type="text"   id="cmddatatext" name="cmddatatext" value="<%=splitlst[1].trim()%>" class="text3"/>
+    <input type="text"   id="ipaddr" name="ipaddr" value="<%=ipaddr%>" class="ipaddrtext"/>
+    <input type="text"   id="cmddatatext" name="cmddatatext" value="<%=cmddata%>" class="text3"/>
     <input type="submit" name="submit" value="保存" class="executorsubmitbtn"/>
 
 <%--    <input type="submit" name="submit" value="<%=splitlst[1].trim()%>" class="executorsubmitbtn"/>--%>
@@ -121,17 +128,6 @@
 <%--                      style="width: 100%;"><%=toshowcontent%>--%>
 <%--                            </textarea>--%>
 </form>
-
-<%--    <form name="form2" method="post" action="<%=app_basePath%>/sql/queryidwithmodify.jsp">--%>
-<%--        <input type="text"--%>
-<%--               size="4"--%>
-<%--               class="text2"--%>
-<%--               name="iddata"--%>
-<%--        &lt;%&ndash;readonly="readonly"&ndash;%&gt;--%>
-<%--               value="<%=splitlst[0].trim()%>"/>--%>
-<%--        <input type="submit" name="submit" value="<%=splitlst[1].trim()%>" class="submitbtn"/>--%>
-<%--    </form>--%>
-
 
 </h3>
 

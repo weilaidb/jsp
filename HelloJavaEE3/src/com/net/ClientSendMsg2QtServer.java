@@ -18,10 +18,23 @@ public class ClientSendMsg2QtServer {
         }
     }
 
-    public static void sendStr2QtServer(String towritestr) {
+    public static String sendStr2QtServer(String ipaddr, String towritestr) {
+        String result = "nothing";
+        String sendok = "send ok";
+        String sendng = "send fail";
         try {
+            String inip = "";
+            ipaddr = ipaddr.trim();
+            if(null == ipaddr || ipaddr.isEmpty() || ipaddr.equals("127.0.0.1") || ipaddr.equals("null"))
+            {
+                inip = "localhost";
+            }
+            else
+            {
+                inip = ipaddr;
+            }
             //1.创建客户端Socket，指定服务器地址和端口
-            Socket socket = new Socket("localhost", 9999);
+            Socket socket = new Socket(inip, 9999);
             //2.获取输出流，向服务器端发送信息
             OutputStream os = socket.getOutputStream();//字节输出流
             PrintWriter pw = new PrintWriter(os);//将输出流包装为打印流
@@ -61,20 +74,25 @@ public class ClientSendMsg2QtServer {
             pw.close();
             os.close();
             try {
-                Thread.sleep(5000);
+                Thread.sleep(2000);
             } catch (Exception e) {
                 e.printStackTrace();
             }
             socket.close();
+            result = sendok;
         } catch (UnknownHostException e) {
             e.printStackTrace();
+            result = e.getMessage();
         } catch (IOException e) {
             e.printStackTrace();
+            result = e.getMessage();
         }
+
+        return result;
     }
 
     public static void main(String[] args) {
-        sendStr2QtServer("D:");
+        sendStr2QtServer("","D:");
 //        sendStr2QtServer("cmd notepad++ D:\\Software\\opengrok\\gen_opengrok_project.bat");
     }
 }

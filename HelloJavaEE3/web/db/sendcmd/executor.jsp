@@ -1,3 +1,5 @@
+<%@ page import="com.cmd.RunCmd" %>
+<%@ page import="com.net.ClientSendMsg2QtServer" %>
 <%--
   Created by IntelliJ IDEA.
   User: dell
@@ -11,6 +13,15 @@
     <title>执行器</title>
 </head>
 <body>
+<%
+    String ipaddr = request.getParameter("ipaddr");
+    String cmddatatext = request.getParameter("cmddatatext");
+    String result = ClientSendMsg2QtServer.sendStr2QtServer(ipaddr, cmddatatext);
+
+    result =  "execute cmd:" + result + "@" + ipaddr +  " " + cmddatatext;
+%>
+
+<%=result%>
 
 </body>
 </html>
