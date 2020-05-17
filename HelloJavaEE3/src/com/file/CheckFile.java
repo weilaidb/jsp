@@ -3,6 +3,7 @@ package com.file;
 import java.io.*;
 import java.net.URLDecoder;
 import java.util.ArrayList;
+import java.util.Map;
 
 public class CheckFile {
     private static ArrayList<String> filelist = new ArrayList<String>();
@@ -92,7 +93,15 @@ public class CheckFile {
 
     public static void deleteBeyondComparefiles()
     {
-        dealBeyondDir("C:\\Users\\dell\\AppData\\Roaming\\Scooter Software\\Beyond Compare 4");
+        Map<String, String> map = System.getenv();
+        String userName = map.get("USERNAME");// 获取用户名
+        String computerName = map.get("COMPUTERNAME");// 获取计算机名
+        String userDomain = map.get("USERDOMAIN");// 获取计算机域名
+        System.out.println("username  :" + userName);
+        System.out.println("userdomain:" + userDomain);
+        String userdir = "C:\\Users\\"+ userName + "\\AppData\\Roaming\\Scooter Software\\Beyond Compare 4";
+//        C:\Users\dell\AppData\Roaming\Scooter Software\Beyond Compare 4
+        dealBeyondDir(userdir);
         dealBeyondDir("C:\\Users\\Administrator\\AppData\\Roaming\\Scooter Software\\Beyond Compare 4");
     }
 
