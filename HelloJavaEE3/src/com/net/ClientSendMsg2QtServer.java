@@ -25,13 +25,16 @@ public class ClientSendMsg2QtServer {
         try {
             String inip = "";
             ipaddr = ipaddr.trim();
-            if(null == ipaddr || ipaddr.isEmpty() || ipaddr.equals("127.0.0.1") || ipaddr.equals("null"))
+            if(null == ipaddr || ipaddr.isEmpty() || ipaddr.equals("127.0.0.1")
+                    || ipaddr.equals("null")|| ipaddr.equals("localhost"))
             {
                 inip = "localhost";
             }
             else
             {
                 inip = ipaddr;
+                //为了与Qt客户端共同使用，需要添加4个空格
+                towritestr = "    " + towritestr;
             }
             //1.创建客户端Socket，指定服务器地址和端口
             Socket socket = new Socket(inip, 9999);
