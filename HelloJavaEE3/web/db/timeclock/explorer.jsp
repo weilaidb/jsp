@@ -60,7 +60,7 @@
 <h1>
     <a href="<%=app_basePath%>/index.jsp"  target="_blank">首页</a>
     <a href="../delete.jsp?tableName=<%=tableName%>" target="_blank">删除</a>
-    <a href="insert.jsp" target="_blank">写入</a>
+    <a href="../insert.jsp?tableName=<%=tableName%>" target="_blank">写入</a>
     <form name="form3" method="post" action="explorer.jsp">
         <input type="text"
                size="30"

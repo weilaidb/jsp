@@ -23,6 +23,12 @@ alter table pupils add COLUMN `update_time` datetime DEFAULT CURRENT_TIMESTAMP O
 alter table timeclock add COLUMN `create_time` datetime DEFAULT CURRENT_TIMESTAMP COMMENT 'create time';
 alter table timeclock add COLUMN `update_time` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'update time';
 
+alter table python add COLUMN `create_time` datetime DEFAULT CURRENT_TIMESTAMP COMMENT 'create time';
+alter table python add COLUMN `update_time` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'update time';
+
+
+alter table linux_driver add COLUMN `create_time` datetime DEFAULT CURRENT_TIMESTAMP COMMENT 'create time';
+alter table linux_driver add COLUMN `update_time` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'update time';
 
 
 

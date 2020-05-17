@@ -56,7 +56,7 @@
 
 <h1><a href="<%=app_basePath%>/index.jsp"  target="_blank">首页</a>
     <a href="../delete.jsp?tableName=<%=tableName%>" target="_blank">删除</a>
-    <a href="insert.jsp" target="_blank">写入</a>
+    <a href="../insert.jsp?tableName=<%=tableName%>" target="_blank">写入</a>
 </h1>
 <%--<h1>性能告警</h1>--%>
 <%!

@@ -60,6 +60,11 @@ public class JspAdapter {
         return jspInsertData(request, getDbShowUi(), tableName);
     }
 
+    public static String jspInsertDataForDbShowUiWithTablName(HttpServletRequest request, String tableName)
+    {
+        return jspInsertData(request, getDbShowUi(), tableName);
+    }
+
     public static String jspGetTableNameByAppPath(String app_CurrentPath)
     {
         //    表名使用模块名

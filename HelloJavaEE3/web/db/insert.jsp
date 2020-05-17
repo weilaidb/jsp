@@ -1,4 +1,3 @@
-<%@ page import="com.commmon.SqlInterface" %>
 <%@ page import="weilaidb.sql.JspAdapter" %>
 <%--
   Created by IntelliJ IDEA.
@@ -9,7 +8,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java"
          pageEncoding="utf-8" %>
-<%@include file="../../common/basepath.jsp"%>
+<%@include file="../common/basepath.jsp"%>
 <%--================css配置=========================--%>
 <style type="text/css">
     .submitbtn {
@@ -25,8 +24,19 @@
     }
 </style>
 <%
-    String result = JspAdapter.jspInsertDataForDbShowUiWithPath(request, app_CurrentPath);
+    String result = "";
+    String tableName = request.getParameter("tableName");
+    if(tableName.isEmpty())
+    {
+        result = JspAdapter.jspInsertDataForDbShowUiWithPath(request, app_CurrentPath);
+    }
+    else
+    {
+        result = JspAdapter.jspInsertDataForDbShowUiWithTablName(request, tableName);
+    }
+
 %>
+
 
 <%--================javascript定义=========================--%>
 <script>
@@ -47,9 +57,9 @@
 %>
 <body onload="ClearTextArea()">
 <h1><a href="<%=basePath%>/index.jsp" target="_blank">首页</a>
-    <a href="explorer.jsp">文件列表</a>
+    <a href="<%=basePath%>/db/<%=tableName%>/explorer.jsp">文件列表</a>
 </h1>
-<form name="form1" method="post" action="insert.jsp">
+<form name="form1" method="post" action="insert.jsp?tableName=<%=tableName%>">
     <h1>
         写入数据：
         <input type="submit" name="Submit" value="点击保存" class="submitbtn"/>
