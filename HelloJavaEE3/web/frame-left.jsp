@@ -30,16 +30,16 @@
     <a href="db/codesets/explorer.jsp"  target="_blank">代码集(codesets)</a></p>
     <a href="db/pubuse/explorer.jsp"   target="frame_right">公共使用</a></p>
     <a href="db/almperf/index.jsp"     target="_blank"     >性能告警</a></p>
+    <a href="db/sendcmd/explorer.jsp"  target="_blank">发送命令</a></p>
     <a href="db/csharp/explorer.jsp"   target="frame_right">C#</a></p>
     <a href="db/qt/explorer.jsp"       target="frame_right">Qt</a></p>
     <a href="db/java/explorer.jsp"     target="frame_right">java</a></p>
     <a href="db/ios/explorer.jsp"      target="frame_right">IOS</a></p>
-    <a href="db/dirinfo/index.jsp"     target="_blank">文件夹列表</a></p>
+    <%--    <a href="db/dirinfo/index.jsp"     target="_blank">文件夹列表</a></p>--%>
     <a href="db/python/explorer.jsp"       target="frame_right">Python</a></p>
     <a href="db/linux_driver/explorer.jsp" target="frame_right">Linux驱动</a></p>
-<%--    <a href="net/getip.jsp"         target="_blank">ip address</a></p>--%>
+    <%--    <a href="net/getip.jsp"         target="_blank">ip address</a></p>--%>
     <a href="db/pupils/explorer.jsp"  target="_blank">儿童专用</a></p>
-    <a href="db/sendcmd/explorer.jsp"  target="_blank">发送命令</a></p>
 
 
 

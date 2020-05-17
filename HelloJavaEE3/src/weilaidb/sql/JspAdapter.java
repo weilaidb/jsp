@@ -56,7 +56,28 @@ public class JspAdapter {
 
     public static String jspInsertDataForDbShowUiWithPath(HttpServletRequest request, String app_CurrentPath)
     {
-        String tableName = jspGetTableNameByAppPath(app_CurrentPath);
+        String tableName = request.getParameter("tableName");
+        if(tableName.trim().isEmpty()) {
+            if(app_CurrentPath.contains("tableName="))
+            {
+                String[] inlist = app_CurrentPath.split("tableName=");
+                if(inlist.length > 1)
+                {
+                    tableName = inlist[1].split("&")[0];
+                }
+                else
+                {
+                    tableName = jspGetTableNameByAppPath(app_CurrentPath);
+                }
+            }
+            else {
+                tableName = jspGetTableNameByAppPath(app_CurrentPath);
+            }
+        }
+        else
+        {
+            tableName = jspGetTableNameByAppPath(app_CurrentPath);
+        }
         return jspInsertData(request, getDbShowUi(), tableName);
     }
 
@@ -69,8 +90,6 @@ public class JspAdapter {
     {
         //    表名使用模块名
         String tableName = "";
-//        String tableName = app_CurrentPath.toLowerCase().substring(1)
-//                .replaceAll("\\/.*", "");
         String[] list = app_CurrentPath.split("\\/");
         for (String str :
                 list) {
@@ -85,14 +104,19 @@ public class JspAdapter {
     public static String jspInsertData(HttpServletRequest request, String dbName, String tableName)
     {
         String filenames = "";
+        String pinyin = "";
         String result = "数据为空";
         System.out.println("tablename:" + tableName);
         try {
             filenames = request.getParameter("insertfilename").replace("\n", "").trim();
+            pinyin = request.getParameter("pinyin").replace("\n", "").trim();
+            System.out.println("filenames:" +  filenames);
+            System.out.println("pinyin   :" +  pinyin);
+
             if(!filenames.trim().isEmpty()) {
                 SqlInterface inter = new SqlInterface();
                 SqlProc.createTableName(dbName, tableName);
-                result = inter.insertName(dbName, tableName, filenames);
+                result = inter.insertName(dbName, tableName, filenames, pinyin);
                 result = new String(result.getBytes("gbk"), "utf-8");
             }
         } catch (Exception e) {

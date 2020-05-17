@@ -13,7 +13,7 @@
 <%@page import="java.sql.*" %>
 <%@ page import="weilaidb.sql.SqlProc" %>
 <%@ page import="com.commmon.SqlInterface" %>  <%--导入java.sql包--%>
-<%@include file="../../common/basepath.jsp"%>
+<%@include file="../common/basepath.jsp"%>
 
 <script language="JavaScript">
     function Refresh()

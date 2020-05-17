@@ -343,7 +343,7 @@ public class SqlInterface {
     }
 
 
-    public String insertName(String dbName, String tableName, String files) {
+    public String insertName(String dbName, String tableName, String files, String pinyin) {
         String resstr = "写入成功!";
         String resfail = "写入失败!";
         String resempty = "数据为空!";
@@ -366,15 +366,18 @@ public class SqlInterface {
                     filelist) {
                 str = str.replace("\\", "\\\\")
                         .replace("\"", "\"\"");
-                PinYinUtil hanyuPinyinUtil = new PinYinUtil();
-                str += spacechs;
-                str += hanyuPinyinUtil.toHanyuPinyin(str);
+                //关键字为空时，null, 或"null" ，不需要带拼音
+                if((null == pinyin) ||pinyin.equals("null") || pinyin.trim().isEmpty()) {
+                    PinYinUtil hanyuPinyinUtil = new PinYinUtil();
+                    str += spacechs;
+                    str += hanyuPinyinUtil.toHanyuPinyin(str);
+                }
                 //此处数据库表增加两列（创建时间，更新时间）
 //                sql = "insert into egtable values(NULL, \"filexxx\");";
                 sql = "insert into egtable values(NULL, \"filexxx\", NULL, NULL);";
                 sql = sql.replace("egtable", tableName)
                         .replace("filexxx", str);
-                System.out.println(sql);
+                System.out.println("sql:" + sql);
                 pstmt = conn.prepareStatement(sql);
                 pstmt.execute();
             }

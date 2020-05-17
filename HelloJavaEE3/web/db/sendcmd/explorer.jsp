@@ -56,7 +56,7 @@
 
 <h1><a href="<%=app_basePath%>/index.jsp"  target="_blank">首页</a>
     <a href="../delete.jsp?tableName=<%=tableName%>" target="_blank">删除</a>
-    <a href="../insert.jsp?tableName=<%=tableName%>" target="_blank">写入</a>
+    <a href="../insert.jsp?tableName=<%=tableName%>&pinyin=no" target="_blank">写入</a>
 </h1>
 <%--<h1>时钟时间</h1>--%>
 <%!
@@ -90,23 +90,49 @@
         {
             continue;
         }
-        /**
-         * 第一个不为索引的不处理
-         */
-        if(false == isNumeric(splitlst[0].trim()))
-        {
-            continue;
-        }
+//        /**
+//         * 第一个不为索引的不处理
+//         */
+//        if(false == isNumeric(splitlst[0].trim()))
+//        {
+//            continue;
+//        }
 %>
-    <form name="form2" method="post" action="<%=app_basePath%>/sql/queryidwithmodify.jsp">
-        <input type="text"
-               size="4"
-               class="text2"
-               name="iddata"
-        <%--readonly="readonly"--%>
-               value="<%=splitlst[0].trim()%>"/>
-        <input type="submit" name="submit" value="<%=splitlst[1].trim()%>" class="submitbtn"/>
-    </form>
+<form name="form2" method="get" action="executor.jsp">
+    <input type="text"
+           size="4"
+           class="text2"
+           name="iddata"
+    <%--readonly="readonly"--%>
+           value="<%=splitlst[0].trim()%>"/>
+    <input type="submit" id="execcmdbtn"  name="execcmdbtn"  value="发送"  class="executorsubmitbtn"/>
+    <input type="text"   id="ipaddr" name="ipaddr" value="<%=splitlst[0].trim()%>" class="ipaddrtext"/>
+    <input type="text"   id="cmddatatext" name="cmddatatext" value="<%=splitlst[1].trim()%>" class="text3"/>
+    <input type="submit" name="submit" value="保存" class="executorsubmitbtn"/>
+
+<%--    <input type="submit" name="submit" value="<%=splitlst[1].trim()%>" class="executorsubmitbtn"/>--%>
+    <%--        <input type="text" name="iddataext" value="<%=qryiddata%>">--%>
+<%--            <textarea class="boxes"--%>
+<%--            &lt;%&ndash;rows="100%"&ndash;%&gt;--%>
+<%--                      rows="<%=actualrows%>"--%>
+<%--                      id="ipt"--%>
+<%--                      name="modifythings"--%>
+<%--                      placeholder="输入要复制的东西"--%>
+<%--                      style="width: 100%;"><%=toshowcontent%>--%>
+<%--                            </textarea>--%>
+</form>
+
+<%--    <form name="form2" method="post" action="<%=app_basePath%>/sql/queryidwithmodify.jsp">--%>
+<%--        <input type="text"--%>
+<%--               size="4"--%>
+<%--               class="text2"--%>
+<%--               name="iddata"--%>
+<%--        &lt;%&ndash;readonly="readonly"&ndash;%&gt;--%>
+<%--               value="<%=splitlst[0].trim()%>"/>--%>
+<%--        <input type="submit" name="submit" value="<%=splitlst[1].trim()%>" class="submitbtn"/>--%>
+<%--    </form>--%>
+
+
 </h3>
 
 <%

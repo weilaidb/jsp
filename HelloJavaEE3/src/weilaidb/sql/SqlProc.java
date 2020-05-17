@@ -18,6 +18,12 @@ public class SqlProc {
 
     static String dbnameShowUi = "showui"; //已经存在的数据库
 
+    public static String getDbnameExecCmd() {
+        return dbnameExecCmd;
+    }
+
+    static String dbnameExecCmd = "execcmd"; //已经存在的数据库
+
     public static String getDbnameAlldb() {
         return dbnameAlldb;
     }
@@ -229,7 +235,7 @@ public class SqlProc {
             if (conn != null) {
                 conn.close();
             }
-            System.out.print("file.encoidng:" + System.getProperty("file.encoding"));
+//            System.out.println("file.encoidng:" + System.getProperty("file.encoding"));
         }
 
         return ret;

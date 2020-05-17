@@ -26,6 +26,7 @@
 <%
     String result = "";
     String tableName = request.getParameter("tableName");
+    String pinyin = request.getParameter("pinyin");
     if(tableName.isEmpty())
     {
         result = JspAdapter.jspInsertDataForDbShowUiWithPath(request, app_CurrentPath);
@@ -59,7 +60,7 @@
 <h1><a href="<%=basePath%>/index.jsp" target="_blank">首页</a>
     <a href="<%=basePath%>/db/<%=tableName%>/explorer.jsp">文件列表</a>
 </h1>
-<form name="form1" method="post" action="insert.jsp?tableName=<%=tableName%>">
+<form name="form1" method="post" action="insert.jsp?tableName=<%=tableName%>&pinyin=<%=pinyin%>">
     <h1>
         写入数据：
         <input type="submit" name="Submit" value="点击保存" class="submitbtn"/>

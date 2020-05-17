@@ -14,7 +14,7 @@
 <%@ page import="com.objectproc.ProcObjectAndByte" %>
 <%@ page import="java.io.InputStream" %>
 <%@ page import="weilaidb.sql.SqlProc" %>  <%--导入java.sql包--%>
-<%@include file="../../common/basepath.jsp"%>
+<%@include file="../common/basepath.jsp"%>
 
 <script language="JavaScript">
     function Refresh()
