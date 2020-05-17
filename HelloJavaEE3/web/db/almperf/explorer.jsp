@@ -16,7 +16,7 @@
          pageEncoding="UTF-8" %>
 <%@include file="../../common/basepath.jsp"%>
 <link href="css/index.css" rel="stylesheet" type="text/css" />
-
+<link href="../../css/explorer.css" rel="stylesheet" type="text/css">
 <%
 //    增加表项openlist，用以打开文件路径
     SqlInterface inter = new SqlInterface();
@@ -33,45 +33,6 @@
 //    }
 
 %>
-
-
-
-<%--================css配置=========================--%>
-<style type="text/css">
-    .mytable th, tr, td, table {
-        /* for IE */
-        text-overflow: ellipsis;
-        /* for Firefox,mozilla */
-        -moz-text-overflow: ellipsis;
-        overflow: hidden;
-        white-space: nowrap;
-        text-align: left;
-
-        border: 1px solid red;
-        tab-interval: 10px;
-        background-color: aliceblue;
-        font-size: medium;
-    }
-
-    .text2 {
-        height: 1px;
-        width: 0px;
-        border: black;
-        border-color: black;
-    }
-
-    .submitbtn {
-        height: 30px;
-        width: 99%;
-        text-align: left;
-        font-family: "Courier New";
-        font-size: large;
-        /*border-width: thin;*/
-        /*border-color: darkviolet;*/
-        /*background-color: silver;*/
-    }
-</style>
-
 
 <html>
 <head>

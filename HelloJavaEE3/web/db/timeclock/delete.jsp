@@ -3,6 +3,7 @@
 <%@ page import="java.nio.charset.Charset" %>
 <%@ page import="java.util.List" %>
 <%@ page import="com.commmon.SqlInterface" %>
+<%@ page import="weilaidb.sql.SqlProc" %>
 <%--
   Created by IntelliJ IDEA.
   User: dell

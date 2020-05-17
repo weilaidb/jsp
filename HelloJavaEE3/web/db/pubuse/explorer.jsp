@@ -15,6 +15,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java"
          pageEncoding="UTF-8" %>
 <%@include file="../../common/basepath.jsp"%>
+<%--================css配置=========================--%>
+<link href="../../css/explorer.css" rel="stylesheet" type="text/css">
+
 <%
     //    打开的文件列表
 //    增加表项openlist，用以打开文件路径
@@ -34,59 +37,6 @@
 //    }
 
 %>
-
-
-
-<%--================css配置=========================--%>
-<style type="text/css">
-    .mytable th, tr, td, table {
-        /* for IE */
-        text-overflow: ellipsis;
-        /* for Firefox,mozilla */
-        -moz-text-overflow: ellipsis;
-        overflow: hidden;
-        white-space: nowrap;
-        text-align: left;
-
-        border: 1px solid red;
-        tab-interval: 10px;
-        background-color: aliceblue;
-        font-size: medium;
-    }
-
-    .text1 {
-        height: 40px
-    }
-
-    .text2 {
-        height: 1px;
-        width: 0px;
-        border: black;
-        border-color: black;
-    }
-
-    .submitbtn {
-        height: 50px;
-        width: 70%;
-        text-align: left;
-        font-family: "Courier New";
-        font-size: xx-large;
-        border-width: thin;
-        /*border-color: darkviolet;*/
-        /*background-color: silver;*/
-    }
-
-    .dia_wbkbig {
-        width: 100%;
-        height: 80%;
-        alignment: center;
-        align-content: center;
-    }
-
-    .body{
-        background-color: black;
-    }
-</style>
 
 
 <html>

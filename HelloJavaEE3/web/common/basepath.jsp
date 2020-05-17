@@ -1,3 +1,4 @@
+<%@ page import="weilaidb.sql.SqlProc" %>
 <%
     String app_basePath = application.getContextPath();
     String app_path = request.getContextPath();
