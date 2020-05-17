@@ -58,7 +58,7 @@
 %>
 <body onload="ClearTextArea()">
 <h1><a href="<%=basePath%>/index.jsp" target="_blank">首页</a>
-    <a href="<%=basePath%>/db/<%=tableName%>/explorer.jsp">文件列表</a>
+    <a href="<%=basePath%>/db/explorer.jsp?tableName=<%=tableName%>">文件列表</a>
 </h1>
 <form name="form1" method="post" action="insert.jsp?tableName=<%=tableName%>&pinyin=<%=pinyin%>">
     <h1>

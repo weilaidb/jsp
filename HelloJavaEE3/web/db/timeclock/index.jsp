@@ -1,4 +1,4 @@
-<%--
+<%@ page import="weilaidb.sql.JspAdapter" %><%--
   Created by IntelliJ IDEA.
   User: dell
   Date: 2019/2/25
@@ -6,9 +6,10 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@include file="../../common/basepath.jsp"%>
 <head>
     <meta charset="UTF-8">
-    <title>时钟时间</title>
+    <title><%=JspAdapter.getJspTitleByKey(JspAdapter.jspGetTableNameByAppPath(app_CurrentPath))%></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 

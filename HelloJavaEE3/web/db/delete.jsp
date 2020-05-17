@@ -53,7 +53,7 @@
 
 
 <h1><a href="<%=basePath%>/index.jsp" target="_blank">首页</a>
-    <a href="explorer.jsp" target="_blank">文件列表</a>
+    <a href="explorer.jsp?tableName=<%=tableName%>" target="_blank">文件列表</a>
 </h1>
 <h1>请选择删除文件</h1>
 
