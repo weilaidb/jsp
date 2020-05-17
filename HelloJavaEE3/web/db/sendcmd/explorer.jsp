@@ -28,7 +28,7 @@
 %>
 
 <%
-
+    //获取处理列表
     List<String> openlist = inter.getAllDesc(dbName, tableName, "");
 //    for (String file :
 //            openlist) {
@@ -90,7 +90,7 @@
         if((splitlst.length < 2) || (0 != CheckIp.ipMatches(splitlst[0].trim())))
         {
             ipaddr = "localhost";
-            cmddata = splitlst[0].trim();
+            cmddata = file;
         }
         else
         {
