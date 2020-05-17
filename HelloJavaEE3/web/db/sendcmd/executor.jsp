@@ -10,6 +10,13 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <SCRIPT language=javascript>
+        function go() {
+            window.history.go(-1);
+        }
+
+        setTimeout("go()", 2000);
+    </SCRIPT>
     <title>执行器</title>
 </head>
 <body>
