@@ -4,6 +4,7 @@
 <%@ page import="com.commmon.SqlInterface" %>
 <%@ page import="weilaidb.sql.JspAdapter" %>
 <%@ page import="weilaidb.sql.SqlProc" %>
+<%@ page import="com.net.CheckIp" %>
 
 <%--
   Created by IntelliJ IDEA.
@@ -86,7 +87,7 @@
     for (String file :
             openlist) {
         String[] splitlst = file.split("\\s+", 2);
-        if(splitlst.length < 2)
+        if((splitlst.length < 2) || (0 != CheckIp.ipMatches(splitlst[0].trim())))
         {
             ipaddr = "localhost";
             cmddata = splitlst[0].trim();
@@ -115,6 +116,7 @@
     <input type="submit" id="execcmdbtn"  name="execcmdbtn"  value="发送"  class="executorsubmitbtn"/>
     <input type="text"   id="ipaddr" name="ipaddr" value="<%=ipaddr%>" class="ipaddrtext"/>
     <input type="text"   id="cmddatatext" name="cmddatatext" value="<%=cmddata%>" class="text3"/>
+
 <%--    <input type="submit" name="submit" value="保存" class="executorsubmitbtn"/>--%>
 
 <%--    <input type="submit" name="submit" value="<%=splitlst[1].trim()%>" class="executorsubmitbtn"/>--%>
