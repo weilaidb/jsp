@@ -115,7 +115,7 @@
     <input type="submit" id="execcmdbtn"  name="execcmdbtn"  value="发送"  class="executorsubmitbtn"/>
     <input type="text"   id="ipaddr" name="ipaddr" value="<%=ipaddr%>" class="ipaddrtext"/>
     <input type="text"   id="cmddatatext" name="cmddatatext" value="<%=cmddata%>" class="text3"/>
-    <input type="submit" name="submit" value="保存" class="executorsubmitbtn"/>
+<%--    <input type="submit" name="submit" value="保存" class="executorsubmitbtn"/>--%>
 
 <%--    <input type="submit" name="submit" value="<%=splitlst[1].trim()%>" class="executorsubmitbtn"/>--%>
     <%--        <input type="text" name="iddataext" value="<%=qryiddata%>">--%>
