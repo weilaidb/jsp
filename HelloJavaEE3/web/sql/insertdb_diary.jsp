@@ -144,7 +144,7 @@
     <title>输入数据(mysql)</title>
 </head>
 <body onload="SetTipsTextArea()">
-<a href="<%=basePath%>/index.jsp">首页</a>
+<a href="<%=basePath%>/index.jsp" target="_blank">首页</a>
 <a href="<%=basePath%>/sql_bin/insertdb.jsp">插入(bin)</a>
 <a href="<%=basePath%>/sql/queryidwithmodify.jsp">latest item</a>
 

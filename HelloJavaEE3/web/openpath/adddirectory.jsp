@@ -186,7 +186,7 @@
 <%--String basePath = application.getContextPath();--%>
 <%--%>--%>
 <%--<body onload="ClearTextArea()">--%>
-<%--<h1><a href="<%=basePath%>/index.jsp">首页</a>--%>
+<%--<h1><a href="<%=basePath%>/index.jsp" target="_blank">首页</a>--%>
 <%--&lt;%&ndash;<a href="explorer.jsp" target="_blank">文件列表</a>&ndash;%&gt;--%>
 <%--</h1>--%>
 <%--<tr>--%>

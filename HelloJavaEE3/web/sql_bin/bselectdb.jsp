@@ -114,7 +114,7 @@
     <title>我的超级记事本(mysql) bin</title>
 </head>
 <body>
-<a href="<%=basePath%>/index.jsp">首页</a>
+<a href="<%=basePath%>/index.jsp" target="_blank">首页</a>
 <a href="<%=basePath%>/sql/bselectdb.jsp">记事本</a>
 <script>
     function openinsertdatapage() {

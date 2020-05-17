@@ -84,7 +84,7 @@
 //    response.setHeader("Refresh","5;iterator.jsp");
 %>
 
-<h1><a href="<%=basePath%>/index.jsp">首页</a>
+<h1><a href="<%=basePath%>/index.jsp" target="_blank">首页</a>
     <%--<a href="adddirectory.jsp" target="_blank">文件夹</a>--%>
     <a href="iterdelete.jsp" target="_blank">删除</a>
     <a href="iterinsert.jsp" target="_blank">写入</a>

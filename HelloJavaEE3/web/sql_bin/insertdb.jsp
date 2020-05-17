@@ -160,7 +160,7 @@
     <title>输入数据(mysql bin)</title>
 </head>
 <body onload="ClearTextArea()">
-<a href="<%=basePath%>/index.jsp">首页</a>
+<a href="<%=basePath%>/index.jsp" target="_blank">首页</a>
 <a href="<%=basePath%>/sql/insertdb.jsp">插入</a>
 
 <form name="form1" method="post" action="">

@@ -102,7 +102,7 @@
     <title>显示ID数据</title>
 </head>
 <body>
-<a href="<%=app_basePath%>/index.jsp">首页</a>
+<a href="<%=app_basePath%>/index.jsp"  target="_blank">首页</a>
 
 <%--================获取查询数据================--%>
 <%--================打开数据库================--%>

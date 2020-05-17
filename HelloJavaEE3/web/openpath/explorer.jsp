@@ -40,7 +40,7 @@
     response.setHeader("Refresh","30;explorer.jsp");
 %>
 
-<h1><a href="<%=basePath%>/index.jsp">首页</a>
+<h1><a href="<%=basePath%>/index.jsp" target="_blank">首页</a>
     <a href="adddirectory.jsp">文件夹</a>
     <a href="deletefile.jsp" target="_blank">删除</a>
     <a href="insertfile.jsp" target="_blank">写入</a>
