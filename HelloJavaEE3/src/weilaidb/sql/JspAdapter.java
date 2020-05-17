@@ -56,8 +56,7 @@ public class JspAdapter {
 
     public static String jspInsertDataForDbShowUiWithPath(HttpServletRequest request, String app_CurrentPath)
     {
-        String tableName = app_CurrentPath.toLowerCase().substring(1)
-                .replaceAll("\\/.*", "");
+        String tableName = jspGetTableNameByAppPath(app_CurrentPath);
         return jspInsertData(request, getDbShowUi(), tableName);
     }
 
@@ -72,7 +71,7 @@ public class JspAdapter {
                 list) {
 //            System.out.println("-->" + str);
         }
-        tableName = list[list.length > 1 ? list.length - 2:list.length];
+        tableName = list[list.length > 1 ? list.length - 2:list.length].toLowerCase().replaceAll("\\/.*", "");
         System.out.println("tableName:" + tableName);
 
         return tableName;
@@ -93,6 +92,7 @@ public class JspAdapter {
             }
         } catch (Exception e) {
 //        out.print("\n");
+            result = e.getMessage();
         }
         return result;
     }

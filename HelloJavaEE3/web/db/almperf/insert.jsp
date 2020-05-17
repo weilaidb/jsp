@@ -28,9 +28,6 @@
     String result = JspAdapter.jspInsertDataForDbShowUiWithPath(request, app_CurrentPath);
 %>
 
-%>
-
-
 <%--================javascript定义=========================--%>
 <script>
     function ClearTextArea() {
