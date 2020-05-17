@@ -1,5 +1,6 @@
 <%@ page import="com.commmon.SqlInterface" %>
 <%@ page import="weilaidb.sql.SqlProc" %>
+<%@ page import="weilaidb.sql.JspAdapter" %>
 <%--
   Created by IntelliJ IDEA.
   User: dell
@@ -25,35 +26,7 @@
     }
 </style>
 <%
-    //    打开的文件列表
-    SqlInterface inter = new SqlInterface();
-    String dbName = SqlProc.getDbnameShowUi();
-    SqlProc.createDbName(dbName);
-%>
-
-<%
-    //    表名使用模块名
-    String tableName = app_CurrentPath.toLowerCase().substring(1)
-            .replaceAll("\\/.*", "");
-    System.out.println("tablename:" + tableName);
-    SqlProc.createTableName(dbName, tableName);
-%>
-
-
-
-<%
-    String filenames = "";
-    String result = "数据为空";
-    try {
-        filenames = request.getParameter("insertfilename").replace("\n", "").trim();
-        if(!filenames.trim().isEmpty()) {
-            result = inter.insertName(dbName, tableName, filenames);
-            result = new String(result.getBytes("gbk"), "utf-8");
-        }
-    } catch (Exception e) {
-//        out.print("\n");
-    }
-
+    String result = JspAdapter.jspInsertDataForDbShowUiWithPath(request, app_CurrentPath);
 %>
 
 

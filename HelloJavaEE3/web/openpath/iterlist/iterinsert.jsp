@@ -1,4 +1,5 @@
 <%@ page import="com.commmon.SqlInterface" %>
+<%@ page import="weilaidb.sql.JspAdapter" %>
 <%--
   Created by IntelliJ IDEA.
   User: dell
@@ -24,25 +25,11 @@
     }
 </style>
 <%
-    //    打开的文件列表
-    SqlInterface inter = new SqlInterface();
     String dbName = "files";
     String tableName = "dirlist";
+    String result = JspAdapter.jspInsertData(request,dbName, tableName);
 %>
 
-<%
-    String filenames = "";
-    String result = "数据为空";
-    try {
-        filenames = request.getParameter("insertfilename");
-        if(!filenames.trim().isEmpty()) {
-            result = inter.insertName(dbName, tableName, filenames);
-        }
-    } catch (Exception e) {
-//        out.print("\n");
-    }
-
-%>
 
 
 <%--================javascript定义=========================--%>

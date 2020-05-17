@@ -41,8 +41,9 @@ public class ClientSendMsg2QtServer {
             }
 //            len = towritestr.length();
             byte[] buffer = Byte24Long.LongToBytes(len);
-            System.out.println("size of len:" + (len));
-            System.out.println("buffer of len:" + (buffer.length));
+            System.out.println("exec cmd:" + (towritestr));
+//            System.out.println("size of len:" + (len));
+//            System.out.println("buffer of len:" + (buffer.length));
             pw.write(Byte24Long.getChars(buffer));
             pw.write(towritestr);
             pw.flush();
@@ -74,5 +75,6 @@ public class ClientSendMsg2QtServer {
 
     public static void main(String[] args) {
         sendStr2QtServer("D:");
+//        sendStr2QtServer("cmd notepad++ D:\\Software\\opengrok\\gen_opengrok_project.bat");
     }
 }
