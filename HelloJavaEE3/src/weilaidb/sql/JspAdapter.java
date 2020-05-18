@@ -1,6 +1,7 @@
 package weilaidb.sql;
 
 import com.commmon.SqlInterface;
+import python.PythonCommand;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
@@ -11,6 +12,34 @@ public class JspAdapter {
     static String dbNameShowUi = "showui";
     static Map<String, String> mapTitle = new HashMap<String, String>();
     static int inittitleflag = 0;
+
+    public static String getParaResult(HttpServletRequest request, String para)
+    {
+        String result = request.getParameter(para);
+        if(null == result)
+        {
+            result="";
+        }
+        return  result;
+    }
+
+    public static String getPythoncalcResult(String express)
+    {
+        String result = "";
+        try{
+            if(express != null && !express.trim().isEmpty())
+            {
+                result = PythonCommand.calcResult(express);
+            }
+        }catch (Exception e)
+        {
+            result = e.getMessage();
+        }
+
+        return  result;
+    }
+
+
 
     public static void initMapTitle() {
         if(inittitleflag == 1)
@@ -29,6 +58,7 @@ public class JspAdapter {
         mapTitle.put("sendcmd", "发送命令");
         mapTitle.put("supertest", "超级测试");
         mapTitle.put("timeclock", "时钟时间");
+        mapTitle.put("calc", "计算器");
 
         inittitleflag = 1;
     }
