@@ -8,7 +8,12 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<link href="../css/explorer.css" rel="stylesheet" type="text/css">
+<%@include file="../common/basepath.jsp"%>
+<%--<link href="../css/explorer.css" rel="stylesheet" type="text/css">--%>
+
+<html>
+
+
 
 <%--================javascript定义=========================--%>
 <script>
@@ -21,10 +26,43 @@
     }
 </script>
 
-
-<html>
 <head>
     <title><%=JspAdapter.getJspTitleByKey("calc")%></title>
+    <style type="text/css">
+        .form2{
+            margin: 5px;
+
+        }
+
+        .text4 {
+            height: 60px;
+            width: 90%;
+            alignment: center;
+            alignment-baseline: center;
+            border: black;
+            border-color: red;
+        }
+        .calcbtn {
+            height: 55px;
+            width: 10%;
+            text-align: center;
+            font-family: "Courier New";
+            font-size: large;
+            padding-right: 10px;
+            padding-left: 10px;
+            margin-right: 40px;
+            /*border-width: medium;*/
+            /*font-style: oblique;*/
+            /*border-width: thin;*/
+            /*border-color: darkviolet;*/
+            /*background-color: silver;*/
+        }
+
+        p
+        {
+            word-spacing:30px;
+        }
+    </style>
 </head>
 <body>
 <%
@@ -34,7 +72,7 @@
 %>
 
 
-<form name="form3" method="post"  action="calculator.jsp" class="form2">
+<form name="form3" method="post" action="calculator.jsp" class="form2">
     <input type="button" name="showtext" value="自定义计算器" class="calcbtn"/><br/>
     <input type="text" id="idexpress" name=<%=keyname%> value="<%=express%>"  placeholder="输入表达式" class="text4"/><br/>
     <input type="text" id="idresult" name="result" value="<%=result%>" placeholder="这是结果"  class="text4"/><br/>
