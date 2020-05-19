@@ -106,7 +106,7 @@
 //        }
 %>
 <%--发送时发送的数据是name=value--%>
-<form name="form2" method="get" action="executor.jsp">
+<form name="form2" method="get" action="executor.jsp" target="_blank">
     <input type="text"
            size="4"
            class="text2"

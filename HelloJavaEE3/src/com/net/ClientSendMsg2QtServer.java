@@ -23,6 +23,8 @@ public class ClientSendMsg2QtServer {
         String sendok = "send ok";
         String sendng = "send fail";
         try {
+            result =  "execute cmd:" + sendok + "@" + ipaddr +  " " + towritestr;
+            result+= "<br/>";
             String inip = "";
             ipaddr = ipaddr.trim();
             if(null == ipaddr || ipaddr.isEmpty() || ipaddr.equals("127.0.0.1")
@@ -68,8 +70,16 @@ public class ClientSendMsg2QtServer {
             InputStream is = socket.getInputStream();
             BufferedReader br = new BufferedReader(new InputStreamReader(is));
             String info = null;
+
             while ((info = br.readLine()) != null) {
-                System.out.println("我是客户端，服务器说：" + info);
+                String gbkinfo = new String(info.getBytes("iso-8859-1"), "utf-8");
+//                int length = gbkinfo.length();
+//                int pos  = 6;
+//                int showbegin = length >pos ? pos: 0;
+                System.out.println("i am client, server say:" + gbkinfo);
+                result+=gbkinfo+"<br/>";
+//                out.write("\n");
+
             }
             //4.关闭资源
             br.close();
@@ -82,13 +92,15 @@ public class ClientSendMsg2QtServer {
                 e.printStackTrace();
             }
             socket.close();
-            result = sendok;
+
         } catch (UnknownHostException e) {
             e.printStackTrace();
             result = e.getMessage();
+            result =  "execute cmd:" + result + "@" + ipaddr +  " " + towritestr;
         } catch (IOException e) {
             e.printStackTrace();
             result = e.getMessage();
+            result =  "execute cmd:" + result + "@" + ipaddr +  " " + towritestr;
         }
 
         return result;
