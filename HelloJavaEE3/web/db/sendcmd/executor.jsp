@@ -6,6 +6,8 @@
 <%@ page import="java.io.*" %>
 <%@ page import="java.net.UnknownHostException" %>
 <%@ page import="static com.net.ClientSendMsg2QtServer.checkiszimu" %>
+<%@ page import="com.commmon.Encoding" %>
+<%@ page import="com.commmon.ChangeCharset" %>
 <%--
   Created by IntelliJ IDEA.
   User: dell
@@ -13,7 +15,11 @@
   Time: 17:16
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page language="java" pageEncoding="gb2312"%>
+<%@ page contentType="text/html;charset=gb2312"%>
+
+<%--<%@ page contentType="text/html;charset=GBK" language="java" pageEncoding="GBK" %>--%>
+<%--<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>--%>
 <html>
 <head>
     <%--    <SCRIPT language=javascript>--%>
@@ -23,7 +29,8 @@
 
     <%--        setTimeout("go()", 2000);--%>
     <%--    </SCRIPT>--%>
-    <title>ÊâßË°åÂô®</title>
+    <title>÷¥––∆˜</title>
+        <meta http-equiv="Content-Type" content="text/html charset=gb2312">
 </head>
 <body>
 <%
@@ -49,17 +56,17 @@
         else
         {
             inip = ipaddr;
-            //‰∏∫‰∫Ü‰∏éQtÂÆ¢Êà∑Á´ØÂÖ±Âêå‰ΩøÁî®ÔºåÈúÄË¶ÅÊ∑ªÂä†4‰∏™Á©∫Ê†º
+            //Œ™¡À”ÎQtøÕªß∂Àπ≤Õ¨ π”√£¨–Ë“™ÃÌº”4∏ˆø’∏Ò
             towritestr = "    " + towritestr;
         }
-        //1.ÂàõÂª∫ÂÆ¢Êà∑Á´ØSocketÔºåÊåáÂÆöÊúçÂä°Âô®Âú∞ÂùÄÂíåÁ´ØÂè£
+        //1.¥¥Ω®øÕªß∂ÀSocket£¨÷∏∂®∑˛ŒÒ∆˜µÿ÷∑∫Õ∂Àø⁄
         Socket socket = new Socket(inip, 9999);
-        //2.Ëé∑ÂèñËæìÂá∫ÊµÅÔºåÂêëÊúçÂä°Âô®Á´ØÂèëÈÄÅ‰ø°ÊÅØ
-        OutputStream os = socket.getOutputStream();//Â≠óËäÇËæìÂá∫ÊµÅ
-        PrintWriter pw = new PrintWriter(os);//Â∞ÜËæìÂá∫ÊµÅÂåÖË£Ö‰∏∫ÊâìÂç∞ÊµÅ
+        //2.ªÒ»° ‰≥ˆ¡˜£¨œÚ∑˛ŒÒ∆˜∂À∑¢ÀÕ–≈œ¢
+        OutputStream os = socket.getOutputStream();//◊÷Ω⁄ ‰≥ˆ¡˜
+        PrintWriter pw = new PrintWriter(os);//Ω´ ‰≥ˆ¡˜∞¸◊∞Œ™¥Ú”°¡˜
         long len = 0;
         /**
-         * ÂèëÈÄÅÈïøÂ∫¶‰∏∫ÊÄªÈïøÂ∫¶ÔºåÂåÖÂê´Â§¥Âíå‰Ωì„ÄÇ
+         * ∑¢ÀÕ≥§∂»Œ™◊‹≥§∂»£¨∞¸∫¨Õ∑∫ÕÃÂ°£
          */
         char lastchar = towritestr.charAt(towritestr.length() - 1);
         if (testChinese.isContainChinese(towritestr)
@@ -79,25 +86,53 @@
         pw.write(Byte24Long.getChars(buffer));
         pw.write(towritestr);
         pw.flush();
-//            socket.shutdownOutput();//ÂÖ≥Èó≠ËæìÂá∫ÊµÅ
-        //3.Ëé∑ÂèñËæìÂÖ•ÊµÅÔºåÂπ∂ËØªÂèñÊúçÂä°Âô®Á´ØÁöÑÂìçÂ∫î‰ø°ÊÅØ
+//            socket.shutdownOutput();//πÿ±’ ‰≥ˆ¡˜
+        //3.ªÒ»° ‰»Î¡˜£¨≤¢∂¡»°∑˛ŒÒ∆˜∂ÀµƒœÏ”¶–≈œ¢
         InputStream is = socket.getInputStream();
         BufferedReader br = new BufferedReader(new InputStreamReader(is));
         String info = null;
-
+//        ChangeCharset test = new ChangeCharset();
+//        String str = "This is a ÷–Œƒµƒ String!";
+//        System.out.println("str£∫" + str);
+//
+//        String gbk = test.toGBK(str);
+//        System.out.println("◊™ªª≥…GBK¬Î£∫" + gbk);
+//        System.out.println();
+        String gbkinfo = "";
         while ((info = br.readLine()) != null) {
 //            String gbkinfo = new String(info.getBytes("iso-8859-1"), "utf-8");
 //            String gbkinfo = new String(info.getBytes("iso-8859-1"), "gbk");
 //            String gbkinfo = new String(info.getBytes("utf-8"), "gbk");
-            String gbkinfo = new String(info.getBytes("utf-8"), "iso-8859-1");
+//            String gbkinfo = new String(info.getBytes("utf-8"), "gb2312");
+
+            //»´≤ø¥Ú”°≥ˆ¿¥
+//            out.println(new String(info.getBytes("gbk"), "utf-8") + entertip);
+//            out.println(new String(info.getBytes("gbk"), "gbk") + entertip);
+//            out.println(new String(info.getBytes("utf-8"), "utf-8") + entertip);
+//            out.println(new String(info.getBytes("utf-8"), "gbk") + entertip);
+
+            gbkinfo = new String(info.getBytes("gbk"), "utf-8") + entertip;
+            out.println(gbkinfo);
+
+//            String gbkinfo = test.toGBK(info);
+
+//            String gbkinfo = new String(info.getBytes("utf-8"), "utf-8");
+//            String gbkinfo = new String(info.getBytes("ISO-8859-1"), "gbk");
+//            String gbkinfo = new String(info.getBytes("ISO-8859-1"), "gb2312");
+//            String gbkinfo = new String(info.getBytes("utf-8"), "iso-8859-1");
 //            String gbkinfo = info;
 //                int length = gbkinfo.length();
 //                int pos  = 6;
 //                int showbegin = length >pos ? pos: 0;
-            System.out.println("i am client, server say:" + gbkinfo);
+//            System.out.println("i am client, server say:" + info);
 //            result+=gbkinfo+"<br/>";
 //                out.write("\n");
-            out.write(gbkinfo + entertip);
+//            out.write(gbkinfo + entertip);
+//            out.write("last string encoding:" + Encoding.getEncoding(info)+entertip);
+//            out.write("last gbk string encoding:" + Encoding.getEncoding(gbkinfo) + entertip);
+//            out.println(gbkinfo + entertip);
+//            out.println("last string encoding:" + Encoding.getEncoding(info)+entertip);
+//            out.println("last gbk string encoding:" + Encoding.getEncoding(gbkinfo) + entertip);
             try {
                 Thread.sleep(10);
             } catch (Exception e) {
@@ -105,7 +140,7 @@
             }
 
         }
-        //4.ÂÖ≥Èó≠ËµÑÊ∫ê
+        //4.πÿ±’◊ ‘¥
         br.close();
         is.close();
         pw.close();
