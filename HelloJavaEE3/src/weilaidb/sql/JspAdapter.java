@@ -1,7 +1,7 @@
 package weilaidb.sql;
 
 import com.commmon.SqlInterface;
-import python.PythonCommand;
+//import python.PythonCommand;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
@@ -23,21 +23,21 @@ public class JspAdapter {
         return  result;
     }
 
-    public static String getPythoncalcResult(String express)
-    {
-        String result = "";
-        try{
-            if(express != null && !express.trim().isEmpty())
-            {
-                result = PythonCommand.calcResult(express);
-            }
-        }catch (Exception e)
-        {
-            result = e.getMessage();
-        }
-
-        return  result;
-    }
+//    public static String getPythoncalcResult(String express)
+//    {
+//        String result = "";
+//        try{
+//            if(express != null && !express.trim().isEmpty())
+//            {
+//                result = PythonCommand.calcResult(express);
+//            }
+//        }catch (Exception e)
+//        {
+//            result = e.getMessage();
+//        }
+//
+//        return  result;
+//    }
 
 
 

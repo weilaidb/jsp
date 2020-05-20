@@ -26,7 +26,7 @@
     <a href="sql/notebookalldb.jsp" target="frame_right">记事本(sqlite)[all.db]</a></p>
     <a href="diary"  target="_blank">日记本</a></p>
     <a href="db/sendcmd/explorer.jsp"  target="_blank">发送命令</a></p>
-    <a href="python/calculator.jsp" target="_blank">计算器</a></p>
+<%--    <a href="python/calculator.jsp" target="_blank">计算器</a></p>--%>
 
     <%
         String[] tablelist ={
