@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+    <display-name>Welcome to My Super DB!!!</display-name>
+    <description>
+        Welcome to My Super DB!!!
+    </description>
+
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+        <welcome-file>index.html</welcome-file>
+        <welcome-file>index.htm</welcome-file>
+    </welcome-file-list>
+
+
+<!--    <servlet>-->
+<!--        <servlet-name>HelloWorld</servlet-name>-->
+<!--        <servlet-class>HelloWorld</servlet-class>-->
+<!--    </servlet>-->
+
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>HelloWorld</servlet-name>-->
+<!--        <url-pattern>/HelloWorld</url-pattern>-->
+<!--    </servlet-mapping>-->
+
+<!--    <servlet>-->
+<!--        <servlet-name>Diary</servlet-name>-->
+<!--        <servlet-class>Diary</servlet-class>-->
+<!--    </servlet>-->
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>Diary</servlet-name>-->
+<!--        <url-pattern>/diary</url-pattern>-->
+<!--    </servlet-mapping>-->
+
+<!--    <servlet>-->
+<!--        <servlet-name>SqliteServlet</servlet-name>-->
+<!--        <servlet-class>weilaidb.sqlite.SqliteServlet</servlet-class>-->
+<!--    </servlet>-->
+
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>SqliteServlet</servlet-name>-->
+<!--        <url-pattern>/note2</url-pattern>-->
+<!--    </servlet-mapping>-->
+
+<!--    <servlet>-->
+<!--        <servlet-name>bmysql</servlet-name>-->
+<!--        <servlet-class>weilaidb.login.LoginServlet</servlet-class>-->
+<!--    </servlet>-->
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>bmysql</servlet-name>-->
+<!--        <url-pattern>/BSelectDb</url-pattern>-->
+<!--    </servlet-mapping>-->
+
+<!--    <servlet>-->
+<!--        <servlet-name>bselectdatabse</servlet-name>-->
+<!--        <servlet-class>weilaidb.login.SelectDatabase</servlet-class>-->
+<!--    </servlet>-->
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>bselectdatabse</servlet-name>-->
+<!--        <url-pattern>/SelectDatabase</url-pattern>-->
+<!--    </servlet-mapping>-->
+
+<!--    <servlet>-->
+<!--        <servlet-name>Explorer</servlet-name>-->
+<!--        <servlet-class>weilaidb.explorer.OpenPath</servlet-class>-->
+<!--    </servlet>-->
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>Explorer</servlet-name>-->
+<!--        <url-pattern>/Explorer</url-pattern>-->
+<!--    </servlet-mapping>-->
+<!--	-->
+<!--	-->
+<!--  <servlet>-->
+<!--    <servlet-name>TreeviewServlet</servlet-name>-->
+<!--    <servlet-class>tree.TreeviewServlet</servlet-class>-->
+<!--   </servlet>-->
+
+<!--  <servlet-mapping>-->
+<!--     <servlet-name>TreeviewServlet</servlet-name>-->
+<!--     <url-pattern>/treeview</url-pattern>-->
+<!--  </servlet-mapping>-->
+<!--    <filter>-->
+<!--        <filter-name>encodingFilter</filter-name>-->
+<!--        <filter-class>com.weilaidb.*</filter-class>-->
+<!--        <init-param>-->
+<!--            <param-name>encoding</param-name>-->
+<!--            <param-value>UTF-8</param-value>-->
+<!--        </init-param>-->
+<!--        <init-param>-->
+<!--            <param-name>forceEncoding</param-name>-->
+<!--            <param-value>true</param-value>-->
+<!--        </init-param>-->
+<!--    </filter>-->
+<!--    <filter-mapping>-->
+<!--        <filter-name>encodingFilter</filter-name>-->
+<!--        <url-pattern>/*</url-pattern>-->
+<!--    </filter-mapping>-->
+<!--    <locale-encoding-mapping>-->
+<!--    <locale>zh</locale>-->
+<!--    <encoding>UTF-8</encoding>-->
+<!--    <locale-encoding-mapping>-->
+<!--            -->
+
+    <locale-encoding-mapping-list>
+        <locale-encoding-mapping>
+            <locale>zh</locale>
+            <encoding>UTF-8</encoding>
+        </locale-encoding-mapping>
+    </locale-encoding-mapping-list>
+</web-app>

@@ -1,0 +1,16 @@
+.btns {
+    font-weight: bold;
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    border: #5fb878;
+    background: #5fb878;
+    font-size: 1.4em;
+    text-align: center;
+    padding-top: 5px;
+    color: white;
+}
+
+a:hover {
+    color: #FFFFFF
+}
