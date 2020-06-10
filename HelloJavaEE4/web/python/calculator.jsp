@@ -51,6 +51,11 @@
         }
     }
 
+    function OffHexTextArea() {
+        var idcontenttext = document.getElementById("idcontent").value;
+        document.getElementById("idcontent").value = idcontenttext.replace("hex", "");
+
+    }
 </script>
 
 <head>
@@ -93,8 +98,6 @@
 </head>
 <body>
 
-<p id="demo">Visit Microsoft!Visit Microsoft!</p>
-
 <%
     String keyname = "express";
     String express = JspAdapter.getParaResult(request, keyname);
@@ -105,7 +108,9 @@
 <form name="form3" method="post" action="calculator.jsp" class="form2">
     <input type="button" name="showtext" value="自定义计算器" class="calcbtn"/>
     <input type="button" name="hextext" value="HEX" class="calcbtn"
-        onclick="HexTextArea()"/>
+           onclick="HexTextArea()"/>
+    <input type="button" name="hextext" value="去HEX" class="calcbtn"
+        onclick="OffHexTextArea()"/>
     <br/>
     <input type="text" id="idcontent" name=<%=keyname%> value="<%=express%>"  placeholder="输入表达式" class="text4"/><br/>
     <input type="text" id="idresult" name="result" value="<%=result%>" placeholder="这是结果"  class="text4"/><br/>
