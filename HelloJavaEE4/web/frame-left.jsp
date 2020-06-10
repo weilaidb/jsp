@@ -31,6 +31,9 @@
     <a href="test/javascript/showtime2.jsp" target="_blank">显示日期2</a></p>
     <a href="test/javascript/innerHtml.jsp" target="_blank">段落修改</a></p>
     <a href="test/javascript/extJavaScript.jsp" target="_blank">外部javaScript</a></p>
+    <a href="test/javascript/a_title.jsp" target="_blank">标题</a></p>
+    <a href="test/javascript/stringlen.jsp" target="_blank">字符长度</a></p>
+    <a href="test/javascript/fontstyle.jsp" target="_blank">字符样式</a></p>
 
 <%--    <%--%>
 <%--        String[] tablelist ={--%>
