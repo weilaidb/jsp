@@ -34,6 +34,9 @@
     <a href="test/javascript/a_title.jsp" target="_blank">标题</a></p>
     <a href="test/javascript/stringlen.jsp" target="_blank">字符长度</a></p>
     <a href="test/javascript/fontstyle.jsp" target="_blank">字符样式</a></p>
+    <a href="test/javascript/indexof.jsp" target="_blank">查找字符出现位置</a></p>
+    <a href="test/javascript/findstr.jsp" target="_blank">字符匹配</a></p>
+    <a href="test/javascript/replace.jsp" target="_blank">字符替换</a></p>
 
 <%--    <%--%>
 <%--        String[] tablelist ={--%>
