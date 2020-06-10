@@ -16,14 +16,24 @@
 
 
 <%--================javascript定义=========================--%>
-<script>
+<script language="JavaScript">
     function ClearTextArea() {
-        document.getElementById("idexpress").value = "";
+        document.getElementById("idcontent").value = "";
         document.getElementById("idresult").value = "";
     }
     function LoadTextArea(str) {
-        document.getElementById("idexpress").value = str;
+        document.getElementById("idcontent").value = str;
     }
+    function HexTextArea() {
+        var idcontenttext = document.getElementById("idcontent");
+        // var idcontenttext = document.getElementById("idcontent");
+        // alert(idcontenttext.indexOf("hex"))
+        // if(idcontenttext.contains("hex"))
+        {
+            document.getElementById("idcontent").value = "hex(" + document.getElementById("idcontent").value + ")";
+        }
+    }
+
 </script>
 
 <head>
@@ -73,8 +83,11 @@
 
 
 <form name="form3" method="post" action="calculator.jsp" class="form2">
-    <input type="button" name="showtext" value="自定义计算器" class="calcbtn"/><br/>
-    <input type="text" id="idexpress" name=<%=keyname%> value="<%=express%>"  placeholder="输入表达式" class="text4"/><br/>
+    <input type="button" name="showtext" value="自定义计算器" class="calcbtn"/>
+    <input type="button" name="hextext" value="HEX" class="calcbtn"
+        onclick="HexTextArea()"/>
+    <br/>
+    <input type="text" id="idcontent" name=<%=keyname%> value="<%=express%>"  placeholder="输入表达式" class="text4"/><br/>
     <input type="text" id="idresult" name="result" value="<%=result%>" placeholder="这是结果"  class="text4"/><br/>
     <input type="button" id="id_cleararea" name="cleararea" value="清  空" class="calcbtn"
            onclick="ClearTextArea()">

@@ -27,6 +27,10 @@
 <%--    <a href="diary"  target="_blank">日记本</a></p>--%>
 <%--    <a href="db/sendcmd/explorer.jsp"  target="_blank">发送命令</a></p>--%>
     <a href="python/calculator.jsp" target="_blank">计算器</a></p>
+    <a href="test/javascript/showtime.jsp" target="_blank">显示日期</a></p>
+    <a href="test/javascript/showtime2.jsp" target="_blank">显示日期2</a></p>
+    <a href="test/javascript/innerHtml.jsp" target="_blank">段落修改</a></p>
+    <a href="test/javascript/extJavaScript.jsp" target="_blank">外部javaScript</a></p>
 
 <%--    <%--%>
 <%--        String[] tablelist ={--%>
