@@ -39,6 +39,15 @@
     <a href="test/javascript/indexof.jsp" target="_blank">查找字符出现位置</a></p>
     <a href="test/javascript/findstr.jsp" target="_blank">字符匹配</a></p>
     <a href="test/javascript/replace.jsp" target="_blank">字符替换</a></p>
+    <a href="test/javascript/msecfrom1970.jsp" target="_blank">单击按钮显示1970年1月1号至今的毫秒数</a></p>
+    <a href="test/javascript/SetFullYear.jsp" target="_blank">单击按钮显示修改后的年月日</a></p>
+    <a href="test/javascript/timetostring.jsp" target="_blank">点击按钮把 utc 日期和时间转换成字符串</a></p>
+    <a href="test/javascript/todayisweeksome.jsp" target="_blank">单击按钮显示今天周几</a></p>
+    <a href="test/javascript/Clock.jsp" target="_blank">钟表</a></p>
+    <a href="test/javascript/array.jsp" target="_blank">数组</a></p>
+    <a href="test/javascript/concat.jsp" target="_blank">数组拼接</a></p>
+    <a href="test/javascript/concat2.jsp" target="_blank">三个数组拼接</a></p>
+    <a href="test/javascript/join.jsp" target="_blank">Join</a></p>
 
 <%--    <%--%>
 <%--        String[] tablelist ={--%>
