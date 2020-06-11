@@ -10,6 +10,10 @@
          pageEncoding="UTF-8" %>
 <%@include file="../common/basepath.jsp"%>
 <link href="../css/explorer.css" rel="stylesheet" type="text/css">
+<%--&lt;%&ndash;此处必须指定文件编码为gb2312,而且解码也是gb2312&ndash;%&gt;--%>
+<%--&lt;%&ndash;使用此来将utf-8的数据翻译成 gbk new String(info.getBytes("gbk"), "utf-8") + entertip;&ndash;%&gt;--%>
+<%--<%@ page language="java" pageEncoding="gb2312"%>--%>
+<%--<%@ page contentType="text/html;charset=gb2312"%>--%>
 
 
 <%
@@ -59,14 +63,14 @@
 <body>
 <%
     //定时刷新页面
-//    response.setHeader("Refresh","30;explorer.jsp");
+//    response.setHeader("Refresh","30;explorersingle.jsp");
 %>
 
 <h1>
     <a href="<%=app_basePath%>/index.jsp"  target="_blank">首页</a>
     <a href="delete.jsp?tableName=<%=tableName%>" target="_blank">删除</a>
     <a href="insert.jsp?tableName=<%=tableName%>" target="_blank">写入</a>
-    <form name="form3" method="post" action="explorer.jsp?tableName=<%=tableName%>">
+    <form name="form3" method="post" action="explorersingle.jsp?tableName=<%=tableName%>">
         <input type="text"
                size="30"
                class="text1"
@@ -129,6 +133,7 @@
 %>
 
 <%
+    String showtextline = "";
     showlist = CharacterFilter.gotHeaderSameList(openlist,"http",2,false);
 //    out.write("showlist:" + showlist.size());
     System.out.println("othershowlist:" + showlist.size());
@@ -136,8 +141,11 @@
             showlist) {
         String numname = CharacterFilter.strBySpaceIndex(showstr,2,0).trim();
         String showname = CharacterFilter.strBySpaceIndex(showstr,2,1).trim();
+        System.out.println("jsp searchkey:" + searchkey);
+        //此处查到内容必须找到源库
+        showtextline += JspAdapter.findLineTextByIdAndKey(JspAdapter.getDbNameAllDb(), JspAdapter.getTableNameAbc(), searchkey, numname);
 %>
-<form name="form2" class="form2" method="post"  target="frame_right" action="<%=app_basePath%>/sql/queryidwithmodify.jsp" onload="autosubmit()">
+<form name="form2" class="form2" method="post"  target="_blank" action="<%=app_basePath%>/sql/queryidwithmodify.jsp" onload="autosubmit()">
     <input type="text"
            size="4"
            class="text2"
@@ -150,6 +158,8 @@
 <%
     }
 %>
+
+<%=showtextline%>
 
 </body>
 </html>

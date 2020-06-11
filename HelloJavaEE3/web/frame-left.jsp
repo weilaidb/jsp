@@ -26,10 +26,15 @@
     <a href="sql/notebookalldb.jsp" target="frame_right">记事本(sqlite)[all.db]</a></p>
     <a href="diary"  target="_blank">日记本</a></p>
     <a href="db/sendcmd/explorer.jsp"  target="_blank">发送命令</a></p>
+    <a href="test/javascript/autosubmit.jsp"  target="_blank">自动提交</a></p>
+<%--    <a href="db/singleitem/index.jsp"  target="_blank">查单项</a></p>--%>
 <%--    <a href="python/calculator.jsp" target="_blank">计算器</a></p>--%>
 
     <%
         String[] tablelist ={
+//        支持查单项，区别是带"singleitem"
+        "singleitem_abc",
+
         "codesets",
         "timeclock",
         "supertest",
@@ -42,22 +47,37 @@
         "python",
         "linux_driver",
         "pupils",
+
+
+
         };
     %>
 
     <%
+        String singletip = "singleitem";
+
         for (String tablename :
         tablelist) {
+            if(tablename.contains(singletip))
+            {
+    %>
+        <a href="db/explorersingle.jsp?tableName=<%=tablename%>" target="_blank"><%=JspAdapter.getJspTitleByKey(tablename)%></a></p>
+    <%
+            }
+            else
+            {
     %>
     <a href="db/index.jsp?tableName=<%=tablename%>"  target="_blank"><%=JspAdapter.getJspTitleByKey(tablename)%></a></p>
     <%
+
+            }
         }
 
     %>
 <%--    <a href="test/createdbname.jsp"  target="_blank">创建数据库</a></p>--%>
 </div>
 
-<h3>版本(V5.8)</h3>
+<h3>版本(V5.9)</h3>
 
 </body>
 </html>

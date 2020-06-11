@@ -4,14 +4,33 @@ import com.commmon.SqlInterface;
 //import python.PythonCommand;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 public class JspAdapter {
     static String dbNameShowUi = "showui";
+
+    public static String getDbNameAllDb() {
+        return dbNameAllDb;
+    }
+
+    static String dbNameAllDb = "alldb";
     static Map<String, String> mapTitle = new HashMap<String, String>();
     static int inittitleflag = 0;
+
+    public static String getTableNameSingeItem() {
+        return tableNameSingeItem;
+    }
+
+    static String tableNameSingeItem = "singleitem";
+
+    public static String getTableNameAbc() {
+        return tableNameAbc;
+    }
+
+    static String tableNameAbc = "abc";
 
     public static String getParaResult(HttpServletRequest request, String para)
     {
@@ -59,6 +78,11 @@ public class JspAdapter {
         mapTitle.put("supertest", "超级测试");
         mapTitle.put("timeclock", "时钟时间");
         mapTitle.put("calc", "计算器");
+
+        /**
+         * 支持查单项，从文件名来看
+         */
+        mapTitle.put("singleitem_abc", "查单项");
 
         inittitleflag = 1;
     }
@@ -149,6 +173,56 @@ public class JspAdapter {
                 result = inter.insertName(dbName, tableName, filenames, pinyin);
                 result = new String(result.getBytes("gbk"), "utf-8");
             }
+        } catch (Exception e) {
+//        out.print("\n");
+            result = e.getMessage();
+        }
+        return result;
+    }
+
+    //根据id号查找内容中带searkey的行
+    public static String findLineTextByIdAndKey(String dbName, String tableName,String searchkey, String numname)
+    {
+        String result = "";
+        System.out.println("tablename:" + tableName);
+        System.out.println("numname:" + numname);
+
+        //查找内容为空时，不处理
+        if(searchkey.trim().isEmpty())
+        {
+            return result;
+        }
+
+        List<String> listContent = new ArrayList<>();
+        listContent.clear();
+        try {
+//            searchkey = new String(searchkey.getBytes("gbk"), "utf-8");
+            searchkey = new String(searchkey.getBytes("utf-8"), "gbk");
+            System.out.println("searchkey1:" + new String(searchkey.getBytes("gbk"), "utf-8"));
+            System.out.println("searchkey2:" + new String(searchkey.getBytes("gbk"), "gbk"));
+            System.out.println("searchkey3:" + new String(searchkey.getBytes("utf-8"), "utf-8"));
+            System.out.println("searchkey4:" + new String(searchkey.getBytes("utf-8"), "gbk"));
+            SqlInterface inter = new SqlInterface();
+            SqlProc.queryDataId(dbName, tableName, numname,listContent);
+            System.out.println("listContent size:" + listContent.size());
+            if(listContent.size() > 0)
+            {
+                System.out.print("searchkey:" + searchkey);
+                for (String item :
+                        listContent) {
+                    String[] listitem = item.split("\n");
+                    System.out.println("listitem size:" + listitem.length);
+                    for (String initem :
+                            listitem) {
+                        System.out.print("initem:" + initem);
+                        if(initem.contains(searchkey))
+                        {
+                            result += initem + "<br/>";
+                        }
+                    }
+                }
+            }
+            result = new String(result.getBytes("gbk"), "utf-8");
         } catch (Exception e) {
 //        out.print("\n");
             result = e.getMessage();

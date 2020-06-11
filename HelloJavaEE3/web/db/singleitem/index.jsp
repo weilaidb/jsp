@@ -5,13 +5,17 @@
 <%@ page import="com.commmon.CharacterFilter" %>
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="weilaidb.sql.SqlProc" %>
-<%@ page import="weilaidb.sql.JspAdapter" %>
+<%@ page import="weilaidb.sql.JspAdapter" %><%--
+  Created by IntelliJ IDEA.
+  User: dell
+  Date: 2019/2/25
+  Time: 22:29
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java"
          pageEncoding="UTF-8" %>
-<%@include file="../common/basepath.jsp"%>
-<link href="../css/explorer.css" rel="stylesheet" type="text/css">
-
-
+<%@include file="../../common/basepath.jsp"%>
+<link href="../../css/explorer.css" rel="stylesheet" type="text/css">
 <%
     //    打开的文件列表
 //    增加表项openlist，用以打开文件路径
@@ -66,7 +70,7 @@
     <a href="<%=app_basePath%>/index.jsp"  target="_blank">首页</a>
     <a href="delete.jsp?tableName=<%=tableName%>" target="_blank">删除</a>
     <a href="insert.jsp?tableName=<%=tableName%>" target="_blank">写入</a>
-    <form name="form3" method="post" action="explorer.jsp?tableName=<%=tableName%>">
+    <form name="form3" method="post" action="index.jsp?tableName=<%=tableName%>">
         <input type="text"
                size="30"
                class="text1"
@@ -129,6 +133,7 @@
 %>
 
 <%
+    String searchkeyline = "";
     showlist = CharacterFilter.gotHeaderSameList(openlist,"http",2,false);
 //    out.write("showlist:" + showlist.size());
     System.out.println("othershowlist:" + showlist.size());
@@ -136,8 +141,9 @@
             showlist) {
         String numname = CharacterFilter.strBySpaceIndex(showstr,2,0).trim();
         String showname = CharacterFilter.strBySpaceIndex(showstr,2,1).trim();
+        searchkeyline+=JspAdapter.findLineTextByIdAndKey(dbName, tableName,searchkey, numname);
 %>
-<form name="form2" class="form2" method="post"  target="frame_right" action="<%=app_basePath%>/sql/queryidwithmodify.jsp" onload="autosubmit()">
+<form name="form2" class="form2" method="post"  target="_blank" action="<%=app_basePath%>/sql/queryidwithmodify.jsp" onload="autosubmit()">
     <input type="text"
            size="4"
            class="text2"
@@ -150,6 +156,8 @@
 <%
     }
 %>
+
+<%=searchkeyline%>
 
 </body>
 </html>
