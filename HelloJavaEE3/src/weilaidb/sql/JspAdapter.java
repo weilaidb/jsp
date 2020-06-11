@@ -197,11 +197,11 @@ public class JspAdapter {
         listContent.clear();
         try {
 //            searchkey = new String(searchkey.getBytes("gbk"), "utf-8");
-            searchkey = new String(searchkey.getBytes("utf-8"), "gbk");
-            System.out.println("searchkey1:" + new String(searchkey.getBytes("gbk"), "utf-8"));
-            System.out.println("searchkey2:" + new String(searchkey.getBytes("gbk"), "gbk"));
-            System.out.println("searchkey3:" + new String(searchkey.getBytes("utf-8"), "utf-8"));
-            System.out.println("searchkey4:" + new String(searchkey.getBytes("utf-8"), "gbk"));
+//            searchkey = new String(searchkey.getBytes("utf-8"), "gbk");
+//            System.out.println("searchkey1:" + new String(searchkey.getBytes("gbk"), "utf-8"));
+//            System.out.println("searchkey2:" + new String(searchkey.getBytes("gbk"), "gbk"));
+//            System.out.println("searchkey3:" + new String(searchkey.getBytes("utf-8"), "utf-8"));
+//            System.out.println("searchkey4:" + new String(searchkey.getBytes("utf-8"), "gbk"));
             SqlInterface inter = new SqlInterface();
             SqlProc.queryDataId(dbName, tableName, numname,listContent);
             System.out.println("listContent size:" + listContent.size());
@@ -222,7 +222,7 @@ public class JspAdapter {
                     }
                 }
             }
-            result = new String(result.getBytes("gbk"), "utf-8");
+//            result = new String(result.getBytes("gbk"), "utf-8");
         } catch (Exception e) {
 //        out.print("\n");
             result = e.getMessage();

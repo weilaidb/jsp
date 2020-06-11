@@ -10,10 +10,6 @@
          pageEncoding="UTF-8" %>
 <%@include file="../common/basepath.jsp"%>
 <link href="../css/explorer.css" rel="stylesheet" type="text/css">
-<%--&lt;%&ndash;此处必须指定文件编码为gb2312,而且解码也是gb2312&ndash;%&gt;--%>
-<%--&lt;%&ndash;使用此来将utf-8的数据翻译成 gbk new String(info.getBytes("gbk"), "utf-8") + entertip;&ndash;%&gt;--%>
-<%--<%@ page language="java" pageEncoding="gb2312"%>--%>
-<%--<%@ page contentType="text/html;charset=gb2312"%>--%>
 
 
 <%
@@ -55,10 +51,10 @@
     <title><%=JspAdapter.getJspTitleByKey(tableName)%></title>
 </head>
 
-<%
-    request.setCharacterEncoding("UTF-8");//传值编码
-    response.setContentType("text/html;charset=UTF-8");//设置传输编码
-%>
+<%--<%--%>
+<%--    request.setCharacterEncoding("UTF-8");//传值编码--%>
+<%--    response.setContentType("text/html;charset=UTF-8");//设置传输编码--%>
+<%--%>--%>
 
 <body>
 <%
@@ -123,10 +119,10 @@
             showlist) {
         String httpname = CharacterFilter.strBySpaceIndex(showstr,3,1);
         String showname = CharacterFilter.strBySpaceIndex(showstr,3,2);
-        %>
+%>
 <h3>
-        <a href="<%=httpname%>" target="_blank"><%=showname%></a>
-<br/>
+    <a href="<%=httpname%>" target="_blank"><%=showname%></a>
+    <br/>
 </h3>
 <%
     }
@@ -141,9 +137,13 @@
             showlist) {
         String numname = CharacterFilter.strBySpaceIndex(showstr,2,0).trim();
         String showname = CharacterFilter.strBySpaceIndex(showstr,2,1).trim();
-        System.out.println("jsp searchkey:" + searchkey);
+        System.out.println("jsp searchkey1:" + inter.getGbkSign(searchkey));
+//        System.out.println("jsp searchkey2:" + new String(searchkey.getBytes("gbk"), "utf-8"));
+//        System.out.println("jsp searchkey3:" + new String(searchkey.getBytes("utf-8"), "gbk"));
+//        System.out.println("jsp searchkey4:" + new String(searchkey.getBytes("gbk"), "utf-8"));
+//        System.out.println("jsp searchkey5:" + new String(searchkey.getBytes("gbk"), "utf-8"));
         //此处查到内容必须找到源库
-        showtextline += JspAdapter.findLineTextByIdAndKey(JspAdapter.getDbNameAllDb(), JspAdapter.getTableNameAbc(), searchkey, numname);
+        showtextline += JspAdapter.findLineTextByIdAndKey(JspAdapter.getDbNameAllDb(), JspAdapter.getTableNameAbc(), inter.getGbkSign(searchkey), numname);
 %>
 <form name="form2" class="form2" method="post"  target="_blank" action="<%=app_basePath%>/sql/queryidwithmodify.jsp" onload="autosubmit()">
     <input type="text"
