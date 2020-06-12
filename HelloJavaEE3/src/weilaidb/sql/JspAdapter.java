@@ -215,7 +215,8 @@ public class JspAdapter {
                     for (String initem :
                             listitem) {
                         System.out.print("initem:" + initem);
-                        if(initem.contains(searchkey))
+                        //不区分大小写都查
+                        if(initem.toLowerCase().contains(searchkey.toLowerCase()))
                         {
                             result += initem + "<br/>";
                         }
