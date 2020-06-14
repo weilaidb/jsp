@@ -1,6 +1,7 @@
 package com.commmon;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -74,4 +75,11 @@ public class CharacterFilter {
         }
         return splitlst[index];
     }
+
+    public static String sameCharNums(String chr,int num)
+    {
+        return new String(new char[num]).replace("\0", chr);
+    }
+
+
 }

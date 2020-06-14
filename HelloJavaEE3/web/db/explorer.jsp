@@ -113,12 +113,20 @@
 %>
 
 <%
+//    处理带http的内容
     showlist = CharacterFilter.gotHeaderSameList(openlist,"http",2,true);
     System.out.println("httpshowlist:" + showlist.size());
     for (String showstr :
             showlist) {
         String httpname = CharacterFilter.strBySpaceIndex(showstr,3,1);
         String showname = CharacterFilter.strBySpaceIndex(showstr,3,2);
+        System.out.println("showname:" + showname);
+        if(showname.length() > JspAdapter.lengthOfDelimiterPinYin())
+        {
+            String splitkey = CharacterFilter.sameCharNums(" ", JspAdapter.lengthOfDelimiterPinYin());
+            System.out.println("splitkey:" + splitkey.length());
+            showname = showname.split(splitkey)[0];
+        }
         %>
 <h3>
         <a href="<%=httpname%>" target="_blank"><%=showname%></a>

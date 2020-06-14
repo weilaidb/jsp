@@ -10,6 +10,12 @@ import java.util.List;
 import java.util.Map;
 
 public class JspAdapter {
+    public static int lengthOfDelimiterPinYin() {
+        return length_delimiter_pinyin;
+    }
+
+    static int length_delimiter_pinyin = 100;
+
 
 
     public static String getBasePath(javax.servlet.ServletContext application, HttpServletRequest request)

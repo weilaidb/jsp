@@ -1,6 +1,7 @@
 package com.commmon;
 
 import com.pinyin.PinYinUtil;
+import weilaidb.sql.JspAdapter;
 
 import java.io.UnsupportedEncodingException;
 import java.sql.*;
@@ -348,7 +349,7 @@ public class SqlInterface {
         String resfail = "写入失败!";
         String resempty = "数据为空!";
 
-        char[] ch = new char[100];
+        char[] ch = new char[JspAdapter.lengthOfDelimiterPinYin()];
         Arrays.fill(ch, ' ');
         String spacechs = new String(ch);
 
