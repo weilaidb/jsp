@@ -10,6 +10,26 @@ import java.util.List;
 import java.util.Map;
 
 public class JspAdapter {
+
+
+    public static String getBasePath(javax.servlet.ServletContext application, HttpServletRequest request)
+    {
+        String app_basePath = application.getContextPath();
+        String app_path = request.getContextPath();
+        String app_docBase = application.getRealPath("/");
+        String app_CurrentPath = request.getServletPath();
+        String app_basePath2 = request.getScheme() + "://"
+                + request.getServerName() + ":" + request.getServerPort()
+                + app_path + "/";
+        System.out.println("app_path          :" + app_path);
+        System.out.println("app_basePath      :" + app_basePath);
+        System.out.println("app_basePath2     :" + app_basePath2);
+        System.out.println("app_CurrentPath   :" + app_CurrentPath);
+        System.out.println("getServletPath:" + request.getServletPath());
+        return app_basePath;
+    }
+
+
     static String dbNameShowUi = "showui";
 
     public static String getDbNameAllDb() {

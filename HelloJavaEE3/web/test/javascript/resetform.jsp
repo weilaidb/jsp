@@ -1,4 +1,4 @@
-<%--
+<%@ page import="weilaidb.sql.JspAdapter" %><%--
   Created by IntelliJ IDEA.
   User: dell
   Date: 2020/6/15
@@ -12,7 +12,7 @@
 <head>
     <meta charset="UTF-8">
     <title>form表单重置</title>
-    <script src="../../javascript/jquery/jquery-3.5.1.min.js"></script>
+    <script src="<%=JspAdapter.getBasePath(application, request)%>/javascript/jquery/jquery-3.5.1.min.js"></script>
 </head>
 
 <body>
