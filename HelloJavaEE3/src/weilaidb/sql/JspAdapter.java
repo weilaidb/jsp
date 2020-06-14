@@ -78,9 +78,11 @@ public class JspAdapter {
         mapTitle.put("supertest", "超级测试");
         mapTitle.put("timeclock", "时钟时间");
         mapTitle.put("calc", "计算器");
+        mapTitle.put("test", "测试项");
 
         /**
          * 支持查单项，从文件名来看
+         * 文件名带 singleitem
          */
         mapTitle.put("singleitem_abc", "查单项");
 

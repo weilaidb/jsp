@@ -11,7 +11,6 @@
 <%@include file="../common/basepath.jsp"%>
 <link href="../css/explorer.css" rel="stylesheet" type="text/css">
 
-
 <%
     //    打开的文件列表
 //    增加表项openlist，用以打开文件路径
@@ -66,15 +65,22 @@
     <a href="<%=app_basePath%>/index.jsp"  target="_blank">首页</a>
     <a href="delete.jsp?tableName=<%=tableName%>" target="_blank">删除</a>
     <a href="insert.jsp?tableName=<%=tableName%>" target="_blank">写入</a>
-    <form name="form3" method="post" action="explorersingle.jsp?tableName=<%=tableName%>">
+    <form name="form3" method="post" action="explorersingle.jsp?tableName=<%=tableName%>" id="searchform">
         <input type="text"
                size="30"
                class="text1"
+               id="idsearchcontent"
                name="searchkey"
                placeholder="请输入查询的内容"
         <%--readonly="readonly"--%>
                value=""/>
         <input type="submit" class="text1" name="Submit" value="点击查询"/>
+        <input type="button" class="text1" name="clearbtn" value="清除" onclick="formReset()"/>
+        <script type="text/javascript">
+            function formReset() {
+                document.getElementById("searchform").reset();
+            }
+        </script>
     </form>
     <div style="background:greenyellow; color:blue">
         <%
@@ -138,10 +144,6 @@
         String numname = CharacterFilter.strBySpaceIndex(showstr,2,0).trim();
         String showname = CharacterFilter.strBySpaceIndex(showstr,2,1).trim();
         System.out.println("jsp searchkey1:" + inter.getGbkSign(searchkey));
-//        System.out.println("jsp searchkey2:" + new String(searchkey.getBytes("gbk"), "utf-8"));
-//        System.out.println("jsp searchkey3:" + new String(searchkey.getBytes("utf-8"), "gbk"));
-//        System.out.println("jsp searchkey4:" + new String(searchkey.getBytes("gbk"), "utf-8"));
-//        System.out.println("jsp searchkey5:" + new String(searchkey.getBytes("gbk"), "utf-8"));
         //此处查到内容必须找到源库
         showtextline += JspAdapter.findLineTextByIdAndKey(JspAdapter.getDbNameAllDb(), JspAdapter.getTableNameAbc(), inter.getGbkSign(searchkey), numname);
 %>
