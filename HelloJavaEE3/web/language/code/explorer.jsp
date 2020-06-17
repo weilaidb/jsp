@@ -8,10 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <%
-        String title = "language";
-    %>
-    <title><%=JspAdapter.getJspTitleByKey(title)%></title>
+    <title><%=JspAdapter.getJspTitleByKey("language")%></title>
 </head>
 <body>
 

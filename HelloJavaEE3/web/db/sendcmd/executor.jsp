@@ -8,25 +8,35 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java"
          pageEncoding="UTF-8" %>
 
-<%--此处必须指定文件编码为gb2312,而且解码也是gb2312--%>
-<%--使用此来将utf-8的数据翻译成 gbk new String(info.getBytes("gbk"), "utf-8") + entertip;--%>
-<%--<%@ page language="java" pageEncoding="gb2312"%>--%>
-<%--<%@ page contentType="text/html;charset=gb2312"%>--%>
-
-
-<%--此处使用utf-8作为文件和解码的编码，也是使用--%>
-<%--使用此来将utf-8的数据翻译成 gbk new String(info.getBytes("gbk"), "utf-8") + entertip;--%>
-<%--<%@ page language="java" pageEncoding="utf-8"%>--%>
-<%--<%@ page contentType="text/html;charset=utf-8"%>--%>
-
-
-
 <html>
 <head>
     <title>执行器</title>
-<%--        <meta http-equiv="Content-Type" content="text/html charset=gb2312">--%>
+    <script>
+        //定义函数myClose关闭当前窗口
+        function myClose(){
+            //将id为time的元素的内容转为整数，保存在变量n中
+            var n=parseInt(time.innerHTML);
+            n--;//将n-1
+            //如果n==0,关闭页面
+            //否则, 将n+秒钟后自动关闭，再保存回time的内容中
+            if(n>0){
+                time.innerHTML=n+"秒钟后自动关闭";
+                timer=setTimeout(myClose,1000);
+            }else{
+                close();
+            }
+        }
+        var timer=null;
+        //当页面加载后，启动周期性定时器，每个1秒执行myClose
+        window.onload=function(){
+            timer=setTimeout(myClose,1000);
+        }
+    </script>
 </head>
 <body>
+<span id="time">600秒钟后自动关闭</span>
+<a href="javascript:close()">立即关闭</a>
+<a href="javascript:clearTimeout(timer)">留在本页</a><br>
 <%
     String ipaddr = request.getParameter("ipaddr");
     String cmddatatext = request.getParameter("cmddatatext");
