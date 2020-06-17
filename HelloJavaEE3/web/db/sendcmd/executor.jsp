@@ -4,13 +4,18 @@
 <%@ page import="java.io.*" %>
 <%@ page import="java.net.UnknownHostException" %>
 <%@ page import="static com.net.ClientSendMsg2QtServer.checkiszimu" %>
-<%--´Ë´¦±ØĞëÖ¸¶¨ÎÄ¼ş±àÂëÎªgb2312,¶øÇÒ½âÂëÒ²ÊÇgb2312--%>
-<%--Ê¹ÓÃ´ËÀ´½«utf-8µÄÊı¾İ·­Òë³É gbk new String(info.getBytes("gbk"), "utf-8") + entertip;--%>
-<%@ page language="java" pageEncoding="gb2312"%>
-<%@ page contentType="text/html;charset=gb2312"%>
+<%@ page import="com.commmon.SqlInterface" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java"
+         pageEncoding="UTF-8" %>
 
-<%--´Ë´¦Ê¹ÓÃutf-8×÷ÎªÎÄ¼şºÍ½âÂëµÄ±àÂë£¬Ò²ÊÇÊ¹ÓÃ--%>
-<%--Ê¹ÓÃ´ËÀ´½«utf-8µÄÊı¾İ·­Òë³É gbk new String(info.getBytes("gbk"), "utf-8") + entertip;--%>
+<%--æ­¤å¤„å¿…é¡»æŒ‡å®šæ–‡ä»¶ç¼–ç ä¸ºgb2312,è€Œä¸”è§£ç ä¹Ÿæ˜¯gb2312--%>
+<%--ä½¿ç”¨æ­¤æ¥å°†utf-8çš„æ•°æ®ç¿»è¯‘æˆ gbk new String(info.getBytes("gbk"), "utf-8") + entertip;--%>
+<%--<%@ page language="java" pageEncoding="gb2312"%>--%>
+<%--<%@ page contentType="text/html;charset=gb2312"%>--%>
+
+
+<%--æ­¤å¤„ä½¿ç”¨utf-8ä½œä¸ºæ–‡ä»¶å’Œè§£ç çš„ç¼–ç ï¼Œä¹Ÿæ˜¯ä½¿ç”¨--%>
+<%--ä½¿ç”¨æ­¤æ¥å°†utf-8çš„æ•°æ®ç¿»è¯‘æˆ gbk new String(info.getBytes("gbk"), "utf-8") + entertip;--%>
 <%--<%@ page language="java" pageEncoding="utf-8"%>--%>
 <%--<%@ page contentType="text/html;charset=utf-8"%>--%>
 
@@ -18,7 +23,7 @@
 
 <html>
 <head>
-    <title>Ö´ĞĞÆ÷</title>
+    <title>æ‰§è¡Œå™¨</title>
 <%--        <meta http-equiv="Content-Type" content="text/html charset=gb2312">--%>
 </head>
 <body>
@@ -26,6 +31,7 @@
     String ipaddr = request.getParameter("ipaddr");
     String cmddatatext = request.getParameter("cmddatatext");
     String towritestr = cmddatatext;
+//    String towritestr = SqlInterface.getGbk2UTF8(cmddatatext);
     String result = "";
     String entertip = "<br/>";
     String sendok = "send ok";
@@ -43,53 +49,41 @@
         else
         {
             inip = ipaddr;
-            //ÎªÁËÓëQt¿Í»§¶Ë¹²Í¬Ê¹ÓÃ£¬ĞèÒªÌí¼Ó4¸ö¿Õ¸ñ
+            //ä¸ºäº†ä¸Qtå®¢æˆ·ç«¯å…±åŒä½¿ç”¨ï¼Œéœ€è¦æ·»åŠ 4ä¸ªç©ºæ ¼
             towritestr = "    " + towritestr;
         }
-        //1.´´½¨¿Í»§¶ËSocket£¬Ö¸¶¨·şÎñÆ÷µØÖ·ºÍ¶Ë¿Ú
+
+        //1.åˆ›å»ºå®¢æˆ·ç«¯Socketï¼ŒæŒ‡å®šæœåŠ¡å™¨åœ°å€å’Œç«¯å£
         Socket socket = new Socket(inip, 9999);
-        //2.»ñÈ¡Êä³öÁ÷£¬Ïò·şÎñÆ÷¶Ë·¢ËÍĞÅÏ¢
-        OutputStream os = socket.getOutputStream();//×Ö½ÚÊä³öÁ÷
-        PrintWriter pw = new PrintWriter(os);//½«Êä³öÁ÷°ü×°Îª´òÓ¡Á÷
+        //2.è·å–è¾“å‡ºæµï¼Œå‘æœåŠ¡å™¨ç«¯å‘é€ä¿¡æ¯
+        OutputStream os = socket.getOutputStream();//å­—èŠ‚è¾“å‡ºæµ
+        PrintWriter pw = new PrintWriter(os);//å°†è¾“å‡ºæµåŒ…è£…ä¸ºæ‰“å°æµ
         long len = 0;
         /**
-         * ·¢ËÍ³¤¶ÈÎª×Ü³¤¶È£¬°üº¬Í·ºÍÌå¡£
+         * å‘é€é•¿åº¦ä¸ºæ€»é•¿åº¦ï¼ŒåŒ…å«å¤´å’Œä½“ã€‚
+         * åŒ…å«ä¸­æ–‡çš„é•¿åº¦éœ€è¦è®¡ç®—ï¼Œæ¯”è¾ƒéº»çƒ¦
          */
-        char lastchar = towritestr.charAt(towritestr.length() - 1);
-        if (testChinese.isContainChinese(towritestr)
-                && (true == checkiszimu(lastchar))) {
-            len = towritestr.length() + 6;
-        }else if (testChinese.isContainChinese(towritestr)
-                && (false == checkiszimu(lastchar))) {
-            len = towritestr.length() + 4;
+        if (testChinese.isContainChinese(towritestr)) {
+            len = testChinese.getWordCountCode(towritestr,"GBK");
         } else {
             len = towritestr.length();
         }
-//            len = towritestr.length();
+
         byte[] buffer = Byte24Long.LongToBytes(len);
-        System.out.println("exec cmd:" + (towritestr));
-//            System.out.println("size of len:" + (len));
-//            System.out.println("buffer of len:" + (buffer.length));
+        System.out.println("exec cmd ok:" + (towritestr) + ", orglen:" + towritestr.length() + ",wr len:" + len);
         pw.write(Byte24Long.getChars(buffer));
         pw.write(towritestr);
         pw.flush();
-//            socket.shutdownOutput();//¹Ø±ÕÊä³öÁ÷
-        //3.»ñÈ¡ÊäÈëÁ÷£¬²¢¶ÁÈ¡·şÎñÆ÷¶ËµÄÏìÓ¦ĞÅÏ¢
+//            socket.shutdownOutput();//å…³é—­è¾“å‡ºæµ
+        //3.è·å–è¾“å…¥æµï¼Œå¹¶è¯»å–æœåŠ¡å™¨ç«¯çš„å“åº”ä¿¡æ¯
         InputStream is = socket.getInputStream();
         BufferedReader br = new BufferedReader(new InputStreamReader(is));
         String info = null;
 
         String gbkinfo = "";
         while ((info = br.readLine()) != null) {
-            //È«²¿´òÓ¡³öÀ´
-//            out.println(new String(info.getBytes("gbk"), "utf-8") + entertip);
-//            out.println(new String(info.getBytes("gbk"), "gbk") + entertip);
-//            out.println(new String(info.getBytes("utf-8"), "utf-8") + entertip);
-//            out.println(new String(info.getBytes("utf-8"), "gbk") + entertip);
-
-            gbkinfo = new String(info.getBytes("gbk"), "utf-8") + entertip;
+            gbkinfo = SqlInterface.getGbkSign(info) + entertip;
             out.println(gbkinfo);
-
             try {
                 Thread.sleep(10);
             } catch (Exception e) {
@@ -97,7 +91,7 @@
             }
 
         }
-        //4.¹Ø±Õ×ÊÔ´
+        //4.å…³é—­èµ„æº
         br.close();
         is.close();
         pw.close();

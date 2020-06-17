@@ -105,6 +105,7 @@ public class JspAdapter {
         mapTitle.put("timeclock", "时钟时间");
         mapTitle.put("calc", "计算器");
         mapTitle.put("test", "测试项");
+        mapTitle.put("language", "代码库");
 
         /**
          * 支持查单项，从文件名来看
