@@ -26,3 +26,26 @@ b)的打印就成了乱码
 <%--<%@ page contentType="text/html;charset=utf-8"%>--%>
 
 
+
+
+Tomcat版本为X86版本，显示中文正常
+Tomcat版本为X64版本，显示中文异常，这是为啥呢？
+查看server.xml的配置
+D:\Software\apache-tomcat-9.0.27-windows-x86\apache-tomcat-9.0.27\conf\server.xml
+    <Connector port="8080" protocol="HTTP/1.1"
+               connectionTimeout="20000"
+               redirectPort="8443" />
+
+
+
+D:\Software\apache-tomcat-9.0.27-windows-x64\apache-tomcat-9.0.27\conf\server.xml
+    <Connector port="8080" protocol="HTTP/1.1"
+               connectionTimeout="20000"
+			   maxHttpHeaderSize="8999"
+               redirectPort="8443"
+			   useBodyEncodingForURI="true" URIEncoding="UTF-8"
+			   maxPostSize="-1"/>
+	<!-- 关于maxPostSize,tomcat默认是2M，单位为字节。maxPostSize="0"则表示不限制大小。 -->
+
+
+
