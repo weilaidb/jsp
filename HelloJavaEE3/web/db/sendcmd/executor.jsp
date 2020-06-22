@@ -73,16 +73,20 @@
          * 发送长度为总长度，包含头和体。
          * 包含中文的长度需要计算，比较麻烦
          */
-        if (testChinese.isContainChinese(towritestr)) {
-            len = testChinese.getWordCountCode(towritestr,"GBK");
+//        String str_gbk = SqlInterface.Unicode2GBK(towritestr);
+        String str_gbk = new String(towritestr.getBytes("UTF-8"), "GBK");
+        if (testChinese.isContainChinese(str_gbk)) {
+            len = testChinese.getWordCountCode(str_gbk,"GBK");
         } else {
-            len = towritestr.length();
+            len = str_gbk.length();
         }
 
         byte[] buffer = Byte24Long.LongToBytes(len);
         System.out.println("exec cmd ok:" + (towritestr) + ", orglen:" + towritestr.length() + ",wr len:" + len);
+        System.out.println("exec cmd ok:" + (str_gbk) + ", orglen:" + str_gbk.length() + ",wr len:" + len);
         pw.write(Byte24Long.getChars(buffer));
-        pw.write(towritestr);
+//        pw.write(towritestr);
+        pw.write(str_gbk);
         pw.flush();
 //            socket.shutdownOutput();//关闭输出流
         //3.获取输入流，并读取服务器端的响应信息

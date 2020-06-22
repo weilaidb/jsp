@@ -1,5 +1,10 @@
 package com.commmon;
 
+import com.sun.deploy.net.HttpRequest;
+import com.sun.deploy.net.HttpResponse;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.UnsupportedEncodingException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -206,4 +211,20 @@ public class testChinese {
         System.out.println(getWordCountCode(str,"GBK"));  //6
         System.out.println(getWordCountCode(str,"UTF-8")); //9
     }
+
+    public static void printCodingInfo(javax.servlet.ServletContext application
+                        , HttpServletRequest request
+                        , HttpServletResponse response
+    )
+    {
+        System.out.println("request character encoding:" + request.getCharacterEncoding());
+        System.out.println("request getContentType:" + request.getContentType());
+        System.out.println("request getRequestURI:" + request.getRequestURI());
+        System.out.println("application getContextPath:" + application.getContextPath());
+        System.out.println("response getContextPath:" + response.getCharacterEncoding());
+        System.out.println("response getContextPath:" + response.getContentType());
+    }
 }
+
+
+

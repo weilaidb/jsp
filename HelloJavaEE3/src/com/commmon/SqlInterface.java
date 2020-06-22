@@ -27,8 +27,7 @@ public class SqlInterface {
     public static String creatsql = "create table egtable (name varchar(4096))  ENGINE=InnoDB AUTO_INCREMENT=217 DEFAULT CHARSET=utf8";
 
     //获取最新索引号
-    public Integer getMaxId(String dbName, String tableName)
-    {
+    public Integer getMaxId(String dbName, String tableName) {
         Integer maxid = 0;
         try {
             Class.forName(DBDRIVER);
@@ -52,7 +51,7 @@ public class SqlInterface {
 
             }
         }
-        return  maxid;
+        return maxid;
     }
 
 
@@ -132,6 +131,7 @@ public class SqlInterface {
         return "";
     }
 
+
     public static String getGbk2UTF8(String code) {
         try {
             return new String(code.getBytes("GBK"), "utf-8");
@@ -140,6 +140,31 @@ public class SqlInterface {
         }
         return "";
     }
+
+    /**
+     *      * unicode转中文
+     *      * @param  str
+     *      * @return 中文
+     *     
+     */
+    public static String Unicode2GBK(String dataStr) {
+        int index = 0;
+        StringBuffer buffer = new StringBuffer();
+        while (index < dataStr.length()) {
+            if (!"//u".equals(dataStr.substring(index, index + 2))) {
+                buffer.append(dataStr.charAt(index));
+                index++;
+                continue;
+            }
+            String charStr = "";
+            charStr = dataStr.substring(index + 2, index + 6);
+            char letter = (char) Integer.parseInt(charStr, 16);
+            buffer.append(letter);
+            index += 6;
+        }
+        return buffer.toString();
+    }
+
     public String checkStringContainKeyList(String content, String key) {
         String result = "";
         String[] qrylst = key
@@ -368,7 +393,7 @@ public class SqlInterface {
                 str = str.replace("\\", "\\\\")
                         .replace("\"", "\"\"");
                 //关键字为空时，null, 或"null" ，不需要带拼音
-                if((null == pinyin) ||pinyin.equals("null") || pinyin.trim().isEmpty()) {
+                if ((null == pinyin) || pinyin.equals("null") || pinyin.trim().isEmpty()) {
                     PinYinUtil hanyuPinyinUtil = new PinYinUtil();
                     str += spacechs;
                     str += hanyuPinyinUtil.toHanyuPinyin(str);
