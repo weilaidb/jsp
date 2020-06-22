@@ -15,6 +15,14 @@ public class Byte24Long {
         return buffer;
     }
 
+    public static void printBytes(byte[] buffer)
+    {
+
+        for (int i = 0; i < buffer.length; i++) {
+            System.out.println( i + ":"  + Integer.toHexString(buffer[i] & 0xFF));
+        }
+    }
+
     public static long BytesToLong(byte[] buffer) {
         long values = 0;
         for (int i = 0; i < 8; i++) {

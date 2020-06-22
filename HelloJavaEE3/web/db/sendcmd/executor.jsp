@@ -41,14 +41,12 @@
     String ipaddr = request.getParameter("ipaddr");
     String cmddatatext = request.getParameter("cmddatatext");
     String towritestr = cmddatatext;
-//    String towritestr = SqlInterface.getGbk2UTF8(cmddatatext);
     String result = "";
     String entertip = "<br/>";
     String sendok = "send ok";
     String sendng = "send fail";
     try {
-        result =  "execute cmd:" + sendok + "@" + ipaddr +  " " + towritestr;
-        result+= "<br/>";
+
         String inip = "";
         ipaddr = ipaddr.trim();
         if(null == ipaddr || ipaddr.isEmpty() || ipaddr.equals("127.0.0.1")
@@ -72,21 +70,40 @@
         /**
          * 发送长度为总长度，包含头和体。
          * 包含中文的长度需要计算，比较麻烦
+         * 因为定义了 useBodyEncodingForURI="true" URIEncoding="UTF-8"
+         * get/post传递的参数编码为utf-8 ?
          */
-//        String str_gbk = SqlInterface.Unicode2GBK(towritestr);
-        String str_gbk = new String(towritestr.getBytes("UTF-8"), "GBK");
-        if (testChinese.isContainChinese(str_gbk)) {
-            len = testChinese.getWordCountCode(str_gbk,"GBK");
+
+        int beforelen = towritestr.length();
+        System.out.println(">>>>before str len:" + beforelen + ", towritestr:" + towritestr);
+        String str1 = new String(towritestr.getBytes("UTF-8"), "GBK");
+        String str2 = new String(towritestr.getBytes("ISO-8859-1"), "GBK");
+        String str3 = new String(towritestr.getBytes("ISO-8859-1"), "UTF-8");
+        String str4 = new String(towritestr.getBytes("GBK"), "UTF-8");
+
+        String str5= new String(str3.getBytes("UTF-8"), "GBK");
+        String str6= new String(str3.getBytes("ISO-8859-1"), "GBK");
+//        System.out.println("str1:"  + str1);
+//        System.out.println("str2:"  + str2);
+//        System.out.println("str3:"  + str3);
+//        System.out.println("str4:"  + str4);
+//        System.out.println("str5:"  + str5);
+//        System.out.println("str6:"  + str6);
+
+
+        towritestr = str3;
+
+
+        if (testChinese.isContainChinese(towritestr)) {
+            len = testChinese.getWordCountCode(towritestr,"UTF-8");
         } else {
-            len = str_gbk.length();
+            len = towritestr.length();
         }
 
         byte[] buffer = Byte24Long.LongToBytes(len);
         System.out.println("exec cmd ok:" + (towritestr) + ", orglen:" + towritestr.length() + ",wr len:" + len);
-        System.out.println("exec cmd ok:" + (str_gbk) + ", orglen:" + str_gbk.length() + ",wr len:" + len);
         pw.write(Byte24Long.getChars(buffer));
-//        pw.write(towritestr);
-        pw.write(str_gbk);
+        pw.write(Byte24Long.getChars(towritestr.getBytes("UTF-8")));
         pw.flush();
 //            socket.shutdownOutput();//关闭输出流
         //3.获取输入流，并读取服务器端的响应信息
@@ -117,6 +134,9 @@
         }
         socket.close();
 
+        result =  "execute cmd:" + sendok + "@" + ipaddr +  " " + towritestr;
+        result+= "<br/>";
+
     } catch (UnknownHostException e) {
         e.printStackTrace();
         result = e.getMessage();
@@ -127,6 +147,7 @@
         result =  "execute cmd:" + result + "@" + ipaddr +  " " + towritestr;
     }
 
+    System.out.println(result);
 %>
 
 <%=result%>

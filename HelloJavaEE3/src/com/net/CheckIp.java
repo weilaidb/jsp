@@ -11,7 +11,7 @@ public class CheckIp {
             // 判断ip地址是否与正则表达式匹配
             if (text.matches(regex)) {
                 // 返回判断信息
-                System.out.println("是一个合法的IP地址！");
+//                System.out.println("是一个合法的IP地址！");
                 return 0;
             } else {
                 // 返回判断信息
