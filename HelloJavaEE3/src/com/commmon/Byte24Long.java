@@ -15,9 +15,9 @@ public class Byte24Long {
         return buffer;
     }
 
-    public static void printBytes(byte[] buffer)
+    public static void printBytes(String tips, byte[] buffer)
     {
-
+        System.out.println("----->[" + tips + "]");
         for (int i = 0; i < buffer.length; i++) {
             System.out.println( i + ":"  + Integer.toHexString(buffer[i] & 0xFF));
         }
