@@ -26,7 +26,7 @@
     <a href="sql/notebookalldb.jsp" target="frame_right">记事本(sqlite)[all.db]</a></p>
     <a href="diary"  target="_blank">日记本</a></p>
     <a href="db/sendcmd/explorer.jsp"  target="_blank">发送命令</a></p>
-    <a href="test/index.jsp"  target="_blank">TEST</a></p>
+<%--    <a href="test/index.jsp"  target="_blank">TEST</a></p>--%>
     <a href="language/code/explorer.jsp"  target="_blank">代码库</a></p>
 <%--    <a href="test/javascript/autosubmit.jsp"  target="_blank">自动提交</a></p>--%>
 <%--    <a href="db/singleitem/index.jsp"  target="_blank">查单项</a></p>--%>
@@ -79,7 +79,7 @@
 <%--    <a href="test/createdbname.jsp"  target="_blank">创建数据库</a></p>--%>
 </div>
 
-<h3>版本(V6.2)</h3>
+<h3>版本(V6.3)</h3>
 
 </body>
 </html>

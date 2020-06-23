@@ -65,7 +65,17 @@
         Socket socket = new Socket(inip, 9999);
         //2.获取输出流，向服务器端发送信息
         OutputStream os = socket.getOutputStream();//字节输出流
-        PrintWriter pw = new PrintWriter(os);//将输出流包装为打印流
+//        PrintWriter pw = new PrintWriter(os);
+        PrintStream ps = new PrintStream(os);//将输出流包装为byte流，默认就发送utf-8字符集
+        /**
+         * PrintStream主要操作byte流，而PrintWriter用来操作字符流。读取文本文件时一般用后者。
+         *
+         * java的一个字符（char）是16bit的，一个BYTE是8bit的
+         * PrintStrean是写入一串8bit的数据的。
+         * PrintWriter是写入一串16bit的数据的。
+         * String缺省是用UNICODE编码，是16bit的。因此用PrintWriter写入的字符串，跨平台性好一些吧。
+         * PrintStream的可能会出现字符集乱码吧。
+         */
         long len = 0;
         /**
          * 发送长度为总长度，包含头和体。
@@ -101,10 +111,17 @@
         }
 
         byte[] buffer = Byte24Long.LongToBytes(len);
+        Byte24Long.printBytes("write len only", buffer);
         System.out.println("exec cmd ok:" + (towritestr) + ", orglen:" + towritestr.length() + ",wr len:" + len);
-        pw.write(Byte24Long.getChars(buffer));
-        pw.write(Byte24Long.getChars(towritestr.getBytes("UTF-8")));
-        pw.flush();
+        //传递HEADER 8个字节，内容为记录BODY长度
+//        pw.write(Byte24Long.getChars(buffer));
+        ps.write(buffer);
+        //传递BODY内容
+        byte [] senddata = (towritestr.getBytes("UTF-8"));
+        Byte24Long.printBytes("last send data", senddata);
+        ps.write(senddata);
+        ps.flush();
+
 //            socket.shutdownOutput();//关闭输出流
         //3.获取输入流，并读取服务器端的响应信息
         InputStream is = socket.getInputStream();
@@ -125,7 +142,7 @@
         //4.关闭资源
         br.close();
         is.close();
-        pw.close();
+        ps.close();
         os.close();
         try {
             Thread.sleep(2000);
