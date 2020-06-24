@@ -131,6 +131,32 @@ public class SqlInterface {
         return "";
     }
 
+    public static String getUtf8Sign(String code) {
+        try {
+            return new String(code.getBytes("iso-8859-1"), "GBK");
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        return "";
+    }
+
+    public static String getUtf8toGbkSign(String code) {
+        try {
+            return new String(code.getBytes("utf-8"), "GBK");
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        return "";
+    }
+    public static String getUtf8to8859Sign(String code) {
+        try {
+            return new String(code.getBytes("utf-8"), "iso-8859-1");
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        return "";
+    }
+
 
     public static String getGbk2UTF8(String code) {
         try {

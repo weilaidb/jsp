@@ -111,14 +111,14 @@
         }
 
         byte[] buffer = Byte24Long.LongToBytes(len);
-        Byte24Long.printBytes("write len only", buffer);
+//        Byte24Long.printBytes("write len only", buffer);
         System.out.println("exec cmd ok:" + (towritestr) + ", orglen:" + towritestr.length() + ",wr len:" + len);
         //传递HEADER 8个字节，内容为记录BODY长度
 //        pw.write(Byte24Long.getChars(buffer));
         ps.write(buffer);
         //传递BODY内容
         byte [] senddata = (towritestr.getBytes("UTF-8"));
-        Byte24Long.printBytes("last send data", senddata);
+//        Byte24Long.printBytes("last send data", senddata);
         ps.write(senddata);
         ps.flush();
 
@@ -130,7 +130,13 @@
 
         String gbkinfo = "";
         while ((info = br.readLine()) != null) {
-            gbkinfo = SqlInterface.getGbkSign(info) + entertip;
+//            str1 = new String(info.getBytes("UTF-8"), "GBK");
+//            str2 = new String(info.getBytes("ISO-8859-1"), "GBK");
+//            str3 = new String(info.getBytes("ISO-8859-1"), "UTF-8");
+            str4 = new String(info.getBytes("GBK"), "UTF-8");
+
+//            gbkinfo = SqlInterface.getGbkSign(info) + entertip;
+            gbkinfo = str4 + entertip;
             out.println(gbkinfo);
             try {
                 Thread.sleep(10);
