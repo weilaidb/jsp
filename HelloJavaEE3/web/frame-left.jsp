@@ -79,7 +79,7 @@
 <%--    <a href="test/createdbname.jsp"  target="_blank">创建数据库</a></p>--%>
 </div>
 
-<h3>版本(V6.4)</h3>
+<h3>版本(V6.6)</h3>
 
 </body>
 </html>

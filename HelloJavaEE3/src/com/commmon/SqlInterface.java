@@ -148,6 +148,7 @@ public class SqlInterface {
         }
         return "";
     }
+
     public static String getUtf8to8859Sign(String code) {
         try {
             return new String(code.getBytes("utf-8"), "iso-8859-1");
@@ -395,6 +396,36 @@ public class SqlInterface {
     }
 
 
+
+    public String execsqlcmd(String dbName, String tableName, String sql,String resstr, String resfail) {
+        try {
+            Class.forName(DBDRIVER);
+            //            创建数据库,需要手动创建呢
+            conn = DriverManager.getConnection(DBURL.replaceAll("mldn", dbName), DBUSER, DBPASS);
+//            创建数据库名称和表必须在首先创建出来。替换通用表名
+            sql = sql.replace("egtable", tableName);
+            System.out.println("sql:" + sql);
+            pstmt = conn.prepareStatement(sql);
+            pstmt.execute();
+
+        } catch (Exception e) {
+            System.out.print(e);
+            resfail += e.getMessage();
+            resstr = resfail;
+        } finally {
+            try {
+                rs.close();
+                pstmt.close();
+                conn.close();
+            } catch (Exception e) {
+
+            }
+        }
+
+        return resstr;
+    }
+
+
     public String insertName(String dbName, String tableName, String files, String pinyin) {
         String resstr = "写入成功!";
         String resfail = "写入失败!";
@@ -434,8 +465,14 @@ public class SqlInterface {
                 pstmt.execute();
             }
         } catch (Exception e) {
+            String resstr_addcolumn = "表添加列写入成功!";
+            String resfail_addcolumn = "表添加列写入失败!";
             System.out.print(e);
             resfail += e.getMessage();
+            String addcolumncreatetimesql = "alter table egtable add COLUMN `create_time` datetime DEFAULT CURRENT_TIMESTAMP COMMENT 'create time';";
+            String addcolumnupdatetimesql = "alter table egtable add COLUMN `update_time` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'update time';";
+            resfail +=  execsqlcmd(dbName, tableName,addcolumncreatetimesql, resstr_addcolumn, resfail_addcolumn);;
+            resfail +=  execsqlcmd(dbName, tableName,addcolumnupdatetimesql, resstr_addcolumn, resfail_addcolumn);;
             resstr = resfail;
         } finally {
             try {
