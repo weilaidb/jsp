@@ -106,6 +106,7 @@ public class JspAdapter {
         mapTitle.put("calc", "计算器");
         mapTitle.put("test", "测试项");
         mapTitle.put("language", "代码库");
+        mapTitle.put("optmonitor", "光监控");
 
         /**
          * 支持查单项，从文件名来看

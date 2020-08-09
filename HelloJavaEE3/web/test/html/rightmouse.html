@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <meta http-equiv="Content-Language" content="zh-cn" />
+
+    <title>右键菜单</title>
+    <style type="text/css">
+        #right-menu{
+            position: absolute;
+            width: 200px;
+            height: auto;
+            border: 1px #ccc solid;
+            display: none;
+            padding:2px 0;
+            box-shadow: 5px 5px 5px #ccc;
+        }
+        .menu-item{
+            height: 25px;
+            margin:4px 0;
+            padding:0 10px;
+            cursor: pointer;
+        }
+        .menu-item:hover{
+            background-color: #ccc;
+        }
+        .menu-item-separator{
+            border-top:1px #ccc solid;
+            height: 1px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- 自定义右键菜单dom -->
+<div  id="right-menu">
+    <div class="menu-item">执行</div>
+    <div class="menu-item">启动</div>
+    <div class="menu-item-separator"></div>
+    <div class="menu-item">删除</div>
+    <div class="menu-item">导出</div>
+</div>
+<script type="text/javascript">
+    window.oncontextmenu = function(e){
+        e.preventDefault(); //阻止浏览器自带的右键菜单显示
+        var menu = document.getElementById("right-menu");
+        menu.style.display = "block"; //将自定义的“右键菜单”显示出来
+        menu.style.left = e.clientX + "px";  //设置位置，跟随鼠标
+        menu.style.top = e.clientY+"px";
+    }
+    window.onclick = function(e){ //点击窗口，右键菜单隐藏
+        var menu = document.getElementById("right-menu");
+        menu.style.display = "none";
+    }
+</script>
+</body>
+</html>
