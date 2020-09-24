@@ -15,5 +15,8 @@
 <a href="synchronized.jsp" target="_blank">synchronized</a></p>
 <a href="checkEmail.jsp" target="_blank">checkEmail</a></p>
 <a href="triangle.jsp" target="_blank">triAngle</a></p>
+<a href="contentType/first.jsp" target="_blank">contentType first</a></p>
+<a href="contentType/second.jsp" target="_blank">contentType second</a></p>
+<a href="computer.jsp" target="_blank">Computer</a></p>
 </body>
 </html>
