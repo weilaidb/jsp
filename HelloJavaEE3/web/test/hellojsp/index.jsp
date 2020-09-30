@@ -18,5 +18,10 @@
 <a href="contentType/first.jsp" target="_blank">contentType first</a></p>
 <a href="contentType/second.jsp" target="_blank">contentType second</a></p>
 <a href="computer.jsp" target="_blank">Computer</a></p>
+<a href="include.jsp" target="_blank">Include</a></p>
+<a href="example2_11.jsp" target="_blank">Include指令标记</a></p>
+<a href="example2_12.jsp" target="_blank">param指令标记</a></p>
+<a href="example2_13.jsp" target="_blank">forward指令标记</a></p>
+<a href="example2_14.jsp" target="_blank">plugin指令标记</a></p>
 </body>
 </html>
