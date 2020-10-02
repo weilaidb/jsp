@@ -28,5 +28,6 @@
 <a href="txt/second.jsp" target="_blank">txt 2</a></p>
 <a href="txt/third.jsp" target="_blank">txt 3</a></p>
 <a href="eg2/one.jsp" target="_blank">eg one</a></p>
+<a href="ch3/example3_1.jsp" target="_blank">Tags</a></p>
 </body>
 </html>
