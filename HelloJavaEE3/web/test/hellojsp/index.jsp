@@ -23,5 +23,6 @@
 <a href="example2_12.jsp" target="_blank">param指令标记</a></p>
 <a href="example2_13.jsp" target="_blank">forward指令标记</a></p>
 <a href="example2_14.jsp" target="_blank">plugin指令标记</a></p>
+<a href="inputName.jsp" target="_blank">输入名称</a></p>
 </body>
 </html>
