@@ -9,10 +9,13 @@
 <%@taglib prefix="computer" tagdir="/WEB-INF/tags" %>
 <html>
 <head>
-    <title>Triangl</title>
+    <title>Triangle</title>
 </head>
 <body>
 <h3>以下是调用Tag文件的效果:</h3>
 <computer:Triangle sideA="5" sideB="6" sideC="7"></computer:Triangle>
+<computer:Triangle sideA="3" sideB="4" sideC="5"></computer:Triangle>
+<computer:Triangle sideA="3" sideB="4" sideC="5"></computer:Triangle>
+<computer:Triangle sideA="3" sideB="4" sideC="5"></computer:Triangle>
 </body>
 </html>
