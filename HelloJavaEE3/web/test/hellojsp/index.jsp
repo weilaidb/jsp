@@ -24,5 +24,9 @@
 <a href="example2_13.jsp" target="_blank">forward指令标记</a></p>
 <a href="example2_14.jsp" target="_blank">plugin指令标记</a></p>
 <a href="inputName.jsp" target="_blank">输入名称</a></p>
+<a href="txt/first.jsp" target="_blank">txt 1</a></p>
+<a href="txt/second.jsp" target="_blank">txt 2</a></p>
+<a href="txt/third.jsp" target="_blank">txt 3</a></p>
+<a href="eg2/one.jsp" target="_blank">eg one</a></p>
 </body>
 </html>
