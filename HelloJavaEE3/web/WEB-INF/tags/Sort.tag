@@ -31,8 +31,8 @@
         double score = (Double)listScore.get(k);
         String name = (String)listName.get(k);
         if(score< 60){
-            out.print("<td bgcolor=yellow>" + name + "</td>");
-            out.print("<td bgcolor=yellow" + score + "</td>");
+            out.print("<td bgcolor=yellow>" + name  + "</td>");
+            out.print("<td bgcolor=yellow>" + score + "</td>");
         }
         else
         {

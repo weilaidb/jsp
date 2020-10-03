@@ -32,5 +32,6 @@
 <a href="ch3/example3_2.jsp" target="_blank">Tags Body</a></p>
 <a href="ch3/example3_3.jsp" target="_blank">Tags 3</a></p>
 <a href="ch3/example3_4..jsp" target="_blank">Tags 4</a></p>
+<a href="ch3/lookTime.jsp" target="_blank">lookTime</a></p>
 </body>
 </html>
