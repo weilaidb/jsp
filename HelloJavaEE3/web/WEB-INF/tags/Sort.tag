@@ -15,7 +15,7 @@
                 Double r = (Double)listScore.get(i);
                 listName.set(i, (String)listName.get(j));
                 listName.set(j, temp);
-                listScore.set(i, (String)listScore.get(j));
+                listScore.set(i, (Double)listScore.get(j));
                 listScore.set(j, r);
             }
         }
@@ -26,9 +26,22 @@
         out.print("<th>" + title + "</th>");
         out.print("<th>" + item + "</th>");
     out.print("<tr>");
-
-
-
+    for(int k = 0; k < listName.size(); k++){
+        out.print("<tr>");
+        double score = (Double)listScore.get(k);
+        String name = (String)listName.get(k);
+        if(score< 60){
+            out.print("<td bgcolor=yellow>" + name + "</td>");
+            out.print("<td bgcolor=yellow" + score + "</td>");
+        }
+        else
+        {
+            out.print("<td>" + name + "</td>");
+            out.print("<td>" + score + "</td>");
+        }
+        out.print("<tr>");
+    }
+    out.print("</table>");
 %>
 
 
