@@ -1,7 +1,7 @@
 <%@ tag pageEncoding="utf-8" %>
-<%@ attribute name="color" %>
-<%@ attribute name="name" %>
-<%@ attribute name="sex" %>
+<%@ attribute name="color" required="true" %>
+<%@ attribute name="name" required="true" %>
+<%@ attribute name="sex" required="true" %>
 <tr bgcolor="<%=color%>">
     <td width="60"><%=name%></td>
     <td width="60"><%=sex%></td>
