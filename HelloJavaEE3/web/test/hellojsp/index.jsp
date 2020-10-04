@@ -35,5 +35,6 @@
 <a href="ch3/lookTime.jsp" target="_blank">lookTime</a></p>
 <a href="ch3/userOne.jsp" target="_blank">userOne</a></p>
 <a href="ch3/userTwo.jsp" target="_blank">userTwo</a></p>
+<a href="ch3/example3_6.jsp" target="_blank">Sort</a></p>
 </body>
 </html>
