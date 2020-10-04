@@ -39,6 +39,7 @@
     String b = request.getParameter("b");
     String c = request.getParameter("c");
     String cd = request.getParameter("R");
+
     if(null == a || null == b || null == c|| null == cd){
         a = "0";
         b = "0";
@@ -50,9 +51,21 @@
 
 %>
     <computer:GetArea numberA="<%=a%>" numberB="<%=b%>" numberC="<%=c%>" condition="<%=cd%>"/>
-    <br><%=message%>
-    <br><%=area%>
+
+
 <%
+        String messageout = request.getParameter("message");
+        String areaout= request.getParameter("area");
+        if(null == messageout || null == areaout){
+            messageout = "";
+            areaout    = "";
+        }
+%>
+    <br><%=messageout%>
+    <br><%=areaout%>
+<%
+
+
     }
 
 
