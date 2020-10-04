@@ -13,7 +13,7 @@
     <title>Sort</title>
 </head>
 <body bgcolor="#00ffff">
-<first:FirstTag number="6"/>
-<first:FirstTag number="8"/>
+<first:FirstTag number="12"/>
+<%--<first:FirstTag number="8"/>--%>
 </body>
 </html>
