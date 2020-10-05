@@ -39,5 +39,11 @@
 <a href="ch3/example3_7.jsp" target="_blank">BiaoGe</a></p>
 <a href="ch3/putImage.jsp" target="_blank">putImage</a></p>
 <a href="ch3/inputAndShow.jsp" target="_blank">inputAndShow</a></p>
+
+
+<a href="ch4/example4_1.jsp" target="_blank">Request</a></p>
+<a href="ch4/example4_2.jsp" target="_blank">Request 2</a></p>
+<a href="ch4/example4_3.jsp" target="_blank">处理汉字乱码</a></p>
+<a href="ch4/example4_4.jsp" target="_blank">request objects</a></p>
 </body>
 </html>
