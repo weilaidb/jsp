@@ -45,5 +45,10 @@
 <a href="ch4/example4_2.jsp" target="_blank">Request 2</a></p>
 <a href="ch4/example4_3.jsp" target="_blank">处理汉字乱码</a></p>
 <a href="ch4/example4_4.jsp" target="_blank">request objects</a></p>
+<a href="ch4/example4_5.jsp" target="_blank">计算三角形</a></p>
+<a href="ch4/example4_6.jsp" target="_blank">选择球队</a></p>
+<a href="ch4/example4_7.jsp" target="_blank">选择求和</a></p>
+<a href="ch4/example4_8.jsp" target="_blank">表格</a></p>
+<a href="ch4/example4_9.jsp" target="_blank">显示图片或视频</a></p>
 </body>
 </html>
