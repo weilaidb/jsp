@@ -50,5 +50,7 @@
 <a href="ch4/example4_7.jsp" target="_blank">选择求和</a></p>
 <a href="ch4/example4_8.jsp" target="_blank">表格</a></p>
 <a href="ch4/example4_9.jsp" target="_blank">显示图片或视频</a></p>
+<a href="ch4/example4_10.jsp" target="_blank">保存为MSWORD</a></p>
+<a href="ch4/example4_11.jsp" target="_blank">观看旋转的椭圆</a></p>
 </body>
 </html>
