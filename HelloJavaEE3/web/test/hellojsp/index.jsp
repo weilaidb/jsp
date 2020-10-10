@@ -52,5 +52,12 @@
 <a href="ch4/example4_9.jsp" target="_blank">显示图片或视频</a></p>
 <a href="ch4/example4_10.jsp" target="_blank">保存为MSWORD</a></p>
 <a href="ch4/example4_11.jsp" target="_blank">观看旋转的椭圆</a></p>
+<a href="ch4/example4_12.jsp" target="_blank">定时刷新</a></p>
+<a href="ch4/example4_13.jsp" target="_blank">重定向</a></p>
+<a href="ch3/other.jsp" target="_blank">重定向2</a></p>
+<a href="ch4/first.jsp" target="_blank">session</a></p>
+<a href="ch4/jiafei.jsp" target="_blank">重写URL</a></p>
+<a href="ch4/example4_17.jsp" target="_blank">session 2</a></p>
+<a href="ch4/example4_18.jsp" target="_blank">猜数字</a></p>
 </body>
 </html>
