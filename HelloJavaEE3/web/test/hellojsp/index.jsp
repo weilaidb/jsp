@@ -63,5 +63,6 @@
 <a href="ch4/example4_20.jsp" target="_blank">session设置间隔时间</a></p>
 <a href="ch4/one.jsp" target="_blank">计数器</a></p>
 <a href="ch4/example4_22.jsp" target="_blank">Out</a></p>
+<a href="ch4/submit.jsp" target="_blank">留言板</a></p>
 </body>
 </html>
