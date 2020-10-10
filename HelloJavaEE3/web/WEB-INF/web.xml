@@ -154,4 +154,8 @@
             <encoding>UTF-8</encoding>
         </locale-encoding-mapping>
     </locale-encoding-mapping-list>
+
+    <session-config>
+        <session-timeout>30</session-timeout>
+    </session-config>
 </web-app>

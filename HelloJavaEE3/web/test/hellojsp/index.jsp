@@ -59,5 +59,9 @@
 <a href="ch4/jiafei.jsp" target="_blank">重写URL</a></p>
 <a href="ch4/example4_17.jsp" target="_blank">session 2</a></p>
 <a href="ch4/example4_18.jsp" target="_blank">猜数字</a></p>
+<a href="ch4/example4_19.jsp" target="_blank">session生存时间</a></p>
+<a href="ch4/example4_20.jsp" target="_blank">session设置间隔时间</a></p>
+<a href="ch4/one.jsp" target="_blank">计数器</a></p>
+<a href="ch4/example4_22.jsp" target="_blank">Out</a></p>
 </body>
 </html>
