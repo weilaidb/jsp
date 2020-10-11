@@ -71,5 +71,9 @@
 <a href="ch5/example5_2.jsp" target="_blank">创建目录</a></p>
 <a href="ch5/example5_3.jsp" target="_blank">目录文件列表</a></p>
 <a href="ch5/example5_4.jsp" target="_blank">列出类型文件</a></p>
+<a href="ch5/example5_5.jsp" target="_blank">删除文件或目录</a></p>
+<a href="ch5/example5_6.jsp" target="_blank">BufferedInputStream和BufferedOutputStream</a></p>
+<a href="ch5/exampleWrite.jsp" target="_blank">写入和显示文件</a></p>
+<a href="ch5/example5_8.jsp" target="_blank">RandomAccessFile</a></p>
 </body>
 </html>
