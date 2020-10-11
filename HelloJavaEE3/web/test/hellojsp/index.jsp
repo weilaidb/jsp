@@ -65,5 +65,11 @@
 <a href="ch4/example4_22.jsp" target="_blank">Out</a></p>
 <a href="ch4/submit.jsp" target="_blank">留言板</a></p>
 <a href="ch4/inputNumber.jsp" target="_blank">计算器</a></p>
+<a href="ch4/inputGuess.jsp" target="_blank">猜数字</a></p>
+
+<a href="ch5/example5_1.jsp" target="_blank">文件</a></p>
+<a href="ch5/example5_2.jsp" target="_blank">创建目录</a></p>
+<a href="ch5/example5_3.jsp" target="_blank">目录文件列表</a></p>
+<a href="ch5/example5_4.jsp" target="_blank">列出类型文件</a></p>
 </body>
 </html>
