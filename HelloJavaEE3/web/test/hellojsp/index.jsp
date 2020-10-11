@@ -75,5 +75,8 @@
 <a href="ch5/example5_6.jsp" target="_blank">BufferedInputStream和BufferedOutputStream</a></p>
 <a href="ch5/exampleWrite.jsp" target="_blank">写入和显示文件</a></p>
 <a href="ch5/example5_8.jsp" target="_blank">RandomAccessFile</a></p>
+<a href="ch5/example5_9.jsp" target="_blank">文件上传</a></p>
+<a href="ch5/example5_10.jsp" target="_blank">文件上传 实际图片</a></p>
+<a href="ch5/example5_11.jsp" target="_blank">文件下载</a></p>
 </body>
 </html>
