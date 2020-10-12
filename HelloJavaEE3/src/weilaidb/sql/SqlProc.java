@@ -80,6 +80,20 @@ public class SqlProc {
         }
     }
 
+    public static void createconn() {
+        Connection con = null;
+        String dbName = "abc";
+        try{
+            String uri = "jdbc:mysql://localhost:3306/" + dbName + "?useUnicode=true&characterEncoding=utf-8"; //Êý¾Ý¿âÃû;
+            String user = "root";
+            String password = "99";
+            con = DriverManager.getConnection(uri, user, password);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+    }
+
 
     public static Connection opendb(String dbname) {
         int ret = -1;

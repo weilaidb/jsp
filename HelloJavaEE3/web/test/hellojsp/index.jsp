@@ -78,5 +78,6 @@
 <a href="ch5/example5_9.jsp" target="_blank">文件上传</a></p>
 <a href="ch5/example5_10.jsp" target="_blank">文件上传 实际图片</a></p>
 <a href="ch5/example5_11.jsp" target="_blank">文件下载</a></p>
+<a href="ch5/example5_12.jsp" target="_blank">读写文件表单</a></p>
 </body>
 </html>
