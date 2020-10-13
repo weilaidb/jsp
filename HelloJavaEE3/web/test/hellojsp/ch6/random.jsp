@@ -23,6 +23,22 @@
     if (id.trim().length() == 0) {
         id = "root";
     }
+
+    if (n.trim().length() == 0) {
+        n = "1";
+    }
+    try{
+        Integer.parseInt(n);
+        System.out.println("Integer.parseInt(n): " + Integer.parseInt(n));
+        if (null == n  || Integer.parseInt(n) == 0) {
+//            response.sendRedirect("example6_3.jsp");
+        }
+    }
+    catch (Exception e){
+        out.print("<br>" + "错误信息：" + e.toString());
+    }
+
+
 %>
     <inquire:RandomQuery databaseName="<%=dName%>" tableName="<%=tName%>" user="<%=id%>" password="<%=secret%>" count="<%=n%>"/>
     在<%=biao%>表随机查询到<%=randomCount%>条记录:
