@@ -47,6 +47,14 @@
             out.print("</tr>");
         }
         out.print("</table>");
+
+////        表字段
+//        DatabaseMetaData metadata = con.getMetaData();
+//        ResultSet tableMessage = metadata.getColumns(null, null, "product", null);
+//        while(tableMessage.next())
+//        {
+//            out.print("<br>" + tableMessage.getCursorName());
+//        }
         con.close();
     } catch (SQLException e) {
         e.printStackTrace();

@@ -82,6 +82,7 @@
 <a href="ch5/example5_13.jsp" target="_blank">读写加密文件</a></p>
 
 <a href="ch6/example6_1.jsp" target="_blank">Mysql</a></p>
+<a href="ch6/example6_2.jsp" target="_blank">查询表字段</a></p>
 
 </body>
 </html>
