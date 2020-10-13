@@ -79,5 +79,9 @@
 <a href="ch5/example5_10.jsp" target="_blank">文件上传 实际图片</a></p>
 <a href="ch5/example5_11.jsp" target="_blank">文件下载</a></p>
 <a href="ch5/example5_12.jsp" target="_blank">读写文件表单</a></p>
+<a href="ch5/example5_13.jsp" target="_blank">读写加密文件</a></p>
+
+<a href="ch6/example6_1.jsp" target="_blank">Mysql</a></p>
+
 </body>
 </html>
