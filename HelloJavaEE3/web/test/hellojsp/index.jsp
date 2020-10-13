@@ -85,6 +85,9 @@
 <a href="ch6/example6_2.jsp" target="_blank">查询表字段</a></p>
 <a href="ch6/example6_3.jsp" target="_blank">随机查询</a></p>
 <a href="ch6/example6_4.jsp" target="_blank">条件查询</a></p>
+<a href="ch6/example6_5.jsp" target="_blank">排序查询</a></p>
+<a href="ch6/example6_6.jsp" target="_blank">模糊查询</a></p>
+<a href="ch6/example6_7.jsp" target="_blank">更新记录</a></p>
 
 </body>
 </html>
