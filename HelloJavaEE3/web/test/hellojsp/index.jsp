@@ -90,6 +90,7 @@
 <a href="ch6/example6_7.jsp" target="_blank">更新记录</a></p>
 <a href="ch6/example6_8.jsp" target="_blank">添加记录</a></p>
 <a href="ch6/example6_9.jsp" target="_blank">删除记录</a></p>
+<a href="ch6/example6_10.jsp" target="_blank">添加记录2</a></p>
 
 </body>
 </html>
