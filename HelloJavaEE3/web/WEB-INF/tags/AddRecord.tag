@@ -6,17 +6,10 @@
 <%@ attribute name="price" required="true" %>
 <%
     float p = Float.parseFloat(price);
-    String condition1 = "UPDATE product SET name='" + name +
-            "' WHERE number=" + "'" + number +"'" ,
-            condition2 = "UPDATE product SET year='" + year +
-                    "' WHERE number=" + "'" + number +"'" ,
-            condition3 = "UPDATE product SET price='" + price +
-                    "' WHERE number=" + "'" + number +"'" ;
-
-    out.println("<br>" + condition1);
-    out.println("<br>" + condition2);
-    out.println("<br>" + condition3);
-
+    String condition =
+    "INSERT INTO product VALUES " +
+        "(" + "'" + number + "','" + name + "','" + p  + "','" +year +"')";
+//    out.println("condition" + condition);
 
     try {
         Class.forName("com.mysql.jdbc.Driver");  ////驱动程序名
@@ -30,19 +23,15 @@
     Statement sql;
     ResultSet rs;
     int n = 0;
-
     try{
         String uri = "jdbc:mysql://localhost:3306/" + "warehouse" + "?useUnicode=true&characterEncoding=utf-8"; //数据库名;
         String user = "root";
         String password = "Zzerp123";
         con = DriverManager.getConnection(uri, user, password);
         sql = con.createStatement();
-        sql.executeUpdate(condition1);
-        sql.executeUpdate(condition2);
-        sql.executeUpdate(condition3);
+        sql.executeUpdate(condition);
         con.close();
     } catch (SQLException e) {
         out.println("" + e);
     }
-
 %>

@@ -88,6 +88,7 @@
 <a href="ch6/example6_5.jsp" target="_blank">排序查询</a></p>
 <a href="ch6/example6_6.jsp" target="_blank">模糊查询</a></p>
 <a href="ch6/example6_7.jsp" target="_blank">更新记录</a></p>
+<a href="ch6/example6_8.jsp" target="_blank">添加记录</a></p>
 
 </body>
 </html>
