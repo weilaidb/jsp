@@ -97,6 +97,7 @@
 <a href="ch6/example6_14.jsp" target="_blank">Other Driver(Access)</a></p>
 <a href="ch6/example6_15.jsp" target="_blank">条件查询</a></p>
 <a href="ch6/example6_16.jsp" target="_blank">更新记录</a></p>
+<a href="ch6/example6_17.jsp" target="_blank">删除记录 Student</a></p>
 
 </body>
 </html>
