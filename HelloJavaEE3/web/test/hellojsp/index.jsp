@@ -99,5 +99,12 @@
 <a href="ch6/example6_16.jsp" target="_blank">更新记录</a></p>
 <a href="ch6/example6_17.jsp" target="_blank">删除记录 Student</a></p>
 
+<a href="ch7/example7_1.jsp" target="_blank">JavaBean page</a></p>
+<a href="ch7/bean1.jsp" target="_blank">JavaBean session</a></p>
+<a href="ch7/example7_3.jsp" target="_blank">JavaBean application</a></p>
+<a href="ch7/example7_4.jsp" target="_blank">JavaBean getProperty</a></p>
+<a href="ch7/example7_5.jsp" target="_blank">JavaBean setProperty</a></p>
+<a href="ch7/example7_6.jsp" target="_blank">JavaBean Student Two</a></p>
+
 </body>
 </html>
