@@ -105,6 +105,10 @@
 <a href="ch7/example7_4.jsp" target="_blank">JavaBean getProperty</a></p>
 <a href="ch7/example7_5.jsp" target="_blank">JavaBean setProperty</a></p>
 <a href="ch7/example7_6.jsp" target="_blank">JavaBean Student Two</a></p>
+<a href="ch7/example7_7.jsp" target="_blank">JavaBean ListFile</a></p>
+<a href="ch7/triangle.jsp" target="_blank">Triangle</a></p>
+<a href="ch7/getNumber.jsp" target="_blank">猜数字</a></p>
+<a href="ch7/showcalendar.jsp" target="_blank">日历</a></p>
 
 </body>
 </html>
