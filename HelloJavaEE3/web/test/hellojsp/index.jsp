@@ -112,6 +112,7 @@
 <a href="ch7/computer.jsp" target="_blank">四则运算</a></p>
 <a href="ch7/showPic.jsp" target="_blank">显示图片</a></p>
 <a href="ch7/select.jsp" target="_blank">查看文件内容</a></p>
+<a href="ch7/write.jsp" target="_blank">写文件内容</a></p>
 
 </body>
 </html>
