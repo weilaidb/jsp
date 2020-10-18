@@ -109,6 +109,9 @@
 <a href="ch7/triangle.jsp" target="_blank">Triangle</a></p>
 <a href="ch7/getNumber.jsp" target="_blank">猜数字</a></p>
 <a href="ch7/showcalendar.jsp" target="_blank">日历</a></p>
+<a href="ch7/computer.jsp" target="_blank">四则运算</a></p>
+<a href="ch7/showPic.jsp" target="_blank">显示图片</a></p>
+<a href="ch7/select.jsp" target="_blank">查看文件内容</a></p>
 
 </body>
 </html>
