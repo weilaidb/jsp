@@ -114,6 +114,8 @@
 <a href="ch7/select.jsp" target="_blank">查看文件内容</a></p>
 <a href="ch7/write.jsp" target="_blank">写文件内容</a></p>
 <a href="ch7/upfile.jsp" target="_blank">上传文件</a></p>
+<a href="ch7/inquire.jsp" target="_blank">查询表product</a></p>
+<a href="ch7/showRecord.jsp" target="_blank">显示记录</a></p>
 
 </body>
 </html>
