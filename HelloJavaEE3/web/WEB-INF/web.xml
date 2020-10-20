@@ -14,6 +14,25 @@
         <welcome-file>index.htm</welcome-file>
     </welcome-file-list>
 
+    <servlet>
+        <servlet-name>hello</servlet-name>
+        <servlet-class>bean.Hello</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>hello</servlet-name>
+        <url-pattern>/lookHello</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>computer</servlet-name>
+        <servlet-class>bean.Computer</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>computer</servlet-name>
+        <url-pattern>/getNumber</url-pattern>
+    </servlet-mapping>
+    
+    
 
     <servlet>
         <servlet-name>HelloWorld</servlet-name>

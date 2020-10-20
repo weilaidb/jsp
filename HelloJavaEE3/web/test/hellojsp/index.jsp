@@ -116,6 +116,10 @@
 <a href="ch7/upfile.jsp" target="_blank">上传文件</a></p>
 <a href="ch7/inquire.jsp" target="_blank">查询表product</a></p>
 <a href="ch7/showRecord.jsp" target="_blank">显示记录</a></p>
+<a href="ch7/test.jsp" target="_blank">小测验</a></p>
+
+
+<a href="ch8/example8_1.jsp" target="_blank">Servlet 正整数</a></p>
 
 </body>
 </html>
