@@ -120,6 +120,9 @@
 
 
 <a href="ch8/example8_1.jsp" target="_blank">Servlet 正整数</a></p>
+<a href="ch8/example8_2.jsp" target="_blank">Servlet 查看俄文字母表</a></p>
+<a href="ch8/example8_3.jsp" target="_blank">Servlet 参与计算PI的值</a></p>
+<a href="ch8/example8_4.jsp" target="_blank">Servlet 字符串提交方式</a></p>
 
 </body>
 </html>

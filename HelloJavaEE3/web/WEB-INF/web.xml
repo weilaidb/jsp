@@ -31,8 +31,34 @@
         <servlet-name>computer</servlet-name>
         <url-pattern>/getNumber</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>show</servlet-name>
+        <servlet-class>bean.ShowLetter</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>show</servlet-name>
+        <url-pattern>/helpMeShow</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>ok</servlet-name>
+        <servlet-class>bean.Show</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ok</servlet-name>
+        <url-pattern>/show</url-pattern>
+    </servlet-mapping>
     
     
+    <servlet>
+        <servlet-name>computerPI</servlet-name>
+        <servlet-class>bean.ComputerPI</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>computerPI</servlet-name>
+        <url-pattern>/computerPI</url-pattern>
+    </servlet-mapping>
 
     <servlet>
         <servlet-name>HelloWorld</servlet-name>
