@@ -6,34 +6,19 @@
 <%@ attribute name="item" required="true" %>
 <%@ attribute name="order" required="true" %>
 <%@ variable name-given="orderResult" scope="AT_END" %>
+<%@ variable name-given="tablelist" scope="AT_END" %>
 
 <%--
 ID	content	lantype	keywords	note	vartype	aspect_field	CreatedTime	delflag	lowercase_keyworks
 原始的all.db的内容
 --%>
 <%
-    String orderCondition  = "SELECT * FROM " + table ;
-    if(order.trim().equals("order"))
-    {
-        orderCondition += " ORDER BY ID desc ";
-    }
-
-    if(item.trim().equals("limit"))
-    {
-        orderCondition += " limit 50";
-    }
-    else
-    {
-        orderCondition += "";
-    }
-
-
-//            "SELECT * FROM " + table;
-//            "SELECT * FROM c_table";
-//            "SELECT * FROM c_table ORDER BY " + orderType;
+    String showTableCondition  = "SELECT name FROM sqlite_master WHERE type='table' ORDER BY name;";
 
     StringBuffer result;
+    StringBuffer resultTables;
     result = new StringBuffer();
+    resultTables = new StringBuffer();
     try {
         Class.forName("org.sqlite.JDBC");  //Sqlite3驱动程序名
     } catch (Exception e) {
@@ -47,20 +32,55 @@ ID	content	lantype	keywords	note	vartype	aspect_field	CreatedTime	delflag	lowerc
     Statement sql;
     ResultSet rs;
     int n = 0;
+    String firsttable = "";
 
     try{
+
         result.append("<table border=1>");
-//        String uri = "jdbc:mysql://localhost:3306/" + "warehouse" + "?useUnicode=true&characterEncoding=utf-8"; //数据库名;
-//        String user = "root";
-//        String password = "Zzerp123";
-//        String dbpath = CSqlitePub.getSqliteWholePath();
         String dbpath = database;
-        System.out.println("dbpath: " + dbpath);
-
-
         con = DriverManager.getConnection(dbpath);
         DatabaseMetaData metadata = con.getMetaData();
         String tableName = table;
+
+        //查找所有表名
+        sql = con.createStatement();
+        rs = sql.executeQuery(showTableCondition);
+        resultTables.append("<br>" );
+        while (rs.next()) {
+            resultTables.append(" " );
+//            resultTables.append("<br>" );
+            resultTables.append(rs.getString(1));
+            if(0 == n)
+            {
+                firsttable = rs.getString(1);
+                n++;
+            }
+        }
+        resultTables.append("<br>" );
+
+        //如果表为空则选择一个
+        if(tableName.trim().isEmpty() && firsttable.trim().length() > 0)
+        {
+            tableName = firsttable.trim();
+        }
+
+        //查询条件列表
+        String orderCondition  = "SELECT * FROM " + tableName ;
+        if(order.trim().equals("order"))
+        {
+            orderCondition += " ORDER BY ID desc ";
+        }
+
+        if(item.trim().equals("limit"))
+        {
+            orderCondition += " limit 50";
+        }
+        else
+        {
+            orderCondition += "";
+        }
+
+        //查找表的列
         ResultSet rs1 = metadata.getColumns(null, null, tableName, null);
         int 字段个数 = 0;
         result.append("<tr>");
@@ -89,5 +109,6 @@ ID	content	lantype	keywords	note	vartype	aspect_field	CreatedTime	delflag	lowerc
     }
 
     jspContext.setAttribute("orderResult", new String(result));
+    jspContext.setAttribute("tablelist", new String(resultTables));
 
 %>

@@ -7,6 +7,6 @@ public class CStringPub {
         {
             string = "";
         }
-        return string;
+        return string.trim();
     }
 }

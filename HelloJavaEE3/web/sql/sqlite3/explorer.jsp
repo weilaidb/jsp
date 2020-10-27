@@ -37,22 +37,24 @@
     String table = request.getParameter("table");
     String item = request.getParameter("item");
     String order = request.getParameter("order");
-    database = CStringPub.ifNullSetEmpty(database);
-    if(database.isEmpty())
+    String databaseProc = CStringPub.ifNullSetEmpty(database);
+    if(databaseProc.isEmpty())
     {
-        database = CSqlitePub.getSqliteWholePath();
+        databaseProc = CSqlitePub.getSqliteWholePath();
     }
     else
     {
-        database = CSqlitePub.getSqlitePathWithDriver(database);
+        databaseProc = CSqlitePub.getSqlitePathWithDriver(databaseProc);
     }
     table = CStringPub.ifNullSetEmpty(table);
     item = CStringPub.ifNullSetEmpty(item);
     order = CStringPub.ifNullSetEmpty(order);
 %>
 
-<sqlite:QuerySqlite database="<%=database%>" table="<%=table%>" item="<%=item%>" order="<%=order%>"/>
-输出查询结果:
+<sqlite:QuerySqlite database="<%=databaseProc%>" table="<%=table%>" item="<%=item%>" order="<%=order%>"/>
+Sqlite库[<%=database%>]有以下表:
+<%=tablelist%>
+查询表[<%=table%>]结果:
 <%=orderResult%>
 
 </body>
