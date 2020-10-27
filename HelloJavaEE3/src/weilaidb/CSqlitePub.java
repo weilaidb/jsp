@@ -58,6 +58,10 @@ public class CSqlitePub {
     {
         return "jdbc:sqlite:" + database;
     }
+    static public String getSqlitePathTrimDriver(String database)
+    {
+        return database.replaceAll("jdbc:sqlite:","");
+    }
 
     //查询数据库表名(默认)
     static public String qrySqliteDefault(String tablename, String qryVal) {
