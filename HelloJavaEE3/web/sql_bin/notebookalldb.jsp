@@ -8,6 +8,7 @@ To change this template use File | Settings | File Templates.
          pageEncoding="utf-8" %>
 <%@ page import="java.sql.*" %>
 <%@ page import="java.net.*" %>
+<%@ page import="weilaidb.CSqlitePub" %>
 
 
 <%--================获取路径和基础路径=========================--%>
@@ -44,29 +45,6 @@ To change this template use File | Settings | File Templates.
     }
 </style>
 
-<%--<script type="text/javascript">--%>
-    <%--function jsSelectItemByValue(objSelect, objItemText) {--%>
-        <%--for (var i = 0; i < objSelect.options.length; i++) {--%>
-            <%--if (objSelect.options[i].value == objItemText) {--%>
-                <%--objSelect.options[i].selected = true;--%>
-                <%--break;--%>
-            <%--}--%>
-        <%--}--%>
-    <%--};--%>
-    <%--jsSelectItemByValue(document.tablename, ${userEx.tablename });--%>
-<%--</script>--%>
-
-<%--<script type="text/javascript">--%>
-    <%--function jsSelectItemByValue(objSelect, objItemText) {--%>
-        <%--for (var i = 0; i < objSelect.options.length; i++) {--%>
-            <%--if (objSelect.options[i].value == objItemText) {--%>
-                <%--objSelect.options[i].selected = true;--%>
-                <%--break;--%>
-            <%--}--%>
-        <%--}--%>
-    <%--};--%>
-    <%--jsSelectItemByValue(document.forms['form1'].tablename, ${userEx.tablename });--%>
-<%--</script>--%>
 
 <script type="text/javascript">
     function setCookie(name, value) {
@@ -110,14 +88,10 @@ To change this template use File | Settings | File Templates.
 </head>
 <body>
 
-<%--<h1>查询结果</h1>--%>
+
 </p>
 </p>
-<%--<select name="curStatus"  value="${curStatus}">--%>
-    <%--<option value="0">-请选择-</option>--%>
-    <%--<option value="1" <c:if test="${'1' eq curStatus}"></c:if>男</option>--%>
-    <%--<option value="2" <c:if test="${'2' eq curStatus}">selected</c:if> >女</option>--%>
-<%--</select>--%>
+
 
 <form id="form1"  name="form1" method="post" action="sql/notebookalldb.jsp">
     <h1>
@@ -156,11 +130,6 @@ To change this template use File | Settings | File Templates.
             <option  value="unittest">unittest</option>
         </select>
     </h1>
-
-    <%--<h1>--%>
-        <%--表名称(all.db)：<input type="text" class="text1" name="tablename" size="30"/>--%>
-        <%--&lt;%&ndash;<input type="submit" name="Submit" value="点击查询"/>&ndash;%&gt;--%>
-    <%--</h1>--%>
 
 
 </form>
@@ -207,24 +176,23 @@ To change this template use File | Settings | File Templates.
 
 
     <%
-        String qryval = "";
-        try {
-            qryval = request.getParameter("qrydata");
-//    out.print("查询数据项:" + qryval);
-//        if (!qryval.isEmpty()) {
-//            out.print("查询内容:" +
-//                    new String(qryval.getBytes("iso-8859-1"), "utf-8"));
-//            out.print("<br />");
-//        }
-        } catch (Exception e) {
-            out.print("\n");
+        String qryval = request.getParameter("qrydata");
+        if(null == qryval)
+        {
+            qryval = "c";
         }
 
+        String temptable = request.getParameter("tablename");
+        if(null == temptable || temptable.isEmpty())
+        {
+            temptable = "c";
+        }
+        System.out.println("temptable:" + temptable);
 
         String tablenamestr = "";
         try {
             String sufixtable = "_table";
-            tablenamestr = request.getParameter("tablename") + sufixtable;
+            tablenamestr = temptable + sufixtable;
             out.print("表名:" + tablenamestr);
             Cookie tablenameforck = new Cookie("tablenameforcookie",
                     tablenamestr);
@@ -233,38 +201,19 @@ To change this template use File | Settings | File Templates.
 
             request.getParameter("tablename");
 
-//        if (!qryval.isEmpty()) {
-//            out.print("查询内容:" +
-//                    new String(qryval.getBytes("iso-8859-1"), "utf-8"));
-//            out.print("<br />");
-//        }
         } catch (Exception e) {
             out.print("表名为空!!!\n");
         }
 
 
-
+        String sql = "";  //查询语句
+        String tablename = "";
         Connection connection = null;
         try {
             Class.forName("org.sqlite.JDBC");
-//        数据库地址写不正常，会报错。
-            String dbpath = "jdbc:sqlite:D:/Dropbox/weidb/autoccode/all.db";
+            String dbpath = CSqlitePub.getSqliteWholePath();
             connection = DriverManager.getConnection(dbpath);
-
             Statement statement = connection.createStatement();   //创建连接对象，是Java的一个操作数据库的重要接口
-
-            Statement stmt = null;
-            ResultSet rs = null;
-            String sql = "";  //查询语句
-            String tablename = "";
-
-//            sql = "select name from sqlite_master where type='table' order by name;";
-//            ResultSet rSettable = statement.executeQuery(sql);
-//            while (rSettable.next()) {            //遍历这个数据集
-//                out.print(rSettable.getString(1));
-//                out.print("<br />");
-//            }
-
 
             if(tablenamestr.trim().isEmpty())
             {

@@ -8,6 +8,7 @@ To change this template use File | Settings | File Templates.
          pageEncoding="utf-8" %>
 <%@ page import="java.sql.*" %>
 <%@ page import="java.net.*" %>
+<%@ page import="weilaidb.CSqlitePub" %>
 
 
 <%--================获取路径和基础路径=========================--%>
@@ -248,7 +249,8 @@ To change this template use File | Settings | File Templates.
         try {
             Class.forName("org.sqlite.JDBC");
 //        数据库地址写不正常，会报错。
-            String dbpath = "jdbc:sqlite:D:/Dropbox/weidb/autoccode/all.db";
+//            String dbpath = "jdbc:sqlite:D:/Dropbox/weidb/autoccode/all.db";
+            String dbpath = CSqlitePub.getSqliteWholePath();
             connection = DriverManager.getConnection(dbpath);
 
             Statement statement = connection.createStatement();   //创建连接对象，是Java的一个操作数据库的重要接口
