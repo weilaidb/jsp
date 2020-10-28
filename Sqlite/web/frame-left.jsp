@@ -16,7 +16,7 @@
 <body>
 
 <div class="showui">
-    <a href="sql/sqlite/querytables.jsp" target="frame_right">常用链接</a></p>
+    <a href="sql/sqlite/querytables.jsp" target="frame_right">从这里开始</a></p>
     <a href="sql/sqlite/showtables.jsp" target="frame_right">查看表</a></p>
     <a href="sql/sqlite/querydatabase.jsp" target="frame_right">查询数据库</a></p>
 </div>

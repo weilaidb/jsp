@@ -13,55 +13,49 @@
     <title>常用记事本-Sqlite</title>
 </head>
 <body bgcolor="#00ffff">
-
 <%
     String table = request.getParameter("table");
     String database = request.getParameter("database");
+    database = CStringPub.ifNullSetEmpty(database);
+    table = CStringPub.ifNullSetEmpty(table);
     System.out.println("database: " + database);
     System.out.println("table   : " + table);
 %>
-<%--
-设计内容:
-1.常用链接
-2.查询表的内容，按名称
-3.
-<%--&ndash;%&gt;--%>
-<%--<font size="3">--%>
-<%--    常用链接--%>
-<%--    <a href="addlink.jsp">添加链接</a>--%>
-<%--    <form action="" method="post" name="form">--%>
-<%--        请输入Sqlite位置:--%>
-<%--        <input type="text" name="database">--%>
-<%--        请输入表名:--%>
-<%--        <input type="text" name="table">--%>
-<%--        <input type="submit" value="查询" name="submit">--%>
-<%--        <input type="checkbox" name="item" value="limit" checked="checked">限制--%>
-<%--        <input type="checkbox" name="order" value="order" checked="checked">反序--%>
-<%--    </form>--%>
-<%--</font>--%>
-<%--<%--%>
-<%--    String database = request.getParameter("database");--%>
-<%--    String table = request.getParameter("table");--%>
-<%--    String item = request.getParameter("item");--%>
-<%--    String order = request.getParameter("order");--%>
-<%--    String databaseProc = CStringPub.ifNullSetEmpty(database);--%>
-<%--    if(databaseProc.isEmpty())--%>
-<%--    {--%>
-<%--        databaseProc = CSqlitePub.getSqliteWholePath();--%>
-<%--    }--%>
-<%--    else--%>
-<%--    {--%>
-<%--        databaseProc = CSqlitePub.getSqlitePathWithDriver(databaseProc);--%>
-<%--    }--%>
-<%--    table = CStringPub.ifNullSetEmpty(table);--%>
-<%--    item = CStringPub.ifNullSetEmpty(item);--%>
-<%--    order = CStringPub.ifNullSetEmpty(order);--%>
-<%--%>--%>
 
-<%--<sqlite:QuerySqlite database="<%=databaseProc%>" table="<%=table%>" item="<%=item%>" order="<%=order%>"/>--%>
-<%--Sqlite库[<%=database%>]有以下表:--%>
+<font size="3">
+<%--    <a href="showtables.jsp">添加链接</a>--%>
+    <form action="" method="post" name="form">
+        在[<%=table%>]查询内容:<br>
+        <input type="text" name="findwords">
+        <input type="hidden" name="database" value="<%=database%>">
+        <input type="hidden" name="table" value="<%=table%>">
+        <input type="checkbox" name="item" value="limit" checked="checked">限制
+        <input type="checkbox" name="order" value="order" checked="checked">反序
+        <input type="submit" value="查询" name="submit">
+        <br>
+        查找的列:
+        <input type="text" name="columns" value="ID,content">
+    </form>
+</font>
+
+<%
+    String item = request.getParameter("item");
+    String order = request.getParameter("order");
+    String columns = request.getParameter("columns");
+    item = CStringPub.ifNullSetEmpty(item);
+    order = CStringPub.ifNullSetEmpty(order);
+    columns = CStringPub.ifNullSetEmpty(columns);
+    System.out.println("columns:" + columns);
+
+%>
+
+<sqlite:QueryContent database="<%=database%>" table="<%=table%>" item="<%=item%>" order="<%=order%>" columns="<%=columns%>"/>
+查询结果:
+<%=orderResult%>
+<%--<sqlite:QuerySqlite database="<%=database%>" table="<%=table%>" item="<%=item%>" order="<%=order%>"/>--%>
+<%--<br></br>Sqlite库[<%=database%>]有以下表:--%>
 <%--<%=tablelist%>--%>
-<%--查询表[<%=table%>]结果:--%>
+<%--<br>查询表[<%=table%>]结果:--%>
 <%--<%=orderResult%>--%>
 
 </body>

@@ -12,6 +12,11 @@ public class CSqlitePub {
     static String secondpath = "sqlite/";
     static String filename = "config.txt";
 
+    static public String getStoreDbFileName()
+    {
+        return "" + firstpath + secondpath  + firstpath;
+    }
+
     static public String getSqlitePathFromFileSingle(String prefix)
     {
         StringBuffer str = new StringBuffer();
@@ -70,7 +75,12 @@ public class CSqlitePub {
 
     static public String getSqlitePathWithDriver(String database)
     {
-        return "jdbc:sqlite:" + database;
+        String prefix = "jdbc:sqlite:";
+        if(false == database.trim().contains(prefix))
+        {
+            return  prefix + database;
+        }
+        return database;
     }
     static public String getSqlitePathTrimDriver(String database)
     {
