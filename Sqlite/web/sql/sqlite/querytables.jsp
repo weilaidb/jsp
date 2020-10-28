@@ -34,6 +34,7 @@
     <input type="submit" name="table" value="<%=table%>" class="submitbtn"/>
     <input type="hidden" name="item" value="limit" >
     <input type="hidden" name="order" value="order" >
+    <input type="hidden" name="showlittle" value="showlittle" >
 
 </form>
 <%

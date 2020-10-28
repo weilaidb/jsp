@@ -29,12 +29,11 @@
         <input type="text" name="findwords">
         <input type="hidden" name="database" value="<%=database%>">
         <input type="hidden" name="table" value="<%=table%>">
+        <input type="hidden" name="columns" value="ID,content">
         <input type="checkbox" name="item" value="limit" checked="checked">限制
         <input type="checkbox" name="order" value="order" checked="checked">反序
+        <input type="checkbox" name="showlittle" value="showlittle" checked="checked">缩略显示
         <input type="submit" value="查询" name="submit">
-        <br>
-        查找的列:
-        <input type="text" name="columns" value="ID,content">
     </form>
 </font>
 
@@ -43,10 +42,14 @@
     String order = request.getParameter("order");
     String columns = request.getParameter("columns");
     String findwords = request.getParameter("findwords");
+    String showlittle = request.getParameter("showlittle");
     item = CStringPub.ifNullSetEmpty(item);
     order = CStringPub.ifNullSetEmpty(order);
     columns = CStringPub.ifNullSetEmpty(columns);
+    findwords = CStringPub.ifNullSetEmpty(findwords);
+    showlittle = CStringPub.ifNullSetEmpty(showlittle);
     System.out.println("columns:" + columns);
+    System.out.println("findwords:" + findwords);
 
 %>
 

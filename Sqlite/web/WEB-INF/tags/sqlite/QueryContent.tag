@@ -32,7 +32,6 @@ ID	content	lantype	keywords	note	vartype	aspect_field	CreatedTime	delflag	lowerc
     Connection con = null;
     Statement sql;
     ResultSet rs;
-    String firsttable = "";
     int n_content_pos = -1;
     String colContent = "content";
 
@@ -40,25 +39,19 @@ ID	content	lantype	keywords	note	vartype	aspect_field	CreatedTime	delflag	lowerc
         result.append("<table border=1>");
         String dbpath = CSqlitePub.getSqlitePathWithDriver(database);
         con = DriverManager.getConnection(dbpath);
-        DatabaseMetaData metadata = con.getMetaData();
         String tableName = table;
 
-        //如果表为空则选择一个
-        if(tableName.trim().isEmpty() && firsttable.trim().length() > 0)
-        {
-            tableName = firsttable.trim();
+        //查询列-自定义
+        String m_StrCols = columns;
+        int m_ColsNum = -1;
+        if(m_StrCols.trim().isEmpty()) {
+            m_StrCols = "*";
+            m_ColsNum = 0;
+        }else {
+            m_ColsNum = columns.split(",").length;
         }
 
-        //查询条件列表
-        String m_columns = columns;
-        int colnum = columns.split(",").length;
-        if(m_columns.trim().isEmpty()) {
-            m_columns = "*";
-            colnum = 0;
-        }
-        else
-            {
-        String orderCondition  = "SELECT " + m_columns + " FROM " + tableName ;
+        String orderCondition  = "SELECT " + m_StrCols + " FROM " + tableName ;
         if(order.trim().equals("order"))
         {
             orderCondition += " ORDER BY ID desc ";
@@ -76,56 +69,64 @@ ID	content	lantype	keywords	note	vartype	aspect_field	CreatedTime	delflag	lowerc
         System.out.println("orderCondition:" + orderCondition);
 
 
-        //查找表的列
-        ResultSet rs1 = metadata.getColumns(null, null, tableName, null);
+        //表的所有列
         int 字段个数 = 0;
+//        DatabaseMetaData metadata = con.getMetaData();
+//        ResultSet rs1 = metadata.getColumns(null, null, tableName, null);
+//        result.append("<tr>");
+//        while (rs1.next()) {
+//            字段个数++;
+//            String columnName = rs1.getString(4);
+//            result.append("<td>" + columnName + "</td>");
+//        }
+//        result.append("</tr>");
+
         result.append("<tr>");
-        while (rs1.next()) {
+        String[] listStrCol = m_StrCols.trim().split(",");
+        for (String m_item :
+                listStrCol) {
             字段个数++;
-            String columnName = rs1.getString(4);
+            String columnName = m_item;
             result.append("<td>" + columnName + "</td>");
-
-            //查找列Content的位置，查找内容时从此处查找
-            if(!findwords.trim().isEmpty() && columnName.trim().equals(colContent.trim()))
-            {
-                n_content_pos = 字段个数-1;
-            }
-
-            if((字段个数>=colnum) && colnum > 0)
-            {
-                break;
-            }
         }
-        System.out.println("字段个数: " + 字段个数);
-        if(n_content_pos != -1)
-        {
-            System.out.println("n_content_pos:" + n_content_pos);
-        }
-
         result.append("</tr>");
+
+        System.out.println("字段个数: " + 字段个数);
+
         sql = con.createStatement();
-        rs = sql.executeQuery(orderCondition);
-        while (rs.next()) {
-            //查找内容包含数据
-            if(findwords.trim().isEmpty()) {
+        if (findwords.trim().isEmpty())
+        {
+            rs = sql.executeQuery(orderCondition);
+            while (rs.next()) {
                 result.append("<tr>");
                 for (int i = 1; i <= 字段个数; i++) {
                     result.append("<td>" + rs.getString(i) + "</td>");
                 }
                 result.append("</tr>");
             }
-            else{
-            //先查找此段时否包含关键字
-                if(rs.getString(n_content_pos).contains(findwords.trim()))
-                {
-                    result.append("<tr>");
-                    for (int i = 1; i <= 字段个数; i++) {
-                        result.append("<td>" + rs.getString(i) + "</td>");
-                    }
-                    result.append("</tr>");
+        }
+        else
+        {
+            orderCondition  = "SELECT " + m_StrCols + " FROM " + tableName ;
+            if(order.trim().equals("order"))
+            {
+                orderCondition += " ORDER BY ID desc ";
+            }
+
+            rs = sql.executeQuery(orderCondition);
+            while (rs.next()) {
+                String m_ColContentVal = rs.getString(2);
+                if(!m_ColContentVal.toLowerCase().contains(findwords.trim().toLowerCase())){
+                    continue;
                 }
+                result.append("<tr>");
+                for (int i = 1; i <= 字段个数; i++) {
+                    result.append("<td>" + rs.getString(i) + "</td>");
+                }
+                result.append("</tr>");
             }
         }
+
         result.append("</table>");
         con.close();
     } catch (SQLException e) {
