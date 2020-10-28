@@ -1,4 +1,3 @@
-<%@ page import="base.CStringPub" %>
 <%@ page import="weilaidb.CSqlitePub" %>
 <%@ page import="java.util.List" %>
 <%@ page import="java.util.Arrays" %><%--
@@ -10,6 +9,8 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
 <%@ taglib prefix="sqlite" tagdir="/WEB-INF/tags/sqlite" %>
+<link href="sqlite.css" rel="stylesheet" type="text/css">
+
 <html>
 <head>
     <title>常用记事本-Sqlite</title>
@@ -19,32 +20,18 @@
 设计内容:
 1.常用链接
 2.查询表的内容，按名称
-3.
 --%>
 <font size="3">
-    常用链接
     <a href="addlink.jsp">添加链接</a>
     <form action="" method="post" name="form">
         请输入Sqlite位置:
         <input type="text" name="database">
-<%--        请输入表名:--%>
-<%--        <input type="text" name="table">--%>
         <input type="submit" value="查询" name="submit">
-<%--        <input type="checkbox" name="item" value="limit" checked="checked">限制--%>
-<%--        <input type="checkbox" name="order" value="order" checked="checked">反序--%>
     </form>
 </font>
 <%
     String database = request.getParameter("database");
-    String databaseProc = CStringPub.ifNullSetEmpty(database);
-    if(databaseProc.isEmpty())
-    {
-        databaseProc = CSqlitePub.getSqliteWholePath();
-    }
-    else
-    {
-        databaseProc = CSqlitePub.getSqlitePathWithDriver(databaseProc);
-    }
+    String databaseProc = CSqlitePub.getSqliteWholePath(database);
 %>
 
 <sqlite:ShowTables database="<%=databaseProc%>"/>
@@ -58,16 +45,11 @@ Sqlite库[<%=CSqlitePub.getSqlitePathTrimDriver(databaseProc)%>]有以下表:<br
 %>
 <font size="3">
     <form action="data.jsp" method="post" name="form">
-        <input type="text" name="table" value="<%=table%>" size="20" >
-        <input type="submit" value="查询" name="submit">
-<%--        <%=table%>--%>
+        <input type="hidden" name="database" value="<%=CSqlitePub.getSqlitePathTrimDriver(databaseProc)%>" >
+        <input type="submit" name="table" value="<%=table%>" class="submitbtn2">
     </form>
 </font>
-
 <%
-
-
-        out.print("");
     }
 %>
 </body>

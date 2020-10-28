@@ -75,6 +75,22 @@
     /*background-color: silver;*/
 }
 
+.submitbtn2 {
+    height: 25px;
+    width: 90%;
+    text-align: left;
+    font-family: "Courier New";
+    font-size: small;
+    border: black;
+    border-color: black;
+
+    /*font-style: oblique;*/
+    /*border-width: thin;*/
+    /*border-color: darkviolet;*/
+    /*background-color: silver;*/
+}
+
+
 .buttoncalc{
     height: 40px;
     width: 30%;

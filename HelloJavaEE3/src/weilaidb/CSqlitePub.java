@@ -1,5 +1,7 @@
 package weilaidb;
 
+import base.CStringPub;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -54,6 +56,18 @@ public class CSqlitePub {
     {
         return "jdbc:sqlite:" + getSqlitePathFromFile();
     }
+    static public String getSqliteWholePath(String databaseProc)
+    {
+        databaseProc = CStringPub.ifNullSetEmpty(databaseProc);
+        if(databaseProc.isEmpty())
+        {
+            return getSqliteWholePath();
+        }
+        else {
+            return getSqlitePathWithDriver(databaseProc);
+        }
+    }
+
     static public String getSqlitePathWithDriver(String database)
     {
         return "jdbc:sqlite:" + database;
