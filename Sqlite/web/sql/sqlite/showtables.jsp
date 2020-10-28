@@ -20,8 +20,7 @@
 3.
 --%>
 <font size="3">
-    常用链接
-    <a href="addlink.jsp">添加链接</a>
+    <a href="showtables.jsp">常用链接</a>
     <form action="" method="post" name="form">
         请输入Sqlite位置:
         <input type="text" name="database">

@@ -16,10 +16,12 @@
 <body>
 
 <div class="showui">
-    <a href="sql/sqlite/index.jsp" target="frame_right">常用链接</a></p>
+    <a href="sql/sqlite/querytables.jsp" target="frame_right">常用链接</a></p>
     <a href="sql/sqlite/showtables.jsp" target="frame_right">查看表</a></p>
-    <a href="sql/sqlite/explorer.jsp" target="frame_right">记事本</a></p>
+    <a href="sql/sqlite/querydatabase.jsp" target="frame_right">查询数据库</a></p>
 </div>
+
+
 <h3>版本(V1.0)</h3>
 
 </body>

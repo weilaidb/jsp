@@ -1,1 +1,15 @@
 /HelloJavaEE3/out
+/Sqlite/out/production/Sqlite/base/*.class
+*.class
+/Sqlite/out/artifacts/Sqlite_war_exploded/WEB-INF/lib/sqlite-jdbc-3.23.1.jar
+/Sqlite/out/artifacts/Sqlite_war_exploded/WEB-INF/tags/sqlite/QuerySqlite.tag
+/Sqlite/out/artifacts/Sqlite_war_exploded/WEB-INF/tags/sqlite/ShowTables.tag
+/Sqlite/out/artifacts/Sqlite_war_exploded/blank.jsp
+/Sqlite/out/artifacts/Sqlite_war_exploded/css/csspub.css
+/Sqlite/out/artifacts/Sqlite_war_exploded/frame-left.jsp
+/Sqlite/out/artifacts/Sqlite_war_exploded/sql/sqlite/data.jsp
+/Sqlite/out/artifacts/Sqlite_war_exploded/sql/sqlite/explorer.jsp
+/Sqlite/out/artifacts/Sqlite_war_exploded/sql/sqlite/index.jsp
+/Sqlite/out/artifacts/Sqlite_war_exploded/sql/sqlite/showtables.jsp
+/Sqlite/out/artifacts/Sqlite_war_exploded/sql/sqlite/sqlite.css
+out
