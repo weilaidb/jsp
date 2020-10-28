@@ -42,6 +42,7 @@
     String item = request.getParameter("item");
     String order = request.getParameter("order");
     String columns = request.getParameter("columns");
+    String findwords = request.getParameter("findwords");
     item = CStringPub.ifNullSetEmpty(item);
     order = CStringPub.ifNullSetEmpty(order);
     columns = CStringPub.ifNullSetEmpty(columns);
@@ -49,7 +50,8 @@
 
 %>
 
-<sqlite:QueryContent database="<%=database%>" table="<%=table%>" item="<%=item%>" order="<%=order%>" columns="<%=columns%>"/>
+<sqlite:QueryContent database="<%=database%>" table="<%=table%>" item="<%=item%>" order="<%=order%>"
+                     columns="<%=columns%>" findwords="<%=findwords%>"/>
 查询结果:
 <%=orderResult%>
 <%--<sqlite:QuerySqlite database="<%=database%>" table="<%=table%>" item="<%=item%>" order="<%=order%>"/>--%>

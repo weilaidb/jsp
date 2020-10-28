@@ -6,12 +6,17 @@
 <%@ attribute name="item" required="true" %>
 <%@ attribute name="order" required="true" %>
 <%@ attribute name="columns" required="true"%>
+<%@ attribute name="findwords" required="true"%>
 <%@ variable name-given="orderResult" scope="AT_END" %>
 
 <%--
 ID	content	lantype	keywords	note	vartype	aspect_field	CreatedTime	delflag	lowercase_keyworks
 原始的all.db的内容
 --%>
+<%
+    System.out.println("findwords:" + findwords);
+
+%>
 <%
     StringBuffer result;
     result = new StringBuffer();
@@ -27,11 +32,11 @@ ID	content	lantype	keywords	note	vartype	aspect_field	CreatedTime	delflag	lowerc
     Connection con = null;
     Statement sql;
     ResultSet rs;
-    int n = 0;
     String firsttable = "";
+    int n_content_pos = -1;
+    String colContent = "content";
 
     try{
-
         result.append("<table border=1>");
         String dbpath = CSqlitePub.getSqlitePathWithDriver(database);
         con = DriverManager.getConnection(dbpath);
@@ -51,6 +56,8 @@ ID	content	lantype	keywords	note	vartype	aspect_field	CreatedTime	delflag	lowerc
             m_columns = "*";
             colnum = 0;
         }
+        else
+            {
         String orderCondition  = "SELECT " + m_columns + " FROM " + tableName ;
         if(order.trim().equals("order"))
         {
@@ -77,22 +84,47 @@ ID	content	lantype	keywords	note	vartype	aspect_field	CreatedTime	delflag	lowerc
             字段个数++;
             String columnName = rs1.getString(4);
             result.append("<td>" + columnName + "</td>");
+
+            //查找列Content的位置，查找内容时从此处查找
+            if(!findwords.trim().isEmpty() && columnName.trim().equals(colContent.trim()))
+            {
+                n_content_pos = 字段个数-1;
+            }
+
             if((字段个数>=colnum) && colnum > 0)
             {
                 break;
             }
         }
         System.out.println("字段个数: " + 字段个数);
+        if(n_content_pos != -1)
+        {
+            System.out.println("n_content_pos:" + n_content_pos);
+        }
 
         result.append("</tr>");
         sql = con.createStatement();
         rs = sql.executeQuery(orderCondition);
         while (rs.next()) {
-            result.append("<tr>");
-            for (int i = 1; i <= 字段个数; i++) {
-                result.append("<td>" + rs.getString(i) + "</td>");
+            //查找内容包含数据
+            if(findwords.trim().isEmpty()) {
+                result.append("<tr>");
+                for (int i = 1; i <= 字段个数; i++) {
+                    result.append("<td>" + rs.getString(i) + "</td>");
+                }
+                result.append("</tr>");
             }
-            result.append("</tr>");
+            else{
+            //先查找此段时否包含关键字
+                if(rs.getString(n_content_pos).contains(findwords.trim()))
+                {
+                    result.append("<tr>");
+                    for (int i = 1; i <= 字段个数; i++) {
+                        result.append("<td>" + rs.getString(i) + "</td>");
+                    }
+                    result.append("</tr>");
+                }
+            }
         }
         result.append("</table>");
         con.close();
@@ -102,5 +134,4 @@ ID	content	lantype	keywords	note	vartype	aspect_field	CreatedTime	delflag	lowerc
     }
 
     jspContext.setAttribute("orderResult", new String(result));
-
 %>
