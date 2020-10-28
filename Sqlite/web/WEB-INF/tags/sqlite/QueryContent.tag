@@ -15,7 +15,6 @@ ID	content	lantype	keywords	note	vartype	aspect_field	CreatedTime	delflag	lowerc
 --%>
 <%
     System.out.println("findwords:" + findwords);
-
 %>
 <%
     StringBuffer result;
@@ -32,8 +31,6 @@ ID	content	lantype	keywords	note	vartype	aspect_field	CreatedTime	delflag	lowerc
     Connection con = null;
     Statement sql;
     ResultSet rs;
-    int n_content_pos = -1;
-    String colContent = "content";
 
     try{
         result.append("<table border=1>");
@@ -43,12 +40,9 @@ ID	content	lantype	keywords	note	vartype	aspect_field	CreatedTime	delflag	lowerc
 
         //查询列-自定义
         String m_StrCols = columns;
-        int m_ColsNum = -1;
-        if(m_StrCols.trim().isEmpty()) {
+        if(findwords.trim().isEmpty())
+        {
             m_StrCols = "*";
-            m_ColsNum = 0;
-        }else {
-            m_ColsNum = columns.split(",").length;
         }
 
         String orderCondition  = "SELECT " + m_StrCols + " FROM " + tableName ;
@@ -68,34 +62,22 @@ ID	content	lantype	keywords	note	vartype	aspect_field	CreatedTime	delflag	lowerc
 
         System.out.println("orderCondition:" + orderCondition);
 
-
-        //表的所有列
-        int 字段个数 = 0;
-//        DatabaseMetaData metadata = con.getMetaData();
-//        ResultSet rs1 = metadata.getColumns(null, null, tableName, null);
-//        result.append("<tr>");
-//        while (rs1.next()) {
-//            字段个数++;
-//            String columnName = rs1.getString(4);
-//            result.append("<td>" + columnName + "</td>");
-//        }
-//        result.append("</tr>");
-
-        result.append("<tr>");
-        String[] listStrCol = m_StrCols.trim().split(",");
-        for (String m_item :
-                listStrCol) {
-            字段个数++;
-            String columnName = m_item;
-            result.append("<td>" + columnName + "</td>");
-        }
-        result.append("</tr>");
-
-        System.out.println("字段个数: " + 字段个数);
-
-        sql = con.createStatement();
         if (findwords.trim().isEmpty())
         {
+            //表的所有列
+            int 字段个数 = 0;
+            DatabaseMetaData metadata = con.getMetaData();
+            ResultSet rs1 = metadata.getColumns(null, null, tableName, null);
+            result.append("<tr>");
+            while (rs1.next()) {
+                字段个数++;
+                String columnName = rs1.getString(4);
+                result.append("<td>" + columnName + "</td>");
+            }
+            result.append("</tr>");
+            System.out.println("字段个数: " + 字段个数);
+
+            sql = con.createStatement();
             rs = sql.executeQuery(orderCondition);
             while (rs.next()) {
                 result.append("<tr>");
@@ -107,12 +89,27 @@ ID	content	lantype	keywords	note	vartype	aspect_field	CreatedTime	delflag	lowerc
         }
         else
         {
+            int 字段个数 = 0;
+            result.append("<tr>");
+            String[] listStrCol = m_StrCols.trim().split(",");
+            for (String m_item :
+                    listStrCol) {
+                字段个数++;
+                String columnName = m_item;
+                result.append("<td>" + columnName + "</td>");
+            }
+            result.append("</tr>");
+
+            System.out.println("字段个数: " + 字段个数);
+
+
             orderCondition  = "SELECT " + m_StrCols + " FROM " + tableName ;
             if(order.trim().equals("order"))
             {
                 orderCondition += " ORDER BY ID desc ";
             }
 
+            sql = con.createStatement();
             rs = sql.executeQuery(orderCondition);
             while (rs.next()) {
                 String m_ColContentVal = rs.getString(2);
