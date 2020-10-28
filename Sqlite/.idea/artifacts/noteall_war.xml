@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="noteall:war">
+    <output-path>$PROJECT_DIR$/out/artifacts/noteall_war</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="Sqlite/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="Sqlite" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
