@@ -2,3 +2,26 @@
     font-size: 20px;
     background-color: #c8eccc;
 }
+
+.submitbtn{
+    height: 20px;
+    width: 90%;
+    text-align: left;
+    font-family: "Courier New";
+    font-size: small;
+
+    background-color: cyan;
+    /*border: whitesmoke;*/
+    /*border-color: black;*/
+
+    font-style: oblique;
+    border-width: thin;
+    /*border-color: darkviolet;*/
+    /*background-color: #c6ecd3;*/
+}
+
+
+.form{
+    margin: 5px;
+
+}

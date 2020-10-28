@@ -9,7 +9,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
 <%@ taglib prefix="sqlite" tagdir="/WEB-INF/tags/sqlite" %>
-<link href="sqlite.css" rel="stylesheet" type="text/css">
+<link href="../../css/csspub.css" rel="stylesheet" type="text/css">
 
 <html>
 <head>
@@ -29,12 +29,10 @@
     for (String table :
             tables) {
 %>
-<font size="3">
-    <form action="data.jsp" method="post" name="form">
-        <input type="hidden" name="database" value="<%=CSqlitePub.getSqlitePathTrimDriver(databaseProc)%>" >
-        <input type="submit" name="table" value="<%=table%>" class="submitbtn">
-    </form>
-</font>
+<form action="querytablesingle.jsp" method="post" name="form" class="form">
+    <input type="hidden" name="database" value="<%=CSqlitePub.getSqlitePathTrimDriver(databaseProc)%>"/>
+    <input type="submit" name="table" value="<%=table%>" class="submitbtn"/>
+</form>
 <%
     }
 %>
