@@ -2,10 +2,7 @@ package sql;
 
 import base.CStringPub;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.UnsupportedEncodingException;
+import java.io.*;
 import java.sql.*;
 
 public class CSqlitePub {
@@ -198,6 +195,15 @@ public class CSqlitePub {
             File dir = new File(prefix + firstpath,secondpath);
             dir.mkdirs();
             File f = new File(dir,filename);
+            if(!f.exists())
+            {
+                try {
+                    f.createNewFile(); //如果文件不存在则创建文件
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                return "";
+            }
             FileReader in = new FileReader(f);
             BufferedReader bufferin = new BufferedReader(in);
             String temp;
