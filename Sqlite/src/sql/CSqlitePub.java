@@ -12,6 +12,7 @@ public class CSqlitePub {
     static String firstpath = "mydb/";
     static String secondpath = "sqlite/";
     static String filename = "config.txt";
+    static int showlen = 100;
 
     //加载驱动
     static public StringBuffer loadSqliteClass(StringBuffer result)
@@ -51,11 +52,22 @@ public class CSqlitePub {
         return orderCondition;
     }
 
+    //is show little
+    static public boolean isShowLittle(String showlittle)
+    {
+        if(CStringPub.ifNullSetEmpty(showlittle).equals("showlittle"))
+        {
+            return true;
+        }
+        return false;
+    }
+
     //query all
     static public StringBuffer procSelectAll(Connection con
             ,String tableName
             ,StringBuffer result
             ,String orderCondition
+            ,String showlittle
     )
     {
         ResultSet rs = null;
@@ -79,7 +91,7 @@ public class CSqlitePub {
             while (rs.next()) {
                 result.append("<tr>");
                 for (int i = 1; i <= 字段个数; i++) {
-                    result.append("<td>" + rs.getString(i) + "</td>");
+                    procShowLittle(showlittle, i, rs,result);
                 }
                 result.append("</tr>");
             }
@@ -99,6 +111,7 @@ public class CSqlitePub {
             ,String findwords
             ,String strCols
             ,String order
+            ,String showlittle
     )
     {
         String orderCondition = null;
@@ -142,7 +155,7 @@ public class CSqlitePub {
                 }
                 result.append("<tr>");
                 for (int i = 1; i <= 字段个数; i++) {
-                    result.append("<td>" + rs.getString(i) + "</td>");
+                    procShowLittle(showlittle, i, rs,result);
                 }
                 result.append("</tr>");
             }
@@ -153,6 +166,26 @@ public class CSqlitePub {
         }
 
         return result;
+    }
+
+    static public void procShowLittle(String showlittle, int i, ResultSet rs, StringBuffer result)
+    {
+        try {
+            if (CSqlitePub.isShowLittle(showlittle)) {
+//                System.out.println("showlittle:" + showlittle);
+//                System.out.println("i:" + i);
+                String tempStr = rs.getString(i);
+                tempStr = CStringPub.ifNullSetEmpty(tempStr);
+                int strlen = tempStr.length();
+                int minlen = strlen > showlen ? showlen : strlen;
+//                System.out.println("rs.getString(i).substring(0, minlen):" + rs.getString(i).substring(0, minlen));
+                result.append("<td>" + tempStr.substring(0, minlen) + "</td>");
+            } else {
+                result.append("<td>" + rs.getString(i) + "</td>");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
 

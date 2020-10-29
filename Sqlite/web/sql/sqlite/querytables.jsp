@@ -29,13 +29,13 @@
     for (String table :
             tables) {
 %>
-<form action="querytablesingle.jsp" method="post" name="form" class="form">
+<form action="querytablesingle.jsp" method="post" name="form" class="form" accept-charset="gbk">
     <input type="hidden" name="database" value="<%=CSqlitePub.getSqlitePathTrimDriver(databaseProc)%>"/>
-    <input type="submit" name="table" value="<%=table%>" class="submitbtn"/>
     <input type="hidden" name="item" value="limit" >
     <input type="hidden" name="order" value="order" >
     <input type="hidden" name="columns" value="ID,content">
     <input type="hidden" name="showlittle" value="showlittle" >
+    <input type="submit" name="table" value="<%=table%>" class="submitbtn"/>
 </form>
 <%
     }

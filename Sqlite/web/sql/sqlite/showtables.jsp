@@ -21,7 +21,7 @@
 --%>
 <font size="3">
     <a href="showtables.jsp">常用链接</a>
-    <form action="" method="post" name="form">
+    <form action="" method="post" name="form" accept-charset="gbk">
         请输入Sqlite位置:
         <input type="text" name="database">
         <input type="submit" value="查询" name="submit">

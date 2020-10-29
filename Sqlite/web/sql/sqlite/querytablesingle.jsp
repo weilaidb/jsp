@@ -50,18 +50,21 @@
     showlittle = CStringPub.ifNullSetEmpty(showlittle);
     System.out.println("columns:" + columns);
     System.out.println("findwords:" + findwords);
+    System.out.println("showlittle:" + showlittle);
 
 %>
 
-<sqlite:QueryContent database="<%=database%>" table="<%=table%>" item="<%=item%>" order="<%=order%>"
-                     columns="<%=columns%>" findwords="<%=findwords%>"/>
+<sqlite:QueryContent database="<%=database%>"
+                     table="<%=table%>"
+                     item="<%=item%>"
+                     order="<%=order%>"
+                     columns="<%=columns%>"
+                     findwords="<%=findwords%>"
+                     showlittle="<%=showlittle%>"
+/>
+
 查询结果:
 <%=orderResult%>
-<%--<sqlite:QuerySqlite database="<%=database%>" table="<%=table%>" item="<%=item%>" order="<%=order%>"/>--%>
-<%--<br></br>Sqlite库[<%=database%>]有以下表:--%>
-<%--<%=tablelist%>--%>
-<%--<br>查询表[<%=table%>]结果:--%>
-<%--<%=orderResult%>--%>
 
 </body>
 </html>

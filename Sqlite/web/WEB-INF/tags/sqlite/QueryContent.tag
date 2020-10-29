@@ -8,6 +8,7 @@
 <%@ attribute name="order" required="true" %>
 <%@ attribute name="columns" required="true"%>
 <%@ attribute name="findwords" required="true"%>
+<%@ attribute name="showlittle" required="true"%>
 <%@ variable name-given="orderResult" scope="AT_END" %>
 
 <%--
@@ -45,11 +46,11 @@ ID	content	lantype	keywords	note	vartype	aspect_field	CreatedTime	delflag	lowerc
 
         if (CStringPub.isTrimEmpty(findwords))
         {
-            CSqlitePub.procSelectAll(con, tableName,result, orderCondition);
+            CSqlitePub.procSelectAll(con, tableName,result, orderCondition, showlittle);
         }
         else
         {
-            CSqlitePub.procFindWord(con, tableName, result,findwords,m_StrCols, order);
+            CSqlitePub.procFindWord(con, tableName, result,findwords,m_StrCols, order, showlittle);
         }
 
         con.close();

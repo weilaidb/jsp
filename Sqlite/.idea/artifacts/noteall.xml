@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="noteall">
+    <output-path>$PROJECT_DIR$/out/artifacts/noteall</output-path>
+    <root id="archive" name="noteall.war">
+      <element id="artifact" artifact-name="noteall_" />
+    </root>
+  </artifact>
+</component>

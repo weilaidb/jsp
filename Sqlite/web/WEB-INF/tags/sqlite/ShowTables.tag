@@ -12,7 +12,7 @@ ID	content	lantype	keywords	note	vartype	aspect_field	CreatedTime	delflag	lowerc
 <%
     String showTableCondition  = "SELECT name FROM sqlite_master WHERE type='table' ORDER BY name;";
 
-    List<String> resultTables  = new ArrayList<>();
+    List<String> resultTables  = new ArrayList<String>();
     try {
         Class.forName("org.sqlite.JDBC");  //Sqlite3驱动程序名
     } catch (Exception e) {
