@@ -5,12 +5,156 @@ import base.CStringPub;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+import java.io.UnsupportedEncodingException;
 import java.sql.*;
 
 public class CSqlitePub {
     static String firstpath = "mydb/";
     static String secondpath = "sqlite/";
     static String filename = "config.txt";
+
+    //加载驱动
+    static public StringBuffer loadSqliteClass(StringBuffer result)
+    {
+        try {
+            Class.forName("org.sqlite.JDBC");  //Sqlite3驱动程序名
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println(e.getMessage());
+            result.append(e);
+        } finally {
+        }
+
+        return result;
+    }
+    //deal  order
+    static public String procOrder(String order, String orderCondition)
+    {
+        if(order.trim().equals("order"))
+        {
+            orderCondition += " ORDER BY ID desc ";
+        }
+        return orderCondition;
+    }
+
+    //deal  limit
+    static public String procLimit(String limit, String orderCondition)
+    {
+        if(limit.trim().equals("limit"))
+        {
+            orderCondition += " limit 50";
+        }
+        else
+        {
+            orderCondition += "";
+        }
+        return orderCondition;
+    }
+
+    //query all
+    static public StringBuffer procSelectAll(Connection con
+            ,String tableName
+            ,StringBuffer result
+            ,String orderCondition
+    )
+    {
+        ResultSet rs = null;
+        Statement sql = null;
+        try{
+            //表的所有列
+            int 字段个数 = 0;
+            DatabaseMetaData metadata = con.getMetaData();
+            ResultSet rs1 = metadata.getColumns(null, null, tableName, null);
+            result.append("<tr>");
+            while (rs1.next()) {
+                字段个数++;
+                String columnName = rs1.getString(4);
+                result.append("<td>" + columnName + "</td>");
+            }
+            result.append("</tr>");
+            System.out.println("字段个数: " + 字段个数);
+
+            sql = con.createStatement();
+            rs = sql.executeQuery(orderCondition);
+            while (rs.next()) {
+                result.append("<tr>");
+                for (int i = 1; i <= 字段个数; i++) {
+                    result.append("<td>" + rs.getString(i) + "</td>");
+                }
+                result.append("</tr>");
+            }
+            result.append("</table>");
+        } catch (SQLException e) {
+            e.printStackTrace();
+            result.append(e);
+        }
+
+        return result;
+    }
+
+    //query with findwords
+    static public StringBuffer procFindWord(Connection con
+            ,String tableName
+            ,StringBuffer result
+            ,String findwords
+            ,String strCols
+            ,String order
+    )
+    {
+        String orderCondition = null;
+        ResultSet rs = null;
+        Statement sql = null;
+        try{
+            int 字段个数 = 0;
+            result.append("<tr>");
+            String[] listStrCol = strCols.trim().split(",");
+            for (String m_item :
+                    listStrCol) {
+                字段个数++;
+                String columnName = m_item;
+                result.append("<td>" + columnName + "</td>");
+            }
+            result.append("</tr>");
+            System.out.println("字段个数: " + 字段个数);
+
+            try {
+                System.out.println("bf findwords: " + findwords);
+                byte aa[] = findwords.getBytes("ISO-8859-1");
+                System.out.println("mid findwords: " + new String(findwords.getBytes("ISO-8859-1")));
+//                System.out.println("mid findwords: " + new String(findwords.getBytes("GBK")));
+//                System.out.println("mid findwords: " + new String(findwords.getBytes("UTF-8")));
+//                System.out.println("mid findwords: " + new String(findwords.getBytes("unicode")));
+                findwords = new String(aa);
+            } catch (UnsupportedEncodingException e) {
+                e.printStackTrace();
+            }
+            System.out.println("in findwords: " + findwords);
+
+            orderCondition  = "SELECT " + strCols + " FROM " + tableName ;
+            orderCondition = procOrder(order, orderCondition);
+
+            sql = con.createStatement();
+            rs = sql.executeQuery(orderCondition);
+            while (rs.next()) {
+                String m_ColContentVal = rs.getString(2);
+                if(!m_ColContentVal.toLowerCase().contains(findwords.trim().toLowerCase())){
+                    continue;
+                }
+                result.append("<tr>");
+                for (int i = 1; i <= 字段个数; i++) {
+                    result.append("<td>" + rs.getString(i) + "</td>");
+                }
+                result.append("</tr>");
+            }
+            result.append("</table>");
+        } catch (SQLException e) {
+            e.printStackTrace();
+            result.append(e);
+        }
+
+        return result;
+    }
+
 
     static public String getStoreDbFileName()
     {

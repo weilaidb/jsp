@@ -1,6 +1,7 @@
 <%@ tag pageEncoding="utf-8" %>
 <%@ tag import="java.sql.*" %>
 <%@ tag import="sql.CSqlitePub" %>
+<%@ tag import="base.CStringPub" %>
 <%@ attribute name="database" required="true" %>
 <%@ attribute name="table" required="true" %>
 <%@ attribute name="item" required="true" %>
@@ -18,25 +19,17 @@ ID	content	lantype	keywords	note	vartype	aspect_field	CreatedTime	delflag	lowerc
 %>
 <%
     StringBuffer result;
-    result = new StringBuffer();
-    try {
-        Class.forName("org.sqlite.JDBC");  //Sqlite3驱动程序名
-    } catch (Exception e) {
-        e.printStackTrace();
-        System.out.println(e.getMessage());
-        result.append(e);
-    } finally {
-    }
-
     Connection con = null;
     Statement sql;
     ResultSet rs;
 
+    result = new StringBuffer();
+    CSqlitePub.loadSqliteClass(result);
+
     try{
         result.append("<table border=1>");
-        String dbpath = CSqlitePub.getSqlitePathWithDriver(database);
-        con = DriverManager.getConnection(dbpath);
         String tableName = table;
+        con = DriverManager.getConnection(CSqlitePub.getSqlitePathWithDriver(database));
 
         //查询列-自定义
         String m_StrCols = columns;
@@ -46,85 +39,19 @@ ID	content	lantype	keywords	note	vartype	aspect_field	CreatedTime	delflag	lowerc
         }
 
         String orderCondition  = "SELECT " + m_StrCols + " FROM " + tableName ;
-        if(order.trim().equals("order"))
-        {
-            orderCondition += " ORDER BY ID desc ";
-        }
-
-        if(item.trim().equals("limit"))
-        {
-            orderCondition += " limit 50";
-        }
-        else
-        {
-            orderCondition += "";
-        }
-
+        orderCondition = CSqlitePub.procOrder(order, orderCondition);
+        orderCondition = CSqlitePub.procLimit(order, orderCondition);
         System.out.println("orderCondition:" + orderCondition);
 
-        if (findwords.trim().isEmpty())
+        if (CStringPub.isTrimEmpty(findwords))
         {
-            //表的所有列
-            int 字段个数 = 0;
-            DatabaseMetaData metadata = con.getMetaData();
-            ResultSet rs1 = metadata.getColumns(null, null, tableName, null);
-            result.append("<tr>");
-            while (rs1.next()) {
-                字段个数++;
-                String columnName = rs1.getString(4);
-                result.append("<td>" + columnName + "</td>");
-            }
-            result.append("</tr>");
-            System.out.println("字段个数: " + 字段个数);
-
-            sql = con.createStatement();
-            rs = sql.executeQuery(orderCondition);
-            while (rs.next()) {
-                result.append("<tr>");
-                for (int i = 1; i <= 字段个数; i++) {
-                    result.append("<td>" + rs.getString(i) + "</td>");
-                }
-                result.append("</tr>");
-            }
+            CSqlitePub.procSelectAll(con, tableName,result, orderCondition);
         }
         else
         {
-            int 字段个数 = 0;
-            result.append("<tr>");
-            String[] listStrCol = m_StrCols.trim().split(",");
-            for (String m_item :
-                    listStrCol) {
-                字段个数++;
-                String columnName = m_item;
-                result.append("<td>" + columnName + "</td>");
-            }
-            result.append("</tr>");
-
-            System.out.println("字段个数: " + 字段个数);
-
-
-            orderCondition  = "SELECT " + m_StrCols + " FROM " + tableName ;
-            if(order.trim().equals("order"))
-            {
-                orderCondition += " ORDER BY ID desc ";
-            }
-
-            sql = con.createStatement();
-            rs = sql.executeQuery(orderCondition);
-            while (rs.next()) {
-                String m_ColContentVal = rs.getString(2);
-                if(!m_ColContentVal.toLowerCase().contains(findwords.trim().toLowerCase())){
-                    continue;
-                }
-                result.append("<tr>");
-                for (int i = 1; i <= 字段个数; i++) {
-                    result.append("<td>" + rs.getString(i) + "</td>");
-                }
-                result.append("</tr>");
-            }
+            CSqlitePub.procFindWord(con, tableName, result,findwords,m_StrCols, order);
         }
 
-        result.append("</table>");
         con.close();
     } catch (SQLException e) {
         e.printStackTrace();

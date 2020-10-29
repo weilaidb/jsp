@@ -24,7 +24,7 @@
 
 <font size="3">
 <%--    <a href="showtables.jsp">添加链接</a>--%>
-    <form action="" method="post" name="form">
+    <form action="" method="post" name="form" accept-charset="gbk">
         在[<%=table%>]查询内容:<br>
         <input type="text" name="findwords">
         <input type="hidden" name="database" value="<%=database%>">
