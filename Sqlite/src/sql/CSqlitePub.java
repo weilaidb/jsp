@@ -172,13 +172,10 @@ public class CSqlitePub {
     {
         try {
             if (CSqlitePub.isShowLittle(showlittle)) {
-//                System.out.println("showlittle:" + showlittle);
-//                System.out.println("i:" + i);
                 String tempStr = rs.getString(i);
                 tempStr = CStringPub.ifNullSetEmpty(tempStr);
                 int strlen = tempStr.length();
                 int minlen = strlen > showlen ? showlen : strlen;
-//                System.out.println("rs.getString(i).substring(0, minlen):" + rs.getString(i).substring(0, minlen));
                 result.append("<td>" + tempStr.substring(0, minlen) + "</td>");
             } else {
                 result.append("<td>" + rs.getString(i) + "</td>");
@@ -236,6 +233,18 @@ public class CSqlitePub {
 
     static public String getSqliteWholePath()
     {
+        String dbPath = getSqlitePathFromFile();
+        try {
+//            byte bb[] = dbPath.getBytes("ISO-8859-1");
+//        byte bb[] = dbPath.getBytes("GBK");
+        byte bb[] = dbPath.getBytes("UTF-8");
+//        byte bb[] = dbPath.getBytes("unicode");
+            dbPath = new String(bb);
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+
+        
         return "jdbc:sqlite:" + getSqlitePathFromFile();
     }
     static public String getSqliteWholePath(String databaseProc)
