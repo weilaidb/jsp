@@ -23,7 +23,7 @@ public class CSqlitePub {
                 ");";
     }
 
-    static public String expDropCondition(String table)
+    static public String expDropTable(String table)
     {
         return "DROP  TABLE " + table +";";
     }

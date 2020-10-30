@@ -30,7 +30,7 @@
     System.out.println("table   : " + table);
 %>
 
-<sqlite:DeleteTable database="<%=databaseProc%>" table="<%=table%>"/>
+<sqlite:DropTable database="<%=databaseProc%>" table="<%=table%>"/>
 库<%=CSqlitePub.getSqlitePathTrimDriver(databaseProc)%><br>
 删除表<%=table%>结果:<br>
 <%=result%>
