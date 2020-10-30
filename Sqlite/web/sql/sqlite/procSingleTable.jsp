@@ -31,8 +31,6 @@
     String table    = request.getParameter("table");
     database = CStringPub.ifNullSetEmpty(database);
     table = CStringPub.ifNullSetEmpty(table);
-//    System.out.println("database: " + database);
-//    System.out.println("table   : " + table);
 %>
 
 

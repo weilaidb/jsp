@@ -1,5 +1,6 @@
 <%@ tag pageEncoding="utf-8" %>
 <%@ tag import="java.sql.*" %>
+<%@ tag import="sql.CSqlitePub" %>
 <%@ attribute name="database" required="true" %>
 <%@ attribute name="table" required="true" %>
 <%@ attribute name="item" required="true" %>
@@ -37,6 +38,7 @@ ID	content	lantype	keywords	note	vartype	aspect_field	CreatedTime	delflag	lowerc
 
         result.append("<table border=1>");
         String dbpath = database;
+        dbpath = CSqlitePub.getSqlitePathWithDriver(dbpath);
         con = DriverManager.getConnection(dbpath);
         DatabaseMetaData metadata = con.getMetaData();
         String tableName = table;

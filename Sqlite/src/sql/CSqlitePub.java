@@ -23,9 +23,14 @@ public class CSqlitePub {
                 ");";
     }
 
-    static public String expDeleteTable(String table)
+    static public String expDropCondition(String table)
     {
         return "DROP  TABLE " + table +";";
+    }
+
+    static public String expDeleteCondition(String table, int id)
+    {
+        return "DELETE FROM " + table + "WHERE ID = '" + id +"';";
     }
 
     static public String procContentWithSpeciSign(String content)
@@ -355,6 +360,7 @@ public class CSqlitePub {
         try {
             Class.forName("org.sqlite.JDBC");
             String dbpath = CSqlitePub.getSqliteWholePath();
+            dbpath = CSqlitePub.getSqlitePathWithDriver(dbpath);
             connection = DriverManager.getConnection(dbpath);
             Statement statement = connection.createStatement();   //创建连接对象，是Java的一个操作数据库的重要接口
 

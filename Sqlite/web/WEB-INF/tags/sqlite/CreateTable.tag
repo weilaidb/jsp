@@ -33,6 +33,7 @@ ID	content	lantype	keywords	note	vartype	aspect_field	CreatedTime	delflag	lowerc
     int ret;
 
     try {
+        database = CSqlitePub.getSqlitePathWithDriver(database);
         con = DriverManager.getConnection(database);
         sql = con.createStatement();
         ret = sql.executeUpdate(execCondition);
