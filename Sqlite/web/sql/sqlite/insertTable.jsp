@@ -22,8 +22,9 @@
 <html>
 <head>
 
-    <%--================javascript定义=========================--%>
-    <script>
+
+        <%--================javascript定义=========================--%>
+        <script>
         function ClearTextArea() {
             document.getElementById("id_insertdb").value = "";
         }
@@ -32,7 +33,6 @@
             var clipBoardContent = txt;
             window.top.clipboardData.setData("Text", clipBoardContent);
         }
-
         function ClipBoard2TextArea() {
             var clipboardContent = "abcfd";
             // var clipboardContent = window.top.clipboardData.getData("text");

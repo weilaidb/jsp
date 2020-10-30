@@ -33,6 +33,19 @@ public class CSqlitePub {
         return "DELETE FROM " + table + "WHERE ID = '" + id +"';";
     }
 
+    static public String expSelectCondition(String table, String item,  int id)
+    {
+        return "SELECT " + item + " FROM " + table + " WHERE ID = '" + id +"';";
+    }
+
+    static public String expUpdateCondition(String table,String item, String val, int id)
+    {
+        val = procContentWithSpeciSign(val);
+        val = procContentWithChinese(val);
+//        UPDATE COMPANY SET ADDRESS = 'Texas' WHERE ID = 6;
+        return "UPDATE " + table + " SET "+ item +"='" + val + "'" + " WHERE ID = '" + id +"';";
+    }
+
     static public String procContentWithSpeciSign(String content)
     {
         return content.replaceAll("\'","\'\'");
@@ -52,7 +65,6 @@ public class CSqlitePub {
         }
         return content;
     }
-
 
 
     static public String expInsertTable(String table,String content)
@@ -111,6 +123,7 @@ public class CSqlitePub {
 
     //query all
     static public StringBuffer procSelectAll(Connection con
+            ,String database
             ,String tableName
             ,StringBuffer result
             ,String orderCondition
@@ -138,7 +151,7 @@ public class CSqlitePub {
             while (rs.next()) {
                 result.append("<tr>");
                 for (int i = 1; i <= 字段个数; i++) {
-                    procShowLittle(showlittle, i, rs,result);
+                    procShowLittle(database, tableName, showlittle, i, rs,result);
                 }
                 result.append("</tr>");
             }
@@ -182,6 +195,7 @@ public class CSqlitePub {
 
     //query with findwords
     static public StringBuffer procFindWord(Connection con
+            ,String database
             ,String tableName
             ,StringBuffer result
             ,String findwords
@@ -225,7 +239,7 @@ public class CSqlitePub {
                 }
                 result.append("<tr>");
                 for (int i = 1; i <= 字段个数; i++) {
-                    procShowLittle(showlittle, i, rs,result);
+                    procShowLittle(database, tableName, showlittle, i, rs,result);
                 }
                 result.append("</tr>");
             }
@@ -238,7 +252,18 @@ public class CSqlitePub {
         return result;
     }
 
-    static public void procShowLittle(String showlittle, int i, ResultSet rs, StringBuffer result)
+    static public String getFormButton(String database, String table,String submit)
+    {
+        String showButton = "<form action=\"updateTable.jsp\" method=\"post\" name=\"form\" class=\"form\" accept-charset=\"gbk\" target=\"_blank\" >  " +
+                "    <input type=\"hidden\" name=\"database\" value=\"" + database + "\"/>                                      " +
+                "    <input type=\"hidden\" name=\"table\" value=\"" +table + "\"/>                                            " +
+                "    <input type=\"hidden\" name=\"id\" value=\"" + submit + "\"/>                                            " +
+                "    <input type=\"submit\" name=\"table\" value=\"" + submit + "\" class=\"submitbtn\"/>                             " +
+                "</form>  ";
+        return showButton;
+    }
+
+    static public void procShowLittle(String database, String table, String showlittle, int i, ResultSet rs, StringBuffer result)
     {
         try {
             if (CSqlitePub.isShowLittle(showlittle)) {
@@ -246,9 +271,19 @@ public class CSqlitePub {
                 tempStr = CStringPub.ifNullSetEmpty(tempStr);
                 int strlen = tempStr.length();
                 int minlen = strlen > showlen ? showlen : strlen;
-                result.append("<td>" + tempStr.substring(0, minlen) + "</td>");
+                if(i != 1) {
+                    result.append("<td>" + tempStr.substring(0, minlen) + "</td>");
+                }else {
+                    String showButton = getFormButton(database, table, tempStr.substring(0, minlen));
+                    result.append("<td>" +  showButton + "</td>");
+                }
             } else {
-                result.append("<td>" + rs.getString(i) + "</td>");
+                if (i != 1) {
+                    result.append("<td>" + rs.getString(i) + "</td>");
+                } else {
+                    String showButton = getFormButton(database, table, rs.getString(i));
+                    result.append("<td>" + showButton + "</td>");
+                }
             }
         } catch (SQLException e) {
             e.printStackTrace();

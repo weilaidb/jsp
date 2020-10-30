@@ -34,7 +34,7 @@ ID	content	lantype	keywords	note	vartype	aspect_field	CreatedTime	delflag	lowerc
 
         //查询列-自定义
         String m_StrCols = columns;
-        if(findwords.trim().isEmpty())
+        if(m_StrCols.trim().isEmpty())
         {
             m_StrCols = "*";
         }
@@ -42,15 +42,15 @@ ID	content	lantype	keywords	note	vartype	aspect_field	CreatedTime	delflag	lowerc
         String orderCondition  = "SELECT " + m_StrCols + " FROM " + tableName ;
         orderCondition = CSqlitePub.procOrder(order, orderCondition);
         orderCondition = CSqlitePub.procLimit(order, orderCondition);
-        System.out.println("orderCondition:" + orderCondition);
+//        System.out.println("orderCondition:" + orderCondition);
 
         if (CStringPub.isTrimEmpty(findwords))
         {
-            CSqlitePub.procSelectAll(con, tableName,result, orderCondition, showlittle);
+            CSqlitePub.procSelectAll(con, database, tableName,result, orderCondition, showlittle);
         }
         else
         {
-            CSqlitePub.procFindWord(con, tableName, result,findwords,m_StrCols, order, showlittle);
+            CSqlitePub.procFindWord(con, database, tableName, result,findwords,m_StrCols, order, showlittle);
         }
 
         con.close();
