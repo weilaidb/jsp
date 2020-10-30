@@ -10,31 +10,44 @@
 <%@ taglib prefix="sqlite" tagdir="/WEB-INF/tags/sqlite" %>
 <html>
 <head>
+    <Script Language="JavaScript">
+        function addTable()
+        {
+            document.form1.action="insertTable.jsp";
+            document.form1.submit();
+        }
+
+        function deleteTable()
+        {
+            document.form1.action="deleteTable.jsp";
+            document.form1.submit();
+        }
+    </Script>
     <title>常用记事本-Sqlite</title>
 </head>
 <body bgcolor="#00ffff">
 <%
-    String table = request.getParameter("table");
     String database = request.getParameter("database");
+    String table    = request.getParameter("table");
     database = CStringPub.ifNullSetEmpty(database);
     table = CStringPub.ifNullSetEmpty(table);
-    System.out.println("database: " + database);
-    System.out.println("table   : " + table);
+//    System.out.println("database: " + database);
+//    System.out.println("table   : " + table);
 %>
 
 
-
-<%--添加数据--%>
-<form action="insertTable.jsp" method="post" name="form" accept-charset="gbk" target="_blank">
+<%--添加数据--%><%--删除数据--%>
+<form action="" method="post" name="form1" accept-charset="gbk" target="_blank" class="form">
     <input type="hidden" name="database" value="<%=database%>">
     <input type="hidden" name="table" value="<%=table%>">
     <a href="index.jsp">首页</a>
-    <input type="submit" value="添加数据" name="submit">
+    <input type="button" value="添加数据" type="submit" onclick="addTable()"/>
+    <input type="button" value="删除数据" type="submit" onclick="deleteTable()"/>
 </form>
 
 <%--查询数据--%>
 <font size="3">
-    <form action="" method="post" name="form" accept-charset="gbk">
+    <form action="" method="post" name="form2" accept-charset="gbk">
         在[<%=table%>]查询内容:<br>
         <input type="text" name="findwords">
         <input type="hidden" name="database" value="<%=database%>">
