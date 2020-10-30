@@ -25,3 +25,31 @@
     margin: 5px;
 
 }
+
+.mytable th, tr, td, table {
+   /* for IE */
+   text-overflow: ellipsis;
+   /* for Firefox,mozilla */
+   -moz-text-overflow: ellipsis;
+   overflow: hidden;
+   white-space: nowrap;
+   text-align: left;
+
+   border: 1px solid red;
+   tab-interval: 10px;
+   background-color: aliceblue;
+   font-size: medium;
+}
+
+.clsSubmitBtn {
+    height: 30px;
+    width: 80px;
+}
+
+.dia_wabbit {
+    width: 100%;
+    height: 80%;
+    alignment: center;
+    align-content: center;
+}
+

@@ -17,7 +17,9 @@
     <title>常用记事本</title>
 </head>
 <body bgcolor="#00ffff">
-<a href="insert.jsp">创建</a>
+<a href="createTable.jsp">创建</a>
+<%--删除表功能暂时不打开--%>
+<%--<a href="delete.jsp">删除</a>--%>
 <%
     String database = request.getParameter("database");
     String databaseProc = CSqlitePub.getSqliteWholePath(database);
@@ -35,13 +37,13 @@
             continue;
         }
 %>
-<form action="querytablesingle.jsp" method="post" name="form" class="form" accept-charset="gbk">
+<form action="procSingleTable.jsp" method="post" name="form" class="form" accept-charset="gbk">
     <input type="hidden" name="database" value="<%=CSqlitePub.getSqlitePathTrimDriver(databaseProc)%>"/>
     <input type="hidden" name="item" value="limit" >
     <input type="hidden" name="order" value="order" >
     <input type="hidden" name="columns" value="ID,content">
     <input type="hidden" name="showlittle" value="showlittle" >
-    <input type="submit" name="table" value="<%=table%>" class="submitbtn"/>
+    <input type="submit" name="table" value="<%=CStringPub.ifNullSetEmpty(table)%>" class="submitbtn"/>
 </form>
 <%
     }

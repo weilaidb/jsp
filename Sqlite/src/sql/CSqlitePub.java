@@ -23,6 +23,39 @@ public class CSqlitePub {
                 ");";
     }
 
+    static public String expDeleteTable(String table)
+    {
+        return "DROP  TABLE " + table +";";
+    }
+
+    static public String procContentWithSpeciSign(String content)
+    {
+        return content.replaceAll("\'","\'\'");
+    }
+
+    static public String procContentWithChinese(String content)
+    {
+        try {
+//            String content = request.getParameter("boy");
+            byte cc[] = content.getBytes("ISO-8859-1");
+//            byte cc[] = content.getBytes("GBK");
+//            byte cc[] = content.getBytes("UTF-8");
+//            byte cc[] = content.getBytes("unicode");
+            content = new String(cc);
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        return content;
+    }
+
+
+
+    static public String expInsertTable(String table,String content)
+    {
+        content = procContentWithSpeciSign(content);
+        content = procContentWithChinese(content);
+        return "INSERT INTO " + table + "([content]) VALUES( '" + content + "')";
+    }
     //加载驱动
     static public StringBuffer loadSqliteClass(StringBuffer result)
     {

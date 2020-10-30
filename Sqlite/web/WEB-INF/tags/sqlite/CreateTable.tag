@@ -23,6 +23,7 @@ ID	content	lantype	keywords	note	vartype	aspect_field	CreatedTime	delflag	lowerc
 //
 
     String execCondition  = CSqlitePub.expCreateTable(table);
+    System.out.println("execCondition:" + execCondition);
 
     StringBuffer resultInfo = new StringBuffer();
     CSqlitePub.loadSqliteClass(resultInfo);
@@ -36,7 +37,7 @@ ID	content	lantype	keywords	note	vartype	aspect_field	CreatedTime	delflag	lowerc
         sql = con.createStatement();
         ret = sql.executeUpdate(execCondition);
         if(0 == ret){
-            resultInfo.append("数据表创建成功" + table);
+            resultInfo.append("数据表创建成功");
         }
     } catch (SQLException e) {
         e.printStackTrace();
