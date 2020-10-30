@@ -11,6 +11,18 @@ public class CSqlitePub {
     static String filename = "config.txt";
     static int showlen = 100;
 
+    static public String expCreateTable(String table)
+    {
+        return "CREATE TABLE " + table +"(" +
+                "[ID] INTEGER PRIMARY KEY," +
+                "[content] varchar(100)," +
+                "[note] varchar(100)," +
+                "delflag integer DEFAULT 0," +
+                "CreatedTime TimeStamp NOT NULL DEFAULT (datetime('now'," +
+                "'localtime'))" +
+                ");";
+    }
+
     //加载驱动
     static public StringBuffer loadSqliteClass(StringBuffer result)
     {

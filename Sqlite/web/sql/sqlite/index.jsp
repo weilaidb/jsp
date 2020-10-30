@@ -1,6 +1,7 @@
 <%@ page import="java.util.List" %>
 <%@ page import="java.util.Arrays" %>
-<%@ page import="sql.CSqlitePub" %><%--
+<%@ page import="sql.CSqlitePub" %>
+<%@ page import="base.CStringPub" %><%--
   Created by IntelliJ IDEA.
   User: dell
   Date: 2020/10/25
@@ -16,6 +17,7 @@
     <title>常用记事本</title>
 </head>
 <body bgcolor="#00ffff">
+<a href="insert.jsp">创建</a>
 <%
     String database = request.getParameter("database");
     String databaseProc = CSqlitePub.getSqliteWholePath(database);
@@ -28,6 +30,10 @@
     List<String> tables = Arrays.asList(strList.toString().split(",")); //通过逗号间隔重新提取出每个字符成员，转成List<String>
     for (String table :
             tables) {
+        if(CStringPub.isTrimEmpty(table))
+        {
+            continue;
+        }
 %>
 <form action="querytablesingle.jsp" method="post" name="form" class="form" accept-charset="gbk">
     <input type="hidden" name="database" value="<%=CSqlitePub.getSqlitePathTrimDriver(databaseProc)%>"/>
