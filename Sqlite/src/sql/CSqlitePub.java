@@ -146,6 +146,35 @@ public class CSqlitePub {
         return result;
     }
 
+    //查找内容是否包含以空格分隔的关键字
+    static public boolean findWordWithSpace(String content, String findWord)
+    {
+        String[] listWord = findWord.split(" ");
+        int num = 0;
+        for (String item:
+             listWord) {
+            if(CStringPub.isTrimEmpty(item))
+            {
+                continue;
+            }
+            if(content.trim().toLowerCase().contains(item.trim().toLowerCase()))
+            {
+                num++;
+            }
+            else
+            {
+                break;
+            }
+        }
+
+        if(num == listWord.length)
+        {
+            return true;
+        }
+        return false;
+    }
+
+
     //query with findwords
     static public StringBuffer procFindWord(Connection con
             ,String tableName
@@ -173,17 +202,11 @@ public class CSqlitePub {
             System.out.println("字段个数: " + 字段个数);
 
             try {
-                System.out.println("bf findwords: " + findwords);
                 byte aa[] = findwords.getBytes("ISO-8859-1");
-                System.out.println("mid findwords: " + new String(findwords.getBytes("ISO-8859-1")));
-//                System.out.println("mid findwords: " + new String(findwords.getBytes("GBK")));
-//                System.out.println("mid findwords: " + new String(findwords.getBytes("UTF-8")));
-//                System.out.println("mid findwords: " + new String(findwords.getBytes("unicode")));
                 findwords = new String(aa);
             } catch (UnsupportedEncodingException e) {
                 e.printStackTrace();
             }
-            System.out.println("in findwords: " + findwords);
 
             orderCondition  = "SELECT " + strCols + " FROM " + tableName ;
             orderCondition = procOrder(order, orderCondition);
@@ -192,7 +215,7 @@ public class CSqlitePub {
             rs = sql.executeQuery(orderCondition);
             while (rs.next()) {
                 String m_ColContentVal = rs.getString(2);
-                if(!m_ColContentVal.toLowerCase().contains(findwords.trim().toLowerCase())){
+                if(!findWordWithSpace(m_ColContentVal, findwords)){
                     continue;
                 }
                 result.append("<tr>");
