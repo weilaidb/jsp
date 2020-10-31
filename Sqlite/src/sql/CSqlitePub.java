@@ -16,7 +16,6 @@ public class CSqlitePub {
         return "CREATE TABLE " + table +"(" +
                 "[ID] INTEGER PRIMARY KEY," +
                 "[content] varchar(100)," +
-                "[note] varchar(100)," +
                 "httpflag integer DEFAULT 0," +
                 "delflag integer DEFAULT 0," +
                 "CreatedTime TimeStamp NOT NULL DEFAULT (datetime('now'," +
@@ -129,6 +128,7 @@ public class CSqlitePub {
             ,StringBuffer result
             ,String orderCondition
             ,String showlittle
+            ,int columnNum
     )
     {
         ResultSet rs = null;
@@ -141,6 +141,10 @@ public class CSqlitePub {
             result.append("<tr>");
             while (rs1.next()) {
                 字段个数++;
+                if(字段个数>=columnNum)
+                {
+                    break;
+                }
                 String columnName = rs1.getString(4);
                 result.append("<td>" + columnName + "</td>");
             }
@@ -152,6 +156,10 @@ public class CSqlitePub {
             while (rs.next()) {
                 result.append("<tr>");
                 for (int i = 1; i <= 字段个数; i++) {
+                    if(字段个数>columnNum)
+                    {
+                        break;
+                    }
                     procShowLittle(database, tableName, showlittle, i, rs,result);
                 }
                 result.append("</tr>");
@@ -203,6 +211,7 @@ public class CSqlitePub {
             ,String strCols
             ,String order
             ,String showlittle
+            ,int columnNum
     )
     {
         String orderCondition = null;
@@ -317,7 +326,7 @@ public class CSqlitePub {
             BufferedReader bufferin = new BufferedReader(in);
             String temp;
             while ((temp = bufferin.readLine()) != null) {
-                if(temp.toString().trim().isEmpty())
+                if(CStringPub.isTrimEmpty(temp))
                 {
                     continue;
                 }
@@ -338,12 +347,17 @@ public class CSqlitePub {
 
     static public String getSqlitePathFromFile()
     {
-        try{
-            return getSqlitePathFromFileSingle("D:/");
-        } catch (Exception e) {
-            e.printStackTrace();
-            return getSqlitePathFromFileSingle("C:/");
+        String[] prepath = {"D:/","E:/","C:/"};
+        for (String pre:
+             prepath) {
+            try{
+                return getSqlitePathFromFileSingle(pre);
+            } catch (Exception e) {
+                e.printStackTrace();
+                continue;
+            }
         }
+        return "";
     }
 
     static public String getSqliteWholePath()

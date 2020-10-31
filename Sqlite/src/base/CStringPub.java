@@ -20,4 +20,17 @@ public class CStringPub {
         return string.trim();
     }
 
+    public static boolean isBufferTrimEmpty(StringBuffer buffer)
+    {
+        return buffer.toString().trim().isEmpty();
+    }
+    public static int splitBySignSize(String buffer, String sign)
+    {
+        return buffer.split(sign).length;
+    }
+    public static int splitByDouSize(String buffer)
+    {
+        return splitBySignSize(buffer,",");
+    }
+
 }

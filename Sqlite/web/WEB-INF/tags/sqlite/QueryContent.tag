@@ -46,11 +46,11 @@ ID	content	lantype	keywords	note	vartype	aspect_field	CreatedTime	delflag	lowerc
 
         if (CStringPub.isTrimEmpty(findwords))
         {
-            CSqlitePub.procSelectAll(con, database, tableName,result, orderCondition, showlittle);
+            CSqlitePub.procSelectAll(con, database, tableName,result, orderCondition, showlittle,CStringPub.splitByDouSize(m_StrCols));
         }
         else
         {
-            CSqlitePub.procFindWord(con, database, tableName, result,findwords,m_StrCols, order, showlittle);
+            CSqlitePub.procFindWord(con, database, tableName, result,findwords,m_StrCols, order, showlittle, CStringPub.splitByDouSize(m_StrCols));
         }
 
         con.close();
