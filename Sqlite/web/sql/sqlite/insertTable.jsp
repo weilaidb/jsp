@@ -21,8 +21,7 @@
 
 <html>
 <head>
-        <%--================javascript定义=========================--%>
-    <script type="text/javascript" src="js/clipboard.js"/>
+    <script type="text/javascript" src="js/clipboard.js"></script>
     <title>添加内容</title>
 </head>
 <body onload="ClearTextArea()">
