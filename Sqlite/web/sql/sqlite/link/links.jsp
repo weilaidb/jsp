@@ -13,7 +13,7 @@
     <Script Language="JavaScript">
         function addTable()
         {
-            document.form1.action="../insertTable.jsp";
+            document.form1.action="addLinkTable.jsp";
             document.form1.submit();
         }
 
@@ -24,19 +24,19 @@
         }
     </Script>
 </head>
-<body>
+<body bgcolor="#00ffff">
 <%--添加数据--%><%--删除数据--%>
 <form action="" method="post" name="form1" accept-charset="gbk" target="_blank" class="form">
     <input type="hidden" name="database" value="<%=CSqlitePub.getSqliteWholePath()%>">
     <input type="hidden" name="table" value="<%=CSqlitePub.getLinktable()%>">
-    <a href="index.jsp">首页</a>
+    <a href="../index.jsp">首页</a><br>
     <input type="button" value="添加链接" type="submit" onclick="addTable()"/>
     <input type="button" value="删除链接" type="submit" onclick="deleteTable()"/>
 </form>
 
-<link:QueryContent database="<%=CSqlitePub.getSqliteWholePath()%>"
-                   table="<%=CSqlitePub.getLinktable()%>" />
-
+<link:QueryLink database="<%=CSqlitePub.getSqliteWholePath()%>"
+                table="<%=CSqlitePub.getLinktable()%>" />
+<%=orderResult%>
 
 </body>
 </html>

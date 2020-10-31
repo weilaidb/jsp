@@ -32,7 +32,6 @@ ID	content	lantype	keywords	note	vartype	aspect_field	CreatedTime	delflag	lowerc
 
             System.out.println("execCondition:" + execCondition);
 
-
             try {
                 database = CSqlitePub.getSqlitePathWithDriver(database);
                 con = DriverManager.getConnection(database);

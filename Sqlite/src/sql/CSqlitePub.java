@@ -26,6 +26,7 @@ public class CSqlitePub {
         return "CREATE TABLE " + table +"(" +
                 "[ID] INTEGER PRIMARY KEY," +
                 "[content] varchar(100)," +
+                "[note] varchar(100)," +
                 "httpflag integer DEFAULT 0," +
                 "delflag integer DEFAULT 0," +
                 "CreatedTime TimeStamp NOT NULL DEFAULT (datetime('now'," +
@@ -46,6 +47,16 @@ public class CSqlitePub {
     static public String expSelectCondition(String table, String item,  int id)
     {
         return "SELECT " + item + " FROM " + table + " WHERE ID = '" + id +"';";
+    }
+
+    static public String expSelectCondition(String table)
+    {
+        return "SELECT * FROM " + table + ";";
+    }
+
+    static public String expSelectConditionContentNote(String table)
+    {
+        return "SELECT content,note FROM " + table + ";";
     }
 
     static public String expUpdateCondition(String table,String item, String val, int id)
@@ -76,13 +87,28 @@ public class CSqlitePub {
         return content;
     }
 
+    static public String procItemWithAll(String item)
+    {
+        item = procContentWithSpeciSign(item);
+        item = procContentWithChinese(item);
+        return item;
+    }
+
 
     static public String expInsertTable(String table,String content)
     {
-        content = procContentWithSpeciSign(content);
-        content = procContentWithChinese(content);
+        content = procItemWithAll(content);
         return "INSERT INTO " + table + "([content]) VALUES( '" + content + "')";
     }
+
+    static public String expInsertTable(String table,String content,String note)
+    {
+        content = procItemWithAll(content);
+        note = procItemWithAll(note);
+        return "INSERT INTO " + table + "(content,note) VALUES( '" + content + "' ,'"+ note +"')";
+    }
+
+
     //加载驱动
     static public StringBuffer loadSqliteClass(StringBuffer result)
     {
@@ -171,6 +197,31 @@ public class CSqlitePub {
                 result.append("</tr>");
             }
             result.append("</table>");
+        } catch (SQLException e) {
+            e.printStackTrace();
+            result.append(e);
+        }
+
+        return result;
+    }
+    //query link table
+    static public StringBuffer procSelectLinkTable(Connection con
+            ,String tableName
+            ,StringBuffer result
+            ,String orderCondition
+    )
+    {
+        ResultSet rs;
+        Statement sql = null;
+        try{
+            //表的所有列
+            int 字段个数 = 2;
+            sql = con.createStatement();
+            rs = sql.executeQuery(orderCondition);
+            while (rs.next()) {
+                result.append("<a href=\""+ rs.getString(1) +"\" target=\"_blank\">"+ rs.getString(2)+"</a>");
+                result.append("<br>");
+            }
         } catch (SQLException e) {
             e.printStackTrace();
             result.append(e);

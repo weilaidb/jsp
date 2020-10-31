@@ -1,7 +1,6 @@
 <%@ tag pageEncoding="utf-8" %>
 <%@ tag import="java.sql.*" %>
 <%@ tag import="sql.CSqlitePub" %>
-<%@ tag import="base.CStringPub" %>
 <%@ attribute name="database" required="true" %>
 <%@ attribute name="table" required="true" %>
 <%@ variable name-given="orderResult" scope="AT_END" %>
@@ -20,11 +19,9 @@
         String tableName = table;
         con = DriverManager.getConnection(CSqlitePub.getSqlitePathWithDriver(database));
 
-        String orderCondition  = "SELECT * FROM " + tableName ;
-        orderCondition = CSqlitePub.procOrder(orderCondition, orderCondition);
-        orderCondition = CSqlitePub.procLimit(orderCondition, orderCondition);
+        String orderCondition  = CSqlitePub.expSelectConditionContentNote(tableName)  ;
 //        System.out.println("orderCondition:" + orderCondition);
-        CSqlitePub.procSelectAll(con, database, tableName,result, orderCondition, "",-1);
+        CSqlitePub.procSelectLinkTable(con, tableName,result, orderCondition);
         con.close();
     } catch (SQLException e) {
         e.printStackTrace();

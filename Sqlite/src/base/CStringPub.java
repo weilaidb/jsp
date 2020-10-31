@@ -1,5 +1,10 @@
 package base;
 
+import com.sun.deploy.net.HttpRequest;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 public class CStringPub {
     public static boolean isTrimEmpty(String string)
     {
@@ -31,6 +36,11 @@ public class CStringPub {
     public static int splitByDouSize(String buffer)
     {
         return splitBySignSize(buffer,",");
+    }
+
+    public static String requesParaIfNullSetEmpty(HttpServletRequest request, String key)
+    {
+        return ifNullSetEmpty(request.getParameter(key));
     }
 
 }
