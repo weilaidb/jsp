@@ -54,9 +54,9 @@ public class CSqlitePub {
         return "SELECT * FROM " + table + ";";
     }
 
-    static public String expSelectConditionContentNote(String table)
+    static public String expSelectIDConditionContentNote(String table)
     {
-        return "SELECT content,note FROM " + table + ";";
+        return "SELECT id,content,note FROM " + table + ";";
     }
 
     static public String expUpdateCondition(String table,String item, String val, int id)
@@ -215,12 +215,19 @@ public class CSqlitePub {
         Statement sql = null;
         try{
             //表的所有列
-            int 字段个数 = 2;
+            int 字段个数 = 3;
             sql = con.createStatement();
             rs = sql.executeQuery(orderCondition);
             while (rs.next()) {
-                result.append("<a href=\""+ rs.getString(1) +"\" target=\"_blank\">"+ rs.getString(2)+"</a>");
-                result.append("<br>");
+                result.append("<font size=5>");
+                result.append(
+                        "<a href=\""+ rs.getString(2) +"\" target=\"_blank\">"
+                        + "["
+                        + rs.getString(1)
+                        + "] "
+                        + rs.getString(3)
+                        +"</a><br/>");
+                result.append("</font>");
             }
         } catch (SQLException e) {
             e.printStackTrace();

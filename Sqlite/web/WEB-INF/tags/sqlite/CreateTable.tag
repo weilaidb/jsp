@@ -1,7 +1,5 @@
 <%@ tag pageEncoding="utf-8" %>
 <%@ tag import="java.sql.*" %>
-<%@ tag import="java.util.List" %>
-<%@ tag import="java.util.ArrayList" %>
 <%@ tag import="sql.CSqlitePub" %>
 <%@ attribute name="database" required="true" %>
 <%@ attribute name="table" required="true" %>

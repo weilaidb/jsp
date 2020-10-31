@@ -19,7 +19,7 @@
         String tableName = table;
         con = DriverManager.getConnection(CSqlitePub.getSqlitePathWithDriver(database));
 
-        String orderCondition  = CSqlitePub.expSelectConditionContentNote(tableName)  ;
+        String orderCondition  = CSqlitePub.expSelectIDConditionContentNote(tableName)  ;
 //        System.out.println("orderCondition:" + orderCondition);
         CSqlitePub.procSelectLinkTable(con, tableName,result, orderCondition);
         con.close();
