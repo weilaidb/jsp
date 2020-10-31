@@ -10,6 +10,16 @@ public class CSqlitePub {
     static String secondpath = "sqlite/";
     static String filename = "config.txt";
     static int showlen = 100;
+    static String linktable = "link";
+
+
+    public static String getLinktable() {
+        return linktable;
+    }
+
+    public static void setLinktable(String linktable) {
+        CSqlitePub.linktable = linktable;
+    }
 
     static public String expCreateTable(String table)
     {
@@ -141,7 +151,7 @@ public class CSqlitePub {
             result.append("<tr>");
             while (rs1.next()) {
                 字段个数++;
-                if(字段个数>=columnNum)
+                if((字段个数>columnNum) && (columnNum != -1))
                 {
                     break;
                 }
@@ -156,10 +166,6 @@ public class CSqlitePub {
             while (rs.next()) {
                 result.append("<tr>");
                 for (int i = 1; i <= 字段个数; i++) {
-                    if(字段个数>columnNum)
-                    {
-                        break;
-                    }
                     procShowLittle(database, tableName, showlittle, i, rs,result);
                 }
                 result.append("</tr>");

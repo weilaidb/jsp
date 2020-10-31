@@ -24,7 +24,7 @@
 
 <form action="" method="post" name="form1" accept-charset="gbk">
     <a href="index.jsp">首页</a>
-    输入要删除的ID
+    输入要删除的ID[<%=table%>]
     <input type="text" name="id" value="">
     <input type="hidden" name="database" value="<%=database%>">
     <input type="hidden" name="table" value="<%=table%>">
