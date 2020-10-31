@@ -24,7 +24,7 @@
         }
     </Script>
 </head>
-<body bgcolor="#00ffff">
+<body bgcolor="#c6ecd3">
 <%--添加数据--%><%--删除数据--%>
 <form action="" method="post" name="form1" accept-charset="gbk" target="_blank" class="form">
     <input type="hidden" name="database" value="<%=CSqlitePub.getSqliteWholePath()%>">

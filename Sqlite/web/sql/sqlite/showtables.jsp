@@ -12,7 +12,7 @@
 <head>
     <title>常用记事本-Sqlite</title>
 </head>
-<body bgcolor="#00ffff">
+<body bgcolor="#c6ecd3">
 <%--
 设计内容:
 1.常用链接

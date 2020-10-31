@@ -12,7 +12,7 @@
 <head>
     <title>删除数据</title>
 </head>
-<body bgcolor="#008b8b">
+<body bgcolor="#c6ecd3">
 <%
     String database = request.getParameter("database");
     String table    = request.getParameter("table");

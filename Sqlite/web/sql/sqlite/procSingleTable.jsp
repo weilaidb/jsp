@@ -25,7 +25,7 @@
     </Script>
     <title>常用记事本-Sqlite</title>
 </head>
-<body bgcolor="#00ffff">
+<body bgcolor="#c6ecd3">
 <%
     String database = request.getParameter("database");
     String table    = request.getParameter("table");

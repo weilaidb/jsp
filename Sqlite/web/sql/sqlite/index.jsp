@@ -16,7 +16,7 @@
 <head>
     <title>常用记事本</title>
 </head>
-<body bgcolor="#00ffff">
+<body bgcolor="#c6ecd3">
 <a href="createTable.jsp">创建</a>
 <%--删除表功能暂时不打开--%>
 <%--<a href="delete.jsp">删除</a>--%>
@@ -37,14 +37,17 @@
             continue;
         }
 %>
-<form action="procSingleTable.jsp" method="post" name="form" class="form" accept-charset="gbk">
-    <input type="hidden" name="database" value="<%=CSqlitePub.getSqlitePathTrimDriver(databaseProc)%>"/>
-    <input type="hidden" name="item" value="limit" >
-    <input type="hidden" name="order" value="order" >
-    <input type="hidden" name="columns" value="ID,content">
-    <input type="hidden" name="showlittle" value="showlittle" >
-    <input type="submit" name="table" value="<%=CStringPub.ifNullSetEmpty(table)%>" class="submitbtn"/>
-</form>
+<font size="4">
+    <form action="procSingleTable.jsp" method="post" name="form" class="form" accept-charset="gbk">
+        <input type="hidden" name="database" value="<%=CSqlitePub.getSqlitePathTrimDriver(databaseProc)%>"/>
+        <input type="hidden" name="item" value="limit" >
+        <input type="hidden" name="order" value="order" >
+        <input type="hidden" name="columns" value="ID,content">
+        <input type="hidden" name="showlittle" value="showlittle" >
+        <input type="submit" name="table" value="<%=CStringPub.ifNullSetEmpty(table)%>" class="submitbtn"/>
+    </form>
+</font>
+
 <%
     }
 %>

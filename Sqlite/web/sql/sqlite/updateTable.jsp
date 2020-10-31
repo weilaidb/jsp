@@ -52,7 +52,7 @@
     <%--onclick="ClipBoard2TextArea()"/>--%>
     <br/>
     <textarea id="id_insertdb" name="content"
-              class="dia_wabbit"><%=showtext%>
+              class="textarea"><%=showtext%>
     </textarea>
 </form>
 
