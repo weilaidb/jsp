@@ -14,15 +14,6 @@ ID	content	lantype	keywords	note	vartype	aspect_field	CreatedTime	delflag	lowerc
 原始的all.db的内容
 --%>
 <%
-//    CREATE TABLE c_table(
-//        [ID] INTEGER PRIMARY KEY,
-//    [content] varchar(100),
-//    [note] varchar(100),
-//    delflag integer DEFAULT 0,
-//    CreatedTime TimeStamp NOT NULL DEFAULT (datetime('now',
-//    'localtime'))
-//    );
-//
     //显示结果
     StringBuffer resultInfo = new StringBuffer();
     //要显示的信息，textarea

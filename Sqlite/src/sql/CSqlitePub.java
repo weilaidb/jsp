@@ -17,6 +17,7 @@ public class CSqlitePub {
                 "[ID] INTEGER PRIMARY KEY," +
                 "[content] varchar(100)," +
                 "[note] varchar(100)," +
+                "httpflag integer DEFAULT 0," +
                 "delflag integer DEFAULT 0," +
                 "CreatedTime TimeStamp NOT NULL DEFAULT (datetime('now'," +
                 "'localtime'))" +
@@ -30,7 +31,7 @@ public class CSqlitePub {
 
     static public String expDeleteCondition(String table, int id)
     {
-        return "DELETE FROM " + table + "WHERE ID = '" + id +"';";
+        return "DELETE FROM " + table + " WHERE ID = '" + id +"';";
     }
 
     static public String expSelectCondition(String table, String item,  int id)

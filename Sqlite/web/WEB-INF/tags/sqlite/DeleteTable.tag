@@ -12,15 +12,9 @@ ID	content	lantype	keywords	note	vartype	aspect_field	CreatedTime	delflag	lowerc
 原始的all.db的内容
 --%>
 <%
-//    CREATE TABLE c_table(
-//        [ID] INTEGER PRIMARY KEY,
-//    [content] varchar(100),
-//    [note] varchar(100),
-//    delflag integer DEFAULT 0,
-//    CreatedTime TimeStamp NOT NULL DEFAULT (datetime('now',
-//    'localtime'))
-//    );
-//
+    System.out.println("id:" + id);
+
+
     StringBuffer resultInfo = new StringBuffer();
     if(CStringPub.isTrimEmpty(id))
     {
@@ -28,25 +22,35 @@ ID	content	lantype	keywords	note	vartype	aspect_field	CreatedTime	delflag	lowerc
     }
     else
     {
-        String execCondition  = CSqlitePub.expDeleteCondition(table, Integer.parseInt(id));
-        CSqlitePub.loadSqliteClass(resultInfo);
-        Connection con = null;
-        Statement sql;
-        int ret;
+        try{
+            int iId = Integer.parseInt(id);
+            String execCondition  = CSqlitePub.expDeleteCondition(table, iId);
+            CSqlitePub.loadSqliteClass(resultInfo);
+            Connection con = null;
+            Statement sql;
+            int ret =-1;
 
-        try {
-            database = CSqlitePub.getSqlitePathWithDriver(database);
-            con = DriverManager.getConnection(database);
-            sql = con.createStatement();
-            ret = sql.executeUpdate(execCondition);
-            if(0 == ret){
+            System.out.println("execCondition:" + execCondition);
+
+
+            try {
+                database = CSqlitePub.getSqlitePathWithDriver(database);
+                con = DriverManager.getConnection(database);
+                sql = con.createStatement();
+                ret = sql.executeUpdate(execCondition);
                 resultInfo.append("删除数据成功" + "[" + id + "]");
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-            resultInfo.append(e);
-        }
+                System.out.println("ret:" + ret);
 
+            } catch (SQLException e) {
+                e.printStackTrace();
+                resultInfo.append("ID号不存在[" + id + "]");
+//                resultInfo.append(e);
+//                System.out.println("ret:" + ret);
+            }
+        } catch (NumberFormatException e) {
+            e.printStackTrace();
+            resultInfo.append("请输入正常的id号");
+        }
     }
     jspContext.setAttribute("result", new String(resultInfo.toString()));
 

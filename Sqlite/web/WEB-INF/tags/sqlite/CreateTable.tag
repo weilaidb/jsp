@@ -12,16 +12,6 @@ ID	content	lantype	keywords	note	vartype	aspect_field	CreatedTime	delflag	lowerc
 原始的all.db的内容
 --%>
 <%
-//    CREATE TABLE c_table(
-//        [ID] INTEGER PRIMARY KEY,
-//    [content] varchar(100),
-//    [note] varchar(100),
-//    delflag integer DEFAULT 0,
-//    CreatedTime TimeStamp NOT NULL DEFAULT (datetime('now',
-//    'localtime'))
-//    );
-//
-
     String execCondition  = CSqlitePub.expCreateTable(table);
     System.out.println("execCondition:" + execCondition);
 
