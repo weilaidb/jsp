@@ -8,9 +8,22 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
 <%@ taglib prefix="sqlite" tagdir="/WEB-INF/tags/sqlite" %>
+<link href="../../css/csspub.css" rel="stylesheet" type="text/css">
+
+<%
+    String database = request.getParameter("database");
+    String table = request.getParameter("table");
+    String item = request.getParameter("item");
+    String order = request.getParameter("order");
+    String databaseProc = CSqlitePub.getSqliteWholePath(database);
+    table = CStringPub.ifNullSetEmpty(table);
+    item = CStringPub.ifNullSetEmpty(item);
+    order = CStringPub.ifNullSetEmpty(order);
+%>
+
 <html>
 <head>
-    <title>常用记事本-Sqlite</title>
+    <title>常用记事本-<%=table%></title>
 </head>
 <body bgcolor="#c6ecd3">
 <%--
@@ -31,16 +44,6 @@
         <input type="checkbox" name="order" value="order" checked="checked">反序
     </form>
 </font>
-<%
-    String database = request.getParameter("database");
-    String table = request.getParameter("table");
-    String item = request.getParameter("item");
-    String order = request.getParameter("order");
-    String databaseProc = CSqlitePub.getSqliteWholePath(database);
-    table = CStringPub.ifNullSetEmpty(table);
-    item = CStringPub.ifNullSetEmpty(item);
-    order = CStringPub.ifNullSetEmpty(order);
-%>
 
 <sqlite:QuerySqlite database="<%=databaseProc%>" table="<%=table%>" item="<%=item%>" order="<%=order%>"/>
 Sqlite库[<%=CSqlitePub.getSqlitePathTrimDriver(databaseProc)%>]有以下表:

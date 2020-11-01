@@ -8,6 +8,15 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
 <%@ taglib prefix="sqlite" tagdir="/WEB-INF/tags/sqlite" %>
+<link href="../../css/csspub.css" rel="stylesheet" type="text/css">
+
+<%
+    String database = request.getParameter("database");
+    String table    = request.getParameter("table");
+    database = CStringPub.ifNullSetEmpty(database);
+    table = CStringPub.ifNullSetEmpty(table);
+%>
+
 <html>
 <head>
     <Script Language="JavaScript">
@@ -23,16 +32,9 @@
             document.form1.submit();
         }
     </Script>
-    <title>常用记事本-Sqlite</title>
+    <title>常用记事本-<%=table%></title>
 </head>
 <body bgcolor="#c6ecd3">
-<%
-    String database = request.getParameter("database");
-    String table    = request.getParameter("table");
-    database = CStringPub.ifNullSetEmpty(database);
-    table = CStringPub.ifNullSetEmpty(table);
-%>
-
 
 <%--添加数据--%><%--删除数据--%>
 <form action="" method="post" name="form1" accept-charset="gbk" target="_blank" class="form">
@@ -47,7 +49,7 @@
 <font size="3">
     <form action="" method="post" name="form2" accept-charset="gbk">
         在[<%=table%>]查询内容:<br>
-        <input type="text" name="findwords">
+        <input type="text" name="findwords"><br>
         <input type="hidden" name="database" value="<%=database%>">
         <input type="hidden" name="table" value="<%=table%>">
         <input type="hidden" name="columns" value="ID,content">
@@ -87,6 +89,7 @@
 
 查询结果[<%=CSqlitePub.procContentWithChinese(findwords)%>]:
 <%=orderResult%>
+
 
 </body>
 </html>

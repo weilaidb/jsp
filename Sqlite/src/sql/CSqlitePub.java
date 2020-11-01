@@ -9,7 +9,7 @@ public class CSqlitePub {
     static String firstpath = "mydb/";
     static String secondpath = "sqlite/";
     static String filename = "config.txt";
-    static int showlen = 100;
+    static int showlen = 60;
     static String linktable = "link";
 
 

@@ -15,7 +15,7 @@
     CSqlitePub.loadSqliteClass(result);
 
     try{
-        result.append("<table border=1>");
+        result.append("<table border=1 class=mytable>");
         String tableName = table;
         con = DriverManager.getConnection(CSqlitePub.getSqlitePathWithDriver(database));
 

@@ -7,6 +7,8 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
 <%@ taglib prefix="link" tagdir="/WEB-INF/tags/sqlite/link" %>
+<link href="../../../css/csspub.css" rel="stylesheet" type="text/css">
+
 <html>
 <head>
     <title>常见链接</title>

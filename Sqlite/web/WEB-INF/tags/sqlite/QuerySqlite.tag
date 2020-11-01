@@ -36,7 +36,7 @@ ID	content	lantype	keywords	note	vartype	aspect_field	CreatedTime	delflag	lowerc
 
     try{
 
-        result.append("<table border=1>");
+        result.append("<table border=1 class=mytable>");
         String dbpath = database;
         dbpath = CSqlitePub.getSqlitePathWithDriver(dbpath);
         con = DriverManager.getConnection(dbpath);
