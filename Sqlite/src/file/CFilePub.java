@@ -1,6 +1,8 @@
 package file;
 
 import base.CStringPub;
+import codec.CCodecPub;
+
 import java.io.*;
 import java.text.ParseException;
 import java.util.ArrayList;
@@ -12,6 +14,9 @@ public class CFilePub {
     {
         List<String> resultList  = new ArrayList<String>();
         try{
+            predir = CCodecPub.UTF8ToISO(predir);
+            filename = CCodecPub.UTF8ToISO(filename);
+
             File dir = new File(predir);
             File f = new File(dir,filename);
             if(!f.exists())
@@ -36,7 +41,7 @@ public class CFilePub {
                 }
                 resultList.add((lineTxt.trim()));
                 System.out.println(lineTxt);
-                System.out.println("temp gbk1:" + (lineTxt));
+//                System.out.println("temp gbk1:" + (lineTxt));
             }
             read.close();
             System.out.println("found ");

@@ -37,7 +37,6 @@
     for (String item:
          results) {
 %>
-<%--    <%=CCodecPub.str2GBK(item)%><br>--%>
     <%=item%><br>
 <%
     }
