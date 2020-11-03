@@ -20,6 +20,7 @@
     <a href="sql/sqlite/link/links.jsp" target="frame_right">常用链接</a></p>
     <a href="sql/sqlite/showtables.jsp" target="frame_right">查看表</a></p>
     <a href="sql/sqlite/querydatabase.jsp" target="frame_right">查询数据库</a></p>
+    <a href="file/autojcode.jsp" target="frame_right">AutoJCode</a></p>
 </div>
 
 
