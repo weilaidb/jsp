@@ -1,12 +1,8 @@
 package file;
 
 import base.CStringPub;
-import codec.CCodecPub;
-
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
+import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,31 +16,56 @@ public class CFilePub {
             File f = new File(dir,filename);
             if(!f.exists())
             {
-                resultList.add(CCodecPub.UTF8ToGBK(m_errcode_filenoexist));
+                resultList.add(m_errcode_filenoexist);
                 return resultList;
             }
-            FileReader in = new FileReader(f);
-            BufferedReader bufferin = new BufferedReader(in);
-            String temp;
-            while ((temp = bufferin.readLine()) != null) {
-                if(CStringPub.isTrimEmpty(temp))
+            InputStreamReader read = null;// 考虑到编码格式
+            try {
+                read = new InputStreamReader(new FileInputStream(f), "utf-8");
+            } catch (UnsupportedEncodingException e) {
+                e.printStackTrace();
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+            BufferedReader bufferedReader = new BufferedReader(read);
+            String lineTxt = null;
+            while ((lineTxt = bufferedReader.readLine()) != null) {
+                if(CStringPub.isTrimEmpty(lineTxt))
                 {
                     continue;
                 }
-                resultList.add(CCodecPub.UTF8ToGBK(temp.trim()));
-
-                System.out.println("temp gbk:" + new String(temp.getBytes("GBK"), "UTF-8"));
+                resultList.add((lineTxt.trim()));
+                System.out.println(lineTxt);
+                System.out.println("temp gbk1:" + (lineTxt));
             }
-            bufferin.close();
-            in.close();
+            read.close();
             System.out.println("found ");
 
             return resultList;
         } catch (Exception e) {
             e.printStackTrace();
             System.out.println("no found:" + e);
-            resultList.add(CCodecPub.UTF8ToGBK(e.toString()));
+            resultList.add((e.toString()));
             return resultList;
         }
     }
+
+    /** 读取数据，存入集合中 */
+    public static void readtFile(File file) throws IOException, ParseException {
+        InputStreamReader read = null;// 考虑到编码格式
+        try {
+            read = new InputStreamReader(new FileInputStream(file), "utf-8");
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        BufferedReader bufferedReader = new BufferedReader(read);
+        String lineTxt = null;
+        while ((lineTxt = bufferedReader.readLine()) != null) {
+            System.out.println(lineTxt);
+        }
+        read.close();
+    }
+
 }
