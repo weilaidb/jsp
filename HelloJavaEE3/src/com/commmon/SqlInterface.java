@@ -1,7 +1,9 @@
 package com.commmon;
 
 import com.pinyin.PinYinUtil;
+import weilaidb.CSqlitePub;
 import weilaidb.sql.JspAdapter;
+import weilaidb.sql.SqlProc;
 
 import java.io.UnsupportedEncodingException;
 import java.sql.*;
@@ -18,10 +20,10 @@ public class SqlInterface {
     String dbName_alldb = "alldb";
     String tableName_abc = "abc";
 
-    public static final String DBDRIVER = "com.mysql.jdbc.Driver";
-    public static final String DBURL = "jdbc:mysql://localhost:3306/mldn?useUnicode=true&characterEncoding=utf-8"; //数据库名";
-    public static final String DBUSER = "root";
-    public static final String DBPASS = "Zzerp123";
+    public static final String DBDRIVER = "org.sqlite.JDBC";
+    public static final String DBURL = SqlProc.getDbPathDefaultWithDriver("mldn") ; //数据库名";
+//    public static final String DBUSER = "root";
+//    public static final String DBPASS = "Zzerp123";
 
     //我么要执行创建表的DDl语句
     public static String creatsql = "create table egtable (name varchar(4096))  ENGINE=InnoDB AUTO_INCREMENT=217 DEFAULT CHARSET=utf8";
@@ -31,7 +33,7 @@ public class SqlInterface {
         Integer maxid = 0;
         try {
             Class.forName(DBDRIVER);
-            conn = DriverManager.getConnection(DBURL.replaceAll("mldn", dbName), DBUSER, DBPASS);
+            conn = DriverManager.getConnection(DBURL.replaceAll("mldn", dbName));
             sql = "SELECT max(id) FROM egtable";
             sql = sql.replaceAll("egtable", tableName);
             pstmt = conn.prepareStatement(sql);
@@ -59,7 +61,7 @@ public class SqlInterface {
         List<String> reslist = new ArrayList<>();
         try {
             Class.forName(DBDRIVER);
-            conn = DriverManager.getConnection(DBURL.replaceAll("mldn", dbName), DBUSER, DBPASS);
+            conn = DriverManager.getConnection(DBURL.replaceAll("mldn", dbName));
             sql = "SELECT * FROM egtable";
             if (colname.trim().isEmpty()) {
                 sql = "SELECT * FROM egtable";
@@ -256,7 +258,7 @@ public class SqlInterface {
         String result = "";
         try {
             Class.forName(DBDRIVER);
-            conn = DriverManager.getConnection(DBURL.replaceAll("mldn", dbName), DBUSER, DBPASS);
+            conn = DriverManager.getConnection(DBURL.replaceAll("mldn", dbName));
             pstmt = conn.prepareStatement(sql);
             rs = pstmt.executeQuery();
             while (rs.next()) {
@@ -281,7 +283,7 @@ public class SqlInterface {
         List<String> reslist = new ArrayList<>();
         try {
             Class.forName(DBDRIVER);
-            conn = DriverManager.getConnection(DBURL.replaceAll("mldn", dbName), DBUSER, DBPASS);
+            conn = DriverManager.getConnection(DBURL.replaceAll("mldn", dbName));
             sql = "SELECT * FROM egtable order by id";
             if (colname.trim().isEmpty()) {
                 sql = "SELECT * FROM egtable order by id";
@@ -340,7 +342,7 @@ public class SqlInterface {
         List<String> reslist = new ArrayList<>();
         try {
             Class.forName(DBDRIVER);
-            conn = DriverManager.getConnection(DBURL.replaceAll("mldn", dbName), DBUSER, DBPASS);
+            conn = DriverManager.getConnection(DBURL.replaceAll("mldn", dbName));
             sql = "SELECT * FROM egtable order by id desc ";
             if (colname.trim().isEmpty()) {
                 sql = "SELECT * FROM egtable order by id desc ";
@@ -401,7 +403,7 @@ public class SqlInterface {
         try {
             Class.forName(DBDRIVER);
             //            创建数据库,需要手动创建呢
-            conn = DriverManager.getConnection(DBURL.replaceAll("mldn", dbName), DBUSER, DBPASS);
+            conn = DriverManager.getConnection(DBURL.replaceAll("mldn", dbName));
 //            创建数据库名称和表必须在首先创建出来。替换通用表名
             sql = sql.replace("egtable", tableName);
             System.out.println("sql:" + sql);
@@ -441,7 +443,7 @@ public class SqlInterface {
             }
             Class.forName(DBDRIVER);
             //            创建数据库,需要手动创建呢
-            conn = DriverManager.getConnection(DBURL.replaceAll("mldn", dbName), DBUSER, DBPASS);
+            conn = DriverManager.getConnection(DBURL.replaceAll("mldn", dbName));
 //            创建数据库名称和表必须在首先创建出来。
             files = new String(files.getBytes("iso-8859-1"), "utf-8");
             String[] filelist = files.split("\n");
@@ -498,7 +500,7 @@ public class SqlInterface {
             }
             Class.forName(DBDRIVER);
             //            创建数据库,需要手动创建呢
-            conn = DriverManager.getConnection(DBURL.replaceAll("mldn", dbName), DBUSER, DBPASS);
+            conn = DriverManager.getConnection(DBURL.replaceAll("mldn", dbName));
 //            创建数据库名称和表必须在首先创建出来。
 //            file = new String(file.getBytes("iso-8859-1"), "utf-8");
 

@@ -8,5 +8,14 @@ CREATE TABLE `abc` (
     create_time datetime DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
     update_time datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',  
   PRIMARY KEY (`id`),
-  UNIQUE KEY `name_UNIQUE` (`name`)
-) ENGINE=InnoDB AUTO_INCREMENT=664 DEFAULT CHARSET=utf8mb4;
+);
+
+--使用以下命令创建sqlite3命令（提前)。
+CREATE TABLE abc(
+[ID] INTEGER PRIMARY KEY,
+[name] varchar(200),
+[content] varchar(200),
+[note] varchar(200),
+create_time TimeStamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+update_time TimeStamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+);

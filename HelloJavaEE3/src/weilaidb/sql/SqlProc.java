@@ -2,8 +2,10 @@ package weilaidb.sql;
 
 import com.commmon.SqlInterface;
 import com.sun.org.apache.xerces.internal.xs.StringList;
+import file.CFilePub;
 
 import javax.swing.plaf.nimbus.State;
+import java.io.File;
 import java.sql.*;
 import java.util.List;
 
@@ -62,16 +64,16 @@ public class SqlProc {
     }
 
     public static String getExistDbNameEps() {
-        return "jdbc:mysql://localhost:3306/" + existdbname + "?useUnicode=true&characterEncoding=utf-8"; //数据库名
+        return "jdbc:sqlite://localhost:3306/" + existdbname + "?useUnicode=true&characterEncoding=utf-8"; //数据库名
     }
 
     public static String getDbNameEps(String dbName) {
-        return "jdbc:mysql://localhost:3306/" + dbName + "?useUnicode=true&characterEncoding=utf-8"; //数据库名
+        return "jdbc:sqlite://localhost:3306/" + dbName + "?useUnicode=true&characterEncoding=utf-8"; //数据库名
     }
 
     public static void classForMysqlDriver() {
         try {
-            Class.forName("com.mysql.jdbc.Driver");  ////驱动程序名
+            Class.forName("org.sqlite.JDBC");  ////驱动程序名
         } catch (Exception e) {
             e.printStackTrace();
             System.out.println(e.getMessage());
@@ -84,7 +86,7 @@ public class SqlProc {
         Connection con = null;
         String dbName = "abc";
         try{
-            String uri = "jdbc:mysql://localhost:3306/" + dbName + "?useUnicode=true&characterEncoding=utf-8"; //数据库名;
+            String uri = "jdbc:sqlite://localhost:3306/" + dbName + "?useUnicode=true&characterEncoding=utf-8"; //数据库名;
             String user = "root";
             String password = "99";
             con = DriverManager.getConnection(uri, user, password);
@@ -94,6 +96,49 @@ public class SqlProc {
 
     }
 
+    //从文件中获取数据库的路径
+    static public String getDbPathFromFile(String predir, String filename)
+    {
+        String[] prepath = {"D:/","E:/","C:/"};
+        for (String pre:
+                prepath) {
+            try{
+                return CFilePub.getFileFirstContent(pre + predir, filename);
+            } catch (Exception e) {
+                e.printStackTrace();
+                continue;
+            }
+        }
+        return "";
+    }
+    static String m_dbpath_pre = "mydb/sqlite/";
+    static String m_dbpath_config = "config.txt";
+
+    static public String getDbPathFromFileDefault()
+    {
+        return getDbPathFromFile(m_dbpath_pre,m_dbpath_config);
+    }
+
+    //带驱动路径的数据库存储目录，不带库名
+    static public String getDbPathDefaultWithDriver(String dbName)
+    {
+        return "jdbc:sqlite:"+  getDbPathFromFileDefault() + File.separator + dbName;
+    }
+
+
+
+    static public void createDbIfNoExist(String dbName)
+    {
+        //从文件中获取数据库存储的路径，没有则创建一个。
+        String dbDir = getDbPathFromFileDefault();
+        try {
+            String url = dbDir + File.separator + dbName;
+            System.out.println("createDbIfNoExist url:" + url);
+            CFilePub.createFileNoExist(url);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
     public static Connection opendb(String dbname) {
         int ret = -1;
@@ -101,18 +146,20 @@ public class SqlProc {
 
         try {
             classForMysqlDriver();
-            String username = getUsername();  //数据库用户名
-            String password = getPassword();  //数据库用户密码
-            String url0 = getExistDbNameEps(); //数据库名
-            conn = DriverManager.getConnection(url0, username, password);  //连接状态
-            Statement stat = conn.createStatement();
+//            String username = getUsername();  //数据库用户名
+//            String password = getPassword();  //数据库用户密码
+//            String url0 = getExistDbNameEps(); //数据库名
+//            conn = DriverManager.getConnection(url0, username, password);  //连接状态
+//            Statement stat = conn.createStatement();
+//
+//            创建数据库dbname如果不存在
+//            stat.executeUpdate("create database if not exists " + dbname);
+            createDbIfNoExist(dbname);
 
-            //创建数据库dbname如果不存在
-            stat.executeUpdate("create database if not exists " + dbname);
-
-
-            String url = "jdbc:mysql://localhost:3306/" + dbname + "?useUnicode=true&characterEncoding=utf-8"; //数据库名
-            conn = DriverManager.getConnection(url, username, password);  //连接状态
+            String dbDir = getDbPathFromFileDefault();
+            String url = getDbPathDefaultWithDriver(dbname); //数据库名
+            conn = DriverManager.getConnection(url);  //连接状态
+            System.out.println("url:" + url);
 
             if (conn != null) {
                 return conn;
