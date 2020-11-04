@@ -1,6 +1,7 @@
 package sql;
 
 import base.CStringPub;
+import file.CFilePub;
 
 import java.io.*;
 import java.sql.*;
@@ -9,6 +10,16 @@ public class CSqlitePub {
     static String firstpath = "mydb/";
     static String secondpath = "sqlite/";
     static String filename = "config.txt";
+
+    public static String getFilenameautojcode() {
+        return filenameautojcode;
+    }
+
+    public static String getDirnameautojcode() {
+        return firstpath + secondpath;
+    }
+
+    static String filenameautojcode = "autojcodeconfig.txt";
     static int showlen = 60;
     static String linktable = "link";
 
@@ -416,6 +427,21 @@ public class CSqlitePub {
              prepath) {
             try{
                 return getSqlitePathFromFileSingle(pre);
+            } catch (Exception e) {
+                e.printStackTrace();
+                continue;
+            }
+        }
+        return "";
+    }
+
+    static public String getAutoJcodePathFromFile(String predir, String filename)
+    {
+        String[] prepath = {"D:/","E:/","C:/"};
+        for (String pre:
+             prepath) {
+            try{
+                return CFilePub.getFileFirstContent(pre + predir, filename);
             } catch (Exception e) {
                 e.printStackTrace();
                 continue;

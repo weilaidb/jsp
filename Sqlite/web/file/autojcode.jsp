@@ -1,7 +1,8 @@
 <%@ page import="base.CStringPub" %>
 <%@ page import="file.CFilePub" %>
 <%@ page import="java.util.List" %>
-<%@ page import="codec.CCodecPub" %><%--
+<%@ page import="codec.CCodecPub" %>
+<%@ page import="sql.CSqlitePub" %><%--
   Created by IntelliJ IDEA.
   User: dell
   Date: 2020/11/3
@@ -14,18 +15,16 @@
     <title>AutoJCode</title>
 </head>
 <body>
+<%
+    String dirpath = CSqlitePub.getAutoJcodePathFromFile(CSqlitePub.getDirnameautojcode(), CSqlitePub.getFilenameautojcode());
+%>
 <font size="3">
 <%--    <form action="" method="post" name="form" accept-charset="gbk">--%>
+
     <form action="" method="post" name="form" >
-        输入解析的文件夹路径（绝对路径）:<input type="text" name="dir"><br>
+        输入解析的文件夹路径（绝对路径）:<input type="text" name="dir" value="<%=dirpath%>"><br>
         输入解析的标准文件名（相对路径）:<input type="text" name="filenamestd" value="selfmenu.txt"><br>
         输入解析的扩展文件名（相对路径）:<input type="text" name="filenameext" value="selfmenu_user.txt"><br>
-<%--        <input type="hidden" name="database" value="<%=database%>">--%>
-<%--        <input type="hidden" name="table" value="<%=table%>">--%>
-<%--        <input type="hidden" name="columns" value="ID,content">--%>
-<%--        <input type="checkbox" name="item" value="limit" checked="checked">限制--%>
-<%--        <input type="checkbox" name="order" value="order" checked="checked">反序--%>
-<%--        <input type="checkbox" name="showlittle" value="showlittle" checked="checked">缩略显示--%>
         <input type="submit" value="解析" name="submit">
     </form>
 </font>

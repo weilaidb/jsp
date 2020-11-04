@@ -43,4 +43,9 @@ public class CStringPub {
         return ifNullSetEmpty(request.getParameter(key));
     }
 
+    public static String emptyString()
+    {
+        return "";
+    }
+
 }
