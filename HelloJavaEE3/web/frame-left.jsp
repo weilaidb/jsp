@@ -24,9 +24,9 @@
 <%--    <a href="sql_bin/insertdb.jsp"  target="frame_right">输入数据(mysql bin)</a></p>--%>
 <%--    <a href="login_bin/login.jsp"   target="frame_right">记 事 本(mysql) bin</a></p>--%>
     <a href="sql/notebookalldb.jsp" target="frame_right">记事本(sqlite)[all.db]</a></p>
-    <a href="sql/sqlite3/explorer.jsp" target="frame_right">常用记事本(sqlite)</a></p>
-    <a href="sql/sqlite3/showtables.jsp" target="frame_right">常用记事本(sqlite) 链接</a></p>
-    <a href="sql/sqlite3/index.jsp" target="frame_right">专用(sqlite)</a></p>
+<%--    <a href="sql/sqlite3/explorer.jsp" target="frame_right">常用记事本(sqlite)</a></p>--%>
+<%--    <a href="sql/sqlite3/showtables.jsp" target="frame_right">常用记事本(sqlite) 链接</a></p>--%>
+<%--    <a href="sql/sqlite3/index.jsp" target="frame_right">专用(sqlite)</a></p>--%>
     <a href="diary"  target="_blank">日记本</a></p>
     <a href="db/sendcmd/explorer.jsp"  target="_blank">发送命令</a></p>
 <%--    <a href="test/index.jsp"  target="_blank">TEST</a></p>--%>
