@@ -225,7 +225,7 @@
 
 <%
     try {
-        insertval = new String(insertval.getBytes("iso-8859-1"), "utf-8");
+//        insertval = new String(insertval.getBytes("iso-8859-1"), "utf-8");
         insertval = insertval.replace("\"", "\"\"");
         insertval = insertval.replace("\\", "\\\\");
         insertval = insertval + DateTimePub.getCurrentDateTimeMultiLine(5);

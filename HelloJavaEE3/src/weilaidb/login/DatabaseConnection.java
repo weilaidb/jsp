@@ -1,11 +1,13 @@
 package weilaidb.login;
 
+import weilaidb.sql.SqlProc;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 
 public class DatabaseConnection {
-    public static final String DBDRIVER = "com.mysql.jdbc.Driver";
-    public static final String DBURL = "jdbc:mysql://localhost:3306/mldn?useUnicode=true&characterEncoding=utf-8"; //数据库名";
+    public static final String DBDRIVER = "org.sqlite.JDBC";
+    public static final String DBURL = SqlProc.getDbPathDefaultWithDriver("mldn"); //数据库名";
     public static final String DBUSER = "root";
     public static final String DBPASS = "Zzerp123";
 

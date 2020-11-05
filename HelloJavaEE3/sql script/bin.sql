@@ -11,3 +11,16 @@ CREATE TABLE `abcbin` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `name_UNIQUE` (`name`)
 ) ENGINE=InnoDB AUTO_INCREMENT=560 DEFAULT CHARSET=utf8mb4
+
+--使用以下命令创建sqlite3命令（提前)。
+CREATE TABLE abcbin(
+[ID] INTEGER PRIMARY KEY,
+[name] varchar(200),
+[content] varchar(200),
+[content_bin] longblob,
+[note] varchar(200),
+create_time TimeStamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+update_time TimeStamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+

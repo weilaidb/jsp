@@ -6,7 +6,7 @@ public class DbManager {
 	//类成员Connection
 	protected static Connection conn;
     //mysql的驱动类，定义为常量
-	public static final String CLASS_NAME = "com.mysql.jdbc.Driver";
+	public static final String CLASS_NAME = "org.sqlite.JDBC";
     //数据库的连接地址，定义为常量
 	public static final String CONNET_STR = "jdbc:mysql://localhost/menu";
     //获得Connetion

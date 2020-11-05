@@ -31,12 +31,12 @@
     <a href="db/sendcmd/explorer.jsp"  target="_blank">发送命令</a></p>
 <%--    <a href="test/index.jsp"  target="_blank">TEST</a></p>--%>
     <a href="language/code/explorer.jsp"  target="_blank">代码库</a></p>
-    <a href="test/dynamicmenu/dmenu.jsp"  target="_blank">动态菜单</a></p>
+<%--    <a href="test/dynamicmenu/dmenu.jsp"  target="_blank">动态菜单</a></p>--%>
 <%--    <a href="test/javascript/autosubmit.jsp"  target="_blank">自动提交</a></p>--%>
 <%--    <a href="db/singleitem/index.jsp"  target="_blank">查单项</a></p>--%>
 <%--    <a href="python/calculator.jsp" target="_blank">计算器</a></p>--%>
 
-    <a href="test/hellojsp/index.jsp" target="_blank">Hello JSP</a></p>
+<%--    <a href="test/hellojsp/index.jsp" target="_blank">Hello JSP</a></p>--%>
 
     <%
         String[] tablelist ={

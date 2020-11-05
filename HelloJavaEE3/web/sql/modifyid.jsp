@@ -83,7 +83,7 @@
 
 <%
     try {
-        insertval = new String(modifydata.getBytes("iso-8859-1"), "utf-8");
+//        insertval = new String(modifydata.getBytes("iso-8859-1"), "utf-8");
         insertval = insertval.replace("\"", "\"\"");
         insertval = insertval.replace("\\", "\\\\");
         //此处时间暂时不添加

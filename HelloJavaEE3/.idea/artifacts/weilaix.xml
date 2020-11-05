@@ -1,0 +1,22 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="weilaix">
+    <output-path>$PROJECT_DIR$/out/artifacts/weilaix</output-path>
+    <root id="archive" name="weilaix.war">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="HelloJavaEE3" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="lib" />
+          <element id="file-copy" path="$PROJECT_DIR$/web/WEB-INF/lib/jstl.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/web/WEB-INF/lib/standard.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/web/WEB-INF/lib/log4j-1.2.17.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/web/WEB-INF/lib/pinyin4j-2.5.0.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/web/WEB-INF/lib/sqlite-jdbc-3.23.1.jar" />
+          <element id="library" level="project" name="Java EE 6-Java EE 6" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="HelloJavaEE3/web/Web" />
+    </root>
+  </artifact>
+</component>

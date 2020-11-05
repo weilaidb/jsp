@@ -1,5 +1,5 @@
 <component name="ArtifactManager">
-  <artifact type="war" name="weilai">
+  <artifact type="war" build-on-make="true" name="weilai">
     <output-path>$PROJECT_DIR$/out/artifacts/weilai</output-path>
     <root id="archive" name="weilai.war">
       <element id="artifact" artifact-name="hello" />

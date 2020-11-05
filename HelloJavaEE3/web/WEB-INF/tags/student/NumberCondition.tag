@@ -1,6 +1,7 @@
 <%@ tag pageEncoding="utf-8" %>
 <%@ tag import="java.sql.*" %>
 <%@ tag import="java.lang.*" %>
+<%@ tag import="weilaidb.sql.SqlProc" %>
 <%@ attribute name="number" required="true" %>
 <%@ variable name-given="queryResultByNumber" scope="AT_END" %>
 
@@ -10,7 +11,7 @@
     String tableName = "message";
 
     try {
-        Class.forName("com.mysql.jdbc.Driver");  ////驱动程序名
+        Class.forName("org.sqlite.JDBC");  ////驱动程序名
     } catch (Exception e) {
         e.printStackTrace();
         System.out.println(e.getMessage());
@@ -23,10 +24,10 @@
     int n = 0;
     try{
         result.append("<table border=1>");
-        String uri = "jdbc:mysql://localhost:3306/" + databaseName + "?useUnicode=true&characterEncoding=utf-8"; //数据库名;
+        String uri = SqlProc.getDbPathDefaultWithDriver(databaseName); //数据库名;
         String user = "root";
         String password = "Zzerp123";
-        con = DriverManager.getConnection(uri, user, password);
+        con = DriverManager.getConnection(uri);
         DatabaseMetaData metadata = con.getMetaData();
         ResultSet rs1 = metadata.getColumns(null, null, tableName, null);
         int 字段个数 = 0;

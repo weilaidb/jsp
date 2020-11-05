@@ -9,7 +9,7 @@
     float p = Float.parseFloat(price);
 
     try {
-        Class.forName("com.mysql.jdbc.Driver");  ////驱动程序名
+        Class.forName("org.sqlite.JDBC");  ////驱动程序名
     } catch (Exception e) {
         e.printStackTrace();
         System.out.println(e.getMessage());

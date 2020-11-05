@@ -15,6 +15,7 @@
 <%@ page import="weilaidb.sql.SqlProc" %>
 <%@ page import="com.file.CheckFile" %>
 <%@ page import="com.timedate.DateTimePub" %>
+<%@ page import="codec.CCodecPub" %>
 <%--================引入jsp=========================--%>
 <%@include file="../file/deletebeyondcomparefiles.jsp"%>
 
@@ -200,7 +201,32 @@
 
 <%
     try {
-        insertval = new String(insertval.getBytes("iso-8859-1"), "utf-8");
+//        insertval = new String(insertval.getBytes("iso-8859-1"), "utf-8");
+//        insertval = CCodecPub.ISOToUTF8(insertval);
+//        insertval = CCodecPub.ISOToGBK(insertval);
+//        insertval = CCodecPub.UTF8ToISO(insertval);
+//        System.out.println("insertval utf8:" + new String(insertval.getBytes("UTF-8"), "ISO-8859-1"));
+//        System.out.println("insertval utf8:" + new String(insertval.getBytes("UTF-8"), "GBK"));
+//        System.out.println("insertval utf8:" + new String(insertval.getBytes("UTF-8"), "unicode"));
+//        System.out.println("insertval utf8:" + new String(insertval.getBytes("UTF-8"), "UTF-8"));
+//
+//        System.out.println("insertval gbk:" + new String(insertval.getBytes("GBK"), "ISO-8859-1"));
+//        System.out.println("insertval gbk:" + new String(insertval.getBytes("GBK"), "GBK"));
+//        System.out.println("insertval gbk:" + new String(insertval.getBytes("GBK"), "unicode"));
+//        System.out.println("insertval gbk:" + new String(insertval.getBytes("GBK"), "UTF-8"));
+//
+//        System.out.println("insertval unicode:" + new String(insertval.getBytes("unicode"), "ISO-8859-1"));
+//        System.out.println("insertval unicode:" + new String(insertval.getBytes("unicode"), "GBK"));
+//        System.out.println("insertval unicode:" + new String(insertval.getBytes("unicode"), "unicode"));
+//        System.out.println("insertval unicode:" + new String(insertval.getBytes("unicode"), "UTF-8"));
+//
+//        System.out.println("insertval iso:" + new String(insertval.getBytes("ISO-8859-1"), "ISO-8859-1"));
+//        System.out.println("insertval iso:" + new String(insertval.getBytes("ISO-8859-1"), "GBK"));
+//        System.out.println("insertval iso:" + new String(insertval.getBytes("ISO-8859-1"), "unicode"));
+//        System.out.println("insertval iso:" + new String(insertval.getBytes("ISO-8859-1"), "UTF-8"));
+
+
+//        insertval = (insertval);
         insertval = insertval.replace("\"", "\"\"");
         insertval = insertval.replace("\\", "\\\\");
         insertval += DateTimePub.getTimestr() + DateTimePub.getCurrentDateTime()

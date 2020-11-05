@@ -10,3 +10,18 @@ PRIMARY KEY (`id`),
 UNIQUE KEY `name_UNIQUE` (`id`)
 )  ENGINE=InnoDB AUTO_INCREMENT=217 DEFAULT CHARSET=utf8mb4;
 -- insert into pubuse values(NULL, '10 你好吗');
+
+
+--使用以下命令创建sqlite3命令（提前)。
+CREATE TABLE java(
+[ID] INTEGER PRIMARY KEY,
+[name] varchar(200),
+create_time TimeStamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+update_time TimeStamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+CREATE TABLE singleitem_abc(
+[ID] INTEGER PRIMARY KEY,
+[name] varchar(200),
+create_time TimeStamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+update_time TimeStamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+);

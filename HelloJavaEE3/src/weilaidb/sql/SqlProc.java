@@ -64,11 +64,11 @@ public class SqlProc {
     }
 
     public static String getExistDbNameEps() {
-        return "jdbc:sqlite://localhost:3306/" + existdbname + "?useUnicode=true&characterEncoding=utf-8"; //数据库名
+        return getDbPathDefaultWithDriver(existdbname); //数据库名
     }
 
     public static String getDbNameEps(String dbName) {
-        return "jdbc:sqlite://localhost:3306/" + dbName + "?useUnicode=true&characterEncoding=utf-8"; //数据库名
+        return getDbPathDefaultWithDriver( dbName); //数据库名
     }
 
     public static void classForMysqlDriver() {
@@ -86,7 +86,7 @@ public class SqlProc {
         Connection con = null;
         String dbName = "abc";
         try{
-            String uri = "jdbc:sqlite://localhost:3306/" + dbName + "?useUnicode=true&characterEncoding=utf-8"; //数据库名;
+            String uri = getDbPathDefaultWithDriver(dbName); //数据库名;
             String user = "root";
             String password = "99";
             con = DriverManager.getConnection(uri, user, password);
@@ -243,24 +243,20 @@ public class SqlProc {
     }
 
     public static String createTableEps(String tableName) {
-        String sql = "CREATE TABLE  IF NOT EXISTS " + tableName + " (  `id` int(200) unsigned NOT NULL AUTO_INCREMENT,\n" +
+        String sql = "CREATE TABLE  IF NOT EXISTS " + tableName + " (  [ID] INTEGER PRIMARY KEY,\n" +
                 "name varchar(3000),\n" +
-                "PRIMARY KEY (`id`),\n" +
-                "create_time datetime DEFAULT CURRENT_TIMESTAMP COMMENT 'create time',\n" +
-                "update_time datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'update time',\n" +
-                "UNIQUE KEY `name_UNIQUE` (`id`)\n" +
-                ")  ENGINE=InnoDB AUTO_INCREMENT=217 DEFAULT CHARSET=utf8mb4;";
+                "create_time TimeStamp DEFAULT CURRENT_TIMESTAMP,\n" +
+                "update_time TimeStamp DEFAULT CURRENT_TIMESTAMP\n" +
+                ")";
         return (sql);
     }
 
     public static String queryTableEps(String tableName) {
-        String sql = "CREATE TABLE  IF NOT EXISTS " + tableName + " (  `id` int(200) unsigned NOT NULL AUTO_INCREMENT,\n" +
+        String sql = "CREATE TABLE  IF NOT EXISTS " + tableName + " (  [ID] INTEGER PRIMARY KEY,\n" +
                 "name varchar(3000),\n" +
-                "PRIMARY KEY (`id`),\n" +
-                "create_time datetime DEFAULT CURRENT_TIMESTAMP COMMENT 'create time',\n" +
-                "update_time datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'update time',\n" +
-                "UNIQUE KEY `name_UNIQUE` (`id`)\n" +
-                ")  ENGINE=InnoDB AUTO_INCREMENT=217 DEFAULT CHARSET=utf8mb4;";
+                "create_time TimeStamp DEFAULT CURRENT_TIMESTAMP,\n" +
+                "update_time TimeStamp DEFAULT CURRENT_TIMESTAMP\n" +
+                ")";
         return (sql);
     }
 
@@ -274,11 +270,12 @@ public class SqlProc {
         try {
             classForMysqlDriver();
             //一开始必须填一个已经存在的数据库
-            conn = DriverManager.getConnection(getDbNameEps(dbName), getUsername(), getPassword());  //连接状态
+            conn = DriverManager.getConnection(getDbNameEps(dbName));  //连接状态
             stat = conn.createStatement();
             //创建数据库表
 //            stat.executeUpdate(createTableEps(dbName, tableName));
-            if (0 == stat.executeLargeUpdate(createTableEps(tableName))) {
+//            if (0 == stat.executeLargeUpdate(createTableEps(tableName))) {
+            if (0 == stat.executeUpdate(createTableEps(tableName))) {
                 System.out.println(("111 create table ok！"));
             } else {
                 System.out.println(("222 create table ng！"));
@@ -414,7 +411,7 @@ public class SqlProc {
                     sql = sqlhead + sqlmid + sqltail;
                 }
 
-//                System.out.println("sql:" + sql);
+                System.out.println("sql:" + sql);
                 stmt = conn.createStatement();
                 rs = stmt.executeQuery(sql);
 

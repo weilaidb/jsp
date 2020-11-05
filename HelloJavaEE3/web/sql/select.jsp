@@ -15,7 +15,7 @@ JDBC 驱动名及数据库 URL
 数据库的用户名与密码，需要根据自己的设置
 useUnicode=true&characterEncoding=utf-8 防止中文乱码
  -->
-<sql:setDataSource var="snapshot" driver="com.mysql.jdbc.Driver"
+<sql:setDataSource var="snapshot" driver="org.sqlite.JDBC"
                    url="jdbc:mysql://localhost:3306/RUNOOB?useUnicode=true&characterEncoding=utf-8"
                    user="root"  password="Zzerp123"/>
 
