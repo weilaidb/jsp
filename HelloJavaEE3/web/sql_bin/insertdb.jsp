@@ -221,8 +221,6 @@
 <%
     byte[] objbyte = null;
     try {
-//        System.out.print("insertval: " + insertval);
-//        insertval = new String(insertval.getBytes("iso-8859-1"), "utf-8");
         insertval = CSqlitePub.procInsertData(insertval);
         insertval = insertval + DateTimePub.getCurrentDateTimeMultiLine(5);
         String nameval = insertval.substring(0, insertval.length() > 100 ? 100 : insertval.length())
@@ -248,10 +246,6 @@
             out.println("数据为空!!<br />");
             return;
         }
-
-//        out.write("sql:" + sql);
-//        stmt = conn.createStatement();
-//        stmt.execute(sql);
         preparedStatement.close();
         rs.close();
         stmt.close();
@@ -260,11 +254,8 @@
         return;
 
     } catch (Exception e) {
-//        e.printStackTrace();
-//        System.out.println("e:"+ e.toString());
         if (insertval != null && !insertval.isEmpty()) {
             if (null == e.getMessage()) {
-//                out.println("写入成功吧!!<br />");
                 out.println("写入成功!!!!! size: " + objbyte.length + "<br />");
             } else {
                 out.println("写入异常!!!!!! " + e.getMessage());

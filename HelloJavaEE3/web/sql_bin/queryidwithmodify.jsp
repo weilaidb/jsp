@@ -144,11 +144,14 @@
             rowCount++;
 //            out.write("rowCount:" + rowCount);
 
-            Blob blob = rs.getBlob(4);
+//            Blob blob = rs.getBlob(4);
+            InputStream blob = rs.getBinaryStream(4);
+//            rs.getBinaryStream(4)
             String toshowcontent = null;
-            InputStream in = blob.getBinaryStream();
-            byte[] bytes = ProcObjectAndByte.toByteArray(in);
-            Object object = ProcObjectAndByte.toObject(bytes);
+//            InputStream in = blob.getBinaryStream();
+            byte[] bytes = ProcObjectAndByte.toByteArray(blob);
+            String object = new String(bytes);
+//            Object object = ProcObjectAndByte.toObject(bytes);
             System.out.println("object size:" + bytes.length
                 + ", whichbtn:" + whichbtnclick);
             int showlen = 10;
