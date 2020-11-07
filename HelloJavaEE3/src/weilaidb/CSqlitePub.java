@@ -9,7 +9,7 @@ import java.sql.*;
 
 public class CSqlitePub {
     static String firstpath = "mydb/";
-    static String secondpath = "sqlite/";
+    static String secondpath = "sqlite_mysql/";
     static String filename = "config.txt";
 
     static public String getSqlitePathFromFileSingle(String prefix)
@@ -19,6 +19,10 @@ public class CSqlitePub {
             File dir = new File(prefix + firstpath,secondpath);
             dir.mkdirs();
             File f = new File(dir,filename);
+            if(!f.exists())
+            {
+                f.createNewFile();
+            }
             FileReader in = new FileReader(f);
             BufferedReader bufferin = new BufferedReader(in);
             String temp;
@@ -110,8 +114,37 @@ public class CSqlitePub {
         return result;
     }
 
-    CSqlitePub()
+    static public String getExpCreatTableAbcBin()
     {
+        String exp = "CREATE TABLE IF NOT EXISTS abcbin(\n" +
+                "[ID] INTEGER PRIMARY KEY   AUTOINCREMENT,\n" +
+                "[name] varchar(200),\n" +
+                "[content] varchar(200),\n" +
+                "[content_bin] BLOB,\n" +
+                "create_time TimeStamp NOT NULL DEFAULT CURRENT_TIMESTAMP,\n" +
+                "update_time TimeStamp NOT NULL DEFAULT CURRENT_TIMESTAMP\n" +
+                ");";
+        return exp;
+    }
 
+    static public String getExpCreatTableAbc()
+    {
+        String exp = "CREATE TABLE  IF NOT EXISTS abc(\n" +
+                "[ID] INTEGER PRIMARY KEY   AUTOINCREMENT,\n" +
+                "[name] varchar(200),\n" +
+                "[content] varchar(200),\n" +
+                "[note] varchar(200),\n" +
+                "create_time TimeStamp NOT NULL DEFAULT CURRENT_TIMESTAMP,\n" +
+                "update_time TimeStamp NOT NULL DEFAULT CURRENT_TIMESTAMP\n" +
+                ");\n";
+        return exp;
+    }
+
+
+    static public String procInsertData(String insertData)
+    {
+        insertData = insertData.replace("\"", "\"\"")
+                .replace("\\", "\\\\");
+        return insertData;
     }
 }

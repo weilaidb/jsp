@@ -18,6 +18,7 @@
 <%@ page import="java.io.*" %>
 <%@ page import="weilaidb.sql.SqlProc" %>
 <%@ page import="com.timedate.DateTimePub" %>
+<%@ page import="weilaidb.CSqlitePub" %>
 <%--================css配置=========================--%>
 <style type="text/css">
     .mytable th, tr, td, table {
@@ -204,30 +205,25 @@
     } catch (Exception e) {
     }
 
-
-%>
-
-<%
     try {
         String dbname = "alldbbin";
         conn = SqlProc.opendb(dbname);
         if (conn != null) {
         }
+        Statement stat = conn.createStatement();
+        stat.executeUpdate(CSqlitePub.getExpCreatTableAbcBin());
     } catch (Exception e) {
-        out.println("数据库连接失败<br/>");
+        out.println("数据库连接失败:" + e.toString() + "<br/>");
         return;
     }
 
 %>
 <%
     byte[] objbyte = null;
-%>
-
-<%
     try {
+//        System.out.print("insertval: " + insertval);
 //        insertval = new String(insertval.getBytes("iso-8859-1"), "utf-8");
-        insertval = insertval.replace("\"", "\"\"");
-        insertval = insertval.replace("\\", "\\\\");
+        insertval = CSqlitePub.procInsertData(insertval);
         insertval = insertval + DateTimePub.getCurrentDateTimeMultiLine(5);
         String nameval = insertval.substring(0, insertval.length() > 100 ? 100 : insertval.length())
                 + System.currentTimeMillis();
@@ -235,22 +231,18 @@
          * 由于JSP是运行有后台，无法从网页处获取剪切板的内容，所以不能在后台获取剪切板的数据，
          * 仍然使用JS进行数据传递。
          */
-//        Object object1 = ProcClipboard.getAll4Clipboard();
-        Object object1 = new String(insertdbcontent.getBytes("iso-8859-1"), "utf-8");;
-//        Object object1 = ProcClipboard.getImageAndText4Clipboard();
-//        Object object1 = ProcClipboard.getselectionHtmlFlavor4Clipboard();
-//        Object object1 = ProcClipboard.getstringFlavor4Clipboard();
-        objbyte = ProcObjectAndByte.toByteArray(object1);
+
+        objbyte = insertdbcontent.getBytes();
         InputStream inputStream = new ByteArrayInputStream(objbyte);
         if (!insertval.isEmpty()) {
-            sql = "insert into " + tablename + "(id, name, content, content_bin) " +
-                    "VALUES(? ,?,?,?)";  //执行语句
+            sql = "insert into " + tablename + "(name, content, content_bin) " +
+                    "VALUES(?,?,?)";  //执行语句
             preparedStatement = conn.prepareStatement(sql);
-            preparedStatement.setInt(1,0);
-            preparedStatement.setString(2,nameval);
-            preparedStatement.setString(3,insertval);
-            preparedStatement.setBlob(4, inputStream);
+            preparedStatement.setString(1,nameval);
+            preparedStatement.setString(2,insertval);
+            preparedStatement.setBinaryStream(3,inputStream, inputStream.available());
             preparedStatement.executeUpdate();
+            System.out.print("sql: " + sql);
 
         } else {
             out.println("数据为空!!<br />");
@@ -268,10 +260,12 @@
         return;
 
     } catch (Exception e) {
+//        e.printStackTrace();
+//        System.out.println("e:"+ e.toString());
         if (insertval != null && !insertval.isEmpty()) {
             if (null == e.getMessage()) {
 //                out.println("写入成功吧!!<br />");
-                out.println("写入成功!! size: " + objbyte.length + "<br />");
+                out.println("写入成功!!!!! size: " + objbyte.length + "<br />");
             } else {
                 out.println("写入异常!!!!!! " + e.getMessage());
             }

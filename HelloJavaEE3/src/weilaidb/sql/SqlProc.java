@@ -111,7 +111,7 @@ public class SqlProc {
         }
         return "";
     }
-    static String m_dbpath_pre = "mydb/sqlite/";
+    static String m_dbpath_pre = "mydb/sqlite_mysql/";
     static String m_dbpath_config = "config.txt";
 
     static public String getDbPathFromFileDefault()
@@ -120,11 +120,32 @@ public class SqlProc {
     }
 
     //带驱动路径的数据库存储目录，不带库名
+    static public String getDbPathWithDriver(String dir, String dbName)
+    {
+        String dbPath = dir + File.separator + dbName;
+        CFilePub.createFileNoExist(dbPath);
+        return dbPathWithJdbc(dbPath);
+    }
+    //路径，数据库名
     static public String getDbPathDefaultWithDriver(String dbName)
     {
-        return "jdbc:sqlite:"+  getDbPathFromFileDefault() + File.separator + dbName;
+        String dbPath = getDbPathFromFileDefault() + File.separator + dbName;
+        CFilePub.createFileNoExist(dbPath);
+        return dbPathWithJdbc(dbPath);
     }
 
+    //添加jdbc sqlite
+    static public String dbPathWithJdbc(String dbPath)
+    {
+        String prefix = "jdbc:sqlite:";
+        if(dbPath.startsWith(prefix))
+        {
+            return dbPath;
+        }
+        else {
+            return prefix + dbPath;
+        }
+    }
 
 
     static public void createDbIfNoExist(String dbName)
@@ -157,9 +178,10 @@ public class SqlProc {
             createDbIfNoExist(dbname);
 
             String dbDir = getDbPathFromFileDefault();
-            String url = getDbPathDefaultWithDriver(dbname); //数据库名
+            String url = getDbPathWithDriver(dbDir, dbname); //数据库名
+            System.out.println("dbDir:" + dbDir);
+            System.out.println("url  :" + url);
             conn = DriverManager.getConnection(url);  //连接状态
-            System.out.println("url:" + url);
 
             if (conn != null) {
                 return conn;

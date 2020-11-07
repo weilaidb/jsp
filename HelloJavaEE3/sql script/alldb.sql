@@ -11,8 +11,8 @@ CREATE TABLE `abc` (
 );
 
 --使用以下命令创建sqlite3命令（提前)。
-CREATE TABLE abc(
-[ID] INTEGER PRIMARY KEY,
+CREATE TABLE  IF NOT EXISTS abc(
+[ID] INTEGER PRIMARY KEY   AUTOINCREMENT,
 [name] varchar(200),
 [content] varchar(200),
 [note] varchar(200),

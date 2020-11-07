@@ -14,13 +14,30 @@ CREATE TABLE `abcbin` (
 
 --使用以下命令创建sqlite3命令（提前)。
 CREATE TABLE abcbin(
-[ID] INTEGER PRIMARY KEY,
+[ID] INTEGER PRIMARY KEY   AUTOINCREMENT,
 [name] varchar(200),
 [content] varchar(200),
-[content_bin] longblob,
+[content_bin] BLOB,
 [note] varchar(200),
 create_time TimeStamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
 update_time TimeStamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
 
+CREATE TABLE abcbin(
+[ID] INTEGER PRIMARY KEY   AUTOINCREMENT,
+[name] varchar(200),
+[content] varchar(200),
+[content_bin] BLOB,
+create_time TimeStamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+update_time TimeStamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+
+
+CREATE TABLE IF NOT EXISTS user
+			(
+			userID INTEGER PRIMARY KEY AUTOINCREMENT,
+			userStudentID BLOB NOT NULL UNIQUE ON CONFLICT IGNORE,
+			userPassword BLOB NOT NULL
+			);

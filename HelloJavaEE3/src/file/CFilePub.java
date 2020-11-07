@@ -22,10 +22,15 @@ public class CFilePub {
             filename = CCodecPub.UTF8ToISO(filename);
 
             File dir = new File(predir);
+            if (!dir.exists())
+            {
+                dir.mkdirs();
+            }
             File f = new File(dir, filename);
             if (!f.exists()) {
-                resultList.add(m_errcode_filenoexist + predir + filename);
-                return resultList;
+                f.createNewFile();
+//                resultList.add(m_errcode_filenoexist + predir + filename);
+//                return resultList;
             }
             InputStreamReader read = null;// ¿¼ÂÇµ½±àÂë¸ñÊ½
             String lineTxt = null;

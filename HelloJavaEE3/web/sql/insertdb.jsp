@@ -15,6 +15,7 @@
 <%@ page import="weilaidb.sql.SqlProc" %>
 <%@ page import="com.file.CheckFile" %>
 <%@ page import="com.timedate.DateTimePub" %>
+<%@ page import="weilaidb.CSqlitePub" %>
 <%--================引入jsp=========================--%>
 <%@include file="../file/deletebeyondcomparefiles.jsp"%>
 
@@ -188,6 +189,8 @@
         conn = SqlProc.opendb(dbname);
         if (conn != null) {
         }
+        Statement stat = conn.createStatement();
+        stat.executeUpdate(CSqlitePub.getExpCreatTableAbc());
     } catch (Exception e) {
         out.println("数据库连接失败<br/>");
         return;
