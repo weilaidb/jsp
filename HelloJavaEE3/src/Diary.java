@@ -55,11 +55,11 @@ public class Diary extends HttpServlet {
          * 获取"日记:"开始的数据库信息
          */
 //        SqlProc.getDbNameEps()
-        String queryData = "^日记:";
+        String queryData = "日记:";
         List<String> showlist = new ArrayList();
         String result = "";
         try {
-            result = SqlProc.queryDataRegex(SqlProc.getDbnameAlldb(), SqlProc.getTablenameAbc(),
+            result = SqlProc.queryDataStartWith(SqlProc.getDbnameAlldb(), SqlProc.getTablenameAbc(),
                     queryData, showlist);
             System.out.println("result count:" + showlist.size());
         } catch (SQLException e) {

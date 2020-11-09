@@ -585,4 +585,116 @@ public class SqlProc {
 
 //        return "";
     }
+
+    //查找包含
+    public static String queryDataStartWith(String dbName, String tableName, String querydata,
+                                   List<String> listContent) throws SQLException {
+        int ret = -1;
+        Connection conn = null;
+        ResultSet rs = null;
+        Statement stmt = null;
+
+        String qryval = "";
+        try {
+            qryval = querydata;
+        } catch (Exception e) {
+            System.out.println("\n");
+        }
+
+        //判断查询的数据是否为无效
+        if(null == qryval )
+        {
+            qryval = "";
+        }
+
+        try {
+            String dbname = dbName;
+            conn = SqlProc.opendb(dbname);
+            if (conn != null) {
+                stmt = null;
+                rs = null;
+                String sql = "";  //查询语句
+                String tablename = tableName;
+                System.out.println("qryval is:" + qryval);
+                if (qryval.isEmpty() || qryval.trim().isEmpty()) {
+                    sql = "SELECT * from " + tablename + " order by id desc limit 10;";  //查询语句
+                } else {
+                    sql = "SELECT * from " + tablename + " order by id desc";  //查询语句
+//                    String sqlhead = " SELECT * FROM " + tablename + " WHERE ";
+//                    String sqltail = " order by id desc;";
+//                    String sqlmid = " ";
+//                    String[] qrylst = qryval
+//                            .replace("\"", "\\\"")
+//                            .split(" ");
+//                    for (int lp = 0; lp < qrylst.length; lp++) {
+//                        sqlmid += "content REGEXP \'" + qrylst[lp] + "\' ";
+//                        if (lp != qrylst.length - 1)
+//                            sqlmid += " and ";
+//                    }
+//                    sql = sqlhead + sqlmid + sqltail;
+                }
+
+                System.out.println("sql:" + sql);
+                stmt = conn.createStatement();
+                rs = stmt.executeQuery(sql);
+
+                int rowCount = 0;
+                while (rs.next()) {
+
+                    String showcontent = rs.getString("content")
+                            .replaceAll("<", "")
+                            .replaceAll(">", "")
+                            .replace("\n", "<br/>");
+
+                    if (qryval.isEmpty() || qryval.trim().isEmpty()) {
+
+                    }
+                    else
+                    {
+                        if(!showcontent.trim().startsWith(qryval))
+                        {
+                            continue;
+                        }
+                    }
+                    rowCount++;
+
+                    listContent.add(showcontent);
+
+                    int showlen = 50;
+                    long totallen = showcontent.length();
+                    if (showcontent.length() > showlen) {
+                        showcontent = showcontent.substring(0, showlen);
+                    }
+                    long curlen = showcontent.length();
+                    if (totallen == 0) {
+                        totallen = 100;
+                    }
+                    String appendstr = "ShowRate:" + (curlen * 100 / totallen) + "%";
+                    if (totallen == 0 || ((curlen * 100 / totallen) == 100)) {
+                        appendstr = "";
+                    } else {
+                        appendstr = appendstr;
+                    }
+                }
+                rs.close();
+                stmt.close();
+                System.out.println("查询结果：" + rowCount + " 条[" + qryval + "]");
+                return ("查询结果：" + rowCount + " 条[" + qryval + "]");
+
+            } else {
+                System.out.println("连接失败！");
+                return("连接失败！");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("请输入查询数据!!!");
+            return ("请输入查询数据!!!");
+        } finally {
+            if (null != conn) {
+                conn.close();
+            }
+        }
+
+//        return "";
+    }
 }
