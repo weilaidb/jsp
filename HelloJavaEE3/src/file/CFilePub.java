@@ -211,4 +211,55 @@ public class CFilePub {
     {
         return "after\\" + filename + "";
     }
+
+//    public static String readContent(File f) {
+//        StringBuffer str = new StringBuffer();
+//        try{
+//            FileReader in = new FileReader(f);
+//            BufferedReader bufferin = new BufferedReader(in);
+//            String temp;
+//            while ((temp = bufferin.readLine()) != null) {
+//                str.append(temp);
+//            }
+//            bufferin.close();
+//            in.close();
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//        return new String(str);
+//    }
+    public static String readContent(File f, boolean brflag) {
+        StringBuffer str = new StringBuffer();
+        try{
+            if(!f.exists())
+            {
+                return "";
+            }
+            InputStreamReader in = new InputStreamReader(new FileInputStream(f), "UTF-8");
+            BufferedReader bufferin = new BufferedReader(in);
+            String temp;
+            while ((temp = bufferin.readLine()) != null) {
+                if(brflag) {
+                    str.append(temp + "<br>");
+                }
+                else {
+                    str.append(temp + "\n");
+                }
+            }
+            bufferin.close();
+            in.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return new String(str);
+    }
+
+    //读取文件内容
+    public static String readFile(String dir, String fileName, boolean brflag)
+    {
+        File f = new File(dir,fileName);
+        String fileContent = readContent(f,brflag);
+        return fileContent;
+    }
+
 }

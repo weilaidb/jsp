@@ -21,7 +21,7 @@
         文件位置:<input type="text" name="topdir" class="input"><br>
         查找内容:<input type="text" name="findtext" class="input"><br>
         <input type="checkbox" name="casesensitive" value="">匹配大小写
-        <input type="checkbox" name="findfilecontent" value="">查找文件内容<br>
+        <input type="checkbox" name="findfileflag" value="">查找文件内容<br>
         <input type="submit" value="显示" name="submit" class="submitbtn_file"><br>
     </form>
 </font>
@@ -31,6 +31,7 @@
     String topdir = CStringPub.requesParaIfNullSetEmpty(request, "topdir");
     String findtext = CStringPub.requesParaIfNullSetEmpty(request, "findtext");
     String casesensitive = CStringPub.requesParaIfNullSetEmpty(request, "casesensitive");
+    String findfileflag = CStringPub.requesParaIfNullSetEmpty(request, "findfileflag");
     if(CStringPub.isTrimEmpty(topdir))
     {
         topdir = SqlProc.getAutoCodeSetsPathFromFileDefault();
@@ -41,13 +42,17 @@
 查看内容[<%=findtext%>]列表:<br><br>
 </font>
 
-<menu:ShowSelfMenuUser topdir="<%=topdir%>" findtext="<%=findtext%>" casesensitive="<%=casesensitive%>"></menu:ShowSelfMenuUser>
+<menu:ShowSelfMenuUser topdir="<%=topdir%>" findtext="<%=findtext%>" casesensitive="<%=casesensitive%>" findfileflag="<%=findfileflag%>"></menu:ShowSelfMenuUser>
 <%
     String[] listSets  = showresult.toString().split("<br>");
     System.out.println("listSets.length:" + listSets.length);
 
     for (String item :
             listSets) {
+        if(CStringPub.isTrimEmpty(item))
+        {
+            continue;
+        }
 %>
 <form name="form2" method="post"  target="frame_right" action="showfilecontent.jsp" onload="autosubmit()">
     <input type="hidden" name="topdir" value="<%=topdir%>">

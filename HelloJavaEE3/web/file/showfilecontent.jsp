@@ -26,15 +26,12 @@ String readFileNameBf = CFilePub.getBeforeName(selectitem);
 String readFileNameAf = CFilePub.getAfterName(selectitem);
 %>
 <file:ReadTag dir="<%=topdir%>" fileName="<%=readFileNameTips%>"></file:ReadTag>
-<%--<%=result%>--%>
 <textarea name="messages" rows="50" cols="60"><%=result%></textarea>
 
 <file:ReadTag dir="<%=topdir%>" fileName="<%=readFileNameBf%>"></file:ReadTag>
-<%--<%=result%>--%>
 <textarea name="messages" rows="50" cols="60"><%=result%></textarea>
 
 <file:ReadTag dir="<%=topdir%>" fileName="<%=readFileNameAf%>"></file:ReadTag>
-<%--<%=result%>--%>
 <textarea name="messages" rows="50" cols="60"><%=result%></textarea>
 
 
