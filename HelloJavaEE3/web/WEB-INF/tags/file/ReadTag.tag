@@ -11,7 +11,8 @@
             BufferedReader bufferin = new BufferedReader(in);
             String temp;
             while ((temp = bufferin.readLine()) != null) {
-                str.append(temp + "<br>");
+//                str.append(temp + "<br>");
+                str.append(temp + "\n");
             }
             bufferin.close();
             in.close();

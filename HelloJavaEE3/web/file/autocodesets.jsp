@@ -8,7 +8,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
-<link href="../css/file.css" rel="stylesheet"></head>
+<%--<link href="../css/file.css" rel="stylesheet"></head>--%>
 <%@taglib prefix="menu" tagdir="/WEB-INF/tags/file" %>
 
 <html>
@@ -49,7 +49,6 @@
     for (String item :
             listSets) {
 %>
-<%--<form name="form2" class="form2" method="post"  target="frame_right" action="showfilecontent.jsp" onload="autosubmit()">--%>
 <form name="form2" method="post"  target="frame_right" action="showfilecontent.jsp" onload="autosubmit()">
     <input type="hidden" name="topdir" value="<%=topdir%>">
     <input type="submit" name="selectitem" value="<%=item%>" class="submitbtn_file">

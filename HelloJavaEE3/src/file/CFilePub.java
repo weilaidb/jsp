@@ -195,4 +195,20 @@ public class CFilePub {
         listcontent.addAll(listcontentUser);
         return listcontent;
     }
+
+    //get tips name
+    public static String getTipsName(String filename)
+    {
+        return "tips\\" + filename + ".tip";
+    }
+    //get before name
+    public static String getBeforeName(String filename)
+    {
+        return "before\\" + filename + "";
+    }
+    //get after name
+    public static String getAfterName(String filename)
+    {
+        return "after\\" + filename + "";
+    }
 }

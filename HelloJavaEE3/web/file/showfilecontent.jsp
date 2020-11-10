@@ -21,11 +21,22 @@
 %>
 【<%=selectitem%>】的内容为:<br>
 <%
-String readFileName = "tips\\" + selectitem + ".tip";
+String readFileNameTips = CFilePub.getTipsName(selectitem);
+String readFileNameBf = CFilePub.getBeforeName(selectitem);
+String readFileNameAf = CFilePub.getAfterName(selectitem);
 %>
-<file:ReadTag dir="<%=topdir%>" fileName="<%=readFileName%>"></file:ReadTag>
-<%=result%>
-<%--<textarea name="messages" rows="6" cols="20"><%=CFilePub.readAllNoEmpty(topdir, selectitem,false)%></textarea>--%>
+<file:ReadTag dir="<%=topdir%>" fileName="<%=readFileNameTips%>"></file:ReadTag>
+<%--<%=result%>--%>
+<textarea name="messages" rows="50" cols="60"><%=result%></textarea>
+
+<file:ReadTag dir="<%=topdir%>" fileName="<%=readFileNameBf%>"></file:ReadTag>
+<%--<%=result%>--%>
+<textarea name="messages" rows="50" cols="60"><%=result%></textarea>
+
+<file:ReadTag dir="<%=topdir%>" fileName="<%=readFileNameAf%>"></file:ReadTag>
+<%--<%=result%>--%>
+<textarea name="messages" rows="50" cols="60"><%=result%></textarea>
+
 
 </body>
 </html>

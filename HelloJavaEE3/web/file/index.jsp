@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<frameset cols="30%,70%">
+<frameset cols="25%,75%">
     <frame src="autocodesets.jsp" name="frame_left" id="frame_left"/>
     <frame src="../blank.jsp" name="frame_right" id="frame_right"/>
 </frameset>
