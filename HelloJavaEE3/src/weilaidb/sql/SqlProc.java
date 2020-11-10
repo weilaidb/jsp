@@ -111,6 +111,7 @@ public class SqlProc {
         }
         return "";
     }
+    //sqlite3 weilaix.war的定义位置
     static String m_dbpath_pre = "mydb/sqlite_mysql/";
     static String m_dbpath_config = "config.txt";
 
@@ -118,6 +119,17 @@ public class SqlProc {
     {
         return getDbPathFromFile(m_dbpath_pre,m_dbpath_config);
     }
+
+//    D:\mydb\autocodesets\
+//sqlite3 weilaix.war的定义位置
+    static String m_autocodesets_pre = "mydb/autocodesets/";
+    static String m_autocodesets_config = "config.txt";
+
+    static public String getAutoCodeSetsPathFromFileDefault()
+    {
+        return getDbPathFromFile(m_autocodesets_pre,m_autocodesets_config);
+    }
+
 
     //带驱动路径的数据库存储目录，不带库名
     static public String getDbPathWithDriver(String dir, String dbName)

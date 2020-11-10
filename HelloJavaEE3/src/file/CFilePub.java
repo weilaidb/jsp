@@ -71,6 +71,56 @@ public class CFilePub {
         return "";
     }
 
+
+    static public List<String> readAllNoEmpty(String predir, String filename, boolean utf8isoflag) {
+        List<String> resultList = new ArrayList<String>();
+        try {
+            if(utf8isoflag) {
+                predir = CCodecPub.UTF8ToISO(predir);
+                filename = CCodecPub.UTF8ToISO(filename);
+            }
+
+            File dir = new File(predir);
+            if (!dir.exists())
+            {
+                dir.mkdirs();
+            }
+            File f = new File(dir, filename);
+            if (!f.exists()) {
+                f.createNewFile();
+            }
+            InputStreamReader read = null;// 考虑到编码格式
+            String lineTxt = null;
+
+            try {
+                read = new InputStreamReader(new FileInputStream(f), "utf-8");
+            } catch (UnsupportedEncodingException e) {
+                e.printStackTrace();
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+            BufferedReader bufferedReader = new BufferedReader(read);
+            while ((lineTxt = bufferedReader.readLine()) != null) {
+                if (CStringPub.isTrimEmpty(lineTxt)) {
+                    continue;
+                }
+                resultList.add((lineTxt.trim()));
+//                System.out.println(lineTxt);
+//                System.out.println("temp gbk1:" + (lineTxt));
+            }
+            read.close();
+            System.out.println("found ");
+
+            return resultList;
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("no found:" + e + ",predir:" + predir +",filename:" + filename);
+//            resultList.add((e.toString()));
+            return resultList;
+        }
+    }
+
+
     /**
      * 读取数据，存入集合中
      */
@@ -108,4 +158,22 @@ public class CFilePub {
         return "";
     }
 
+
+    //append string
+    public static String getJoinPath(String prefix, String path)
+    {
+        return prefix + File.separator + path;
+    }
+
+    private static String relPath  = "selfmenu.txt";
+    private static String relPathuser = "selfmenu_user.txt";
+    //read selfmenu.txt and selfmenu_user.txt
+    public static List<String> readMenuAndUser(String topdir)
+    {
+
+        List<String> listcontent = CFilePub.readAllNoEmpty(topdir, relPath,false);
+        List<String> listcontentUser = CFilePub.readAllNoEmpty(topdir, relPathuser,false);
+        listcontent.addAll(listcontentUser);
+        return listcontent;
+    }
 }
