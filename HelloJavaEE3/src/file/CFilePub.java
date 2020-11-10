@@ -140,6 +140,25 @@ public class CFilePub {
         }
         read.close();
     }
+    public static String readtFileContent(File file) throws IOException, ParseException {
+        StringBuffer result = new StringBuffer();
+        InputStreamReader read = null;// ¿¼ÂÇµ½±àÂë¸ñÊ½
+        try {
+            read = new InputStreamReader(new FileInputStream(file), "utf-8");
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        BufferedReader bufferedReader = new BufferedReader(read);
+        String lineTxt = null;
+        while ((lineTxt = bufferedReader.readLine()) != null) {
+            System.out.println(lineTxt);
+            result.append(lineTxt + "<br>");
+        }
+        read.close();
+        return new String(result);
+    }
 
     //create file if no exist
     public static String createFileNoExist(String filePathAll) {

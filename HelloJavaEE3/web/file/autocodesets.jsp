@@ -8,7 +8,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
-<link href="../css/bdata.css" rel="stylesheet"></head>
+<link href="../css/file.css" rel="stylesheet"></head>
 <%@taglib prefix="menu" tagdir="/WEB-INF/tags/file" %>
 
 <html>
@@ -19,9 +19,10 @@
 <font size="3">
     <form action="" method="post" name="form">
         文件位置:<input type="text" name="topdir" class="input"><br>
-        查找内容:<input type="text" name="findtext" class="input">
-        <input type="checkbox" name="casesensitive" value="true" class="checkboxself">大小写<br>
-        <input type="submit" value="显示" name="submit" class="button">
+        查找内容:<input type="text" name="findtext" class="input"><br>
+        <input type="checkbox" name="casesensitive" value="">匹配大小写
+        <input type="checkbox" name="findfilecontent" value="">查找文件内容<br>
+        <input type="submit" value="显示" name="submit" class="submitbtn_file"><br>
     </form>
 </font>
 
@@ -48,14 +49,10 @@
     for (String item :
             listSets) {
 %>
-<form name="form2" class="form2" method="post"  target="frame_right" action="showfilecontent.jsp" onload="autosubmit()">
-    <input type="text"
-           size="4"
-           class="text2"
-           name="iddata"
-    <%--readonly="readonly"--%>
-    <%--           value="<%=numname%>"/>--%>
-    <input type="submit" name="submit" value="<%=item%>" class="submitbtn" />
+<%--<form name="form2" class="form2" method="post"  target="frame_right" action="showfilecontent.jsp" onload="autosubmit()">--%>
+<form name="form2" method="post"  target="frame_right" action="showfilecontent.jsp" onload="autosubmit()">
+    <input type="hidden" name="topdir" value="<%=topdir%>">
+    <input type="submit" name="selectitem" value="<%=item%>" class="submitbtn_file">
 </form>
 <%
     }
