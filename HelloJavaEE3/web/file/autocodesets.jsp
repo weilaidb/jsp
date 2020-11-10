@@ -1,7 +1,6 @@
 <%@ page import="string.CStringPub" %>
 <%@ page import="weilaidb.sql.SqlProc" %>
-<%@ page import="file.CFilePub" %>
-<%@ page import="java.util.List" %><%--
+<%@ page import="java.util.LinkedList" %><%--
   Created by IntelliJ IDEA.
   User: dell
   Date: 2020/11/10
@@ -17,11 +16,11 @@
     <title>代码集</title>
 </head>
 <body>
-<font size="5">
+<font size="3">
     <form action="" method="post" name="form">
         文件位置:<input type="text" name="topdir" class="input"><br>
         查找内容:<input type="text" name="findtext" class="input">
-        <input type="checkbox" name="casesensitive" value="true" class="checkboxself">大小写
+        <input type="checkbox" name="casesensitive" value="true" class="checkboxself">大小写<br>
         <input type="submit" value="显示" name="submit" class="button">
     </form>
 </font>
@@ -42,7 +41,27 @@
 </font>
 
 <menu:ShowSelfMenuUser topdir="<%=topdir%>" findtext="<%=findtext%>" casesensitive="<%=casesensitive%>"></menu:ShowSelfMenuUser>
-<%=showresult%>
+<%
+    String[] listSets  = showresult.toString().split("<br>");
+    System.out.println("listSets.length:" + listSets.length);
+
+    for (String item :
+            listSets) {
+%>
+<form name="form2" class="form2" method="post"  target="frame_right" action="showfilecontent.jsp" onload="autosubmit()">
+    <input type="text"
+           size="4"
+           class="text2"
+           name="iddata"
+    <%--readonly="readonly"--%>
+    <%--           value="<%=numname%>"/>--%>
+    <input type="submit" name="submit" value="<%=item%>" class="submitbtn" />
+</form>
+<%
+    }
+%>
+
+
 
 </body>
 </html>
