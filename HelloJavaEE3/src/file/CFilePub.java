@@ -184,6 +184,22 @@ public class CFilePub {
         return prefix + File.separator + path;
     }
 
+    public static String getRelPath() {
+        return relPath;
+    }
+
+    public static void setRelPath(String relPath) {
+        CFilePub.relPath = relPath;
+    }
+
+    public static String getRelPathuser() {
+        return relPathuser;
+    }
+
+    public static void setRelPathuser(String relPathuser) {
+        CFilePub.relPathuser = relPathuser;
+    }
+
     private static String relPath  = "selfmenu.txt";
     private static String relPathuser = "selfmenu_user.txt";
     //read selfmenu.txt and selfmenu_user.txt
@@ -264,22 +280,6 @@ public class CFilePub {
         return "after\\" + filename + "";
     }
 
-//    public static String readContent(File f) {
-//        StringBuffer str = new StringBuffer();
-//        try{
-//            FileReader in = new FileReader(f);
-//            BufferedReader bufferin = new BufferedReader(in);
-//            String temp;
-//            while ((temp = bufferin.readLine()) != null) {
-//                str.append(temp);
-//            }
-//            bufferin.close();
-//            in.close();
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//        return new String(str);
-//    }
     public static String readContent(File f, boolean brflag) {
         StringBuffer str = new StringBuffer();
         try{
@@ -306,12 +306,42 @@ public class CFilePub {
         return new String(str);
     }
 
+
+    public static String writeContent(File f, String content) {
+        StringBuffer str = new StringBuffer();
+        try{
+            if(!f.exists())
+            {
+                return "";
+            }
+            FileOutputStream out = new FileOutputStream(f);
+            OutputStreamWriter bufferout = new OutputStreamWriter(out, "UTF-8");
+            bufferout.write(content);
+            bufferout.flush();
+            bufferout.close();
+            out.close();
+            str.append("写入成功<br>");
+        } catch (Exception e) {
+            e.printStackTrace();
+            str.append("写入失败:" + e.toString() + "<br>");
+        }
+        return new String(str);
+    }
+
     //读取文件内容
     public static String readFile(String dir, String fileName, boolean brflag)
     {
         File f = new File(dir,fileName);
         String fileContent = readContent(f,brflag);
         return fileContent;
+    }
+
+    //写文件
+    public static String writeFile(String dir, String fileName, String  content)
+    {
+        File f = new File(dir,fileName);
+        String result = writeContent(f,content);
+        return result;
     }
 
 }
