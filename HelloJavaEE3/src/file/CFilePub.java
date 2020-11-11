@@ -196,6 +196,58 @@ public class CFilePub {
         return listcontent;
     }
 
+    //read selfmenu.txt
+    public static List<String> readMenuStand(String topdir)
+    {
+
+        List<String> listcontent = CFilePub.readAllNoEmpty(topdir, relPath,false);
+        return listcontent;
+    }
+
+       //read selfmenu_user.txt
+    public static List<String> readMenuUser(String topdir)
+    {
+
+        List<String> listcontentUser = CFilePub.readAllNoEmpty(topdir, relPathuser,false);
+        return listcontentUser;
+    }
+
+    //read selfmenu.txt
+    public static String readMenuStandResStr(String topdir, String enterFlag)
+    {
+
+        List<String> listcontent = CFilePub.readAllNoEmpty(topdir, relPath,false);
+        return listToString(listcontent,enterFlag);
+    }
+
+       //read selfmenu_user.txt
+    public static String readMenuUserResStr(String topdir, String enterFlag)
+    {
+
+        List<String> listcontentUser = CFilePub.readAllNoEmpty(topdir, relPathuser,false);
+        return listToString(listcontentUser,enterFlag);
+    }
+
+//enterFlag ,¿ÕÎª"<br>"£¬·Ç¿ÕÎª"\n"
+    public static String listToString(List<String> list, String enterFlag)
+    {
+        String result = "";
+        for (String item :
+                list) {
+            if(CStringPub.isTrimEmpty(enterFlag))
+            {
+                result += item + "<br>";
+            }
+            else
+            {
+                result += item + "\n";
+            }
+        }
+        return result;
+    }
+
+
+
     //get tips name
     public static String getTipsName(String filename)
     {

@@ -1,9 +1,12 @@
 package string;
 
 import com.sun.deploy.net.HttpRequest;
+import file.CFilePub;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.ArrayList;
+import java.util.List;
 
 public class CStringPub {
     public static boolean isTrimEmpty(String string)
@@ -91,6 +94,21 @@ public class CStringPub {
     public static String emptyString()
     {
         return "";
+    }
+
+    public static List<String> filterListEmpty(String[] list)
+    {
+        List<String> lResult = new ArrayList<String>();
+        for (String item :
+                list) {
+            if(isTrimEmpty(item))
+            {
+                continue;
+            }
+            lResult.add(item);
+
+        }
+        return lResult;
     }
 
 }

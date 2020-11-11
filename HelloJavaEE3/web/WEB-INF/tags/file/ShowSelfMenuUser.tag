@@ -6,6 +6,7 @@
 <%@ attribute name="findtext" required="true" %>
 <%@ attribute name="casesensitive" required="true" %>
 <%@ attribute name="findfileflag" required="true" %>
+<%@ attribute name="enterflag" required="true" %>
 <%@ variable name-given="showresult" scope="AT_END" %>
 <%--<%@ variable name-given="listResult" variable-class="java.util.LinkedList" scope="AT_END" %>--%>
 <%
@@ -25,7 +26,13 @@
         }
         if(CStringPub.isTrimEmpty(findtext))
         {
-            result.append(item + "<br>");
+            if(CStringPub.isTrimEmpty(enterflag)) {
+                result.append(item + "<br>");
+            }
+            else
+            {
+                result.append(item + "\n");
+            }
 //            listResultBuffer.add(item + "<br>");
             continue;
         }
@@ -33,7 +40,13 @@
         //查找关键字列表
         if(CStringPub.isContainList(item, findtext, casesensitive))
         {
-            result.append(item + "<br>");
+            if(CStringPub.isTrimEmpty(enterflag)) {
+                result.append(item + "<br>");
+            }
+            else
+            {
+                result.append(item + "\n");
+            }
             continue;
 //            listResultBuffer.add(item + "<br>");
         }
@@ -50,7 +63,13 @@
         ||(CStringPub.isContainList(contAf, findtext, casesensitive))
         )
         {
-            result.append(item + "<br>");
+            if(CStringPub.isTrimEmpty(enterflag)) {
+                result.append(item + "<br>");
+            }
+            else
+            {
+                result.append(item + "\n");
+            }
             continue;
         }
     }
