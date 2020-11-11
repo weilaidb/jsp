@@ -10,14 +10,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
 <%@ taglib prefix="menu" tagdir="/WEB-INF/tags/file" %>
 <link href="../css/file.css" rel="stylesheet"></head>
+<script type="text/javascript" src="../js/file.js"></script>
 
-<script language="JavaScript">
-    function Refresh()
-    {
-        window.location.reload();
-    }
-    // setTimeout('Refresh()',1000); //1秒刷新一次
-</script>
 
 <html>
 <head>

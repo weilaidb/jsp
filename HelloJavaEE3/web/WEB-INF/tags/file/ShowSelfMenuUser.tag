@@ -13,6 +13,7 @@
     System.out.println("topdir:" + topdir);
     System.out.println("findtext:" + findtext);
     System.out.println("casesensitive:" + casesensitive);
+    System.out.println("findfileflag :" + findfileflag);
 //    List<String> listResultBuffer  = new LinkedList<String>();
 
 
@@ -20,10 +21,12 @@
     List<String> listcontent = CFilePub.readMenuAndUser(topdir);
     for (String item :
             listcontent) {
+        //menu项为空
         if(CStringPub.isTrimEmpty(item))
         {
             continue;
         }
+        //搜索字段为空，全部显示
         if(CStringPub.isTrimEmpty(findtext))
         {
             if(CStringPub.isTrimEmpty(enterflag)) {
@@ -37,7 +40,7 @@
             continue;
         }
 
-        //查找关键字列表
+        //查找关键字列表，区分大小写时，如果不为空则表示区分大小写
         if(CStringPub.isContainList(item, findtext, casesensitive))
         {
             if(CStringPub.isTrimEmpty(enterflag)) {
@@ -51,6 +54,12 @@
 //            listResultBuffer.add(item + "<br>");
         }
 
+        if(CStringPub.isTrimEmpty(findfileflag))
+        {
+            continue;
+        }
+
+        //查找文件内容
         String readFileNameTips = CFilePub.getTipsName(item);
         String readFileNameBf = CFilePub.getBeforeName(item);
         String readFileNameAf = CFilePub.getAfterName(item);

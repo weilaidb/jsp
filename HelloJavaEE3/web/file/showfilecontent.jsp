@@ -8,6 +8,9 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
 <%@ taglib prefix="file" tagdir="/WEB-INF/tags/file" %>
+<link href="../css/file.css" rel="stylesheet"></head>
+<script type="text/javascript" src="../js/file.js"></script>
+
 <html>
 <head>
     <title>文件内容</title>
@@ -19,21 +22,32 @@
     System.out.println("topdir:" + topdir);
     System.out.println("selectitem:" + selectitem);
 %>
+
+
+
 【<%=selectitem%>】的内容为:<br>
 <%
 String readFileNameTips = CFilePub.getTipsName(selectitem);
 String readFileNameBf = CFilePub.getBeforeName(selectitem);
 String readFileNameAf = CFilePub.getAfterName(selectitem);
 %>
-<file:ReadTag dir="<%=topdir%>" fileName="<%=readFileNameTips%>"></file:ReadTag>
-<textarea name="messages" rows="50" cols="60"><%=result%></textarea>
 
-<file:ReadTag dir="<%=topdir%>" fileName="<%=readFileNameBf%>"></file:ReadTag>
-<textarea name="messages" rows="50" cols="60"><%=result%></textarea>
+<font size="3">
+    <form action="savefile.jsp" method="post" name="form">
+        <input type="hidden" value="<%=topdir%>" name="topdir">
+        <input type="hidden" value="<%=selectitem%>" name="selectitem">
+        <input type="submit" value="保存" name="submit">
+        <input type="button" id="btn_refresh" onclick="Refresh()" value="刷新"/><br>
+        <file:ReadTag dir="<%=topdir%>" fileName="<%=readFileNameTips%>"></file:ReadTag>
+        <textarea name="filetip" class="textarea_reg1"><%=result%></textarea>
 
-<file:ReadTag dir="<%=topdir%>" fileName="<%=readFileNameAf%>"></file:ReadTag>
-<textarea name="messages" rows="50" cols="60"><%=result%></textarea>
+        <file:ReadTag dir="<%=topdir%>" fileName="<%=readFileNameBf%>"></file:ReadTag>
+        <textarea name="filebf" class="textarea_reg2"><%=result%></textarea>
 
+        <file:ReadTag dir="<%=topdir%>" fileName="<%=readFileNameAf%>"></file:ReadTag>
+        <textarea name="fileaf" class="textarea_reg3"><%=result%></textarea>
+    </form>
+</font>
 
 </body>
 </html>

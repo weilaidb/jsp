@@ -34,8 +34,8 @@
     <form action="" method="post" name="form">
         文件位置:<input type="text" name="topdir" class="input"><br>
         查找内容:<input type="text" name="findtext" class="input"><br>
-        <input type="checkbox" name="casesensitive" value="">匹配大小写
-        <input type="checkbox" name="findfileflag" value="">查找文件内容
+        <input type="checkbox" name="casesensitive">匹配大小写
+        <input type="checkbox" name="findfileflag">查找文件内容
 <%--        <input type="checkbox" name="casesensitive" value="0" <c:if test="${fn:contains(certDlStatusList, '0') }">checked="checked"</c:if>>匹配大小写--%>
 <%--        <input type="checkbox" name="findfileflag" value="1" <c:if test="${fn:contains(certDlStatusList, '0') }">checked="checked"</c:if>>查找文件内容--%>
         <input type="submit" value="显示" name="submit" class="submitbtn_file">

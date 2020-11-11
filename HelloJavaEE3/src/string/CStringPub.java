@@ -40,6 +40,7 @@ public class CStringPub {
         String [] findlist = text.split(" ");
         for (String item :
                 findlist) {
+            //无内容（空），表示不区分大小写
             if(CStringPub.isTrimEmpty(casesensitive))
             {
                 if(org.trim().toLowerCase().contains(item.trim().toLowerCase()))
