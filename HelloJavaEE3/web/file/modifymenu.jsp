@@ -9,6 +9,8 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
 <%@ taglib prefix="menu" tagdir="/WEB-INF/tags/file" %>
+<link href="../css/file.css" rel="stylesheet"></head>
+
 <script language="JavaScript">
     function Refresh()
     {
@@ -40,8 +42,8 @@
         <input type="submit" value="保存" name="submit">
         <input type="button" id="btn_refresh" onclick="Refresh()" value="刷新"/>
         显示菜单内容:<br>
-        <textarea name="menuStand" rows="50" cols="45%"><%=menuStand%></textarea>
-        <textarea name="menuUser" rows="50" cols="45%"><%=menuUser%></textarea>
+        <textarea name="menuStand" class="textarea_showmenu"><%=menuStand%></textarea>
+        <textarea name="menuUser" class="textarea_showmenu"><%=menuUser%></textarea>
     </form>
 </font>
 
