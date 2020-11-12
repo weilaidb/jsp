@@ -30,15 +30,20 @@
 </head>
 <body>
 <%
-    String topdir = CStringPub.requesParaIfNullSetEmpty(request, "topdir");
+    String topdir     = CStringPub.requesParaIfNullSetEmpty(request, "topdir");
     String selectitem = CStringPub.requesParaIfNullSetEmpty(request, "selectitem");
+    String lefttext   = CStringPub.requesParaIfNullSetEmpty(request, "lefttext");
+    String righttext  = CStringPub.requesParaIfNullSetEmpty(request, "righttext");
     System.out.println("topdir:" + topdir);
     System.out.println("selectitem:" + selectitem);
+    System.out.println("lefttext:" + lefttext);
+    System.out.println("righttext:" + righttext);
 %>
 
 
 
 <%
+//    读取文本内容
     String contentTips = CStringPub.emptyString();
     String contentBf = CStringPub.emptyString();
     String contentAf = CStringPub.emptyString();
@@ -49,6 +54,10 @@
 <file:ReadTag dir="<%=topdir%>" fileName="<%=readFileNameTips%>"></file:ReadTag>
 <%
     contentTips = result.toString();
+    if(CStringPub.isTrimEmpty(lefttext))
+    {
+        lefttext = contentTips;
+    }
 %>
 <file:ReadTag dir="<%=topdir%>" fileName="<%=readFileNameBf%>"></file:ReadTag>
 <%
@@ -70,8 +79,8 @@
         <input type="button" value="转换" type="submit" onclick="convertInfo()"/>
         <input type="button" id="btn_refresh" onclick="Refresh()" value="刷新"/>
         <br>
+        <textarea name="lefttext" class="textarea_reg1"><%=lefttext%></textarea>
         <textarea name="righttext" class="textarea_reg1"><%=contentTips%></textarea>
-        <textarea name="lefttext" class="textarea_reg1"><%=contentTips%></textarea>
         <br>
         <textarea name="filetip" class="textarea_reg1"><%=contentTips%></textarea>
         <textarea name="filebf" class="textarea_reg2"><%=contentBf%></textarea>

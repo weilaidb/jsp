@@ -339,9 +339,36 @@ public class CFilePub {
     //写文件
     public static String writeFile(String dir, String fileName, String  content)
     {
+        createParentDirNoExist(dir, fileName);
         File f = new File(dir,fileName);
         String result = writeContent(f,content);
         return result;
     }
+    //替换非法的路径分隔符
+    public static String replaceSeparator(String path)
+    {
+        return path.replace("/", File.separator);
+    }
 
+    //判断父路径不存在时，创建路径
+    public static void createParentDirNoExist(String dir, String fileName)
+    {
+        //判断路径存在否
+        try{
+            dir = replaceSeparator(dir);
+            fileName = replaceSeparator(fileName);
+            String filePath = dir + File.separator + fileName;
+            File f = new File(filePath);
+            System.out.println("createParentDirNoExist filePath:" + f.getParent());
+            File d = new File(f.getParent());
+            if(!d.exists())
+            {
+                System.out.println("createParentDirNoExist filePath2:" + f.getParent());
+                d.mkdirs();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println(e.toString());
+        }
+    }
 }
