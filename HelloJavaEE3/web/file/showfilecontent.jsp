@@ -10,6 +10,19 @@
 <%@ taglib prefix="file" tagdir="/WEB-INF/tags/file" %>
 <link href="../css/file.css" rel="stylesheet"></head>
 <script type="text/javascript" src="../js/file.js"></script>
+<Script Language="JavaScript">
+    function saveFile()
+    {
+        document.form1.action="savefile.jsp";
+        document.form1.submit();
+    }
+
+    function convertInfo()
+    {
+        document.form1.action="";
+        document.form1.submit();
+    }
+</Script>
 
 <html>
 <head>
@@ -50,13 +63,16 @@
 
 【<%=selectitem%>】的内容为:<br>
 <font size="3">
-    <form action="savefile.jsp" method="post" name="form">
+    <form action="" method="post" name="form1">
         <input type="hidden" value="<%=topdir%>" name="topdir">
         <input type="hidden" value="<%=selectitem%>" name="selectitem">
-        <input type="submit" value="保存" name="submit">
-        <input type="button" id="btn_refresh" onclick="Refresh()" value="刷新"/><br>
+        <input type="button" value="保存" type="submit" onclick="saveFile()"/>
+        <input type="button" value="转换" type="submit" onclick="convertInfo()"/>
+        <input type="button" id="btn_refresh" onclick="Refresh()" value="刷新"/>
+        <br>
         <textarea name="righttext" class="textarea_reg1"><%=contentTips%></textarea>
-        <textarea name="lefttext" class="textarea_reg1"><%=contentTips%></textarea><br>
+        <textarea name="lefttext" class="textarea_reg1"><%=contentTips%></textarea>
+        <br>
         <textarea name="filetip" class="textarea_reg1"><%=contentTips%></textarea>
         <textarea name="filebf" class="textarea_reg2"><%=contentBf%></textarea>
         <textarea name="fileaf" class="textarea_reg3"><%=contentAf%></textarea>
