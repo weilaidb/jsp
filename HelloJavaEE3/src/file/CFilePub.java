@@ -312,7 +312,7 @@ public class CFilePub {
         try{
             if(!f.exists())
             {
-                return "";
+                f.createNewFile();
             }
             FileOutputStream out = new FileOutputStream(f);
             OutputStreamWriter bufferout = new OutputStreamWriter(out, "UTF-8");

@@ -71,23 +71,36 @@ html, body {
 .textarea_showmenu{
     width:40%;
     height:90%;
-    overflow-y:visible
+    overflow-y:visible;
 }
+
 
 .textarea_reg1{
     width:40%;
-    height:95%;
-    overflow-y:visible
+    height:50%;
+    overflow-y:visible;
 }
+
 .textarea_reg2{
     width:10%;
-    height:95%;
-    overflow-y:visible
+    height:50%;
+    overflow-y:visible;
 }
 
 .textarea_reg3{
     width:40%;
-    height:95%;
-    overflow-y:visible
+    height:50%;
+    overflow-y:visible;
 }
 
+.textarea_reg4{
+    width:45%;
+    height:50%;
+    overflow-y: visible;
+}
+
+.textarea_reg5{
+    width:45%;
+    height:50%;
+    overflow-y: visible;
+}

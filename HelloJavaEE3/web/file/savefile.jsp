@@ -10,11 +10,6 @@
 <script type="text/javascript" src="../js/file.js"></script>
 
 <SCRIPT language=javascript>
-    // //返回到原页面
-    // function go() {
-    //     window.history.go(-1);
-    // }
-
     setTimeout("go()", 300);
 </SCRIPT>
 <html>
@@ -42,6 +37,16 @@
 //    }
 //    else
     {
+        //内容为空特殊处理一下
+        if(CStringPub.isTrimEmpty(filebf))
+        {
+            filebf = "(.*)";
+        }
+        if(CStringPub.isTrimEmpty(fileaf))
+        {
+            fileaf = "\\1";
+        }
+
         result += CFilePub.writeFile(topdir,CFilePub.getTipsName(selectitem), filetip);
         result += CFilePub.writeFile(topdir,CFilePub.getBeforeName(selectitem), filebf);
         result += CFilePub.writeFile(topdir,CFilePub.getAfterName(selectitem), fileaf);

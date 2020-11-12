@@ -181,7 +181,7 @@
                     .replace("\"", "\\\"")
                     .split(" ");
             for (int lp = 0; lp < qrylst.length; lp++) {
-                sqlmid += "content like  \"%" + new String(qrylst[lp].getBytes("iso-8859-1"), "utf-8") + "%\" ";
+                sqlmid += "content like  \"%" + qrylst[lp] + "%\" ";
                 if (lp != qrylst.length - 1)
                     sqlmid += " and ";
 
@@ -226,7 +226,7 @@
     <%
                 }
                 out.print("查询结果：" + rowCount + " 条["
-                        + new String(qryval.getBytes("iso-8859-1"), "utf-8")
+                        + qryval
                         + "]");
                 out.print("<br/>");
                 rs.close();

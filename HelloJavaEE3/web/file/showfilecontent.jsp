@@ -25,27 +25,41 @@
 
 
 
-【<%=selectitem%>】的内容为:<br>
 <%
-String readFileNameTips = CFilePub.getTipsName(selectitem);
-String readFileNameBf = CFilePub.getBeforeName(selectitem);
-String readFileNameAf = CFilePub.getAfterName(selectitem);
+    String contentTips = CStringPub.emptyString();
+    String contentBf = CStringPub.emptyString();
+    String contentAf = CStringPub.emptyString();
+    String readFileNameTips = CFilePub.getTipsName(selectitem);
+    String readFileNameBf = CFilePub.getBeforeName(selectitem);
+    String readFileNameAf = CFilePub.getAfterName(selectitem);
+%>
+<file:ReadTag dir="<%=topdir%>" fileName="<%=readFileNameTips%>"></file:ReadTag>
+<%
+    contentTips = result.toString();
+%>
+<file:ReadTag dir="<%=topdir%>" fileName="<%=readFileNameBf%>"></file:ReadTag>
+<%
+    contentBf = result.toString();
+%>
+<file:ReadTag dir="<%=topdir%>" fileName="<%=readFileNameAf%>"></file:ReadTag>
+<%
+    contentAf = result.toString();
 %>
 
+
+
+【<%=selectitem%>】的内容为:<br>
 <font size="3">
     <form action="savefile.jsp" method="post" name="form">
         <input type="hidden" value="<%=topdir%>" name="topdir">
         <input type="hidden" value="<%=selectitem%>" name="selectitem">
         <input type="submit" value="保存" name="submit">
         <input type="button" id="btn_refresh" onclick="Refresh()" value="刷新"/><br>
-        <file:ReadTag dir="<%=topdir%>" fileName="<%=readFileNameTips%>"></file:ReadTag>
-        <textarea name="filetip" class="textarea_reg1"><%=result%></textarea>
-
-        <file:ReadTag dir="<%=topdir%>" fileName="<%=readFileNameBf%>"></file:ReadTag>
-        <textarea name="filebf" class="textarea_reg2"><%=result%></textarea>
-
-        <file:ReadTag dir="<%=topdir%>" fileName="<%=readFileNameAf%>"></file:ReadTag>
-        <textarea name="fileaf" class="textarea_reg3"><%=result%></textarea>
+        <textarea name="righttext" class="textarea_reg1"><%=contentTips%></textarea>
+        <textarea name="lefttext" class="textarea_reg1"><%=contentTips%></textarea><br>
+        <textarea name="filetip" class="textarea_reg1"><%=contentTips%></textarea>
+        <textarea name="filebf" class="textarea_reg2"><%=contentBf%></textarea>
+        <textarea name="fileaf" class="textarea_reg3"><%=contentAf%></textarea>
     </form>
 </font>
 
