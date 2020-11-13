@@ -1,5 +1,6 @@
 <%@ page import="string.CStringPub" %>
-<%@ page import="file.CFilePub" %><%--
+<%@ page import="file.CFilePub" %>
+<%@ page import="regexp.CRegExpPub" %><%--
   Created by IntelliJ IDEA.
   User: dell
   Date: 2020/11/10
@@ -68,6 +69,11 @@
     contentAf = result.toString();
 %>
 
+<%
+//正则处理后的结果
+    String regexpResult = CRegExpPub.procPatterInfo(lefttext, contentBf, contentAf);
+
+%>
 
 
 【<%=selectitem%>】的内容为:<br>
@@ -80,7 +86,7 @@
         <input type="button" id="btn_refresh" onclick="Refresh()" value="刷新"/>
         <br>
         <textarea name="lefttext" class="textarea_reg1"><%=lefttext%></textarea>
-        <textarea name="righttext" class="textarea_reg1"><%=contentTips%></textarea>
+        <textarea name="righttext" class="textarea_reg1"><%=regexpResult%></textarea>
         <br>
         <textarea name="filetip" class="textarea_reg1"><%=contentTips%></textarea>
         <textarea name="filebf" class="textarea_reg2"><%=contentBf%></textarea>
