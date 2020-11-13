@@ -7,9 +7,15 @@ import java.util.regex.*;
 import static java.util.regex.Matcher.quoteReplacement;
 
 public class CRegExpPub {
-
-    public static String procPatternInfo(String bf, String pattern, String af)
+    //处理特别字符串
+    public static String procSpecialSignReplace(String str)
     {
+        return str.replace("$NL", "\n")
+                .replace("$TB", "    ");
+    }
+
+
+    public static String procPatternInfo(String bf, String pattern, String af) {
         //正则表达式使用字符解析和从网页中获取的数据解析，发现不一样
         //原来从网页获取的长度多了1个字节，原来是换行
         //查看pattern后的长度是 pattern.length()
@@ -41,7 +47,7 @@ public class CRegExpPub {
             reFlags |= Pattern.DOTALL;
 //            reFlags |= Pattern.COMMENTS;
 //            reFlags |= Pattern.LITERAL;
-            try{
+            try {
                 Pattern r = Pattern.compile(pattern, reFlags);
 //                Pattern r = Pattern.compile(pattern);
                 System.out.println("pattern.length():" + pattern.length());
@@ -53,12 +59,19 @@ public class CRegExpPub {
                 // 现在创建 matcher 对象
                 Matcher m = r.matcher(line);
                 //m.find()或m.matches()只能调用一次，再次调用就可能为false了。
-            while (m.find()) {
-                System.out.println("seq:" + m.group());
-                for (int i = 0; i < m.groupCount(); i++) {
-                    System.out.println("Found value[" + i + "]: " + m.group(i));
+                System.out.println("m.groupCount():" + m.groupCount());
+                String replaceStr = CStringPub.emptyString();
+                if (m.find()) {
+//                System.out.println("seq:" + m.group());
+                    System.out.println("Found value[" + 0 + "]: " + m.group(0));
+                    replaceStr = af;
+                    for (int i = 1; i <= m.groupCount(); i++) {
+                        System.out.println("Found value[" + i + "]: " + m.group(i));
+                        replaceStr = replaceStr.replace("\\" + i, m.group(i));
+                        replaceStr = procSpecialSignReplace(replaceStr);
+                    }
                 }
-            }
+                result += replaceStr + "\n";
 
             } catch (Exception e) {
                 e.printStackTrace();
@@ -70,12 +83,11 @@ public class CRegExpPub {
         return result;
     }
 
-    public static void test1()
-    {
+    public static void test1() {
         procPatternInfo("abc1234", "(\\w+)(\\d+)(.*)", "");
     }
 
-    public static void main( String args[] ){
+    public static void main(String args[]) {
 
         // 按指定模式在字符串查找
 //        String line = "This order was placed for QT3000! OK?";
@@ -88,11 +100,11 @@ public class CRegExpPub {
 
         // 现在创建 matcher 对象
         Matcher m = r.matcher(line);
-        if (m.find( )) {
-            System.out.println("Found value: " + m.group(0) );
-            System.out.println("Found value: " + m.group(1) );
-            System.out.println("Found value: " + m.group(2) );
-            System.out.println("Found value: " + m.group(3) );
+        if (m.find()) {
+            System.out.println("Found value: " + m.group(0));
+            System.out.println("Found value: " + m.group(1));
+            System.out.println("Found value: " + m.group(2));
+            System.out.println("Found value: " + m.group(3));
         } else {
             System.out.println("NO MATCH");
         }
