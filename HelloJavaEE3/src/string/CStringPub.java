@@ -112,4 +112,9 @@ public class CStringPub {
         return lResult;
     }
 
+
+    public static String trimString(String buf)
+    {
+        return buf.trim();
+    }
 }

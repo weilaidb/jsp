@@ -71,7 +71,7 @@
 
 <%
 //正则处理后的结果
-    String regexpResult = CRegExpPub.procPatterInfo(lefttext, contentBf, contentAf);
+    String regexpResult = CRegExpPub.procPatternInfo(lefttext, contentBf, contentAf);
 
 %>
 
