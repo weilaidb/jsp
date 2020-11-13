@@ -10,14 +10,14 @@
 <script type="text/javascript" src="../js/file.js"></script>
 
 <SCRIPT language=javascript>
-    setTimeout("go()", 300);
+    setTimeout("go()", 1000);
 </SCRIPT>
 <html>
 <head>
     <title>保存菜单</title>
 </head>
 <body>
-<%--<jsp:forward page="showfilecontent.jsp"/>返回--%>
+
 <%
     String topdir  = CStringPub.requesParaIfNullSetEmpty(request, "topdir");
     String filetip  = CStringPub.requesParaIfNullSetEmpty(request, "filetip");
@@ -54,6 +54,8 @@
 %>
 
 <%=result%>
+
+<jsp:forward page="showfilecontent.jsp"/>返回
 
 </body>
 </html>

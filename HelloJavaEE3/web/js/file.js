@@ -9,5 +9,12 @@ function go() {
     window.history.go(-1);
 }
 
+// //返回到原页面并刷新
+// function gorefresh() {
+//     window.history.go(-1);
+//     // parent.location.reload();
+//     // window.location.reload();
+// }
+
 
 
