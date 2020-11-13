@@ -81,13 +81,13 @@
     <form action="" method="post" name="form1">
         <input type="hidden" value="<%=topdir%>" name="topdir">
         <input type="hidden" value="<%=selectitem%>" name="selectitem">
-        <input type="button" value="保存" type="submit" onclick="saveFile()"/>
         <input type="button" value="转换" type="submit" onclick="convertInfo()"/>
         <input type="button" id="btn_refresh" onclick="Refresh()" value="刷新"/>
         <br>
         <textarea name="lefttext" class="textarea_reg1"><%=lefttext%></textarea>
         <textarea name="righttext" class="textarea_reg1"><%=regexpResult%></textarea>
         <br>
+        <input type="button" value="保存" type="submit" onclick="saveFile()"/><br>
         <textarea name="filetip" class="textarea_reg1"><%=contentTips%></textarea>
         <textarea name="filebf" class="textarea_reg2"><%=contentBf%></textarea>
         <textarea name="fileaf" class="textarea_reg3"><%=contentAf%></textarea>
