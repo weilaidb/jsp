@@ -143,8 +143,8 @@ public class CSqlitePub {
 
     static public String procInsertData(String insertData)
     {
-        insertData = insertData.replace("\"", "\"\"")
-                .replace("\\", "\\\\");
+        insertData = insertData.replace("\"", "\"\"");
+//                .replace("\\", "\\\\");
         return insertData;
     }
 }

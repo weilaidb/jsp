@@ -449,8 +449,10 @@ public class SqlInterface {
             String[] filelist = files.split("\n");
             for (String str :
                     filelist) {
-                str = str.replace("\\", "\\\\")
-                        .replace("\"", "\"\"");
+//                str = str.replace("\\", "\\\\")
+//                        .replace("\"", "\"\"");
+                str = str.replace("\"", "\"\"");
+
                 //关键字为空时，null, 或"null" ，不需要带拼音
                 if ((null == pinyin) || pinyin.equals("null") || pinyin.trim().isEmpty()) {
                     PinYinUtil hanyuPinyinUtil = new PinYinUtil();
@@ -505,8 +507,9 @@ public class SqlInterface {
 //            创建数据库名称和表必须在首先创建出来。
 //            file = new String(file.getBytes("iso-8859-1"), "utf-8");
 
-            file = file.replace("\\", "\\\\")
-                    .replace("\"", "\"\"");
+//            file = file.replace("\\", "\\\\")
+//                    .replace("\"", "\"\"");
+            file = file.replace("\"", "\"\"");
             sql = "delete from egtable where name=\"filexxx\"";
             sql = sql.replace("egtable", tableName)
                     .replace("filexxx", file);

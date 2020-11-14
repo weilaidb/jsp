@@ -202,7 +202,7 @@
     try {
 //        insertval = new String(insertval.getBytes("iso-8859-1"), "utf-8");
         insertval = insertval.replace("\"", "\"\"");
-        insertval = insertval.replace("\\", "\\\\");
+//        insertval = insertval.replace("\\", "\\\\");
         insertval = insertval + DateTimePub.getCurrentDateTimeMultiLine(4);
         String nameval = insertval.substring(0, insertval.length() > 100 ? 100 : insertval.length())
                 + System.currentTimeMillis();

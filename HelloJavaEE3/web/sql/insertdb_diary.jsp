@@ -228,7 +228,7 @@
 
 //        insertval = (insertval);
         insertval = insertval.replace("\"", "\"\"");
-        insertval = insertval.replace("\\", "\\\\");
+//        insertval = insertval.replace("\\", "\\\\");
         insertval += DateTimePub.getTimestr() + DateTimePub.getCurrentDateTime()
                         + DateTimePub.mulLineTitleNum(5);
 //        insertval = insertval + DateTimePub.getCurrentDateTimeMultiLine(4);
