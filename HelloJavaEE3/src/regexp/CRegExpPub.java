@@ -17,7 +17,7 @@ public class CRegExpPub {
     //反处理特别字符串
     public static String procSpecialSignReplacerevert(String str)
     {
-        return str.replace("\n", "$NL")
+        return str.replace("\r?\n", "$NL")
                 .replace("    ", "$TB");
     }
 

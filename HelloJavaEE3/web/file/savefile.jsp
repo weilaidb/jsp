@@ -38,7 +38,7 @@
 //    }
 //    else
     {
-//        fileaf = CRegExpPub.procSpecialSignReplacerevert(fileaf);
+        fileaf = CRegExpPub.procSpecialSignReplacerevert(fileaf);
 
         //内容为空特殊处理一下
         if(CStringPub.isTrimEmpty(filebf))
