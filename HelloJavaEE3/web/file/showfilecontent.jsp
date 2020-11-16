@@ -67,6 +67,7 @@
 <file:ReadTag dir="<%=topdir%>" fileName="<%=readFileNameAf%>"></file:ReadTag>
 <%
     contentAf = result.toString();
+    contentAf = CRegExpPub.procSpecialSignReplace(contentAf);
 %>
 
 <%

@@ -1,5 +1,6 @@
 <%@ page import="string.CStringPub" %>
-<%@ page import="file.CFilePub" %><%--
+<%@ page import="file.CFilePub" %>
+<%@ page import="regexp.CRegExpPub" %><%--
   Created by IntelliJ IDEA.
   User: dell
   Date: 2020/11/11
@@ -37,6 +38,8 @@
 //    }
 //    else
     {
+//        fileaf = CRegExpPub.procSpecialSignReplacerevert(fileaf);
+
         //内容为空特殊处理一下
         if(CStringPub.isTrimEmpty(filebf))
         {

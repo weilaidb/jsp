@@ -14,6 +14,12 @@ public class CRegExpPub {
                 .replace("$TB", "    ");
     }
 
+    //反处理特别字符串
+    public static String procSpecialSignReplacerevert(String str)
+    {
+        return str.replace("\n", "$NL")
+                .replace("    ", "$TB");
+    }
 
     public static String procPatternInfo(String bf, String pattern, String af) {
         //正则表达式使用字符解析和从网页中获取的数据解析，发现不一样
