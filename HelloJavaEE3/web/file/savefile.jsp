@@ -39,6 +39,7 @@
 //    else
     {
         fileaf = CRegExpPub.procSpecialSignReplacerevert(fileaf);
+        System.out.println("fileaf w: " + fileaf);
 
         //内容为空特殊处理一下
         if(CStringPub.isTrimEmpty(filebf))
