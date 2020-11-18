@@ -201,18 +201,15 @@ public class SqlInterface {
                 .split(" ");
         int count = 0;
         for (int lp = 0; lp < qrylst.length; lp++) {
-            try {
-                //查找出来的数据编码已经是utf-8
-                String itemkey = new String(qrylst[lp].getBytes("iso-8859-1"), "utf-8");
+            //查找出来的数据编码已经是utf-8
+//                String itemkey = new String(qrylst[lp].getBytes("iso-8859-1"), "utf-8");
+            String itemkey = qrylst[lp];
 //                System.out.println("itemkey:"  + itemkey);
 //                System.out.println("content:"  + content);
-                if (!content.toLowerCase().contains(itemkey.toLowerCase())) {
-                    break;
-                }
-                count++;
-            } catch (UnsupportedEncodingException e) {
-                e.printStackTrace();
+            if (!content.toLowerCase().contains(itemkey.toLowerCase())) {
+                break;
             }
+            count++;
         }
 
         if (count == qrylst.length) {

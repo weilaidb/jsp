@@ -3,7 +3,7 @@ a）文件指定编码为
 <%@ page contentType="text/html;charset=UTF-8" language="java"
          pageEncoding="UTF-8" %>
 b)
-out.write("查找:" + inter.getGbkSign(searchkey));
+out.write("查找:" + (searchkey));
 
 
 如果文件更换成

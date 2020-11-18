@@ -85,7 +85,7 @@
     <div style="background:greenyellow; color:blue">
         <%
             if(!searchkey.trim().isEmpty()) {
-                out.write("查找:" + inter.getGbkSign(searchkey));
+                out.write("查找:" + (searchkey));
             }
         %>
     </div>
@@ -143,9 +143,9 @@
             showlist) {
         String numname = CharacterFilter.strBySpaceIndex(showstr,2,0).trim();
         String showname = CharacterFilter.strBySpaceIndex(showstr,2,1).trim();
-        System.out.println("jsp searchkey1:" + inter.getGbkSign(searchkey));
+        System.out.println("jsp searchkey1:" + (searchkey));
         //此处查到内容必须找到源库
-        showtextline += JspAdapter.findLineTextByIdAndKey(JspAdapter.getDbNameAllDb(), JspAdapter.getTableNameAbc(), inter.getGbkSign(searchkey), numname);
+        showtextline += JspAdapter.findLineTextByIdAndKey(JspAdapter.getDbNameAllDb(), JspAdapter.getTableNameAbc(), (searchkey), numname);
 %>
 <form name="form2" class="form2" method="post"  target="_blank" action="<%=app_basePath%>/sql/queryidwithmodify.jsp" onload="autosubmit()">
     <input type="text"

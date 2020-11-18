@@ -79,7 +79,7 @@
     <div style="background:greenyellow; color:blue">
         <%
             if(!searchkey.trim().isEmpty()) {
-                out.write("查找:" + inter.getGbkSign(searchkey));
+                out.write("查找:" + (searchkey));
             }
         %>
     </div>
