@@ -1,0 +1,84 @@
+<PUBLIC:COMPONENT>
+    <PUBLIC:ATTACH EVENT="oncontentready"   ONEVENT="fnInit()"   />
+    <PUBLIC:ATTACH EVENT="onmousedown"      ONEVENT="fnGrab()"   />
+    <public:event name="onsplit" ID=idsplit />
+<SCRIPT LANGUAGE="JScript">
+var giY=0; //全局变量，记载起始y坐标。
+function fnInit()  //初始化代码，给元素添加一个div元素，用于拖动。
+{
+ var oDragWindow = window.document.createElement( "<div style='DISPLAY: none; FILTER: alpha( opacity=20 );POSITION: absolute;BACKGROUND-COLOR: black;overflow:hidden;'>" );
+ element.dragwindow = oDragWindow;
+ element.insertAdjacentElement( "beforeEnd" , oDragWindow );
+}
+
+function fnGrab() //当鼠标按下时，显示splitter,添加鼠标事件。
+{
+        fnShowDragWindow();
+        window.document.attachEvent( "onmousemove"  , fnMove );
+        window.document.attachEvent( "onscroll"  , fnMove );
+        window.document.attachEvent( "onmousemove" , fnCheckState );
+        window.document.attachEvent( "onmouseup"    , fnRelease );
+        window.document.attachEvent( "onselectstart", fnSelect );
+}
+function fnCheckState()
+{
+        if( event.button != 1 ) fnRelease();
+}
+function fnSelect()
+{
+        return false;
+}
+function fnMove() //移动鼠标时，亦同时移动splitter。
+{
+ if (event.button != 1)
+ {
+  fnRelease();
+  return;
+ }
+ element.dragwindow.style.top = event.clientY + window.document.body.scrollTop;
+ if (event.clientY > window.document.body.clientHeight - 10 )
+ {
+  window.scrollBy(0, 10);
+ }
+ else if (event.clientY < 10)
+ {
+  window.scrollBy(event.clientX, -10);
+ }
+}
+function fnRelease() //当鼠标释放时，解除页面的鼠标事件，隐藏splitter,并触发onsplit事件。事件带有一个dy参数表示y轴方向的增量。
+{
+     fnHideDragWindow()
+     var oEvent  = createEventObject();
+ oEvent.dy = event.clientY-giY;
+ window.document.detachEvent( "onmousemove" , fnMove );
+        window.document.detachEvent( "onscroll" , fnMove );
+        window.document.detachEvent( "onmousemove" , fnCheckState );
+        window.document.detachEvent( "onmouseup" , fnRelease );
+        window.document.detachEvent( "onselectstart", fnSelect );
+ idsplit.fire(oEvent);
+}
+function fnShowDragWindow()
+{
+ var iLeft=element.offsetLeft;
+ var o=element;
+ while(o.offsetParent){o=o.offsetParent;iLeft+=o.offsetLeft;}
+ element.dragwindow.style.height = element.offsetHeight;
+ element.dragwindow.style.top = event.clientY;
+ element.dragwindow.style.left = iLeft;
+ element.dragwindow.style.width = element.offsetWidth;
+ element.dragwindow.zIndex = 100;
+ element.dragwindow.style.display = "block";
+ giY=event.clientY;
+}
+
+function fnHideDragWindow()
+{
+ element.dragwindow.style.display = "none";
+ element.dragwindow.style.height = "";
+ element.dragwindow.style.top = "";
+ element.dragwindow.style.left = "";
+ element.dragwindow.style.width = "";
+ element.dragwindow.zIndex = "";
+}
+</SCRIPT>
+</PUBLIC:COMPONENT>

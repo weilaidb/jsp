@@ -2,16 +2,27 @@ package regexp;
 
 import string.CStringPub;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.regex.*;
 
-import static java.util.regex.Matcher.quoteReplacement;
+//import static java.util.regex.Matcher.quoteReplacement;
+//import org.joda.time.DateTime;
 
 public class CRegExpPub {
     //处理特别字符串
     public static String procSpecialSignReplace(String str)
     {
+        Date dNow  = new Date();
+        SimpleDateFormat ft = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+        String time = ft.format(dNow);
+//        System.out.println("time: " + time);
+
         return str.replace("$NL", "\n")
-                .replace("$TB", "    ");
+                .replace("$TB", "    ")
+                .replace("$SP", " ")
+                .replace("$DATE", time)
+                ;
     }
 
     //反处理特别字符串
