@@ -63,6 +63,10 @@
         String readFileNameTips = CFilePub.getTipsName(item);
         String readFileNameBf = CFilePub.getBeforeName(item);
         String readFileNameAf = CFilePub.getAfterName(item);
+        System.out.println("readFileNameTips:" + readFileNameTips);
+        System.out.println("readFileNameBf:" + readFileNameBf);
+        System.out.println("readFileNameAf:" + readFileNameAf);
+
         //查找文件内容
         String contTip = CFilePub.readFile(topdir, readFileNameTips, false);
         String contBf = CFilePub.readFile(topdir, readFileNameBf, false);

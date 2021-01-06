@@ -262,22 +262,48 @@ public class CFilePub {
         return result;
     }
 
+    public static String appendTxt(String filename)
+    {
+        return filename.concat(".txt");
+    }
 
 
     //get tips name
     public static String getTipsName(String filename)
     {
-        return "tips\\" + filename + ".tip";
+        String temp = "tips\\" + filename + ".tip";
+        File file = new File(temp);
+        if(file.exists())
+        {
+
+            file.renameTo(new File(temp + ".txt"));
+        }
+
+        return replaceSeparator(appendTxt(temp));
     }
     //get before name
     public static String getBeforeName(String filename)
     {
-        return "before\\" + filename + "";
+        String temp = "before\\" + filename + "";
+        File file = new File(temp);
+        if(file.exists())
+        {
+
+            file.renameTo(new File(temp + ".txt"));
+        }
+        return replaceSeparator(appendTxt(temp));
     }
     //get after name
     public static String getAfterName(String filename)
     {
-        return "after\\" + filename + "";
+        String temp = "after\\" + filename + "";
+        File file = new File(temp);
+        if(file.exists())
+        {
+
+            file.renameTo(new File(temp + ".txt"));
+        }
+        return replaceSeparator(appendTxt(temp));
     }
 
     public static String readContent(File f, boolean brflag) {
