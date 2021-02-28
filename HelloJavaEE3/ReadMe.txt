@@ -4,6 +4,13 @@
 3.增加Python 计算器
 4.增加从单一表中单一条中查找数据
 
+Linux部署说明:
+1.配置路径文件（仅针对代码集)
+[duo@bogon reg]$ cat > /home/duo/D\:/mydb/autocodesets/config.txt
+/home/duo/work/git/qtlibs_mingw730_32/release/32/reg
+2.Sqlite数据库
+
+
 
 ======显示网页的方法 ：
 索引 网址 显示内容

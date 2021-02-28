@@ -271,7 +271,7 @@ public class CFilePub {
     //get tips name
     public static String getTipsName(String filename)
     {
-        String temp = "tips\\" + filename + ".tip";
+        String temp = "tips" + File.separator +  filename + ".tip";
         File file = new File(temp);
         if(file.exists())
         {
@@ -284,7 +284,7 @@ public class CFilePub {
     //get before name
     public static String getBeforeName(String filename)
     {
-        String temp = "before\\" + filename + "";
+        String temp = "before" + File.separator + filename + "";
         File file = new File(temp);
         if(file.exists())
         {
@@ -296,7 +296,7 @@ public class CFilePub {
     //get after name
     public static String getAfterName(String filename)
     {
-        String temp = "after\\" + filename + "";
+        String temp = "after" + File.separator + filename + "";
         File file = new File(temp);
         if(file.exists())
         {

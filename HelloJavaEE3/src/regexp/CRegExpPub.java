@@ -18,9 +18,14 @@ public class CRegExpPub {
         String time = ft.format(dNow);
 //        System.out.println("time: " + time);
 
+        SimpleDateFormat ft2 = new SimpleDateFormat("yyyy-MM-dd_hh_mm_ss");
+        String time2 = ft2.format(dNow);
+//        System.out.println("time: " + time);
+
         return str.replace("$NL", "\n")
                 .replace("$TB", "    ")
                 .replace("$SP", " ")
+                .replace("$DATEX", time2)
                 .replace("$DATE", time)
                 ;
     }
