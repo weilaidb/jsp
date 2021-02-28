@@ -9,6 +9,10 @@ Linux部署说明:
 [duo@bogon reg]$ cat > /home/duo/D\:/mydb/autocodesets/config.txt
 /home/duo/work/git/qtlibs_mingw730_32/release/32/reg
 2.Sqlite数据库
+数据库
+[duo@bogon apache-tomcat-9.0.31]$ mkdir /run/media/duo/linux/db/sqlite.linux/alldb -p
+[duo@bogon apache-tomcat-9.0.31]$ cat > /home/duo/D:/mydb/sqlite_mysql/config.txt
+/run/media/duo/linux/db/sqlite.linux/alldb
 
 
 
