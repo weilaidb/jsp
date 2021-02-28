@@ -1,7 +1,8 @@
 package com.commmon;
 
-import com.sun.deploy.net.HttpRequest;
-import com.sun.deploy.net.HttpResponse;
+//import com.sun.deploy.net.HttpRequest;
+//import com.sun.deploy.net.HttpResponse;
+//import com.sun.net.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
