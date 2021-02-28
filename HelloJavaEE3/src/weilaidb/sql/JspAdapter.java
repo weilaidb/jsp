@@ -68,24 +68,6 @@ public class JspAdapter {
         return  result;
     }
 
-//    public static String getPythoncalcResult(String express)
-//    {
-//        String result = "";
-//        try{
-//            if(express != null && !express.trim().isEmpty())
-//            {
-//                result = PythonCommand.calcResult(express);
-//            }
-//        }catch (Exception e)
-//        {
-//            result = e.getMessage();
-//        }
-//
-//        return  result;
-//    }
-
-
-
     public static void initMapTitle() {
         if(inittitleflag == 1)
             return;
@@ -101,7 +83,7 @@ public class JspAdapter {
         mapTitle.put("python", "Python");
         mapTitle.put("qt", "QT");
         mapTitle.put("sendcmd", "发送命令");
-        mapTitle.put("supertest", "超级测试");
+        mapTitle.put("supertest", "测试列表");
         mapTitle.put("timeclock", "时钟时间");
         mapTitle.put("calc", "计算器");
         mapTitle.put("test", "测试项");

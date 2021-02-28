@@ -28,20 +28,6 @@
 </head>
 <body>
 <%--<a href="modifymenu.jsp" target="_blank">修改菜单</a>--%>
-
-<%--//显示内容--%>
-<font size="3">
-    <form action="" method="post" name="form">
-        文件位置:<input type="text" name="topdir" class="input"><br>
-        查找内容:<input type="text" name="findtext" class="input" ><br>
-        <input type="checkbox" name="casesensitive">匹配大小写
-        <input type="checkbox" name="findfileflag">查找文件内容
-<%--        <input type="checkbox" name="casesensitive" value="0" <c:if test="${fn:contains(certDlStatusList, '0') }">checked="checked"</c:if>>匹配大小写--%>
-<%--        <input type="checkbox" name="findfileflag" value="1" <c:if test="${fn:contains(certDlStatusList, '0') }">checked="checked"</c:if>>查找文件内容--%>
-        <input type="submit" value="显示" name="submit" class="submitbtn_file">
-    </form>
-</font>
-
 <%
     String topdir = CStringPub.requesParaIfNullSetEmpty(request, "topdir");
     String findtext = CStringPub.requesParaIfNullSetEmpty(request, "findtext");
@@ -51,6 +37,39 @@
     {
         topdir = SqlProc.getAutoCodeSetsPathFromFileDefault();
     }
+
+    String checkflag_case = casesensitive.isEmpty() ? "" : "checked";
+    String checkflag_findfile = findfileflag.isEmpty() ? "" : "checked";
+%>
+
+<%--//显示内容--%>
+<font size="3">
+    <form action="" method="post" name="form">
+        文件位置:<input type="text" name="topdir" class="input"><br>
+        查找内容:<input type="text" name="findtext" class="input" value="<%=findtext%>"><br>
+<%--        <input type="checkbox" name="casesensitive" checked="checked">匹配大小写--%>
+<%--        <input type="checkbox" name="findfileflag" checked="checked">查找文件内容--%>
+        <input type="checkbox" name="casesensitive">匹配大小写
+        <input type="checkbox" name="findfileflag">查找文件内容
+<%--        <input type="checkbox" name="casesensitive" value="0" <c:if test="${fn:contains(certDlStatusList, '0') }">checked="checked"</c:if>>匹配大小写--%>
+<%--        <input type="checkbox" name="findfileflag" value="1" <c:if test="${fn:contains(certDlStatusList, '0') }">checked="checked"</c:if>>查找文件内容--%>
+        <input type="submit" value="显示" name="submit" class="submitbtn_file">
+    </form>
+</font>
+
+<%
+//    topdir = CStringPub.requesParaIfNullSetEmpty(request, "topdir");
+    findtext = CStringPub.requesParaIfNullSetEmpty(request, "findtext");
+    casesensitive = CStringPub.requesParaIfNullSetEmpty(request, "casesensitive");
+    findfileflag = CStringPub.requesParaIfNullSetEmpty(request, "findfileflag");
+//    if(CStringPub.isTrimEmpty(topdir))
+//    {
+//        topdir = SqlProc.getAutoCodeSetsPathFromFileDefault();
+//    }
+//    System.out.println("findtext: " + findtext);
+//    System.out.println("casesensitive: " + casesensitive);
+//    System.out.println("findfileflag: " + findfileflag);
+
 %>
 
 <%--//修改菜单--%>

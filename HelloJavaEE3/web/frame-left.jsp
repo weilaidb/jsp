@@ -44,7 +44,7 @@
 //        支持查单项，区别是带"singleitem"
         "singleitem_abc",
 
-        "codesets",
+//        "codesets",
         "timeclock",
         "optmonitor",
         "supertest",
