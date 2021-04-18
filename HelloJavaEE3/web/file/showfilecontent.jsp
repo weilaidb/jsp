@@ -12,7 +12,6 @@
 <link href="../css/file.css" rel="stylesheet"></head>
 <script type="text/javascript" src="../js/file.js"></script>
 <Script Language="JavaScript">
-
     function convertInfo()
     {
         document.form1.action="";
@@ -99,30 +98,17 @@
 <%--    <textarea name="filebf" class="textarea_reg2"><%=contentBf%></textarea>--%>
 <%--    <textarea name="fileaf" class="textarea_reg3"><%=contentAf%></textarea>--%>
 </form>
-【<%=selectitem%>】的内容为:<br>
-<font size="3">
-    <form action="" method="post" name="form1">
-        <input type="hidden" value="<%=topdir%>" name="topdir">
-        <input type="hidden" value="<%=selectitem%>" name="selectitem">
-        <input type="button" value="转换" type="submit" onclick="convertInfo()"/>
-        <input type="button" id="btn_refresh" onclick="Refresh()" value="刷新"/>
-        <br>
-        <textarea name="lefttext" class="textarea_reg1"><%=lefttext%></textarea>
-        <textarea name="righttext" class="textarea_reg1"><%=regexpResult%></textarea>
-    </form>
+【<%=selectitem%>】:<br>
 
-<%--    <form action="" method="post" name="form2" target="_blank">--%>
-<%--        <input type="hidden" value="<%=topdir%>" name="topdir">--%>
-<%--        <input type="hidden" value="<%=selectitem%>" name="selectitem">--%>
-<%--        <input type="button" value="保存" type="submit" onclick="saveFile()"/>--%>
-<%--        <input type="button" value="查看" type="submit" onclick="showFile()" />--%>
-<%--        &lt;%&ndash;        <input type="button" value="查看" type="submit" onclick="window.location.href='showfile.jsp'" />&ndash;%&gt;--%>
-<%--        <br>--%>
-<%--        <textarea name="filetip" class="textarea_reg1"><%=contentTips%></textarea>--%>
-<%--        <textarea name="filebf" class="textarea_reg2"><%=contentBf%></textarea>--%>
-<%--        <textarea name="fileaf" class="textarea_reg3"><%=contentAf%></textarea>--%>
-<%--    </form>--%>
-</font>
+<form action="" method="post" name="form1">
+    <input type="hidden" value="<%=topdir%>" name="topdir">
+    <input type="hidden" value="<%=selectitem%>" name="selectitem">
+    <input type="button" value="转换" type="submit" onclick="convertInfo()"/>
+    <input type="button" id="btn_refresh" onclick="Refresh()" value="刷新"/>
+    <br>
+    <textarea name="lefttext" class="textarea_reg1"><%=lefttext%></textarea>
+    <textarea name="righttext" class="textarea_reg1"><%=regexpResult%></textarea>
+</form>
 
 </body>
 </html>
