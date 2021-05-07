@@ -21,6 +21,16 @@
             certDlStatus.push($(this).val());
         }
     );
+    function showFindResult()
+    {
+        document.form.action="autocodesets.jsp";
+        document.form.submit();
+    }
+    function historyResult()
+    {
+        document.form.action="historyResult.jsp";
+        document.form.submit();
+    }
 </script>
 
 <head>
@@ -53,7 +63,11 @@
         <input type="checkbox" name="findfileflag">查找文件内容
 <%--        <input type="checkbox" name="casesensitive" value="0" <c:if test="${fn:contains(certDlStatusList, '0') }">checked="checked"</c:if>>匹配大小写--%>
 <%--        <input type="checkbox" name="findfileflag" value="1" <c:if test="${fn:contains(certDlStatusList, '0') }">checked="checked"</c:if>>查找文件内容--%>
-        <input type="submit" value="显示" name="submit" class="submitbtn_file">
+<%--        <input type="submit" value="显示" name="submit" class="submitbtn_file">--%>
+<%--        <input type="submit" value="历史记录" name="submit" class="submitbtn_file">--%>
+
+        <input type="button" value="显示" type="submit" onclick="showFindResult()"/>
+        <input type="button" value="历史记录" type="submit" onclick="historyResult()"/>
     </form>
 </font>
 
@@ -74,7 +88,7 @@
 
 <%--//修改菜单--%>
 <font size="3">
-    <form action="modifymenu.jsp" method="post" name="form" target="_blank">
+    <form action="modifymenu.jsp" method="post" name="form1" target="_blank">
         <input type="hidden" name="topdir" class="input" value="<%=topdir%>"><br>
         <input type="submit" value="修改菜单" name="submit" class="submitbtn_file"><br>
     </form>
