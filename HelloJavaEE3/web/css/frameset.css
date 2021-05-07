@@ -1,0 +1,24 @@
+.frame_left{
+    /*height: 40px;*/
+    /*width: 30%;*/
+    align-content: center;
+    alignment: center;
+    align-self: center;
+    text-align: center;
+    font-family: "Courier New";
+    font-size: large;
+    /*background-color: lightslategrey;*/
+}
+
+.frame_right {
+    /*height: 40px;*/
+    /*width: 30%;*/
+    align-content: center;
+    alignment: center;
+    align-self: center;
+    text-align: center;
+    font-family: "Courier New";
+    font-size: large;
+    background-color: honeydew;
+
+}

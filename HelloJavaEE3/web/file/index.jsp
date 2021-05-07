@@ -14,12 +14,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">   <%-- 在IE运行最新的渲染模式 --%>
     <meta name="viewport" content="width=device-width, initial-scale=1">   <%-- 初始化移动浏览显示 --%>
     <meta name="Author" content="duoduo">
-    
+
     <!-- 引入各种CSS样式表 -->
     <link rel="stylesheet" href="../css/new/bootstrap.css">
     <link rel="stylesheet" href="../css/new/font-awesome.css">
     <link rel="stylesheet" href="../css/new/index.css">	<!-- 修改自Bootstrap官方Demon，你可以按自己的喜好制定CSS样式 -->
     <link rel="stylesheet" href="../css/new/font-change.css">	<!-- 将默认字体从宋体换成微软雅黑（个人比较喜欢微软雅黑，移动端和桌面端显示效果比较接近） -->
+    <link rel="stylesheet" href="../css/frameset.css" >
 
     <script type="text/javascript" src="../js/new/jquery-1.12.3.min.js"></script>
     <script type="text/javascript" src="../js/new/bootstrap.min.js"></script>
@@ -91,9 +92,45 @@
 
 <%--</body>--%>
 
-<frameset cols="25%,75%">
-    <frame src="autocodesets.jsp" name="frame_left" id="frame_left"/>
-    <frame src="../blank.jsp" name="frame_right" id="frame_right"/>
+<frameset cols="20%,80%" border="1">
+    <frame src="autocodesets.jsp" name="frame_left" id="frame_left" class="frame_left"/>
+    <frame src="../blank.jsp" name="frame_right" id="frame_right" class="frame_right"/>
 </frameset>
-
+<noframes></noframes><body>
+</body>
 </html>
+
+
+
+<%--<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">--%>
+<%--<HTML>--%>
+<%--<HEAD>--%>
+<%--&lt;%&ndash;    <TITLE> New Document </TITLE>&ndash;%&gt;--%>
+<%--&lt;%&ndash;    <META NAME="Generator" CONTENT="EditPlus">&ndash;%&gt;--%>
+<%--&lt;%&ndash;    <META NAME="Author" CONTENT="YangHui">&ndash;%&gt;--%>
+<%--&lt;%&ndash;    <META NAME="Keywords" CONTENT="YangHui">&ndash;%&gt;--%>
+<%--&lt;%&ndash;    <META NAME="Description" CONTENT="YangHui">&ndash;%&gt;--%>
+
+<%--</HEAD>--%>
+
+<%--<FRAMESET ROWS="33%,34%,33%" COLS="33%,34%,33%" onload="for(var i=0;i<3;i++) setColor(frames[i]);"  border="1" >--%>
+<%--    <FRAME SRC="UntitledFrame-13.html" NAME="f1">--%>
+<%--&lt;%&ndash;    <FRAME SRC="UntitledFrame-14.html" NAME="f2">&ndash;%&gt;--%>
+<%--&lt;%&ndash;    <FRAME SRC="UntitledFrame-15.html" NAME="f3">&ndash;%&gt;--%>
+<%--&lt;%&ndash;    <FRAME SRC="UntitledFrame-34.html" NAME="f4">&ndash;%&gt;--%>
+<%--&lt;%&ndash;    <FRAME SRC="UntitledFrame-35.html" NAME="f5">&ndash;%&gt;--%>
+<%--&lt;%&ndash;    <FRAME SRC="UntitledFrame-36.html" NAME="f6">&ndash;%&gt;--%>
+<%--&lt;%&ndash;    <FRAME SRC="UntitledFrame-37.html" NAME="f7">&ndash;%&gt;--%>
+<%--&lt;%&ndash;    <FRAME SRC="UntitledFrame-38.html" NAME="f8">&ndash;%&gt;--%>
+<%--&lt;%&ndash;    <FRAME SRC="UntitledFrame-39.html" NAME="f9">&ndash;%&gt;--%>
+
+<%--&lt;%&ndash;    <frame src="UntitledFrame-28">&ndash;%&gt;--%>
+<%--&lt;%&ndash;    <frame src="UntitledFrame-29">&ndash;%&gt;--%>
+<%--&lt;%&ndash;    <frame src="UntitledFrame-30">&ndash;%&gt;--%>
+<%--&lt;%&ndash;    <frame src="UntitledFrame-31">&ndash;%&gt;--%>
+<%--&lt;%&ndash;    <frame src="UntitledFrame-32">&ndash;%&gt;--%>
+<%--&lt;%&ndash;    <frame src="UntitledFrame-33">&ndash;%&gt;--%>
+<%--</FRAMESET>--%>
+<%--<noframes></noframes><body>--%>
+<%--</body>--%>
+<%--</HTML>--%>

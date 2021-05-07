@@ -23,7 +23,7 @@
     );
     function showFindResult()
     {
-        document.form.action="autocodesets.jsp";
+        document.form.action="";
         document.form.submit();
     }
     function historyResult()
