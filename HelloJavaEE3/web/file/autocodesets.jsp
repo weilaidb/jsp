@@ -29,6 +29,7 @@
     function historyResult()
     {
         document.form.action="historyResult.jsp";
+        document.form.target = "_blank";
         document.form.submit();
     }
 </script>
@@ -67,7 +68,7 @@
 <%--        <input type="submit" value="历史记录" name="submit" class="submitbtn_file">--%>
 
         <input type="button" value="显示" type="submit" onclick="showFindResult()"/>
-        <input type="button" value="历史记录" type="submit" onclick="historyResult()"/>
+        <input type="button" value="历史记录" type="submit" formatarget="_blank" onclick="historyResult()"/>
     </form>
 </font>
 

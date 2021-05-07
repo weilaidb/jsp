@@ -236,6 +236,14 @@ public class CFilePub {
         return listToString(listcontent,enterFlag);
     }
 
+      //read self define files
+    public static String readFileSelf(String topdir, String filename, String enterFlag)
+    {
+
+        List<String> listcontent = CFilePub.readAllNoEmpty(topdir, filename,false);
+        return listToString(listcontent,enterFlag);
+    }
+
        //read selfmenu_user.txt
     public static String readMenuUserResStr(String topdir, String enterFlag)
     {
