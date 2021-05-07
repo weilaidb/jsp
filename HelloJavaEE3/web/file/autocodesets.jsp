@@ -32,6 +32,13 @@
         document.form.target = "_blank";
         document.form.submit();
     }
+    function searchKeyResult()
+    {
+        document.form.action="searchKeyResult.jsp";
+        document.form.target = "_blank";
+        document.form.submit();
+    }
+
 </script>
 
 <head>
@@ -69,6 +76,7 @@
 
         <input type="button" value="显示" type="submit" onclick="showFindResult()"/>
         <input type="button" value="历史记录" type="submit" formatarget="_blank" onclick="historyResult()"/>
+        <input type="button" value="查询关键字" type="submit" formatarget="_blank" onclick="searchKeyResult()"/>
     </form>
 </font>
 
