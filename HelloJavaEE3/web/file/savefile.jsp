@@ -12,12 +12,27 @@
 
 <SCRIPT language=javascript>
     setTimeout("go()", 1000);
+
 </SCRIPT>
 <html>
 <head>
     <title>保存菜单</title>
 </head>
 <body>
+
+<script language="javascript">
+    <!--
+    function closewin(){
+        self.opener=null;
+        self.close();}
+    function clock(){i=i-1
+        document.title="本窗口将在"+i+"秒后自动关闭!";
+        if(i>0)setTimeout("clock();",1000);
+        else closewin();}
+    var i=10
+    clock();
+    //-->
+</script>
 
 <%
     String topdir  = CStringPub.requesParaIfNullSetEmpty(request, "topdir");
@@ -26,17 +41,7 @@
     String fileaf  = CStringPub.requesParaIfNullSetEmpty(request, "fileaf");
     String selectitem  = CStringPub.requesParaIfNullSetEmpty(request, "selectitem");
     String result  = "";
-//    System.out.println("filetip:" + filetip);
-//    System.out.println("filebf:" + filebf);
-//    System.out.println("fileaf:" + fileaf);
-//    System.out.println("selectitem:" + selectitem);
 
-
-//    if(CStringPub.isTrimEmpty(menuStand))
-//    {
-//        out.println("内容为空，请输入内容<br>");
-//    }
-//    else
     {
         fileaf = CRegExpPub.procSpecialSignReplacerevert(fileaf);
         System.out.println("fileaf w: " + fileaf);
@@ -59,8 +64,8 @@
 
 <%=result%>
 
-//保存数据并返回刷新
-<jsp:forward page="showfilecontent.jsp"/>返回
+<%--//保存数据并返回刷新--%>
+<%--<jsp:forward page="showfilecontent.jsp"/>返回--%>
 
 </body>
 </html>
