@@ -45,6 +45,8 @@
     System.out.println("selectitem:" + selectitem);
     System.out.println("lefttext:" + lefttext);
     System.out.println("righttext:" + righttext);
+    //保存点击项
+    CFilePub.writeFileSortRemoveDuplicate(topdir,CFilePub.getFreqUseName(), selectitem);
 %>
 
 

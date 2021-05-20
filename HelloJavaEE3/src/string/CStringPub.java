@@ -6,6 +6,7 @@ import file.CFilePub;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 
 public class CStringPub {
@@ -116,5 +117,32 @@ public class CStringPub {
     public static String trimString(String buf)
     {
         return buf.trim();
+    }
+
+    public static void removeDuplicate(List<String> list) {
+        HashSet<String> set = new HashSet<String>(list.size());
+        List<String> result = new ArrayList<String>(list.size());
+        for (String str : list) {
+            if (set.add(str)) {
+                result.add(str);
+            }
+        }
+        list.clear();
+        list.addAll(result);
+    }
+
+    public static String list2String(List<String> list, String sign)
+    {
+        String result = "";
+        for (String str :
+                list) {
+            result = result.concat(str).concat(sign);
+        }
+        return result;
+    }
+
+    public static String list2StringEnter(List<String> list)
+    {
+        return list2String(list,"\n");
     }
 }

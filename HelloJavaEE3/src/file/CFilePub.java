@@ -5,8 +5,9 @@ import string.CStringPub;
 
 import java.io.*;
 import java.text.ParseException;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
+
+import static java.util.Collections.*;
 
 public class CFilePub {
     public static String getM_errcode_filenoexist() {
@@ -202,6 +203,8 @@ public class CFilePub {
 
     private static String relPath  = "selfmenu.txt";
     private static String relPathuser = "selfmenu_user.txt";
+    private static String searchKeyFileName = "recentopen.txt";
+    private static String freqUseFileName = "frequse.txt";
     //read selfmenu.txt and selfmenu_user.txt
     public static List<String> readMenuAndUser(String topdir)
     {
@@ -313,6 +316,17 @@ public class CFilePub {
         }
         return replaceSeparator(appendTxt(temp));
     }
+    //get frequse.txt name
+    public static String getFreqUseName()
+    {
+        return freqUseFileName;
+    }
+
+    //get search key
+    public static String getSearchKey()
+    {
+        return searchKeyFileName;
+    }
 
     public static String readContent(File f, boolean brflag) {
         StringBuffer str = new StringBuffer();
@@ -362,6 +376,27 @@ public class CFilePub {
         return new String(str);
     }
 
+    public static String writeContentAppend(File f, String content) {
+        StringBuffer str = new StringBuffer();
+        try{
+            if(!f.exists())
+            {
+                f.createNewFile();
+            }
+            FileOutputStream out = new FileOutputStream(f);
+            OutputStreamWriter bufferout = new OutputStreamWriter(out, "UTF-8");
+            bufferout.append(content);
+            bufferout.flush();
+            bufferout.close();
+            out.close();
+            str.append("写入成功<br>");
+        } catch (Exception e) {
+            e.printStackTrace();
+            str.append("写入失败:" + e.toString() + "<br>");
+        }
+        return new String(str);
+    }
+
     //读取文件内容
     public static String readFile(String dir, String fileName, boolean brflag)
     {
@@ -378,6 +413,49 @@ public class CFilePub {
         String result = writeContent(f,content);
         return result;
     }
+    //写文件(追加)
+    public static String writeFileAppend(String dir, String fileName, String  content)
+    {
+        System.out.println("content: " + content);
+
+        createParentDirNoExist(dir, fileName);
+        File f = new File(dir,fileName);
+        String orgContent = readFile(dir,fileName,false);
+        String[] enterlist  = orgContent.split("\n");
+//        Arrays.sort(enterlist);
+        List<String> list = new ArrayList<>(Arrays.asList(enterlist));
+        list.add(content);
+//        CStringPub.removeDuplicate(list);
+
+        String result = writeContent(f,content);
+        return result;
+    }
+
+    //写文件(追加),排序，去重
+    public static String writeFileSortRemoveDuplicate(String dir, String fileName, String  content)
+    {
+
+        createParentDirNoExist(dir, fileName);
+        File f = new File(dir,fileName);
+        String orgContent = readFile(dir,fileName,false);
+
+        String[] enterlist  = orgContent.split("\n");
+
+        Arrays.sort(enterlist);
+
+        List<String> list = new ArrayList<>(Arrays.asList(enterlist));
+        list.add(content);
+        CStringPub.removeDuplicate(list);
+        //集合默认按字符升序排序
+        Collections.sort(list);
+
+        String filecon = CStringPub.list2StringEnter(list);
+
+        String result = writeContent(f,filecon);
+        return result;
+    }
+
+
     //替换非法的路径分隔符
     public static String replaceSeparator(String path)
     {
@@ -403,6 +481,8 @@ public class CFilePub {
         } catch (Exception e) {
             e.printStackTrace();
             System.out.println(e.toString());
+        } finally {
+
         }
     }
 }
