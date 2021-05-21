@@ -75,16 +75,17 @@ html, body {
 }
 
 
-.textarea_reg1{
-    width:40%;
-    height:200%;
-    overflow-y:visible;
-}
-
 .textarea_reg2{
     width:10%;
     height:200%;
     overflow-y:visible;
+}
+
+.textarea_reg1{
+    width:40%;
+    height:200%;
+    overflow-y:visible;
+    background-color: #cce8cf;
 }
 
 .textarea_reg3{

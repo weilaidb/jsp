@@ -108,8 +108,8 @@
     <input type="button" value="转换" type="submit" onclick="convertInfo()"/>
     <input type="button" id="btn_refresh" onclick="Refresh()" value="刷新"/>
     <br>
-    <textarea name="lefttext" class="textarea_reg1"><%=lefttext%></textarea>
-    <textarea name="righttext" class="textarea_reg1"><%=regexpResult%></textarea>
+    <textarea name="lefttext" class="textarea_reg1" style="background-color:#cce8cf;color:black;"><%=lefttext%></textarea>
+    <textarea name="righttext" class="textarea_reg1" style="background-color:#cce8cf;color:black;"><%=regexpResult%></textarea>
 </form>
 
 </body>
