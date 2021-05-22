@@ -61,8 +61,8 @@
         <input type="checkbox" name="findfileflag">查找文件内容
 
         <input type="submit" value="显示"  onclick="showFindResult()"/>
-        <input type="button" value="历史记录"  formatarget="_blank" onclick="historyResult()"/>
-        <input type="button" value="查询关键字"  formatarget="_blank" onclick="searchKeyResult()"/>
+        <input type="button" value="历史"  formatarget="_blank" onclick="historyResult()"/>
+        <input type="button" value="关键字"  formatarget="_blank" onclick="searchKeyResult()"/>
     </form>
 </font>
 

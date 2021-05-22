@@ -17,17 +17,16 @@
         document.form1.action="";
         document.form1.submit();
     }
-
-    function saveFile()
+    function saveFileExt()
     {
-        document.form2.action="savefile.jsp";
-        document.form2.submit();
+        document.form1.action="savefile2.jsp";
+        document.form1.target = "_blank";
+        document.form1.submit();
     }
-
     function showFile()
     {
-        document.form2.action="showfile.jsp";
-        document.form2.submit();
+        document.form1.action="showfile.jsp";
+        document.form1.submit();
     }
 </Script>
 
@@ -41,17 +40,9 @@
     String selectitem = CStringPub.requesParaIfNullSetEmpty(request, "selectitem");
     String lefttext   = CStringPub.requesParaIfNullSetEmpty(request, "lefttext");
     String righttext  = CStringPub.requesParaIfNullSetEmpty(request, "righttext");
-    System.out.println("topdir:" + topdir);
-    System.out.println("selectitem:" + selectitem);
-    System.out.println("lefttext:" + lefttext);
-    System.out.println("righttext:" + righttext);
     //保存点击项
     CFilePub.writeFileSortRemoveDuplicate(topdir,CFilePub.getFreqUseName(), selectitem);
-%>
 
-
-
-<%
 //    读取文本内容
     String contentTips = CStringPub.emptyString();
     String contentBf = CStringPub.emptyString();
@@ -59,11 +50,8 @@
     String readFileNameTips = CFilePub.getTipsName(selectitem);
     String readFileNameBf = CFilePub.getBeforeName(selectitem);
     String readFileNameAf = CFilePub.getAfterName(selectitem);
-    System.out.println("readFileNameTips:" + readFileNameTips);
-    System.out.println("readFileNameBf:" + readFileNameBf);
-    System.out.println("readFileNameAf:" + readFileNameAf);
-
 %>
+
 <file:ReadTag dir="<%=topdir%>" fileName="<%=readFileNameTips%>"></file:ReadTag>
 <%
     contentTips = result.toString();
@@ -80,35 +68,22 @@
 <%
     contentAf = result.toString();
     contentAf = CRegExpPub.procSpecialSignReplace(contentAf);
-%>
-
-<%
-//正则处理后的结果
+    //正则处理后的结果
     String regexpResult = CRegExpPub.procPatternInfo(lefttext, contentBf, contentAf);
-
 %>
 
-<form action="modifyfilecontent.jsp" method="post" name="form2" target="_blank">
-    <input type="hidden" value="<%=topdir%>" name="topdir">
-    <input type="hidden" value="<%=selectitem%>" name="selectitem">
-    <input type="submit" value="修改" name="submit">
-    <%--    <input type="button" value="保存" type="submit" onclick="saveFile()"/>--%>
-<%--    <input type="button" value="查看" type="submit" onclick="showFile()" />--%>
-    <%--        <input type="button" value="查看" type="submit" onclick="window.location.href='showfile.jsp'" />--%>
-    <br>
-<%--    <textarea name="filetip" class="textarea_reg1"><%=contentTips%></textarea>--%>
-<%--    <textarea name="filebf" class="textarea_reg2"><%=contentBf%></textarea>--%>
-<%--    <textarea name="fileaf" class="textarea_reg3"><%=contentAf%></textarea>--%>
-</form>
 【<%=selectitem%>】:<br>
 
 <form action="" method="post" name="form1">
     <input type="hidden" value="<%=topdir%>" name="topdir">
     <input type="hidden" value="<%=selectitem%>" name="selectitem">
-    <input type="button" value="转换" type="submit" onclick="convertInfo()"/>
+    <input type="hidden" name="filebf" value="<%=contentBf%>"/>
+    <input type="hidden" name="fileaf" value="<%=contentAf%>"/>
+    <input type="button" value="保存" onclick="saveFileExt()"/>
+    <input type="button" value="转换" onclick="convertInfo()"/>
     <input type="button" id="btn_refresh" onclick="Refresh()" value="刷新"/>
     <br>
-    <textarea name="lefttext" class="textarea_reg1" style="background-color:#cce8cf;color:black;"><%=lefttext%></textarea>
+    <textarea name="filetip" class="textarea_reg1" style="background-color:#cce8cf;color:black;"><%=lefttext%></textarea>
     <textarea name="righttext" class="textarea_reg1" style="background-color:#cce8cf;color:black;"><%=regexpResult%></textarea>
 </form>
 

@@ -1,25 +1,17 @@
-<%@ page import="string.CStringPub" %>
 <%@ page import="file.CFilePub" %>
+<%@ page import="string.CStringPub" %>
 <%@ page import="regexp.CRegExpPub" %><%--
   Created by IntelliJ IDEA.
   User: dell
-  Date: 2020/11/11
-  Time: 12:13
+  Date: 2021/5/22
+  Time: 23:30
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
-<script type="text/javascript" src="../js/file.js"></script>
-
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <SCRIPT language=javascript>
     setTimeout("go()", 1000);
 
 </SCRIPT>
-<html>
-<head>
-    <title>保存菜单</title>
-</head>
-<body>
-
 <script language="javascript">
     <!--
     function closewin(){
@@ -29,10 +21,17 @@
         document.title="本窗口将在"+i+"秒后自动关闭!";
         if(i>0)setTimeout("clock();",1000);
         else closewin();}
-    var i=10
+    var i=1
     clock();
     //-->
 </script>
+<html>
+
+<head>
+    <title>保存文件并返回</title>
+</head>
+
+<body>
 
 <%
     String topdir  = CStringPub.requesParaIfNullSetEmpty(request, "topdir");
@@ -41,6 +40,11 @@
     String fileaf  = CStringPub.requesParaIfNullSetEmpty(request, "fileaf");
     String selectitem  = CStringPub.requesParaIfNullSetEmpty(request, "selectitem");
     String result  = "";
+
+    System.out.println("filetip: " + filetip);
+    System.out.println("filebf: " + filebf);
+    System.out.println("fileaf: " + fileaf);
+    System.out.println("selectitem: " + selectitem);
 
     {
         fileaf = CRegExpPub.procSpecialSignReplacerevert(fileaf);
@@ -61,10 +65,7 @@
         result += CFilePub.writeFile(topdir,CFilePub.getAfterName(selectitem), fileaf);
     }
 %>
-
 <%=result%>
-
-<%--保存数据--%>
-<jsp:forward page="modifyfilecontent.jsp"></jsp:forward>
+<%--<jsp:forward page="showfilecontent.jsp"></jsp:forward>--%>
 </body>
 </html>

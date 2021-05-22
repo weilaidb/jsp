@@ -26,35 +26,23 @@
     String fileaf  = CStringPub.requesParaIfNullSetEmpty(request, "fileaf");
     String selectitem  = CStringPub.requesParaIfNullSetEmpty(request, "selectitem");
     String result  = "";
-//    System.out.println("filetip:" + filetip);
-//    System.out.println("filebf:" + filebf);
-//    System.out.println("fileaf:" + fileaf);
-//    System.out.println("selectitem:" + selectitem);
 
+    fileaf = CRegExpPub.procSpecialSignReplacerevert(fileaf);
+    System.out.println("fileaf w: " + fileaf);
 
-//    if(CStringPub.isTrimEmpty(menuStand))
-//    {
-//        out.println("内容为空，请输入内容<br>");
-//    }
-//    else
+    //内容为空特殊处理一下
+    if(CStringPub.isTrimEmpty(filebf))
     {
-        fileaf = CRegExpPub.procSpecialSignReplacerevert(fileaf);
-        System.out.println("fileaf w: " + fileaf);
-
-        //内容为空特殊处理一下
-        if(CStringPub.isTrimEmpty(filebf))
-        {
-            filebf = "(.*)";
-        }
-        if(CStringPub.isTrimEmpty(fileaf))
-        {
-            fileaf = "\\1";
-        }
-
-        result += CFilePub.writeFile(topdir,CFilePub.getTipsName(selectitem), filetip);
-        result += CFilePub.writeFile(topdir,CFilePub.getBeforeName(selectitem), filebf);
-        result += CFilePub.writeFile(topdir,CFilePub.getAfterName(selectitem), fileaf);
+        filebf = "(.*)";
     }
+    if(CStringPub.isTrimEmpty(fileaf))
+    {
+        fileaf = "\\1";
+    }
+
+    result += CFilePub.writeFile(topdir,CFilePub.getTipsName(selectitem), filetip);
+    result += CFilePub.writeFile(topdir,CFilePub.getBeforeName(selectitem), filebf);
+    result += CFilePub.writeFile(topdir,CFilePub.getAfterName(selectitem), fileaf);
 %>
 
 <%=result%>
