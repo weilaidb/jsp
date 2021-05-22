@@ -14,7 +14,8 @@
 <Script Language="JavaScript">
     function convertInfo()
     {
-        document.form1.action="";
+        document.form1.action="convertinfo.jsp";
+        document.form1.target = "";
         document.form1.submit();
     }
     function saveFileExt()
@@ -23,9 +24,10 @@
         document.form1.target = "_blank";
         document.form1.submit();
     }
-    function showFile()
+    function RefreshSelf()
     {
-        document.form1.action="showfile.jsp";
+        document.form1.action="refresh.jsp";
+        document.form1.target = "";
         document.form1.submit();
     }
 </Script>
@@ -38,8 +40,17 @@
 <%
     String topdir     = CStringPub.requesParaIfNullSetEmpty(request, "topdir");
     String selectitem = CStringPub.requesParaIfNullSetEmpty(request, "selectitem");
-    String lefttext   = CStringPub.requesParaIfNullSetEmpty(request, "lefttext");
+    String lefttext   = CStringPub.requesParaIfNullSetEmpty(request, "filetip");
     String righttext  = CStringPub.requesParaIfNullSetEmpty(request, "righttext");
+    System.out.println("lefttext: " + lefttext);
+
+    Object refreshflag = request.getAttribute("filetip");
+    if((refreshflag != null)
+    && refreshflag.toString().trim().equals("refresh"))
+    {
+        lefttext = "";
+    }
+
     //保存点击项
     CFilePub.writeFileSortRemoveDuplicate(topdir,CFilePub.getFreqUseName(), selectitem);
 
@@ -75,15 +86,15 @@
 【<%=selectitem%>】:<br>
 
 <form action="" method="post" name="form1">
-    <input type="hidden" value="<%=topdir%>" name="topdir">
-    <input type="hidden" value="<%=selectitem%>" name="selectitem">
+    <input type="hidden" name="topdir" value="<%=topdir%>" >
+    <input type="hidden" name="selectitem" value="<%=selectitem%>" >
     <input type="hidden" name="filebf" value="<%=contentBf%>"/>
     <input type="hidden" name="fileaf" value="<%=contentAf%>"/>
     <input type="button" value="保存" onclick="saveFileExt()"/>
     <input type="button" value="转换" onclick="convertInfo()"/>
-    <input type="button" id="btn_refresh" onclick="Refresh()" value="刷新"/>
+    <input type="button" value="刷新" onclick="RefreshSelf()" id="btn_refresh"/>
     <br>
-    <textarea name="filetip" class="textarea_reg1" style="background-color:#cce8cf;color:black;"><%=lefttext%></textarea>
+    <textarea name="filetip" class="textarea_reg1" style="background-color:#cce8cf;color:black;" id="filetip"><%=lefttext%></textarea>
     <textarea name="righttext" class="textarea_reg1" style="background-color:#cce8cf;color:black;"><%=regexpResult%></textarea>
 </form>
 

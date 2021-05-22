@@ -40,6 +40,7 @@
     String fileaf  = CStringPub.requesParaIfNullSetEmpty(request, "fileaf");
     String selectitem  = CStringPub.requesParaIfNullSetEmpty(request, "selectitem");
     String result  = "";
+    request.setAttribute("filetip","");
 
     fileaf = CRegExpPub.procSpecialSignReplacerevert(fileaf);
     System.out.println("fileaf w: " + fileaf);
