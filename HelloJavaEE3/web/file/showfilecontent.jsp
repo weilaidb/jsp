@@ -21,7 +21,7 @@
     function saveFileExt()
     {
         document.form1.action="savefile2.jsp";
-        document.form1.target = "_blank";
+        document.form1.target = "";
         document.form1.submit();
     }
     function RefreshSelf()

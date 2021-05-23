@@ -1,7 +1,8 @@
 <%@ page import="file.CFilePub" %>
 <%@ page import="java.util.List" %>
 <%@ page import="string.CStringPub" %>
-<%@ page import="weilaidb.sql.SqlProc" %><%--
+<%@ page import="weilaidb.sql.SqlProc" %>
+<%@ page import="com.sun.org.apache.xerces.internal.xs.StringList" %><%--
   Created by IntelliJ IDEA.
   User: dell
   Date: 2021/5/7
@@ -32,6 +33,20 @@
 
 %>
 
-<%=listcontent%>
+<%--<%=listcontent%>--%>
+<%
+    List<String> list = CStringPub.string2ListBr(listcontent);
+    System.out.println("list size: " + list.size());
+
+    for (String item:
+            list) {
+//        out.write("========\n");
+%>
+
+<%=item%><br>
+<%
+    }
+%>
+
 </body>
 </html>

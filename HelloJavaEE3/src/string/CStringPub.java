@@ -6,6 +6,7 @@ import file.CFilePub;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 
@@ -145,4 +146,20 @@ public class CStringPub {
     {
         return list2String(list,"\n");
     }
+
+    public static List<String> string2List(String str, String sign)
+    {
+        String[] arr = str.split(sign);
+        return new ArrayList<String>(Arrays.asList(arr));
+    }
+
+    public static List<String> string2ListEnter(String str)
+    {
+        return string2List(str,"\n");
+    }
+    public static List<String> string2ListBr(String str)
+    {
+        return string2List(str,"<br>");
+    }
+
 }

@@ -12,19 +12,6 @@
     setTimeout("go()", 1000);
 
 </SCRIPT>
-<script language="javascript">
-    <!--
-    function closewin(){
-        self.opener=null;
-        self.close();}
-    function clock(){i=i-1
-        document.title="本窗口将在"+i+"秒后自动关闭!";
-        if(i>0)setTimeout("clock();",1000);
-        else closewin();}
-    var i=0
-    clock();
-    //-->
-</script>
 <html>
 
 <head>
@@ -60,6 +47,6 @@
     result += CFilePub.writeFile(topdir,CFilePub.getAfterName(selectitem), fileaf);
 %>
 <%=result%>
-<%--<jsp:forward page="showfilecontent.jsp"></jsp:forward>--%>
+<jsp:forward page="showfilecontent.jsp"></jsp:forward>
 </body>
 </html>
