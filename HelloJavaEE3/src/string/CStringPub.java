@@ -162,4 +162,10 @@ public class CStringPub {
         return string2List(str,"<br>");
     }
 
+    public static String procStringDoubleSign(String str)
+    {
+        return str.replaceAll("\"", "\\\"")
+                .replaceAll("/", "\\/");
+    }
+
 }

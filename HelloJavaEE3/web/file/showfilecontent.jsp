@@ -30,6 +30,12 @@
         document.form1.target = "";
         document.form1.submit();
     }
+    function modifyFiles()
+    {
+        document.form1.action="modifyfilecontent.jsp";
+        document.form1.target = "_blank";
+        document.form1.submit();
+    }
 </Script>
 
 <html>
@@ -81,21 +87,27 @@
     contentAf = CRegExpPub.procSpecialSignReplace(contentAf);
     //正则处理后的结果
     String regexpResult = CRegExpPub.procPatternInfo(lefttext, contentBf, contentAf);
+    System.out.println("selectitem:" + selectitem);
+    System.out.println("filebf:" + contentBf);
+    System.out.println("contentAf:" + contentAf);
 %>
 
 【<%=selectitem%>】:<br>
 
 <form action="" method="post" name="form1">
-    <input type="hidden" name="topdir" value="<%=topdir%>" >
-    <input type="hidden" name="selectitem" value="<%=selectitem%>" >
-    <input type="hidden" name="filebf" value="<%=contentBf%>"/>
-    <input type="hidden" name="fileaf" value="<%=contentAf%>"/>
-    <input type="button" value="保存" onclick="saveFileExt()"/>
-    <input type="button" value="转换" onclick="convertInfo()"/>
-    <input type="button" value="刷新" onclick="RefreshSelf()" id="btn_refresh"/>
+    <input type="button" value="转换" onclick="convertInfo()" style="margin-right: 10px;width: 60px"/>
+    <input type="button" value="刷新" onclick="RefreshSelf()" style="margin-right: 10px;width: 60px" id="btn_refresh"/>
+    <input type="button" value="保存" onclick="saveFileExt()" style="margin-right: 10px;width: 60px"/>
+    <input type="button" value="修改" onclick="modifyFiles()" style="margin-right: 10px;width: 60px"/>
     <br>
     <textarea name="filetip" class="textarea_reg1" style="background-color:#cce8cf;color:black;" id="filetip"><%=lefttext%></textarea>
     <textarea name="righttext" class="textarea_reg1" style="background-color:#cce8cf;color:black;"><%=regexpResult%></textarea>
+
+    <input type="hidden" name="topdir" value="<%=topdir%>"/>
+    <input type="hidden" name="selectitem" value="<%=selectitem%>"/>
+    <input type="hidden" name="filebf" value="<%=contentBf%>"/>
+    <input type="hidden" name="fileaf" value="<%=CStringPub.procStringDoubleSign(contentAf)%>"></input>
+<%--    <input type="hidden" name="fileaf" value="<%=contentAf%>"></input>--%>
 </form>
 
 </body>

@@ -18,16 +18,22 @@
         document.form.target = "";
         document.form.submit();
     }
+    function clearSearchEdit()
+    {
+        document.getElementById("id_findtext").value = "";
+    }
     function historyResult()
     {
         document.form.action="historyResult.jsp";
-        document.form.target = "_blank";
+        document.form.target = "";
+        // document.form.target = "_blank";
         document.form.submit();
     }
     function searchKeyResult()
     {
         document.form.action="searchKeyResult.jsp";
-        document.form.target = "_blank";
+        document.form.target = "";
+        // document.form.target = "_blank";
         document.form.submit();
     }
 
@@ -42,6 +48,8 @@
     String findtext = CStringPub.requesParaIfNullSetEmpty(request, "findtext");
     String casesensitive = CStringPub.requesParaIfNullSetEmpty(request, "casesensitive");
     String findfileflag = CStringPub.requesParaIfNullSetEmpty(request, "findfileflag");
+    String historyitem = CStringPub.requesParaIfNullSetEmpty(request, "historyitem");
+    String keyitem = CStringPub.requesParaIfNullSetEmpty(request, "keyitem");
     if(CStringPub.isTrimEmpty(topdir))
     {
         topdir = SqlProc.getAutoCodeSetsPathFromFileDefault();
@@ -56,13 +64,34 @@
 <font size="3">
     <form action="" method="post" name="form">
         文件位置:<input type="text" name="topdir" class="input"><br>
-        查找内容:<input type="text" name="findtext" class="input" value="<%=findtext%>"><br>
-        <input type="checkbox" name="casesensitive">匹配大小写
-        <input type="checkbox" name="findfileflag">查找文件内容
+        <%
+            if(historyitem.trim().length() > 0 )
+            {
+        %>
+        查找内容:<input type="text" name="findtext" class="input" value="<%=historyitem%>" id="id_findtext"><br>
+        <%
+        }
+        else if(keyitem.trim().length() > 0)
+        {
+        %>
+        查找内容:<input type="text" name="findtext" class="input" value="<%=keyitem%>" id="id_findtext"><br>
+        <%
+        }
+        else
+        {
+        %>
+        查找内容:<input type="text" name="findtext" class="input" value="<%=findtext%>" id="id_findtext"><br>
+        <%
+            }
+        %>
 
-        <input type="submit" value="显示"  onclick="showFindResult()"/>
-        <input type="button" value="历史"  formatarget="_blank" onclick="historyResult()"/>
-        <input type="button" value="关键字"  formatarget="_blank" onclick="searchKeyResult()"/>
+        <input type="checkbox" name="casesensitive">大小写
+        <input type="checkbox" name="findfileflag" style="margin-bottom: 20px">查找文件
+
+        <input type="submit" value="显示"  onclick="showFindResult()" style="margin-right: 10px;margin-bottom:10px;width: 60px"/>
+        <input type="submit" value="清空"  onclick="clearSearchEdit()" style="margin-right: 10px;width: 60px"/>
+        <input type="button" value="历史"  formatarget="_blank" onclick="historyResult()" style="margin-right: 10px;width: 60px"/>
+        <input type="button" value="关键字"  formatarget="_blank" onclick="searchKeyResult()" style="margin-right: 10px;width: 60px"/>
     </form>
 </font>
 
@@ -84,8 +113,8 @@
 <%--//修改菜单--%>
 <font size="3">
     <form action="modifymenu.jsp" method="post" name="form1" target="_blank">
-        <input type="hidden" name="topdir" class="input" value="<%=topdir%>"><br>
-        <input type="submit" value="修改菜单" name="submit" class="submitbtn_file"><br>
+        <input type="submit" value="修改菜单" name="submit" class="submitbtn_file" style="margin-bottom: 0px><br>
+        <input type="hidden" name="topdir" class="input" value="<%=topdir%>" style="margin-bottom: 0px"><br>
     </form>
 </font>
 
@@ -114,8 +143,8 @@
         haveKey = true;
 %>
 <form name="form2" method="post"  target="frame_right" action="showfilecontent.jsp" onload="autosubmit()">
-    <input type="hidden" name="topdir" value="<%=topdir%>">
     <input type="submit" name="selectitem" value="<%=item%>" class="submitbtn_file">
+    <input type="hidden" name="topdir" value="<%=topdir%>">
 </form>
 <%
     }

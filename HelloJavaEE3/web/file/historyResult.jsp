@@ -19,17 +19,13 @@
 
 <%
     String topdir = CStringPub.requesParaIfNullSetEmpty(request, "topdir");
-//    String findtext = CStringPub.requesParaIfNullSetEmpty(request, "findtext");
-//    String casesensitive = CStringPub.requesParaIfNullSetEmpty(request, "casesensitive");
-//    String findfileflag = CStringPub.requesParaIfNullSetEmpty(request, "findfileflag");
     if(CStringPub.isTrimEmpty(topdir))
     {
         topdir = SqlProc.getAutoCodeSetsPathFromFileDefault();
     }
-    String freqUse = "frequse.txt";
 
-    String listcontent = CFilePub.readFileSelf(topdir, freqUse,"");
-    System.out.println("listcontent: " + listcontent);
+    String listcontent = CFilePub.readFileSelf(topdir, CFilePub.getFreqUseName(),"");
+//    System.out.println("listcontent: " + listcontent);
 
 %>
 
@@ -40,10 +36,11 @@
 
     for (String item:
             list) {
-//        out.write("========\n");
 %>
-
-<%=item%><br>
+<form action="autocodesets.jsp" method="post" name="form">
+    <input type="submit" name="historyitem" value="<%=item%>" >
+</form>
+<%--<%=item%><br>--%>
 <%
     }
 %>

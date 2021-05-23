@@ -1,6 +1,7 @@
 <%@ page import="string.CStringPub" %>
 <%@ page import="weilaidb.sql.SqlProc" %>
-<%@ page import="file.CFilePub" %><%--
+<%@ page import="file.CFilePub" %>
+<%@ page import="java.util.List" %><%--
   Created by IntelliJ IDEA.
   User: dell
   Date: 2021/5/7
@@ -13,22 +14,34 @@
     <title>关键字</title>
 </head>
 <body>
+
 <%
     String topdir = CStringPub.requesParaIfNullSetEmpty(request, "topdir");
-//    String findtext = CStringPub.requesParaIfNullSetEmpty(request, "findtext");
-//    String casesensitive = CStringPub.requesParaIfNullSetEmpty(request, "casesensitive");
-//    String findfileflag = CStringPub.requesParaIfNullSetEmpty(request, "findfileflag");
     if(CStringPub.isTrimEmpty(topdir))
     {
         topdir = SqlProc.getAutoCodeSetsPathFromFileDefault();
     }
-    String freqUse = "recentopen.txt";
 
-    String listcontent = CFilePub.readFileSelf(topdir, freqUse,"");
-    System.out.println("listcontent: " + listcontent);
+    String listcontent = CFilePub.readFileSelf(topdir, CFilePub.getSearchKey(),"");
+//    System.out.println("listcontent: " + listcontent);
 
 %>
 
-<%=listcontent%>
+<%--<%=listcontent%>--%>
+<%
+    List<String> list = CStringPub.string2ListBr(listcontent);
+    System.out.println("list size: " + list.size());
+
+    for (String item:
+            list) {
+%>
+<form action="autocodesets.jsp" method="post" name="form">
+    <input type="submit" name="keyitem" value="<%=item%>" >
+</form>
+<%--<%=item%><br>--%>
+<%
+    }
+%>
+
 </body>
 </html>
