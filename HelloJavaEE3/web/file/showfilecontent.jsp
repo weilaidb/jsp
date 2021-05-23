@@ -100,8 +100,8 @@
     <input type="button" value="保存" onclick="saveFileExt()" style="margin-right: 10px;width: 60px"/>
     <input type="button" value="修改" onclick="modifyFiles()" style="margin-right: 10px;width: 60px"/>
     <br>
-    <textarea name="filetip" class="textarea_reg1" style="background-color:#cce8cf;color:black;" id="filetip"><%=lefttext%></textarea>
-    <textarea name="righttext" class="textarea_reg1" style="background-color:#cce8cf;color:black;"><%=regexpResult%></textarea>
+    <textarea name="filetip" class="textarea_reg1" style="background-color:#cce8cf;color:black;width: 48%;" id="filetip"><%=lefttext%></textarea>
+    <textarea name="righttext" class="textarea_reg1" style="background-color:#cce8cf;color:black;width: 48%;"><%=regexpResult%></textarea>
 
     <input type="hidden" name="topdir" value="<%=topdir%>"/>
     <input type="hidden" name="selectitem" value="<%=selectitem%>"/>
