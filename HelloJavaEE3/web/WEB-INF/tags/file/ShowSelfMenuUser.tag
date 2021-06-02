@@ -2,6 +2,7 @@
 <%@ tag import="file.CFilePub" %>
 <%@ tag import="java.util.List" %>
 <%@ tag import="string.CStringPub" %>
+<%@ tag import="java.util.Collections" %>
 <%@ attribute name="topdir" required="true" %>
 <%@ attribute name="findtext" required="true" %>
 <%@ attribute name="casesensitive" required="true" %>

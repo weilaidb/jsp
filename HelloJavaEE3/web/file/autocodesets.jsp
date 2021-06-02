@@ -1,6 +1,10 @@
 <%@ page import="string.CStringPub" %>
 <%@ page import="weilaidb.sql.SqlProc" %>
 <%@ page import="file.CFilePub" %>
+<%@ page import="java.util.Collections" %>
+<%@ page import="java.util.List" %>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="java.util.Arrays" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
 <%@taglib prefix="menu" tagdir="/WEB-INF/tags/file" %>
 
@@ -96,6 +100,14 @@
 </font>
 
 <%
+    if(CStringPub.stringLenOk(keyitem) || CStringPub.stringLenOk(findtext))
+    {
+
+    }
+%>
+
+
+<%
 //    topdir = CStringPub.requesParaIfNullSetEmpty(request, "topdir");
     findtext = CStringPub.requesParaIfNullSetEmpty(request, "findtext");
     casesensitive = CStringPub.requesParaIfNullSetEmpty(request, "casesensitive");
@@ -113,7 +125,7 @@
 <%--//修改菜单--%>
 <font size="3">
     <form action="modifymenu.jsp" method="post" name="form1" target="_blank">
-        <input type="submit" value="修改菜单" name="submit" class="submitbtn_file" style="margin-bottom: 0px><br>
+        <input type="submit" value="修改菜单" name="submit" class="submitbtn_file" style="margin-bottom: 0px"><br>
         <input type="hidden" name="topdir" class="input" value="<%=topdir%>" style="margin-bottom: 0px"><br>
     </form>
 </font>
@@ -134,14 +146,20 @@
 //    listSets = CStringPub.filterListEmpty(listSets);
     boolean haveKey = false;
 
+    List<String> newListSets = CStringPub.listSortUniq(listSets);
+
     for (String item :
-            listSets) {
+            newListSets) {
         if(CStringPub.isTrimEmpty(item))
         {
             continue;
         }
         haveKey = true;
 %>
+
+<%--######右侧显示内容--%>
+<%--######右侧显示内容--%>
+<%--######右侧显示内容--%>
 <form name="form2" method="post"  target="frame_right" action="showfilecontent.jsp" onload="autosubmit()">
     <input type="submit" name="selectitem" value="<%=item%>" class="submitbtn_file">
     <input type="hidden" name="topdir" value="<%=topdir%>">

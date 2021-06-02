@@ -1,14 +1,12 @@
 package string;
 
 //import com.sun.deploy.net.HttpRequest;
+import com.sun.org.apache.xerces.internal.xs.StringList;
 import file.CFilePub;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.List;
+import java.util.*;
 
 public class CStringPub {
     public static boolean isTrimEmpty(String string)
@@ -120,6 +118,11 @@ public class CStringPub {
         return buf.trim();
     }
 
+    public static boolean stringLenOk(String buf)
+    {
+        return buf.trim().length() > 0;
+    }
+
     public static void removeDuplicate(List<String> list) {
         HashSet<String> set = new HashSet<String>(list.size());
         List<String> result = new ArrayList<String>(list.size());
@@ -161,11 +164,77 @@ public class CStringPub {
     {
         return string2List(str,"<br>");
     }
-
     public static String procStringDoubleSign(String str)
     {
         return str.replaceAll("\"", "\\\"")
                 .replaceAll("/", "\\/");
+    }
+
+    public static List<String> listSort(String[] array)
+    {
+        List<String> newListSets = new ArrayList<>(Arrays.asList(array));
+        //集合默认按字符升序排序
+        Collections.sort(newListSets);
+
+        return newListSets;
+    }
+
+    public static List<String> listSortUniq(String[] array)
+    {
+        List<String> arrayList = new ArrayList<>(Arrays.asList(array));
+        return listSortUniq(arrayList);
+    }
+
+    public static List<String> listSortUniq(List<String> inputList)
+    {
+        List<String> templist = new ArrayList<String>();
+        for (String string : inputList) {
+            String strim = string.trim();
+            //如何templist中没有则添加
+            if (!templist.contains(strim)) {
+                templist.add(strim);
+            }
+        }
+
+        //集合默认按字符升序排序
+        Collections.sort(templist);
+
+        return templist;
+    }
+
+    public static String stringSortUniqByEnter(String inputStr)
+    {
+        String result = "";
+        List<String> tempList = string2ListEnter(inputStr);
+        tempList = listSortUniq(tempList);
+        result = list2StringEnter(tempList);
+
+        return result;
+    }
+
+    public static String stringFilterSigns(String orgStr, String s1, String s2)
+    {
+        String result=  "";
+        List<String> list = new ArrayList<>(Arrays.asList(orgStr.split("<br>")));
+        if(list.size() == 1)
+        {
+            list = new ArrayList<>(Arrays.asList(orgStr.split("\n")));
+        }
+
+        for (String str :
+                list) {
+            str = str.trim();
+            if(str.length() > 1
+                    && (str.subSequence(0,1).equals(s1)
+                    || str.subSequence(str.length() - 2, str.length() - 1) == s2))
+            {
+                continue;
+            }
+            result = result.concat(str);
+            result = result.concat("\n");
+        }
+
+        return result;
     }
 
 }

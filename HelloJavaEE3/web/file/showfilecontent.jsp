@@ -83,13 +83,20 @@
 %>
 <file:ReadTag dir="<%=topdir%>" fileName="<%=readFileNameAf%>"></file:ReadTag>
 <%
+    String LeftNew = "";
     contentAf = result.toString();
     contentAf = CRegExpPub.procSpecialSignReplace(contentAf);
+    //    去除文本左侧的[] 【】
+    LeftNew = lefttext;
+    LeftNew  = CStringPub.stringFilterSigns(LeftNew, "[", "]");
+    LeftNew  = CStringPub.stringFilterSigns(LeftNew, "【", "】");
+
     //正则处理后的结果
-    String regexpResult = CRegExpPub.procPatternInfo(lefttext, contentBf, contentAf);
+    String regexpResult = CRegExpPub.procPatternInfo(LeftNew, contentBf, contentAf);
     System.out.println("selectitem:" + selectitem);
     System.out.println("filebf:" + contentBf);
     System.out.println("contentAf:" + contentAf);
+
 %>
 
 【<%=selectitem%>】:<br>

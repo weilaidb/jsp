@@ -26,6 +26,11 @@
     }
     else
     {
+        menuStand = CStringPub.stringSortUniqByEnter(menuStand);
+        menuUser = CStringPub.stringSortUniqByEnter(menuUser);
+//        System.out.println("af menuStand:" + menuStand);
+        System.out.println("af menuUser:" + menuUser);
+
         result += CFilePub.writeFile(topdir,CFilePub.getRelPath(), menuStand);
         result += CFilePub.writeFile(topdir,CFilePub.getRelPathuser(), menuUser);
     }
