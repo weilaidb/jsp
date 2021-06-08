@@ -36,6 +36,14 @@
         document.form1.target = "_blank";
         document.form1.submit();
     }
+
+    function openFiles()
+    {
+        document.form1.action="openfile.jsp";
+        document.form1.target = "";
+        document.form1.submit();
+    }
+
 </Script>
 
 <style type="text/css">
@@ -129,6 +137,7 @@
     <input type="button" value="刷新" onclick="RefreshSelf()" style="margin-right: 10px;width: 60px" id="btn_refresh"/>
     <input type="button" value="保存" onclick="saveFileExt()" style="margin-right: 10px;width: 60px"/>
     <input type="button" value="修改" onclick="modifyFiles()" style="margin-right: 10px;width: 60px"/>
+    <input type="button" value="打开" onclick="openFiles()" style="margin-right: 10px;width: 60px"/>
     <br>
     <textarea name="filetip" class="textarea_reg1" style="background-color:#cce8cf;color:black;width: 48%;" id="filetip"><%=lefttext%></textarea>
     <textarea name="righttext" class="textarea_reg1" style="background-color:#cce8cf;color:black;width: 48%;"><%=regexpResult%></textarea>
@@ -146,6 +155,7 @@
             <input type="button" id="btn_refresh_float" onclick="RefreshSelf()" value="刷新" class="floatbtns"/>
             <input type="button" id="btn_save_float"    onclick="saveFileExt()" value="保存" class="floatbtns"/>
             <input type="button" id="btn_modify_float"  onclick="modifyFiles()" value="修改" class="floatbtns"/>
+            <input type="button" id="btn_open_float"    onclick="openFiles()" value="打开" class="floatbtns"/>
             <a href="javascript:void(0);" onclick="javascript:document.getElementsByTagName('BODY')[0].scrollTop=0;" class="floatbtns">页顶</a>
             <a href="javascript:void(0);" onclick="javascript:document.getElementsByTagName('BODY')[0].scrollTop=document.getElementsByTagName('BODY')[0].scrollHeight; "搜索 class="floatbtns">页底</a>
         </div>

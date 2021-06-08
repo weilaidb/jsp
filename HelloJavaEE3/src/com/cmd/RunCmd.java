@@ -23,10 +23,9 @@ public class RunCmd {
     }
 
     public static void runcmd(String command) {
-        Process p = null;
+        Process proc = null;
         try {
-//            p = Runtime.getRuntime().exec(command);
-            Process proc = Runtime.getRuntime().exec(command);
+            proc = Runtime.getRuntime().exec(command);
             StreamGobbler errorGobbler = new StreamGobbler(proc.getErrorStream(), "Error");
             StreamGobbler outputGobbler = new StreamGobbler(proc.getInputStream(), "Output");
             errorGobbler.start();
@@ -37,13 +36,19 @@ public class RunCmd {
             e.printStackTrace();
         }
 
+        if(null == proc)
+        {
+            System.err.println("proc handler null");
+            return;
+        }
+
 //##读取命令的输出信息
         BufferedReader reader = null;
         try {
-            InputStream is = p.getInputStream();
+            InputStream is = proc.getInputStream();
             reader = new BufferedReader(new InputStreamReader(is));
-            p.waitFor();
-            if (p.exitValue() != 0) {
+            proc.waitFor();
+            if (proc.exitValue() != 0) {
                 //说明命令执行失败
                 //可以进入到错误处理步骤中
             }
