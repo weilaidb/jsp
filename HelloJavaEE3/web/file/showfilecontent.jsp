@@ -38,6 +38,29 @@
     }
 </Script>
 
+<style type="text/css">
+    .floatbtns {
+        font-weight: bold;
+        display: inline-block;
+        width: 40px;
+        height: 100%;
+        border: #5fb878;
+        background: #5fb878;
+        font-size: 1.0em;
+        text-align: right;
+        padding-top: 0px;
+        padding-right: 0px;
+        margin-right: 1px;
+        color: blue;
+        background-color: transparent;
+    }
+
+    a:hover {
+        color: #FFFFFF
+    }
+</style>
+
+
 <html>
 <head>
     <title>文件内容</title>
@@ -115,6 +138,19 @@
     <input type="hidden" name="filebf" value="<%=contentBf%>"/>
     <input type="hidden" name="fileaf" value="<%=CStringPub.procStringDoubleSign(contentAf)%>"></input>
 <%--    <input type="hidden" name="fileaf" value="<%=contentAf%>"></input>--%>
+
+
+    <div style="overflow: hidden;position: fixed;right: 0px;bottom: 1px;z-index: 1;">
+        <div style="padding-top:1px;padding-right:1px;padding-bottom:1px">
+            <input type="button" id="btn_convert_float" onclick="convertInfo()" value="转换" class="floatbtns"/>
+            <input type="button" id="btn_refresh_float" onclick="RefreshSelf()" value="刷新" class="floatbtns"/>
+            <input type="button" id="btn_save_float"    onclick="saveFileExt()" value="保存" class="floatbtns"/>
+            <input type="button" id="btn_modify_float"  onclick="modifyFiles()" value="修改" class="floatbtns"/>
+            <a href="javascript:void(0);" onclick="javascript:document.getElementsByTagName('BODY')[0].scrollTop=0;" class="floatbtns">页顶</a>
+            <a href="javascript:void(0);" onclick="javascript:document.getElementsByTagName('BODY')[0].scrollTop=document.getElementsByTagName('BODY')[0].scrollHeight; "搜索 class="floatbtns">页底</a>
+        </div>
+    </div>
+
 </form>
 
 </body>
