@@ -40,7 +40,7 @@
     function openFiles()
     {
         document.form1.action="openfile.jsp";
-        document.form1.target = "";
+        document.form1.target = "_blank";
         document.form1.submit();
     }
 

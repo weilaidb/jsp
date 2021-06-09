@@ -11,6 +11,20 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
+<script language="javascript">
+    <!--
+    function closewin(){
+        self.opener=null;
+        self.close();}
+    function clock(){i=i-1
+        document.title="本窗口将在"+i+"秒后自动关闭!";
+        if(i>0)setTimeout("clock();",1000);
+        else closewin();}
+    var i=2
+    clock();
+    //-->
+</script>
+
 <head>
     <title>打开文件</title>
 </head>
@@ -29,18 +43,20 @@
     System.out.println("-->this is open page");
     System.out.println("topdir: " + topdir);
     System.out.println("selectitem getTipsName: " + CFilePub.getTipsName(selectitem));
-    System.out.println("filebf: " + filebf);
-    System.out.println("fileaf: " + fileaf);
-    System.out.println("filetip: " + filetip);
+//    System.out.println("filebf: " + filebf);
+//    System.out.println("fileaf: " + fileaf);
+//    System.out.println("filetip: " + filetip);
     System.out.println("selectitem: " + selectitem);
 
     String openPath = topdir + File.separator + CFilePub.getTipsName(selectitem);
     System.out.println("openPath: " + openPath);
-    RunCmd.explorerdir(CFilePub.replaceSeparator(openPath));
+    RunCmd.explorerdir(openPath);
+//    RunCmd.explorerdir(CFilePub.replaceSeparator(openPath));
 //        ClientSendMsg2QtServer.sendStr2QtServer("", openPath);
 %>
 
-<jsp:forward page="showfilecontent.jsp"></jsp:forward>
+
+<%--<jsp:forward page="showfilecontent.jsp"></jsp:forward>--%>
 
 </body>
 </html>
