@@ -67,24 +67,24 @@
 <%--//显示内容--%>
 <font size="3">
     <form action="" method="post" name="form">
-        文件位置:<input type="text" name="topdir" class="input"><br>
+        文件位置:<input type="text" name="topdir" class="input" placeholder="输入文件路径"><br>
         <%
             if(historyitem.trim().length() > 0 )
             {
         %>
-        查找内容:<input type="text" name="findtext" class="input" value="<%=historyitem%>" id="id_findtext"><br>
+        查找内容:<input type="text" name="findtext" class="input" value="<%=historyitem%>" id="id_findtext" placeholder="Search"><br>
         <%
         }
         else if(keyitem.trim().length() > 0)
         {
         %>
-        查找内容:<input type="text" name="findtext" class="input" value="<%=keyitem%>" id="id_findtext"><br>
+        查找内容:<input type="text" name="findtext" class="input" value="<%=keyitem%>" id="id_findtext" placeholder="Search"><br>
         <%
         }
         else
         {
         %>
-        查找内容:<input type="text" name="findtext" class="input" value="<%=findtext%>" id="id_findtext"><br>
+        查找内容:<input type="text" name="findtext" class="input" value="<%=findtext%>" id="id_findtext" placeholder="Search"><br>
         <%
             }
         %>
