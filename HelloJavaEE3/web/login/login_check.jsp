@@ -10,8 +10,7 @@
 <%@ page import="java.sql.ResultSet" %>
 <%@ page import="java.sql.DriverManager" %>
 <%@ page import="weilaidb.sql.SqlProc" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java"
-         pageEncoding="UTF-8" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
 <html>
 <head>
     <title>Title</title>
@@ -42,8 +41,14 @@
             name = rs.getString(1);
             flag = true;
         }
+        else
+        {
+            out.write("数据库为空，请检查！");
+            session.setAttribute("tips","database empty, please check!");
+        }
     } catch (Exception e) {
         System.out.print(e);
+        session.setAttribute("tips","database no exist, please check!");
     } finally {
         try {
             rs.close();

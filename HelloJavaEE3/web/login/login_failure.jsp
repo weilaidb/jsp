@@ -1,4 +1,4 @@
-<%--
+<%@ page import="string.CStringPub" %><%--
   Created by IntelliJ IDEA.
   User: dell
   Date: 2019/3/31
@@ -14,6 +14,9 @@
 <center>
     <h1>登陆操作</h1>
     <h2>登陆失败，请重新<a href="login.jsp">登陆</a>! </h2>
+    <%
+        out.write(CStringPub.ifNullSetEmpty(session.getAttribute("tips").toString()));
+    %>
 </center>
 </body>
 </html>

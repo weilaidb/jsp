@@ -14,6 +14,9 @@
 <%@ page import="weilaidb.sql.SqlProc" %>
 <%@ page import="com.commmon.SqlInterface" %>  <%--导入java.sql包--%>
 <%@include file="../common/basepath.jsp"%>
+<%--================css配置=========================--%>
+<link rel="stylesheet" type="text/css" href="../css/base.css" />
+
 
 <script language="JavaScript">
     function Refresh()
@@ -22,80 +25,6 @@
     }
     // setTimeout('Refresh()',1000); //1秒刷新一次
 </script>
-
-<%--================css配置=========================--%>
-<style type="text/css">
-    .mytable th, tr, td, table {
-        /* for IE */
-        text-overflow: ellipsis;
-        /* for Firefox,mozilla */
-        -moz-text-overflow: ellipsis;
-        overflow: hidden;
-        white-space: nowrap;
-        text-align: left;
-
-        border: 1px solid red;
-        tab-interval: 10px;
-        background-color: aliceblue;
-        font-size: medium;
-    }
-
-    .boxes {
-        display: block;
-        margin: 0 auto;
-        overflow: hidden;
-        width: 550px;
-        height: 100%;
-        line-height: 24px;
-        padding: 2px;
-
-        min-height: 20px;
-        max-height: 1000px;
-        font-size: 16px;
-        outline: 0;
-        border: 1px solid #a0b3d6;
-        line-height: 24px;
-        word-wrap: break-word;
-        overflow-x: hidden;
-        overflow-y: auto;
-        border-color: rgba(82, 168, 236, 0.8);
-        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
-        background-color: #c8eccc;
-    }
-</style>
-
-<style type="text/css">
-    html, body {
-        margin: 0;
-    }
-
-    div {
-        padding: 40px;
-    }
-
-    input {
-        width: 240px;
-        height: 40px;
-        line-height: 40px;
-        font-size: 14px;
-        border: none;
-        background-color: #eee;
-        border-radius: 4px;
-        text-indent: 4px;
-        outline: none;
-        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    }
-
-    button {
-        width: 140px;
-        height: 50px;
-        border: none;
-        border-radius: 4px;
-        outline: none;
-        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-        cursor: pointer;
-    }
-</style>
 
 <html>
 <head>
@@ -189,14 +118,10 @@
     %>
 </table>
 
-
-
-    <div style="overflow: hidden;position: fixed;right: 0px;bottom: 1px;z-index: 1;">
+    <div style="overflow: hidden;position: fixed;right: 0px;bottom: 0px;z-index: 1;">
         <div style="padding-top:1px;padding-right:1px;padding-bottom:1px">
             <input type="button" id="btn_refresh" onclick="Refresh()" value="刷新" class="btns"/>
             <input type="submit" id="savetext" name="Submit" value="保存" class="btns"/>
-            <%--<a href="#" styl="float: right;" class="btns">顶部</a>--%>
-            <%--<div style="height:3000px;"></div>--%>
             <a href="javascript:void(0);" onclick="javascript:document.getElementsByTagName('BODY')[0].scrollTop=0;" class="btns">页顶</a>
             <a href="javascript:void(0);" onclick="javascript:document.getElementsByTagName('BODY')[0].scrollTop=document.getElementsByTagName('BODY')[0].scrollHeight; "搜索 class="btns">页底</a>
         </div>
@@ -205,26 +130,6 @@
 </form>
 
 <h2 align="center"><font size="12" color="red">~~不能再底部了~~~</font></h2>
-
-<style type="text/css">
-    .btns {
-        font-weight: bold;
-        display: inline-block;
-        width: 100%;
-        height: 100%;
-        border: #5fb878;
-        background: #5fb878;
-        font-size: 1.6em;
-        text-align: center;
-        padding-top: 0px;
-        color: blue;
-        background-color: transparent;
-    }
-
-    a:hover {
-        color: #FFFFFF
-    }
-</style>
 
 
 </body>

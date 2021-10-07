@@ -1,6 +1,6 @@
 package weilaidb;
 
-import base.CStringPub;
+import string.CStringPub;
 
 import java.io.BufferedReader;
 import java.io.File;

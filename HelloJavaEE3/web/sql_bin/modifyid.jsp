@@ -12,8 +12,8 @@
 <%--================引入头文件=========================--%>
 <%@page import="java.sql.*" %>
 <%@ page import="weilaidb.sql.SqlProc" %>  <%--导入java.sql包--%>
-<%--<%@ include file="../css/bdata.css"%>--%>
-<link href="../css/bdata.css" rel="stylesheet" type="text/css"/>
+<%--<%@ include file="../css/base.css"%>--%>
+<link href="../css/base.css" rel="stylesheet" type="text/css"/>
 
 
 <html>

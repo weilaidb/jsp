@@ -1,6 +1,7 @@
 package base;
 
-//import com.sun.deploy.net.HttpRequest;
+import string.CStringPub;
+
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import java.util.*;
@@ -10,12 +11,9 @@ public class BaseInfo {
     {
         String path = request.getContextPath();
         String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
-//        System.out.println("path: " + path);
-        System.out.println("basePath: " + basePath);
-        if(null == basePath)
-        {
-            return "";
-        }
+//        System.out.println("basePath: " + basePath);
+        basePath = CStringPub.ifNullSetEmpty(basePath);
+
         return basePath;
     }
 }
