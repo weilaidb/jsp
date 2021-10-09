@@ -44,7 +44,7 @@
 
     result += CFilePub.writeFile(topdir,CFilePub.getTipsName(selectitem), filetip);
     result += CFilePub.writeFile(topdir,CFilePub.getBeforeName(selectitem), filebf);
-    result += CFilePub.writeFile(topdir,CFilePub.getAfterName(selectitem), fileaf);
+//    result += CFilePub.writeFile(topdir,CFilePub.getAfterName(selectitem), fileaf);
 %>
 <%=result%>
 <jsp:forward page="showfilecontent.jsp"></jsp:forward>
