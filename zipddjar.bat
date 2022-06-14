@@ -4,4 +4,4 @@ REM pause
 cd /d %~dp0
 @echo off
 
-7z.exe a dd-0.2-SNAPSHOT.jar.7z dd-0.2-SNAPSHOT.jar
+7z.exe a dd-0.3-SNAPSHOT.jar.7z dd-0.3-SNAPSHOT.jar
